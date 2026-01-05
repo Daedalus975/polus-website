@@ -32,16 +32,17 @@ export default function HomePage() {
   return (
     <>
       <StructuredData data={getLocalBusinessSchema()} />
-      {/* Hero Section with overlay gradient */}
-      <div className="relative min-h-[600px] md:min-h-[700px]">
-        {/* Background image placeholder with overlay */}
-        <div className="absolute inset-0 bg-polus-forest">
-          <ImagePlaceholder aspectRatio="wide" className="h-full w-full rounded-none">
-            <div className="text-polus-mint/30 text-sm">Hero background image</div>
-          </ImagePlaceholder>
-          {/* Gradient overlay per style guide */}
-          <div className="absolute inset-0 bg-gradient-to-b from-polus-forest/20 via-polus-forest/70 to-polus-forest/90" />
-        </div>
+      {/* Hero Section */}
+      <section 
+        className="relative overflow-hidden min-h-[600px] md:min-h-[700px]"
+        style={{ 
+          backgroundImage: "url(/hero/hero-bg.svg)", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center" 
+        }}
+      >
+        {/* Readability overlay */}
+        <div className="absolute inset-0 bg-polus-forest/30" />
 
         {/* Hero content */}
         <Section className="relative z-10 pt-32 md:pt-40 pb-20 md:pb-28">
@@ -73,7 +74,7 @@ export default function HomePage() {
             </p>
           </div>
         </Section>
-      </div>
+      </section>
 
       {/* Value Props */}
       <Section className="bg-polus-surface1">
