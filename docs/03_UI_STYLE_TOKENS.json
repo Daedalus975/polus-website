@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "name": "Polus LLC UI Style Guide",
+    "version": "1.0",
+    "generated_for": "lovable.dev",
+    "notes": [
+      "UI tokens, layout, and component specs for lovable.dev.",
+      "Brand voice/messaging is separated into Polus_Brand_Guide_v1.md."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "paper": {
+        "hex": "#FEFFFF",
+        "role": "Primary text on dark surfaces, card text, backgrounds in light mode sections"
+      },
+      "forest": {
+        "hex": "#0D251C",
+        "role": "Preferred global background"
+      },
+      "gold": {
+        "hex": "#C2A319",
+        "role": "Primary CTA / accents / highlights"
+      },
+      "mint": {
+        "hex": "#B1E3C7",
+        "role": "Secondary accents / success tints / subtle highlights"
+      },
+      "emerald": {
+        "hex": "#116238",
+        "role": "Focus/active states, links, positive indicators"
+      }
+    },
+    "semantic": {
+      "background": "#0D251C",
+      "surface_1": "#102D22",
+      "surface_2": "#143427",
+      "surface_3": "#183A2B",
+      "border_subtle": "rgba(177, 227, 199, 0.18)",
+      "border_strong": "rgba(177, 227, 199, 0.28)",
+      "text_primary": "#FEFFFF",
+      "text_secondary": "rgba(254, 255, 255, 0.78)",
+      "text_muted": "rgba(254, 255, 255, 0.62)",
+      "cta_primary_bg": "#C2A319",
+      "cta_primary_text": "#0D251C",
+      "cta_secondary_bg": "transparent",
+      "cta_secondary_text": "#B1E3C7",
+      "cta_secondary_border": "rgba(177, 227, 199, 0.35)",
+      "link": "#B1E3C7",
+      "link_hover": "#C2A319",
+      "focus_ring": "rgba(17, 98, 56, 0.55)",
+      "success": "#116238",
+      "warning": "#C2A319",
+      "danger": "#E05A4F"
+    },
+    "gradients": {
+      "hero_overlay": {
+        "type": "linear",
+        "direction": "to bottom",
+        "stops": [
+          {
+            "color": "rgba(13, 37, 28, 0.20)",
+            "position": "0%"
+          },
+          {
+            "color": "rgba(13, 37, 28, 0.70)",
+            "position": "55%"
+          },
+          {
+            "color": "rgba(13, 37, 28, 0.90)",
+            "position": "100%"
+          }
+        ],
+        "usage": "Overlay on hero photography to keep H1 readable, inspired by ref 1 + ref 2."
+      },
+      "section_glow": {
+        "type": "radial",
+        "stops": [
+          {
+            "color": "rgba(194, 163, 25, 0.12)",
+            "position": "0%"
+          },
+          {
+            "color": "rgba(13, 37, 28, 0.00)",
+            "position": "70%"
+          }
+        ],
+        "usage": "Subtle gold glow behind pricing/CTA blocks."
+      }
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": [
+        "Sora",
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Arial",
+        "sans-serif"
+      ],
+      "body": [
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Arial",
+        "sans-serif"
+      ],
+      "mono": [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace"
+      ]
+    },
+    "scale": {
+      "h1": {
+        "size": "clamp(2.2rem, 3vw, 3.25rem)",
+        "lineHeight": "1.05",
+        "weight": 700,
+        "letterSpacing": "-0.02em"
+      },
+      "h2": {
+        "size": "clamp(1.75rem, 2.2vw, 2.4rem)",
+        "lineHeight": "1.12",
+        "weight": 650,
+        "letterSpacing": "-0.015em"
+      },
+      "h3": {
+        "size": "1.5rem",
+        "lineHeight": "1.2",
+        "weight": 650
+      },
+      "h4": {
+        "size": "1.25rem",
+        "lineHeight": "1.25",
+        "weight": 600
+      },
+      "body": {
+        "size": "1rem",
+        "lineHeight": "1.6",
+        "weight": 400
+      },
+      "small": {
+        "size": "0.9rem",
+        "lineHeight": "1.5",
+        "weight": 400
+      },
+      "micro": {
+        "size": "0.8rem",
+        "lineHeight": "1.45",
+        "weight": 400
+      }
+    },
+    "usage_rules": [
+      "Headlines: outcome-first, 8\u201312 words max.",
+      "Subheads: 1\u20132 short sentences; use plain language.",
+      "Body text: 45\u201385 characters per line for readability.",
+      "Use numeric callouts (stats) sparingly and only if true."
+    ]
+  },
+  "layout": {
+    "grid": {
+      "maxWidth": 1200,
+      "columns_desktop": 12,
+      "gutter": 24,
+      "containerPadding": {
+        "desktop": 24,
+        "tablet": 20,
+        "mobile": 16
+      }
+    },
+    "spacing": {
+      "sectionPaddingY": {
+        "desktop": 96,
+        "tablet": 72,
+        "mobile": 56
+      },
+      "stackGap": {
+        "xs": 8,
+        "sm": 12,
+        "md": 16,
+        "lg": 24,
+        "xl": 32,
+        "2xl": 48
+      }
+    },
+    "radii": {
+      "sm": 10,
+      "md": 14,
+      "lg": 18,
+      "xl": 24
+    },
+    "elevation": {
+      "card": "0 10px 30px rgba(0,0,0,0.30)",
+      "cardHover": "0 16px 50px rgba(0,0,0,0.35)"
+    },
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "components": {
+    "navbar": {
+      "style": "Dark, minimal, sticky; CTA button on right; subtle blur/backdrop.",
+      "height": 72,
+      "background": "rgba(13, 37, 28, 0.72)",
+      "backdropBlur": 14,
+      "borderBottom": "1px solid rgba(177, 227, 199, 0.12)",
+      "items": [
+        "Home",
+        "Services",
+        "Industries",
+        "About",
+        "Contact"
+      ],
+      "cta": "Book a Free Discovery Call"
+    },
+    "hero": {
+      "layout": "Full-width photo with gradient overlay; left-aligned copy; single primary CTA + microcopy.",
+      "elements": [
+        "H1",
+        "Subtext",
+        "Primary CTA",
+        "Secondary CTA (Request a Quote)",
+        "Trust line (ITIL4 \u2022 Network+)"
+      ],
+      "image_guidance": "Professional, candid workplace scenes; avoid cheesy stock poses; keep faces unobstructed."
+    },
+    "buttons": {
+      "primary": {
+        "bg": "#C2A319",
+        "text": "#0D251C",
+        "radius": 14,
+        "padding": {
+          "y": 12,
+          "x": 18
+        },
+        "hover": {
+          "bg": "#D1B21E"
+        },
+        "focusRing": "0 0 0 4px rgba(17, 98, 56, 0.40)"
+      },
+      "secondary": {
+        "bg": "transparent",
+        "text": "#B1E3C7",
+        "border": "1px solid rgba(177, 227, 199, 0.35)",
+        "radius": 14,
+        "padding": {
+          "y": 12,
+          "x": 18
+        },
+        "hover": {
+          "bg": "rgba(177, 227, 199, 0.08)",
+          "border": "1px solid rgba(177, 227, 199, 0.50)"
+        }
+      },
+      "link": {
+        "text": "#B1E3C7",
+        "hoverText": "#C2A319",
+        "underline": "on-hover"
+      }
+    },
+    "cards": {
+      "base": {
+        "bg": "#102D22",
+        "border": "1px solid rgba(177, 227, 199, 0.16)",
+        "radius": 18,
+        "padding": 20,
+        "hover": {
+          "border": "1px solid rgba(177, 227, 199, 0.28)",
+          "transform": "translateY(-2px)"
+        }
+      },
+      "service_card": {
+        "header": [
+          "icon",
+          "title"
+        ],
+        "body": [
+          "1-line outcome",
+          "3 deliverable bullets"
+        ],
+        "footer": [
+          "starting_at_price",
+          "cta"
+        ]
+      },
+      "pricing_card": {
+        "emphasis": "Center plan highlighted with slightly stronger border and subtle glow",
+        "includes": [
+          "plan_name",
+          "price",
+          "features",
+          "select_button"
+        ],
+        "badge": "Recommended"
+      },
+      "stat_card": {
+        "usage": "Only for verified metrics; otherwise use 'What you can expect' outcomes.",
+        "layout": [
+          "metric",
+          "label"
+        ]
+      }
+    },
+    "forms": {
+      "field": {
+        "bg": "#0F2A20",
+        "text": "#FEFFFF",
+        "placeholder": "rgba(254, 255, 255, 0.45)",
+        "border": "1px solid rgba(177, 227, 199, 0.18)",
+        "radius": 14,
+        "padding": {
+          "y": 12,
+          "x": 14
+        },
+        "focus": {
+          "border": "1px solid rgba(17, 98, 56, 0.70)",
+          "ring": "0 0 0 4px rgba(17, 98, 56, 0.35)"
+        }
+      },
+      "layout": "Two-column on desktop, stacked on mobile (inspired by ref 2 consultation block).",
+      "spam_protection": [
+        "honeypot",
+        "captcha"
+      ]
+    },
+    "sections": {
+      "what_we_do": {
+        "style": "3-up cards with icons; short outcomes; no paragraphs longer than 2 lines.",
+        "title": "What we do"
+      },
+      "how_it_works": {
+        "style": "3 steps with minimal copy; numbered pills; aligns with PRD funnel.",
+        "steps": [
+          "Free discovery",
+          "Assessment + plan",
+          "Implementation + support"
+        ]
+      },
+      "lead_magnet": {
+        "style": "Compact capture module; promise-focused copy; minimal fields (email only).",
+        "title": "Get the Process + IT Readiness Checklist"
+      },
+      "blog_resources": {
+        "status": "commented_out_v1",
+        "style": "Card grid with image thumbnails (ref 2), but hidden until v2."
+      },
+      "footer": {
+        "style": "Multi-column links + newsletter strip; muted text; social icons minimal.",
+        "newsletter": {
+          "status": "optional",
+          "fields": [
+            "email"
+          ]
+        }
+      }
+    }
+  },
+  "imagery": {
+    "style": {
+      "photography": [
+        "Realistic workplace moments (consulting, planning, device setup)",
+        "Warm lighting or neutral tones; avoid extreme HDR",
+        "Use hero overlay gradient to ensure headline contrast"
+      ],
+      "illustrations": [
+        "Minimal line icons, 2px stroke, rounded caps",
+        "Avoid cartoon-heavy or overly playful illustrations"
+      ]
+    },
+    "overlays": {
+      "default_hero_overlay": "colors.gradients.hero_overlay",
+      "card_media_overlay": "rgba(13, 37, 28, 0.35)"
+    }
+  },
+  "motion": {
+    "durations_ms": {
+      "fast": 150,
+      "base": 200,
+      "slow": 280
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+    },
+    "hover_effects": [
+      "Cards: translateY(-2px), border brighten",
+      "Buttons: slight brightness increase",
+      "Links: color shift mint -> gold"
+    ],
+    "avoid": [
+      "Large parallax",
+      "Auto-playing video with sound"
+    ]
+  },
+  "accessibility": {
+    "contrast_targets": {
+      "body_text_min": "WCAG AA",
+      "large_text_min": "WCAG AA",
+      "focus_visible": "Always show focus ring"
+    },
+    "rules": [
+      "Ensure gold buttons have sufficient contrast (gold bg with forest text).",
+      "Do not rely on color alone to convey state; add icons or labels.",
+      "All form inputs have labels and error text."
+    ]
+  },
+  "implementation": {
+    "css_variables": {
+      "--polus-bg": "#0D251C",
+      "--polus-surface-1": "#102D22",
+      "--polus-surface-2": "#143427",
+      "--polus-text": "#FEFFFF",
+      "--polus-text-muted": "rgba(254, 255, 255, 0.78)",
+      "--polus-border": "rgba(177, 227, 199, 0.18)",
+      "--polus-gold": "#C2A319",
+      "--polus-mint": "#B1E3C7",
+      "--polus-emerald": "#116238"
+    },
+    "tailwind_hint": {
+      "note": "If using Tailwind in Lovable, map these tokens into theme.extend.colors and theme.extend.borderRadius.",
+      "colors": {
+        "polus": {
+          "paper": "#FEFFFF",
+          "forest": "#0D251C",
+          "gold": "#C2A319",
+          "mint": "#B1E3C7",
+          "emerald": "#116238",
+          "surface1": "#102D22",
+          "surface2": "#143427"
+        }
+      },
+      "radius": {
+        "md": "14px",
+        "lg": "18px",
+        "xl": "24px"
+      }
+    }
+  }
+}

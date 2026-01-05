@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --polus-bg: #0D251C;
+  --polus-surface-1: #102D22;
+  --polus-surface-2: #143427;
+  --polus-text: #FEFFFF;
+  --polus-text-muted: rgba(254, 255, 255, 0.78);
+  --polus-border: rgba(177, 227, 199, 0.18);
+  --polus-gold: #C2A319;
+  --polus-mint: #B1E3C7;
+  --polus-emerald: #116238;
+}
+
+html, body { height: 100%; }
+body { background: var(--polus-bg); color: var(--polus-text); }

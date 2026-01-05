@@ -1,0 +1,102 @@
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
+import { Button } from "@/components/Button";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { OperatingSystem } from "@/components/OperatingSystem";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Polus — Oklahoma IT + Operations Consulting",
+  description: "Small businesses deserve systems that are clear, supportable, and built to last. Learn about our approach.",
+  openGraph: {
+    title: "About Polus — Oklahoma IT + Operations Consulting",
+    description: "Small businesses deserve systems that are clear, supportable, and built to last. Learn about our approach.",
+    type: "website"
+  },
+  twitter: {
+    card: "summary",
+    title: "About Polus — Oklahoma IT + Operations Consulting",
+    description: "Small businesses deserve systems that are clear, supportable, and built to last."
+  }
+};
+
+export default function AboutPage() {
+  return (
+    <>
+      <Section title="Meet Polus" className="pt-20 md:pt-24">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-6">
+              Polus is built around one idea: small businesses deserve systems that are clear, supportable, and built to last.
+            </p>
+            <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed">
+              We help Oklahoma startups and small businesses strengthen their operations and IT through practical, straightforward consulting. Whether you need clearer workflows, better Microsoft 365 governance, or a plan to reduce downtime risk, we build solutions that fit your reality.
+            </p>
+          </div>
+          <ImagePlaceholder aspectRatio="square" />
+        </div>
+      </Section>
+
+      <Section title="Our values" className="bg-polus-surface1">
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card>
+            <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Clarity</h3>
+            <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
+              Plain-English explanations, transparent pricing, clear next steps. No confusion, just clarity.
+            </p>
+          </Card>
+
+          <Card>
+            <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Reliability</h3>
+            <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
+              Systems built to last, documented properly, and designed for stability. We build for the long term.
+            </p>
+          </Card>
+
+          <Card>
+            <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Follow-through</h3>
+            <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
+              We finish what we start. Implementation, documentation, training, support—we see it through.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section title="How we work" eyebrow="Our Operating System" className="bg-polus-surface1">
+        <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
+          Every engagement follows a clear four-phase framework: assess, plan, implement, adopt. You'll always know what's happening and what you're getting.
+        </p>
+        <OperatingSystem variant="full" />
+      </Section>
+
+      <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+            Let's talk about your systems
+          </h2>
+          <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
+            Book a free 30-minute discovery call and leave with clear next steps.
+          </p>
+          <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
+            Book a Free Discovery Call
+          </Button>
+        </div>
+      </Section>
+    </>
+  );
+}

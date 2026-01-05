@@ -1,0 +1,27 @@
+import Link from "next/link";
+
+type ServiceCardProps = {
+  title: string;
+  description: string;
+  slug: string;
+  icon?: React.ReactNode;
+};
+
+export function ServiceCard({ title, description, slug, icon }: ServiceCardProps) {
+  return (
+    <Link
+      href={`/services/${slug}`}
+      className="group rounded-lg border border-[rgba(177,227,199,0.16)] bg-polus-surface1 shadow-card p-6 transition hover:-translate-y-1 hover:border-[rgba(177,227,199,0.28)] hover:shadow-cardHover"
+    >
+      {icon && <div className="text-polus-mint mb-4">{icon}</div>}
+      <h3 className="font-semibold text-lg group-hover:text-polus-mint transition">{title}</h3>
+      <p className="mt-2 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">{description}</p>
+      <div className="mt-4 text-sm text-polus-mint flex items-center gap-1 group-hover:gap-2 transition-all">
+        Learn more
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </Link>
+  );
+}
