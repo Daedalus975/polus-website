@@ -131,7 +131,7 @@ export function getLocalBusinessSchema(): LocalBusinessSchema {
     email: businessEmail,
     priceRange: "$$",
     areaServed: {
-      "@type": "State",
+      "@type": "State" as const,
       name: "Oklahoma"
     },
     description: "IT and operations consulting for Oklahoma small businesses. Services include process mapping, SOPs, Microsoft 365 governance, backup/disaster recovery, managed IT, and more."
