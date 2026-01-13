@@ -54,12 +54,12 @@ export default function StartQuizPage() {
       id: "team_size",
       question: "How many people are on your team?",
       options: [
-        { label: "Just me (1 person)", value: "solo", weights: { "systems-assessment": 2, "web-development": 1 } },
-        { label: "2-5 employees", value: "micro", weights: { "systems-assessment": 1, "process-mapping-sops": 1 } },
-        { label: "6-15 employees", value: "small", weights: { "process-mapping-sops": 2, "m365-governance": 1, "onboarding-offboarding": 1 } },
-        { label: "16-30 employees", value: "medium", weights: { "m365-governance": 2, "service-desk-setup": 2, "onboarding-offboarding": 2 } },
-        { label: "31-50 employees", value: "large", weights: { "managed-it": 2, "endpoint-standardization": 2, "service-desk-setup": 2 } },
-        { label: "51+ employees", value: "enterprise", weights: { "managed-it": 3, "service-desk-setup": 3 } }
+        { label: "Just me (1 person)", value: "solo", weights: { "systems-assessment": 2, "web-development": 1, "mvp-prd": 1 } },
+        { label: "2-5 employees", value: "micro", weights: { "systems-assessment": 1, "process-clarity-pack": 1 } },
+        { label: "6-15 employees", value: "small", weights: { "process-clarity-pack": 2, "m365-governance": 1, "employee-lifecycle": 1 } },
+        { label: "16-30 employees", value: "medium", weights: { "m365-governance": 2, "it-operations-toolkit": 2, "employee-lifecycle": 2, "new-foundation-bundle": 2 } },
+        { label: "31-50 employees", value: "large", weights: { "strategic-advisory": 2, "identity-device-foundation": 2, "it-operations-toolkit": 2 } },
+        { label: "51+ employees", value: "enterprise", weights: { "strategic-advisory": 3, "it-operations-toolkit": 3 } }
       ]
     },
     {
@@ -67,11 +67,11 @@ export default function StartQuizPage() {
       question: "Which of these problems is causing you the most pain right now?",
       helpText: "Pick the one that keeps you up at night.",
       options: [
-        { label: "Nothing is documented—everything lives in people's heads", value: "no_docs", weights: { "process-mapping-sops": 5, "systems-assessment": 2 } },
-        { label: "Can't find files, emails get lost, info is scattered everywhere", value: "scattered", weights: { "m365-governance": 5, "process-mapping-sops": 2 } },
-        { label: "Terrified we'll lose critical data or have major downtime", value: "data_risk", weights: { "backup-disaster-recovery": 5, "systems-assessment": 2 } },
-        { label: "Onboarding new people takes forever and is inconsistent", value: "onboarding_slow", weights: { "onboarding-offboarding": 5, "process-mapping-sops": 2 } },
-        { label: "IT problems constantly interrupt work and slow us down", value: "it_fires", weights: { "managed-it": 4, "service-desk-setup": 3, "systems-assessment": 2 } },
+        { label: "Nothing is documented—everything lives in people's heads", value: "no_docs", weights: { "process-clarity-pack": 5, "systems-assessment": 2 } },
+        { label: "Can't find files, emails get lost, info is scattered everywhere", value: "scattered", weights: { "m365-governance": 5, "process-clarity-pack": 2 } },
+        { label: "Terrified we'll lose critical data or have major downtime", value: "data_risk", weights: { "backup-dr-readiness": 5, "systems-assessment": 2 } },
+        { label: "Onboarding new people takes forever and is inconsistent", value: "onboarding_slow", weights: { "employee-lifecycle": 5, "process-clarity-pack": 2 } },
+        { label: "IT problems constantly interrupt work and slow us down", value: "it_fires", weights: { "strategic-advisory": 4, "it-operations-toolkit": 3, "systems-assessment": 2 } },
         { label: "Need to build a new product or website but don't know where to start", value: "build_something", weights: { "mvp-prd": 4, "web-development": 3, "systems-assessment": 1 } },
         { label: "Not sure what the problem is—just know things aren't working", value: "unclear", weights: { "systems-assessment": 5 } }
       ]
@@ -93,9 +93,9 @@ export default function StartQuizPage() {
       question: "Do you currently have IT support?",
       showIf: (answers) => answers.primary_pain === "it_fires" || answers.primary_pain === "data_risk" || answers.primary_pain === "unclear",
       options: [
-        { label: "No—we're on our own", value: "none", weights: { "managed-it": 3, "systems-assessment": 2 } },
-        { label: "We have an IT person/MSP but they're overwhelmed or not responsive", value: "bad_support", weights: { "managed-it": 4, "service-desk-setup": 2 } },
-        { label: "We have good IT support, just need help with a specific project", value: "good_support", weights: { "process-mapping-sops": 1, "backup-disaster-recovery": 1 } }
+        { label: "No—we're on our own", value: "none", weights: { "strategic-advisory": 3, "systems-assessment": 2, "growth-acceleration-bundle": 3 } },
+        { label: "We have an IT person/MSP but they're overwhelmed or not responsive", value: "bad_support", weights: { "strategic-advisory": 4, "it-operations-toolkit": 2 } },
+        { label: "We have good IT support, just need help with a specific project", value: "good_support", weights: { "process-clarity-pack": 1, "backup-dr-readiness": 1 } }
       ]
     },
     {
@@ -103,9 +103,9 @@ export default function StartQuizPage() {
       question: "How much of your core processes are documented?",
       showIf: (answers) => answers.primary_pain === "no_docs" || answers.primary_pain === "onboarding_slow" || answers.primary_pain === "unclear",
       options: [
-        { label: "Almost nothing—it's all in people's heads", value: "none", weights: { "process-mapping-sops": 4, "systems-assessment": 2 } },
-        { label: "A few things, but they're outdated or incomplete", value: "partial", weights: { "process-mapping-sops": 3 } },
-        { label: "Most things are documented, just need to organize them", value: "exists_messy", weights: { "m365-governance": 2, "process-mapping-sops": 1 } }
+        { label: "Almost nothing—it's all in people's heads", value: "none", weights: { "process-clarity-pack": 4, "systems-assessment": 2 } },
+        { label: "A few things, but they're outdated or incomplete", value: "partial", weights: { "process-clarity-pack": 3 } },
+        { label: "Most things are documented, just need to organize them", value: "exists_messy", weights: { "m365-governance": 2, "process-clarity-pack": 1 } }
       ]
     },
     {
@@ -113,16 +113,16 @@ export default function StartQuizPage() {
       question: "If your main file server or cloud storage disappeared tomorrow, could you recover everything?",
       showIf: (answers) => answers.primary_pain === "data_risk" || answers.primary_pain === "unclear",
       options: [
-        { label: "Honestly, no—we'd be in serious trouble", value: "no", weights: { "backup-disaster-recovery": 5 } },
-        { label: "Probably, but I'm not confident", value: "maybe", weights: { "backup-disaster-recovery": 4 } },
-        { label: "Yes, we have backups and have tested them", value: "yes", weights: { "endpoint-standardization": 1 } }
+        { label: "Honestly, no—we'd be in serious trouble", value: "no", weights: { "backup-dr-readiness": 5 } },
+        { label: "Probably, but I'm not confident", value: "maybe", weights: { "backup-dr-readiness": 4 } },
+        { label: "Yes, we have backups and have tested them", value: "yes", weights: { "identity-device-foundation": 1 } }
       ]
     },
     {
       id: "urgency",
       question: "How urgently do you need to fix this?",
       options: [
-        { label: "Emergency—this is actively causing problems right now", value: "urgent", weights: { "systems-assessment": 2, "managed-it": 2 } },
+        { label: "Emergency—this is actively causing problems right now", value: "urgent", weights: { "systems-assessment": 2, "strategic-advisory": 2 } },
         { label: "Soon—need to address this within the next month", value: "soon", weights: {} },
         { label: "Planning ahead—want to fix it in the next 1-3 months", value: "planning", weights: {} },
         { label: "Just exploring options for now", value: "exploring", weights: { "systems-assessment": 1 } }
@@ -146,11 +146,11 @@ export default function StartQuizPage() {
       question: "When this is done, what would success look like?",
       helpText: "Pick the outcome that matters most to you.",
       options: [
-        { label: "Everyone knows where to find documents and how to do their job", value: "clarity", weights: { "process-mapping-sops": 3, "m365-governance": 2, "onboarding-offboarding": 2 } },
-        { label: "New hires ramp up in days instead of weeks", value: "fast_onboarding", weights: { "onboarding-offboarding": 4, "process-mapping-sops": 2 } },
-        { label: "We're confident our data is safe and we can recover from disasters", value: "data_safe", weights: { "backup-disaster-recovery": 4, "endpoint-standardization": 2 } },
-        { label: "IT problems don't interrupt work anymore", value: "stable_it", weights: { "managed-it": 3, "service-desk-setup": 2 } },
-        { label: "We have a clear roadmap for what to fix and in what order", value: "roadmap", weights: { "systems-assessment": 4 } },
+        { label: "Everyone knows where to find documents and how to do their job", value: "clarity", weights: { "process-clarity-pack": 3, "m365-governance": 2, "employee-lifecycle": 2 } },
+        { label: "New hires ramp up in days instead of weeks", value: "fast_onboarding", weights: { "employee-lifecycle": 4, "process-clarity-pack": 2 } },
+        { label: "We're confident our data is safe and we can recover from disasters", value: "data_safe", weights: { "backup-dr-readiness": 4, "identity-device-foundation": 2 } },
+        { label: "IT problems don't interrupt work anymore", value: "stable_it", weights: { "strategic-advisory": 3, "it-operations-toolkit": 2 } },
+        { label: "We have a clear roadmap for what to fix and in what order", value: "roadmap", weights: { "systems-assessment": 4, "technology-roadmap-workshop": 2 } },
         { label: "We launch our product/website and start getting customers", value: "launch", weights: { "mvp-prd": 3, "web-development": 3 } }
       ]
     }
@@ -159,7 +159,7 @@ export default function StartQuizPage() {
   const services: Record<string, ServiceRecommendation> = {
     "systems-assessment": {
       slug: "systems-assessment",
-      title: "Business + IT Systems Assessment",
+      title: "Systems Snapshot Assessment",
       description: "A 90-minute deep-dive session where we evaluate your current operations, IT setup, and workflows. You'll walk away with a prioritized roadmap and clear next steps.",
       deliverables: [
         "Documented findings report",
@@ -167,29 +167,29 @@ export default function StartQuizPage() {
         "Effort and cost estimates",
         "Quick wins identified"
       ],
-      price: "$1,250",
-      timeline: "1-2 weeks to complete",
-      minBudget: 1250,
+      price: "$299",
+      timeline: "1 week to complete",
+      minBudget: 299,
       idealFor: ["All industries", "Teams unsure where to start", "Crisis situations"]
     },
-    "process-mapping-sops": {
-      slug: "process-mapping-sops",
-      title: "Process Mapping + SOPs",
+    "process-clarity-pack": {
+      slug: "process-clarity-pack",
+      title: "Process Clarity Pack",
       description: "Document your core workflows and create standard operating procedures so your team has clear, repeatable processes—and new hires can ramp faster.",
       deliverables: [
-        "3-5 documented process maps",
-        "SOPs for each workflow",
+        "Visual process maps",
+        "Written SOPs",
         "Training materials",
-        "Adoption support"
+        "SOP template for future use"
       ],
-      price: "$2,500+",
-      timeline: "2-4 weeks",
-      minBudget: 2500,
+      price: "$1,500+",
+      timeline: "1-2 weeks per process",
+      minBudget: 1500,
       idealFor: ["Construction", "Nonprofits", "Growing teams with no documentation"]
     },
     "m365-governance": {
       slug: "m365-governance",
-      title: "Microsoft 365 Governance",
+      title: "M365 Cleanup & Governance",
       description: "Clean up your Teams, SharePoint, and file structure. Set clear permissions, establish naming conventions, and create sustainable governance rules.",
       deliverables: [
         "Cleaned-up Teams/SharePoint structure",
@@ -198,28 +198,28 @@ export default function StartQuizPage() {
         "User training"
       ],
       price: "$3,500+",
-      timeline: "3-5 weeks",
+      timeline: "4-6 weeks",
       minBudget: 3500,
       idealFor: ["Teams using M365 but files are scattered", "6+ employees"]
     },
-    "onboarding-offboarding": {
-      slug: "onboarding-offboarding",
-      title: "Onboarding / Offboarding Systems",
-      description: "Build repeatable checklists and workflows for new hires and departures. Ensure smooth transitions and secure access management.",
+    "employee-lifecycle": {
+      slug: "employee-lifecycle",
+      title: "Employee Lifecycle System",
+      description: "Build repeatable automated workflows for new hires and departures. Ensure smooth transitions and secure access management.",
       deliverables: [
-        "Onboarding checklist",
-        "Offboarding checklist",
+        "Onboarding automation",
+        "Offboarding automation",
         "Access provisioning workflows",
         "Manager playbooks"
       ],
-      price: "$2,000+",
-      timeline: "2-3 weeks",
-      minBudget: 2000,
+      price: "$2,500+",
+      timeline: "3-4 weeks",
+      minBudget: 2500,
       idealFor: ["Nonprofits with volunteers", "Growing teams", "High turnover"]
     },
-    "backup-disaster-recovery": {
-      slug: "backup-disaster-recovery",
-      title: "Backup + Disaster Recovery",
+    "backup-dr-readiness": {
+      slug: "backup-dr-readiness",
+      title: "Backup Verification & DR Readiness",
       description: "Verify your backups are working, document recovery procedures, and reduce downtime risk with tested runbooks.",
       deliverables: [
         "Backup verification report",
@@ -227,55 +227,55 @@ export default function StartQuizPage() {
         "Recovery time estimates",
         "Testing documentation"
       ],
-      price: "$2,800+",
-      timeline: "2-4 weeks",
-      minBudget: 2800,
+      price: "$1,500+",
+      timeline: "1-3 weeks",
+      minBudget: 1500,
       idealFor: ["All industries", "Teams worried about data loss"]
     },
-    "managed-it": {
-      slug: "managed-it",
-      title: "Managed IT Services",
-      description: "Ongoing IT support with proactive monitoring, help desk access, and strategic planning. Choose from Essentials or Plus packages.",
+    "identity-device-foundation": {
+      slug: "identity-device-foundation",
+      title: "Identity & Device Foundation",
+      description: "Modern cloud identity (Azure AD) and centralized device management (Intune) with MFA, SSO, and baseline security policies.",
       deliverables: [
-        "24/7 monitoring",
-        "Help desk access",
-        "Monthly reporting",
-        "Strategic planning"
+        "Azure AD/Entra ID setup",
+        "Device enrollment in Intune",
+        "MFA and Conditional Access",
+        "Security baseline policies"
       ],
-      price: "$800/month+",
-      timeline: "Ongoing monthly service",
-      minBudget: 9600, // Annual minimum
-      idealFor: ["No current IT support", "Bad MSP experience", "20+ employees"]
+      price: "$6,500+",
+      timeline: "6-8 weeks",
+      minBudget: 6500,
+      idealFor: ["Teams moving to cloud", "Security-conscious organizations", "10-50 employees"]
     },
-    "service-desk-setup": {
-      slug: "service-desk-setup",
-      title: "Service Desk Setup",
-      description: "Implement a platform-agnostic service desk with intake forms, categories, SLAs, knowledge base, and reporting.",
+    "strategic-advisory": {
+      slug: "strategic-advisory",
+      title: "Strategic IT Advisory (Retainer)",
+      description: "Ongoing strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets.",
+      deliverables: [
+        "Monthly strategic sessions",
+        "Technology roadmap",
+        "Vendor evaluation",
+        "Budget planning"
+      ],
+      price: "$500/month+",
+      timeline: "Ongoing monthly retainer",
+      minBudget: 6000, // 12 months minimum
+      idealFor: ["Growing businesses", "Teams making technology decisions", "Companies without IT leadership"]
+    },
+    "it-operations-toolkit": {
+      slug: "it-operations-toolkit",
+      title: "IT Operations Toolkit",
+      description: "Service desk, asset tracking, and operational foundation. Get structured support workflows and handoff-ready documentation.",
       deliverables: [
         "Service desk platform setup",
-        "Intake and categorization",
-        "SLA definitions",
-        "Knowledge base foundation"
+        "Asset management",
+        "Admin training",
+        "Knowledge base templates"
       ],
       price: "$4,500+",
-      timeline: "4-6 weeks",
+      timeline: "3-7 weeks",
       minBudget: 4500,
       idealFor: ["Teams with existing IT support", "30+ employees"]
-    },
-    "endpoint-standardization": {
-      slug: "endpoint-standardization",
-      title: "Endpoint Standardization",
-      description: "Establish policy baselines, compliance approaches, and standard app sets for consistent device management across your team.",
-      deliverables: [
-        "Device policy baselines",
-        "Standard app configurations",
-        "Compliance approach",
-        "Deployment runbooks"
-      ],
-      price: "$3,200+",
-      timeline: "3-5 weeks",
-      minBudget: 3200,
-      idealFor: ["Healthcare", "Professional services", "Teams with security concerns"]
     },
     "mvp-prd": {
       slug: "mvp-prd",
@@ -287,25 +287,10 @@ export default function StartQuizPage() {
         "First iteration plan",
         "Launch roadmap"
       ],
-      price: "$4,000+",
-      timeline: "3-6 weeks",
-      minBudget: 4000,
+      price: "$2,000+",
+      timeline: "1-day workshop + 1 week",
+      minBudget: 2000,
       idealFor: ["Startups", "Building new products"]
-    },
-    "automation-no-code": {
-      slug: "automation-no-code",
-      title: "Automation / No-Code",
-      description: "Build workflow automation using Power Automate, Zapier, or similar tools. Connect forms, tasks, notifications, and reporting.",
-      deliverables: [
-        "3-5 automated workflows",
-        "Integration setup",
-        "Testing and documentation",
-        "Training materials"
-      ],
-      price: "$2,200+",
-      timeline: "2-4 weeks",
-      minBudget: 2200,
-      idealFor: ["Teams with mature systems", "Repetitive manual processes"]
     },
     "web-development": {
       slug: "web-development",
@@ -321,6 +306,81 @@ export default function StartQuizPage() {
       timeline: "4-8 weeks",
       minBudget: 3500,
       idealFor: ["All industries", "Need online presence", "Lead generation"]
+    },
+    "new-foundation-bundle": {
+      slug: "new-foundation-bundle",
+      title: "New Foundation Bundle",
+      description: "Complete foundational IT setup: Identity & Device Foundation + M365 Governance + Employee Lifecycle. Save $2,000.",
+      deliverables: [
+        "Complete Azure AD/Intune setup",
+        "M365 governance framework",
+        "Automated employee workflows",
+        "Training and documentation"
+      ],
+      price: "$13,500",
+      timeline: "8-12 weeks",
+      minBudget: 13500,
+      idealFor: ["Companies starting fresh", "10-25 employees", "Complete IT rebuild"]
+    },
+    "growth-acceleration-bundle": {
+      slug: "growth-acceleration-bundle",
+      title: "Growth Acceleration Bundle",
+      description: "Assessment + Identity & Device Foundation + 3 months Strategic Advisory. Complete modernization with ongoing guidance.",
+      deliverables: [
+        "Systems assessment",
+        "Identity & Device implementation",
+        "3 months strategic advisory",
+        "Technology roadmap"
+      ],
+      price: "$8,500",
+      timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
+      minBudget: 8500,
+      idealFor: ["Ready to modernize", "Want expert guidance", "Growing businesses"]
+    },
+    "m365-training": {
+      slug: "m365-training",
+      title: "Microsoft 365 End-User Training",
+      description: "Drive M365 adoption with targeted training. Teams, SharePoint, OneDrive best practices.",
+      deliverables: [
+        "2-hour training session",
+        "Training materials",
+        "Recorded session",
+        "Quick reference guides"
+      ],
+      price: "$1,200+",
+      timeline: "1-2 weeks",
+      minBudget: 1200,
+      idealFor: ["Post-implementation teams", "Low M365 adoption", "User training needed"]
+    },
+    "cloud-cost-optimization": {
+      slug: "cloud-cost-optimization",
+      title: "Cloud Cost Optimization Review",
+      description: "Find waste in Azure and M365 spending. Most clients save 15-30% annually.",
+      deliverables: [
+        "License utilization audit",
+        "Cost analysis",
+        "Right-sizing recommendations",
+        "Monitoring setup"
+      ],
+      price: "$1,200",
+      timeline: "1-2 weeks",
+      minBudget: 1200,
+      idealFor: ["Growing cloud costs", "25+ M365 licenses", "Need cost controls"]
+    },
+    "technology-roadmap-workshop": {
+      slug: "technology-roadmap-workshop",
+      title: "Technology Roadmap Workshop",
+      description: "Build a 3-5 year technology plan. Full-day workshop with leadership to align technology with business goals.",
+      deliverables: [
+        "Current state assessment",
+        "3-5 year roadmap",
+        "Budget estimates",
+        "Executive presentation"
+      ],
+      price: "$2,000",
+      timeline: "1-day workshop + 1 week",
+      minBudget: 2000,
+      idealFor: ["Annual planning", "Funding rounds", "Multi-year decisions"]
     }
   };
 
@@ -613,7 +673,33 @@ export default function StartQuizPage() {
               <div>
                 <div className="mb-4">
                   <h3 className="font-semibold text-polus-mint mb-2">Starting Price</h3>
-                  <p className="text-2xl font-bold text-polus-gold">{service.price}</p>
+                  {(() => {
+                    // Calculate 20% discount
+                    const numMatch = service.price.match(/[\d,]+/);
+                    if (!numMatch) return <p className="text-2xl font-bold text-polus-gold">{service.price}</p>;
+                    
+                    const priceNum = parseInt(numMatch[0].replace(/,/g, ''));
+                    const discountedNum = Math.round(priceNum * 0.8); // 20% off
+                    const formattedDiscounted = discountedNum.toLocaleString();
+                    
+                    const prefix = service.price.match(/^\$/) ? '$' : '';
+                    const suffix = service.price.match(/\/\w+$/) ? service.price.match(/\/\w+$/)?.[0] : '';
+                    const discountedPrice = `${prefix}${formattedDiscounted}${suffix || ''}`;
+                    
+                    return (
+                      <div className="space-y-1">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide mb-2">
+                          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                          Limited Offer
+                        </div>
+                        <div className="text-lg text-[rgba(254,255,255,0.48)] line-through">{service.price}</div>
+                        <div className="text-2xl font-bold text-polus-gold">{discountedPrice}</div>
+                        <div className="text-sm text-polus-mint font-semibold">Save 20% • First 10 Businesses</div>
+                      </div>
+                    );
+                  })()}
                 </div>
                 <div>
                   <h3 className="font-semibold text-polus-mint mb-2">Typical Timeline</h3>

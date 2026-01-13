@@ -45,16 +45,22 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-polus-forest/30" />
 
         {/* Hero content */}
-        <Section className="relative z-10 pt-32 md:pt-40 pb-20 md:pb-28">
+        <Section className="relative z-20 pt-32 md:pt-40 pb-20 md:pb-28">
           <div className="max-w-4xl">
             <div className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-polus-gold mb-6">
               Polus
+            </div>
+            <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+              </svg>
+              Limited Time: 20% off for first 10 businesses
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper mb-6">
               Fix your processes. Strengthen your IT. Get more time back.
             </h1>
             <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl mb-8">
-              Polus helps Oklahoma small businesses run smoother by simplifying workflows, building SOPs, and improving Microsoft 365 + IT reliability—in plain English.
+              Stop wasting time on IT chaos and scattered processes. Get expert help for Oklahoma small businesses—without the MSP price tag.
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <Button
@@ -139,13 +145,21 @@ export default function HomePage() {
       <Section title="Start with a fixed-scope package" eyebrow="Packages">
         <div className="grid gap-6 md:grid-cols-3">
           <Card className="hover:shadow-cardHover flex flex-col">
-            <div className="font-semibold text-lg">Business + IT Systems Assessment</div>
+            <div className="font-semibold text-lg">Systems Snapshot Assessment</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
               A clear priority plan and next steps in 90 minutes.
             </div>
             <div className="mt-5">
-              <span className="text-[rgba(254,255,255,0.62)] text-sm">Starting at </span>
-              <span className="text-2xl font-semibold">$249</span>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide mb-2">
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                20% Off
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[rgba(254,255,255,0.48)] text-sm line-through">$299</span>
+                <span className="text-2xl font-semibold text-polus-gold">$239</span>
+              </div>
             </div>
             <div className="mt-4">
               <Button href="/services/systems-assessment" variant="secondary" className="w-full">
@@ -154,31 +168,47 @@ export default function HomePage() {
             </div>
           </Card>
           <Card className="hover:shadow-cardHover border-polus-gold/40 flex flex-col">
-            <div className="font-semibold text-lg">Process Mapping + SOP Starter Pack</div>
+            <div className="font-semibold text-lg">Identity & Device Foundation</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
-              Map workflows, create SOPs, and reduce day-to-day chaos.
+              Modern cloud identity and centralized device management.
             </div>
             <div className="mt-5">
-              <span className="text-[rgba(254,255,255,0.62)] text-sm">Starting at </span>
-              <span className="text-2xl font-semibold">$1,250</span>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide mb-2">
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                20% Off
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[rgba(254,255,255,0.48)] text-sm line-through">$6,500</span>
+                <span className="text-2xl font-semibold text-polus-gold">$5,200</span>
+              </div>
             </div>
             <div className="mt-4">
-              <Button href="/services/process-mapping-sops" variant="secondary" className="w-full">
+              <Button href="/services/identity-device-foundation" variant="secondary" className="w-full">
                 Learn more
               </Button>
             </div>
           </Card>
           <Card className="hover:shadow-cardHover flex flex-col">
-            <div className="font-semibold text-lg">IT Stability + Backup/DR Check</div>
+            <div className="font-semibold text-lg">Backup Verification & DR</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
-              Verify backups, reduce downtime risk, and document recovery steps.
+              Know your backups work before you need them.
             </div>
             <div className="mt-5">
-              <span className="text-[rgba(254,255,255,0.62)] text-sm">Starting at </span>
-              <span className="text-2xl font-semibold">$399</span>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide mb-2">
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                20% Off
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[rgba(254,255,255,0.48)] text-sm line-through">$1,500</span>
+                <span className="text-2xl font-semibold text-polus-gold">$1,200</span>
+              </div>
             </div>
             <div className="mt-4">
-              <Button href="/services/backup-disaster-recovery" variant="secondary" className="w-full">
+              <Button href="/services/backup-dr-readiness" variant="secondary" className="w-full">
                 Learn more
               </Button>
             </div>

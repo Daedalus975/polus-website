@@ -5,14 +5,20 @@ type ServiceCardProps = {
   description: string;
   slug: string;
   icon?: React.ReactNode;
+  tag?: string;
 };
 
-export function ServiceCard({ title, description, slug, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, slug, icon, tag }: ServiceCardProps) {
   return (
     <Link
       href={`/services/${slug}`}
       className="group rounded-lg border border-[rgba(177,227,199,0.16)] bg-polus-surface1 shadow-card p-6 transition hover:-translate-y-1 hover:border-[rgba(177,227,199,0.28)] hover:shadow-cardHover"
     >
+      {tag && (
+        <div className="inline-block mb-3 px-3 py-1 text-xs font-semibold rounded-full bg-polus-gold/20 text-polus-gold border border-polus-gold/30">
+          {tag}
+        </div>
+      )}
       {icon && <div className="text-polus-mint mb-4">{icon}</div>}
       <h3 className="font-semibold text-lg group-hover:text-polus-mint transition">{title}</h3>
       <p className="mt-2 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">{description}</p>

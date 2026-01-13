@@ -49,8 +49,8 @@ export default function PrivacyPage() {
         <h2 className="text-xl font-semibold mt-8 mb-4">Contact Us</h2>
         <p className="text-[rgba(254,255,255,0.78)] leading-relaxed">
           For questions about this privacy policy, contact us at{" "}
-          <a href="mailto:contact@polusllc.com" className="text-polus-mint hover:text-polus-gold underline">
-            contact@polusllc.com
+          <a href="mailto:jack.washmon@polus-cs.com" className="text-polus-mint hover:text-polus-gold underline">
+            jack.washmon@polus-cs.com
           </a>
         </p>
       </div>

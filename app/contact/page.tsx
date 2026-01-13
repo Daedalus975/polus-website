@@ -26,7 +26,7 @@ function getServiceExplanations(prefillData: any) {
     const reasons: string[] = [];
     
     // Service-specific logic
-    if (slug === 'process-mapping-sops') {
+    if (slug === 'process-clarity-pack') {
       if (prefillData.primary_pain === 'no_docs') reasons.push("You indicated nothing is documented");
       if (prefillData.documentation_state === 'none' || prefillData.documentation_state === 'partial') reasons.push("Your processes need documentation");
       if (prefillData.outcome === 'clarity') reasons.push("You want clear documentation for your team");
@@ -44,33 +44,33 @@ function getServiceExplanations(prefillData: any) {
       }
     }
     
-    if (slug === 'backup-disaster-recovery') {
+    if (slug === 'backup-dr-readiness') {
       if (prefillData.primary_pain === 'data_risk') reasons.push("You're concerned about data loss");
       if (prefillData.backup_confidence === 'no' || prefillData.backup_confidence === 'maybe') reasons.push("Your backup situation needs improvement");
       if (prefillData.outcome === 'data_safe') reasons.push("You want confidence in data recovery");
       if (reasons.length === 0) reasons.push("Critical foundation for business continuity");
     }
     
-    if (slug === 'onboarding-offboarding') {
+    if (slug === 'employee-lifecycle') {
       if (prefillData.primary_pain === 'onboarding_slow') reasons.push("New hire onboarding is taking too long");
       if (prefillData.outcome === 'fast_onboarding') reasons.push("You want faster employee ramp-up");
       if (prefillData.documentation_state === 'none' || prefillData.documentation_state === 'partial') reasons.push("Documented onboarding processes are missing");
       if (reasons.length === 0) reasons.push("Good fit for your team size and growth stage");
     }
     
-    if (slug === 'managed-it') {
+    if (slug === 'strategic-advisory') {
       if (prefillData.primary_pain === 'it_fires') reasons.push("IT problems are interrupting work");
       if (prefillData.it_support === 'none') reasons.push("You don't have IT support currently");
       if (prefillData.it_support === 'bad_support') reasons.push("Your current IT support isn't meeting needs");
       if (prefillData.outcome === 'stable_it') reasons.push("You want stable, reliable IT");
-      if (reasons.length === 0) reasons.push("Your team size indicates need for ongoing IT support");
+      if (reasons.length === 0) reasons.push("Your team size indicates need for ongoing IT guidance");
     }
     
-    if (slug === 'service-desk-setup') {
+    if (slug === 'it-operations-toolkit') {
       if (prefillData.primary_pain === 'it_fires') reasons.push("IT problems need better tracking and resolution");
       if (prefillData.it_support === 'bad_support') reasons.push("Improve your existing IT support with structure");
       if (prefillData.outcome === 'stable_it') reasons.push("You want organized IT request management");
-      if (reasons.length === 0) reasons.push("Good fit for teams needing structured IT support");
+      if (reasons.length === 0) reasons.push("Good fit for teams needing structured IT operations");
     }
     
     if (slug === 'systems-assessment') {
@@ -93,25 +93,46 @@ function getServiceExplanations(prefillData: any) {
       if (reasons.length === 0) reasons.push("Turn your product idea into reality");
     }
     
-    if (slug === 'endpoint-standardization') {
+    if (slug === 'identity-device-foundation') {
       if (prefillData.backup_confidence === 'yes') reasons.push("You're ready for device policy improvements");
       if (prefillData.outcome === 'data_safe') reasons.push("You want better device security");
       if (prefillData.team_size && (prefillData.team_size === 'large' || prefillData.team_size === 'enterprise')) {
-        reasons.push("Your team size benefits from standardized endpoints");
+        reasons.push("Your team size benefits from cloud identity and device management");
       }
-      if (reasons.length === 0) reasons.push("Strengthen security with device management");
+      if (reasons.length === 0) reasons.push("Strengthen security with modern identity foundation");
     }
-    
-    if (slug === 'automation-no-code') {
-      if (prefillData.m365_status === 'organized') reasons.push("Your systems are mature enough for automation");
-      if (prefillData.outcome === 'stable_it') reasons.push("Automation reduces manual IT work");
-      if (reasons.length === 0) reasons.push("Streamline repetitive tasks with automation");
+
+    if (slug === 'new-foundation-bundle') {
+      if (prefillData.team_size === 'medium') reasons.push("Perfect fit for your team size");
+      if (prefillData.it_support === 'none') reasons.push("Complete IT foundation for teams without support");
+      if (reasons.length === 0) reasons.push("Complete foundational IT setup (save $2,000)");
+    }
+
+    if (slug === 'growth-acceleration-bundle') {
+      if (prefillData.it_support === 'none') reasons.push("Assessment + implementation + ongoing guidance");
+      if (prefillData.primary_pain === 'unclear') reasons.push("Start with assessment, then modernize");
+      if (reasons.length === 0) reasons.push("Complete modernization path (save $1,299)");
+    }
+
+    if (slug === 'm365-training') {
+      if (prefillData.m365_status === 'underutilized') reasons.push("Drive adoption of M365 tools");
+      if (reasons.length === 0) reasons.push("Help your team use M365 effectively");
+    }
+
+    if (slug === 'cloud-cost-optimization') {
+      if (prefillData.team_size === 'large' || prefillData.team_size === 'enterprise') reasons.push("Save 15-30% on cloud spending");
+      if (reasons.length === 0) reasons.push("Find waste in Azure and M365");
+    }
+
+    if (slug === 'technology-roadmap-workshop') {
+      if (prefillData.outcome === 'roadmap') reasons.push("Build a 3-5 year technology plan");
+      if (reasons.length === 0) reasons.push("Strategic planning for technology decisions");
     }
     
     // Add industry fit if applicable
     const industryFit: Record<string, string[]> = {
-      'process-mapping-sops': ['construction', 'nonprofit'],
-      'onboarding-offboarding': ['nonprofit'],
+      'process-clarity-pack': ['construction', 'nonprofit'],
+      'employee-lifecycle': ['nonprofit'],
       'mvp-prd': ['startup'],
       'web-development': ['startup', 'professional']
     };
@@ -175,17 +196,24 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
   const sortedServices = topServices.sort((a, b) => (serviceScores[b] || 0) - (serviceScores[a] || 0));
   
   const serviceNames: Record<string, string> = {
-    'systems-assessment': 'Systems Assessment',
-    'process-mapping-sops': 'Process Mapping + SOPs',
-    'm365-governance': 'Microsoft 365 Governance',
-    'onboarding-offboarding': 'Onboarding / Offboarding',
-    'backup-disaster-recovery': 'Backup + Disaster Recovery',
-    'managed-it': 'Managed IT Services',
-    'service-desk-setup': 'Service Desk Setup',
-    'endpoint-standardization': 'Endpoint Standardization',
+    'systems-assessment': 'Systems Snapshot Assessment',
+    'process-clarity-pack': 'Process Clarity Pack',
+    'm365-governance': 'M365 Cleanup & Governance',
+    'employee-lifecycle': 'Employee Lifecycle System',
+    'backup-dr-readiness': 'Backup Verification & DR Readiness',
+    'identity-device-foundation': 'Identity & Device Foundation',
+    'strategic-advisory': 'Strategic IT Advisory (Retainer)',
+    'it-operations-toolkit': 'IT Operations Toolkit',
     'mvp-prd': 'MVP / PRD Kickoff',
-    'automation-no-code': 'Automation / No-Code',
-    'web-development': 'Web Development'
+    'web-development': 'Web Development',
+    'new-foundation-bundle': 'New Foundation Bundle',
+    'growth-acceleration-bundle': 'Growth Acceleration Bundle',
+    'm365-training': 'Microsoft 365 End-User Training',
+    'it-documentation': 'IT Documentation Package',
+    'dr-testing-service': 'Disaster Recovery Testing Service',
+    'cloud-cost-optimization': 'Cloud Cost Optimization Review',
+    'compliance-documentation': 'Compliance Documentation Prep',
+    'technology-roadmap-workshop': 'Technology Roadmap Workshop'
   };
 
   return (

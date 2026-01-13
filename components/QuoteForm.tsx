@@ -42,16 +42,23 @@ type PrefillData = {
 function mapServiceSlugToCheckboxLabel(slug: string): string {
   const mapping: Record<string, string> = {
     "systems-assessment": "Systems assessment",
-    "process-mapping-sops": "Process mapping / SOPs",
+    "process-clarity-pack": "Process mapping / SOPs",
     "m365-governance": "Microsoft 365 governance",
-    "onboarding-offboarding": "Onboarding / Offboarding",
-    "backup-disaster-recovery": "Backup / DR",
-    "managed-it": "Managed IT support",
-    "service-desk-setup": "Service desk setup",
-    "endpoint-standardization": "Endpoint management",
-    "mvp-prd": "Systems assessment",
-    "automation-no-code": "Systems assessment",
-    "web-development": "Web development"
+    "employee-lifecycle": "Employee lifecycle (onboarding/offboarding)",
+    "backup-dr-readiness": "Backup / DR",
+    "identity-device-foundation": "Identity & Device Foundation",
+    "strategic-advisory": "Strategic IT advisory (retainer)",
+    "it-operations-toolkit": "IT operations / service desk",
+    "mvp-prd": "MVP / PRD Kickoff",
+    "web-development": "Web development",
+    "new-foundation-bundle": "New Foundation Bundle",
+    "growth-acceleration-bundle": "Growth Acceleration Bundle",
+    "m365-training": "Microsoft 365 training",
+    "it-documentation": "IT documentation",
+    "dr-testing-service": "DR testing service",
+    "cloud-cost-optimization": "Cloud cost optimization",
+    "compliance-documentation": "Compliance documentation",
+    "technology-roadmap-workshop": "Technology roadmap workshop"
   };
   return mapping[slug] || "Systems assessment";
 }

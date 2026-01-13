@@ -98,7 +98,7 @@ export function StructuredData({ data }: StructuredDataProps) {
 
 export function getOrganizationSchema(): OrganizationSchema {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const businessEmail = process.env.BUSINESS_INBOX_EMAIL || "contact@polusllc.com";
+  const businessEmail = process.env.BUSINESS_INBOX_EMAIL || "jack.washmon@polus-cs.com";
 
   return {
     "@context": "https://schema.org",
@@ -121,7 +121,7 @@ export function getOrganizationSchema(): OrganizationSchema {
 
 export function getLocalBusinessSchema(): LocalBusinessSchema {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const businessEmail = process.env.BUSINESS_INBOX_EMAIL || "contact@polusllc.com";
+  const businessEmail = process.env.BUSINESS_INBOX_EMAIL || "jack.washmon@polus-cs.com";
 
   return {
     "@context": "https://schema.org",
@@ -130,10 +130,12 @@ export function getLocalBusinessSchema(): LocalBusinessSchema {
     url: baseUrl,
     email: businessEmail,
     priceRange: "$$",
-    areaServed: {
-      "@type": "State" as const,
-      name: "Oklahoma"
-    },
+    areaServed: [
+      {
+        "@type": "State",
+        name: "Oklahoma"
+      }
+    ],
     description: "IT and operations consulting for Oklahoma small businesses. Services include process mapping, SOPs, Microsoft 365 governance, backup/disaster recovery, managed IT, and more."
   };
 }

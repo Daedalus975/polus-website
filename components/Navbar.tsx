@@ -10,17 +10,14 @@ export function Navbar() {
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
 
   const services = [
-    { name: "Systems Assessment", href: "/services/systems-assessment" },
-    { name: "Process Mapping & SOPs", href: "/services/process-mapping-sops" },
-    { name: "M365 Governance", href: "/services/m365-governance" },
-    { name: "Onboarding & Offboarding", href: "/services/onboarding-offboarding" },
-    { name: "Backup & Disaster Recovery", href: "/services/backup-disaster-recovery" },
-    { name: "Managed IT", href: "/services/managed-it" },
-    { name: "Service Desk Setup", href: "/services/service-desk-setup" },
-    { name: "Endpoint Standardization", href: "/services/endpoint-standardization" },
-    { name: "MVP & PRD", href: "/services/mvp-prd" },
-    { name: "Automation (No-Code)", href: "/services/automation-no-code" },
-    { name: "Web Development", href: "/services/web-development" },
+    { name: "Systems Snapshot Assessment", href: "/services/systems-assessment" },
+    { name: "Strategic IT Advisory (Retainer)", href: "/services/strategic-advisory" },
+    { name: "Identity & Device Foundation", href: "/services/identity-device-foundation" },
+    { name: "M365 Cleanup & Governance", href: "/services/m365-governance" },
+    { name: "Employee Lifecycle System", href: "/services/employee-lifecycle" },
+    { name: "IT Operations Toolkit", href: "/services/it-operations-toolkit" },
+    { name: "Backup Verification & DR", href: "/services/backup-dr-readiness" },
+    { name: "Acquisition Integration", href: "/services/acquisition-integration" },
   ];
 
   const industries = [
@@ -30,8 +27,10 @@ export function Navbar() {
   ];
 
   return (
-    <div className="sticky top-0 z-50 border-b border-[rgba(177,227,199,0.12)] bg-polus-forest/90 backdrop-blur-navbar">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 h-[72px] flex items-center justify-between">
+    <>
+      {/* Main Navbar */}
+      <div className="sticky top-0 z-50 border-b border-[rgba(177,227,199,0.12)] bg-polus-forest/90 backdrop-blur-navbar">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 h-[72px] flex items-center justify-between">
         <Link href="/" className="font-bold text-xl text-polus-gold hover:text-polus-mint transition">Polus</Link>
         
         {/* Desktop Navigation */}
@@ -61,13 +60,6 @@ export function Navbar() {
             {servicesDropdownOpen && (
               <div className="absolute top-full left-0 pt-2 w-72">
                 <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] rounded-lg shadow-2xl py-3 backdrop-blur-sm">
-                  <Link
-                    href="/services"
-                    className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
-                  >
-                    View All Services
-                  </Link>
-                  <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
                   <div className="max-h-[60vh] overflow-y-auto">
                     {services.map((service) => (
                       <Link
@@ -79,6 +71,13 @@ export function Navbar() {
                       </Link>
                     ))}
                   </div>
+                  <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
+                  <Link
+                    href="/services"
+                    className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
+                  >
+                    More Services
+                  </Link>
                 </div>
               </div>
             )}
@@ -276,7 +275,33 @@ export function Navbar() {
             </div>
           </nav>
         </div>
-      )}
-    </div>
+        )}
+      </div>
+      
+      {/* Limited Time Offer Banner */}
+      <div className="sticky top-[72px] z-40 bg-polus-forest border-b border-polus-gold/20 py-2.5 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-polus-gold/5 to-transparent"></div>
+        <div className="relative z-10 flex items-center justify-center gap-3 flex-wrap">
+          <span className="inline-flex items-center gap-2 bg-polus-gold/10 border border-polus-gold/30 text-polus-gold px-3 py-1 rounded-full font-semibold text-xs uppercase tracking-wide">
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            </svg>
+            Limited Offer
+          </span>
+          <span className="text-polus-paper/90 text-sm md:text-base">
+            First 10 businesses get <span className="text-polus-gold font-semibold">20% off all services</span>
+          </span>
+          <a 
+            href="/contact?promo=early-bird" 
+            className="inline-flex items-center gap-1.5 bg-polus-gold text-polus-forest px-4 py-1.5 rounded-full font-semibold text-sm hover:brightness-110 transition shadow-sm"
+          >
+            Claim Your Spot
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </>
   );
 }

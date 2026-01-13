@@ -33,7 +33,13 @@ export default function AboutPage() {
               We help Oklahoma startups and small businesses strengthen their operations and IT through practical, straightforward consulting. Whether you need clearer workflows, better Microsoft 365 governance, or a plan to reduce downtime risk, we build solutions that fit your reality.
             </p>
           </div>
-          <ImagePlaceholder aspectRatio="square" />
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-cardHover border border-[rgba(177,227,199,0.12)]">
+            <img 
+              src="/about/workspace.jpg" 
+              alt="Professional workspace with code editor and coffee" 
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </Section>
 
@@ -42,24 +48,24 @@ export default function AboutPage() {
           <Card>
             <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg mb-2">Clarity</h3>
+            <h3 className="font-semibold text-lg mb-2">Integrity</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              Plain-English explanations, transparent pricing, clear next steps. No confusion, just clarity.
+              We do what's right for your business, not what's easiest for us. Honest recommendations, transparent pricing, no overselling.
             </p>
           </Card>
 
           <Card>
             <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg mb-2">Reliability</h3>
+            <h3 className="font-semibold text-lg mb-2">Accountability</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              Systems built to last, documented properly, and designed for stability. We build for the long term.
+              We own our work and stand behind our recommendations. Clear expectations, documented deliverables, and responsive follow-up.
             </p>
           </Card>
 
@@ -69,9 +75,9 @@ export default function AboutPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg mb-2">Follow-through</h3>
+            <h3 className="font-semibold text-lg mb-2">Commitment</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              We finish what we start. Implementation, documentation, training, support—we see it through.
+              We finish what we start and support what we build. Implementation, training, documentation—we see it through to adoption.
             </p>
           </Card>
         </div>

@@ -11,21 +11,32 @@
       <stop offset="55%" stop-color="#116238" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#0D251C" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="10%" stop-color="white"/>
+      <stop offset="100%" stop-color="black"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1920" height="1080" fill="#0D251C"/>
-  <rect width="1920" height="1080" fill="url(#spot)"/>
+  <mask id="fadeMask">
+    <rect width="1920" height="1080" fill="url(#bottomFade)"/>
+  </mask>
 
-  <path d="M0,235 C240,300 520,120 860,190 C1200,260 1450,95 1920,165 L1920,0 L0,0 Z"
-        fill="#C2A319" opacity="0.12"/>
+  <g mask="url(#fadeMask)">
+    <rect width="1920" height="1080" fill="#0D251C"/>
+    <rect width="1920" height="1080" fill="url(#spot)"/>
 
-  <path d="M0,560 C260,505 510,720 820,650 C1130,580 1340,430 1620,520 C1765,567 1845,610 1920,640 L1920,0 L0,0 Z"
-        fill="#116238" opacity="0.14"/>
+    <path d="M0,235 C240,300 520,120 860,190 C1200,260 1450,95 1920,165 L1920,0 L0,0 Z"
+          fill="#C2A319" opacity="0.12"/>
 
-  <path d="M0,830 C250,770 470,960 760,910 C1050,860 1210,720 1480,800 C1690,860 1810,930 1920,970 L1920,1080 L0,1080 Z"
-        fill="#B1E3C7" opacity="0.16"/>
-  <path d="M0,900 C300,840 520,1010 820,960 C1120,910 1260,790 1520,860 C1720,910 1840,980 1920,1020 L1920,1080 L0,1080 Z"
-        fill="#C2A319" opacity="0.08"/>
+    <path d="M0,560 C260,505 510,720 820,650 C1130,580 1340,430 1620,520 C1765,567 1845,610 1920,640 L1920,0 L0,0 Z"
+          fill="#116238" opacity="0.14"/>
 
-  <rect width="1920" height="1080" fill="url(#glow)"/>
+    <path d="M0,830 C250,770 470,960 760,910 C1050,860 1210,720 1480,800 C1690,860 1810,930 1920,970 L1920,1080 L0,1080 Z"
+          fill="#B1E3C7" opacity="0.16"/>
+    <path d="M0,900 C300,840 520,1010 820,960 C1120,910 1260,790 1520,860 C1720,910 1840,980 1920,1020 L1920,1080 L0,1080 Z"
+          fill="#C2A319" opacity="0.08"/>
+
+    <rect width="1920" height="1080" fill="url(#glow)"/>
+  </g>
 </svg>

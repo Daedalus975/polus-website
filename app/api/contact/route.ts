@@ -49,7 +49,7 @@ const Schema = z.object({
   team_size: z.string().optional(),
   primary_need: z.array(z.string()).optional(),
   urgency: z.string().optional(),
-  message: z.string().min(20),
+  message: z.string().min(20, "Message must be at least 20 characters"),
   honeypot: z.string().optional(),
   form_type: z.enum(["contact", "quote"]).optional()
 });
@@ -141,7 +141,7 @@ export async function POST(req: Request) {
   const host = process.env.SMTP_HOST;
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const from = process.env.SMTP_FROM || "Polus <no-reply@polusllc.com>";
+  const from = process.env.SMTP_FROM || "Polus <no-reply@polus-cs.com>";
 
   if (!host || !user || !pass) {
     return NextResponse.json(

@@ -47,8 +47,8 @@ export default function TermsPage() {
         <h2 className="text-xl font-semibold mt-8 mb-4">Contact</h2>
         <p className="text-[rgba(254,255,255,0.78)] leading-relaxed">
           Questions about these terms? Contact us at{" "}
-          <a href="mailto:contact@polusllc.com" className="text-polus-mint hover:text-polus-gold underline">
-            contact@polusllc.com
+          <a href="mailto:jack.washmon@polus-cs.com" className="text-polus-mint hover:text-polus-gold underline">
+            jack.washmon@polus-cs.com
           </a>
         </p>
       </div>
