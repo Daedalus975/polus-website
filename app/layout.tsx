@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StructuredData, getOrganizationSchema, getWebSiteSchema } from "@/components/StructuredData";
 import AIChatWidget from "@/components/AIChatWidget";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <StructuredData data={getOrganizationSchema()} />
         <StructuredData data={getWebSiteSchema()} />
+        <GoogleAnalytics />
       </head>
       <body className={inter.className}>
         {/* Skip to main content link for keyboard navigation */}
