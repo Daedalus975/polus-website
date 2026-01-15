@@ -16,6 +16,7 @@ type Step2Data = {
   email: string;
   phone: string;
   message: string;
+  privacyConsent: boolean;
   honeypot: string;
 };
 
@@ -173,6 +174,7 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
     email: "",
     phone: "",
     message: buildPrefilledMessage(prefillData || {}),
+    privacyConsent: false,
     honeypot: ""
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -260,6 +262,7 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
           email: "",
           phone: "",
           message: "",
+          privacyConsent: false,
           honeypot: ""
         });
         setStep(1);
@@ -504,6 +507,25 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
               />
             </div>
 
+            {/* Privacy Consent */}
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacyConsent"
+                checked={formData.privacyConsent}
+                onChange={(e) => setFormData(prev => ({ ...prev, privacyConsent: e.target.checked }))}
+                required
+                className="mt-1 w-4 h-4 rounded border-polus-mint/30 bg-polus-surface2 text-polus-gold focus:ring-2 focus:ring-polus-emerald/55"
+              />
+              <label htmlFor="privacyConsent" className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
+                I agree to the{" "}
+                <a href="/privacy" target="_blank" className="text-polus-mint hover:text-polus-gold underline">
+                  Privacy Policy
+                </a>{" "}
+                and understand my information will be used to provide a quote. <span className="text-polus-gold">*</span>
+              </label>
+            </div>
+
             {/* Honeypot */}
             <input
               type="text"
@@ -539,7 +561,7 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
                 type="submit"
                 variant="secondary"
                 className="w-1/3 min-w-fit"
-                disabled={status === "loading"}
+                disabled={status === "loading" || !formData.privacyConsent}
               >
                 {status === "loading" ? "Submitting..." : "Submit Quote Request"}
               </Button>

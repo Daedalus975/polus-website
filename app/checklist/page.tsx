@@ -67,6 +67,15 @@ export default function ChecklistPage() {
               </p>
             </div>
 
+            <div className="bg-polus-surface2 border border-polus-gold/20 rounded-lg p-6 mb-6">
+              <p className="text-sm text-[rgba(254,255,255,0.78)]">
+                <strong className="text-polus-gold">Privacy Notice:</strong> This checklist helps you prepare for your consultation. No personal data is collected when you download it. If you email your completed checklist to us, your information will be handled according to our{" "}
+                <a href="/privacy" className="text-polus-mint hover:text-polus-gold underline">
+                  Privacy Policy
+                </a>.
+              </p>
+            </div>
+
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-semibold text-polus-mint mb-3">Choose your format:</h3>

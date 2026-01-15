@@ -13,6 +13,7 @@ type FormData = {
   primary_need: string[];
   urgency: string;
   message: string;
+  privacyConsent: boolean;
   honeypot: string;
 };
 
@@ -27,6 +28,7 @@ export function ContactForm() {
     primary_need: [],
     urgency: "",
     message: "",
+    privacyConsent: false,
     honeypot: ""
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -82,6 +84,7 @@ export function ContactForm() {
           primary_need: [],
           urgency: "",
           message: "",
+          privacyConsent: false,
           honeypot: ""
         });
       } else {
@@ -271,6 +274,25 @@ export function ContactForm() {
         <p className="mt-1 text-xs text-[rgba(254,255,255,0.62)]">Minimum 20 characters</p>
       </div>
 
+      {/* Privacy Consent */}
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="privacyConsent"
+          checked={formData.privacyConsent}
+          onChange={(e) => setFormData(prev => ({ ...prev, privacyConsent: e.target.checked }))}
+          required
+          className="mt-1 w-4 h-4 rounded border-polus-mint/30 bg-polus-surface2 text-polus-gold focus:ring-2 focus:ring-polus-emerald/55"
+        />
+        <label htmlFor="privacyConsent" className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
+          I agree to the{" "}
+          <a href="/privacy" target="_blank" className="text-polus-mint hover:text-polus-gold underline">
+            Privacy Policy
+          </a>{" "}
+          and understand my information will be used to respond to my inquiry. <span className="text-polus-gold">*</span>
+        </label>
+      </div>
+
       {/* Honeypot field - hidden from real users */}
       <input
         type="text"
@@ -283,7 +305,7 @@ export function ContactForm() {
         aria-hidden="true"
       />
 
-      <Button type="submit" variant="primary" disabled={status === "loading"} className="w-full md:w-auto">
+      <Button type="submit" variant="primary" disabled={status === "loading" || !formData.privacyConsent} className="w-full md:w-auto">
         {status === "loading" ? "Sending..." : "Send Message"}
       </Button>
 
