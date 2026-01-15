@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StructuredData, getOrganizationSchema, getWebSiteSchema } from "@/components/StructuredData";
 import AIChatWidget from "@/components/AIChatWidget";
+import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -42,23 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <StructuredData data={getOrganizationSchema()} />
         <StructuredData data={getWebSiteSchema()} />
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-RMS0FPEQPD"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-RMS0FPEQPD');
-            `,
-          }}
-        />
+        {/* Google Analytics loaded conditionally by CookieConsent component after user consent */}
       </head>
       <body className={inter.className}>
         {/* Skip to main content link for keyboard navigation */}
@@ -72,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <Footer />
         <AIChatWidget />
+        <CookieConsent />
       </body>
     </html>
   );
