@@ -47,7 +47,7 @@ export default function NonprofitsPage() {
           <Card>
             <h3 className="font-semibold text-lg mb-2">Limited IT budget</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              Can't afford full-time IT. We provide fixed-scope packages and flexible support so you get expert help without the overhead.
+              Can&apos;t afford full-time IT. We provide fixed-scope packages and flexible support so you get expert help without the overhead.
             </p>
           </Card>
         </div>
@@ -210,10 +210,10 @@ export default function NonprofitsPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Let's talk about your mission
+            Let&apos;s talk about your mission
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
-            Book a free discovery call and we'll find ways to reduce overhead and increase impact.
+            Book a free discovery call and we&apos;ll find ways to reduce overhead and increase impact.
           </p>
           <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
             Book a Free Discovery Call

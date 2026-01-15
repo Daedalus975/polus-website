@@ -142,7 +142,7 @@ export default function ServicesPage() {
       <Section className="pt-20 md:pt-24">
         <h1 className="font-display text-4xl font-bold tracking-tight text-polus-paper mb-6">Operations and IT services built for small businesses</h1>
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
-          Pick a service to learn what you get, typical timelines, and starting-at pricing. Need something not listed? <a href="/contact" className="text-polus-gold hover:text-polus-mint transition underline">Just ask</a>—we offer additional services beyond what's shown here.
+          Pick a service to learn what you get, typical timelines, and starting-at pricing. Need something not listed? <a href="/contact" className="text-polus-gold hover:text-polus-mint transition underline">Just ask</a>—we offer additional services beyond what&apos;s shown here.
         </p>
         
         {/* Search Input */}
@@ -219,7 +219,7 @@ export default function ServicesPage() {
             Need something else?
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
-            We offer additional services including process mapping, workflow automation, web development, and product kickoff planning. If you don't see what you need here, reach out—we can likely help or refer you to a trusted partner.
+            We offer additional services including process mapping, workflow automation, web development, and product kickoff planning. If you don&apos;t see what you need here, reach out—we can likely help or refer you to a trusted partner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -241,7 +241,7 @@ export default function ServicesPage() {
       {FEATURE_FLAGS.DELIVERABLES_GALLERY_ENABLED && (
         <Section title="Sample Deliverables" eyebrow="What you receive">
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
-            Every engagement includes clear, actionable deliverables. Here are examples of what you'll receive (sanitized for confidentiality).
+            Every engagement includes clear, actionable deliverables. Here are examples of what you&apos;ll receive (sanitized for confidentiality).
           </p>
           {/* <DeliverableGallery /> */}
         </Section>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
             Not sure where to start?
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
-            Book a free discovery call and we'll recommend the best first step.
+            Book a free discovery call and we&apos;ll recommend the best first step.
           </p>
           <a
             href="/book"

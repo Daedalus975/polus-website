@@ -14,10 +14,10 @@ export default function BookPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
-            Free • 30 minutes • You'll leave with next steps
+            Free • 30 minutes • You&apos;ll leave with next steps
           </p>
           <p className="text-[rgba(254,255,255,0.62)]">
-            We'll talk about your goals, current challenges, and what success looks like. Then we'll recommend the best next step—with no obligation.
+            We&apos;ll talk about your goals, current challenges, and what success looks like. Then we&apos;ll recommend the best next step—with no obligation.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function BookPage() {
               View Calendar & Book
             </a>
             <p className="mt-6 text-sm text-[rgba(254,255,255,0.62)]">
-              You'll receive a calendar invite and reminder before the call.
+              You&apos;ll receive a calendar invite and reminder before the call.
             </p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function ResultsPage() {
     <>
       <Section title="What you can expect" className="pt-20 md:pt-24">
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
-          We share outcomes and sample deliverables without naming clients. Here's what success looks like.
+          We share outcomes and sample deliverables without naming clients. Here&apos;s what success looks like.
         </p>
       </Section>
 
@@ -148,7 +148,7 @@ export default function ResultsPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            See if we're a fit
+            See if we&apos;re a fit
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
             Book a free discovery call. No sales pitch—just a conversation about your goals.

@@ -564,7 +564,7 @@ export default function StartAssessmentPage() {
       <Section title="Find Your Starting Point" eyebrow="Guided Assessment" className="pt-20 md:pt-24">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
-            Answer 10 targeted questions and we'll recommend the exact service you need—based on your specific challenges, budget, and industry.
+            Answer 10 targeted questions and we&apos;ll recommend the exact service you need—based on your specific challenges, budget, and industry.
           </p>
           <Card className="p-8">
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -612,7 +612,7 @@ export default function StartAssessmentPage() {
               </Button>
             </div>
             <p className="text-sm text-[rgba(254,255,255,0.58)] mt-6">
-              Not sure which option to choose? The assessment helps us understand your situation so we can point you in the right direction—or book a discovery call and we'll figure it out together.
+              Not sure which option to choose? The assessment helps us understand your situation so we can point you in the right direction—or book a discovery call and we&apos;ll figure it out together.
             </p>
           </Card>
         </div>
@@ -634,7 +634,7 @@ export default function StartAssessmentPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
                 <div>
-                  <h3 className="font-semibold mb-1">Not sure? Let's talk it through.</h3>
+                  <h3 className="font-semibold mb-1">Not sure? Let&apos;s talk it through.</h3>
                   <p className="text-sm text-[rgba(254,255,255,0.78)]">
                     Based on your answers, we have a good idea—but a 15-minute discovery call would help us pinpoint exactly what you need. No pressure, just clarity.
                   </p>
@@ -659,7 +659,7 @@ export default function StartAssessmentPage() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
-                <h3 className="font-semibold text-polus-mint mb-3">What You'll Get</h3>
+                <h3 className="font-semibold text-polus-mint mb-3">What You&apos;ll Get</h3>
                 <ul className="space-y-2">
                   {service.deliverables.map((item, index) => (
                     <li key={index} className="flex items-start gap-2 text-sm text-[rgba(254,255,255,0.78)]">

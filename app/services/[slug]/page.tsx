@@ -989,7 +989,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
               {service.overview}
             </p>
 
-            <h3 className="text-xl font-semibold mb-4">What you'll get</h3>
+            <h3 className="text-xl font-semibold mb-4">What you&apos;ll get</h3>
             <ul className="space-y-3 mb-8">
               {service.deliverables.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
@@ -1077,7 +1077,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
                 </div>
 
                 <div className="pt-4 border-t border-[rgba(177,227,199,0.12)] text-sm text-[rgba(254,255,255,0.62)]">
-                  Free • 30 minutes • You'll leave with next steps
+                  Free • 30 minutes • You&apos;ll leave with next steps
                 </div>
               </div>
             </Card>

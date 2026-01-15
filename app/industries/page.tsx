@@ -56,7 +56,7 @@ export default function IndustriesPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Don't see your industry?
+            Don&apos;t see your industry?
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
             We work with all types of small businesses. Book a call to discuss your specific needs.

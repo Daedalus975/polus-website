@@ -152,7 +152,7 @@ export default function ConstructionPage() {
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Project Folder Template</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
-                  Standardize where docs live so teams don't waste time searching.
+                  Standardize where docs live so teams don&apos;t waste time searching.
                 </p>
                 <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
                   <li className="flex items-start gap-2">
@@ -210,10 +210,10 @@ export default function ConstructionPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Let's talk about your projects
+            Let&apos;s talk about your projects
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
-            Book a free discovery call and we'll map out a practical next step.
+            Book a free discovery call and we&apos;ll map out a practical next step.
           </p>
           <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
             Book a Free Discovery Call

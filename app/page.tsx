@@ -76,7 +76,7 @@ export default function HomePage() {
               </Button>
             </div>
             <p className="text-sm text-polus-paper/70">
-              Free • 30 minutes • You'll leave with next steps
+              Free • 30 minutes • You&apos;ll leave with next steps
             </p>
           </div>
         </Section>

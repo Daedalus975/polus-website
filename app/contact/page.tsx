@@ -228,9 +228,9 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p className="text-polus-mint font-semibold mb-1">Assessment Completed — Here's What We Recommend</p>
+                    <p className="text-polus-mint font-semibold mb-1">Assessment Completed — Here&apos;s What We Recommend</p>
                     <div className="text-sm text-[rgba(254,255,255,0.78)] mb-4">
-                      Based on your answers, we've pre-selected the services that best match your needs. The form below is ready to submit—just add your contact info.
+                      Based on your answers, we&apos;ve pre-selected the services that best match your needs. The form below is ready to submit—just add your contact info.
                     </div>
                   </div>
                 </div>
@@ -280,7 +280,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
             </>
           )}
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
-            Tell us what you need—we'll send you a detailed quote within 1 business day.
+            Tell us what you need—we&apos;ll send you a detailed quote within 1 business day.
           </p>
           <p className="text-sm text-[rgba(254,255,255,0.65)]">
             Looking for a quick conversation first? <a href="/book" className="text-polus-mint hover:text-polus-gold underline">Book a free discovery call</a>.
@@ -292,7 +292,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
       <Section title="Or just reach out" className="bg-polus-surface1">
         <div className="max-w-3xl">
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
-            Have a simple question? Send us a message and we'll reply within 1 business day.
+            Have a simple question? Send us a message and we&apos;ll reply within 1 business day.
           </p>
           <ContactForm />
         </div>

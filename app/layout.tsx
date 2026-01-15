@@ -6,6 +6,7 @@ import { StructuredData, getOrganizationSchema, getWebSiteSchema } from "@/compo
 import AIChatWidget from "@/components/AIChatWidget";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -41,8 +42,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <StructuredData data={getOrganizationSchema()} />
         <StructuredData data={getWebSiteSchema()} />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMS0FPEQPD"></script>
-        <script
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RMS0FPEQPD"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

@@ -49,10 +49,10 @@ export default function BlogPage() {
               Blog Coming Soon
             </h2>
             <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
-              We're working on publishing helpful content about IT management, Microsoft 365 best practices, backup strategies, and more for Oklahoma small businesses.
+              We&apos;re working on publishing helpful content about IT management, Microsoft 365 best practices, backup strategies, and more for Oklahoma small businesses.
             </p>
             <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
-              In the meantime, have questions about IT or operations? Let's talk.
+              In the meantime, have questions about IT or operations? Let&apos;s talk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
@@ -69,7 +69,7 @@ export default function BlogPage() {
       <Section>
         <div className="max-w-3xl">
           <h2 className="font-display text-3xl font-bold tracking-tight text-polus-paper mb-6">
-            Topics We'll Cover
+            Topics We&apos;ll Cover
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
             <Card>

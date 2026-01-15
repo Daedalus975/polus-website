@@ -42,7 +42,7 @@ export default function LocationsPage() {
             Polus LLC provides expert IT consulting and operations services to small businesses throughout Oklahoma—with deep expertise in Microsoft 365, process optimization, backup/disaster recovery, and systems management.
           </p>
           <p className="mt-4 text-lg text-neutral-600">
-            Whether you're in Oklahoma City, Tulsa, or anywhere else in the state, we help Oklahoma businesses strengthen their IT infrastructure and optimize their operations.
+            Whether you&apos;re in Oklahoma City, Tulsa, or anywhere else in the state, we help Oklahoma businesses strengthen their IT infrastructure and optimize their operations.
           </p>
         </div>
       </Section>

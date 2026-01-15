@@ -33,7 +33,7 @@ export default function StartupsPage() {
           <Card>
             <h3 className="font-semibold text-lg mb-2">No documented processes</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              Everything lives in people's heads. We document core workflows and create SOPs so new hires can ramp quickly.
+              Everything lives in people&apos;s heads. We document core workflows and create SOPs so new hires can ramp quickly.
             </p>
           </Card>
 
@@ -47,7 +47,7 @@ export default function StartupsPage() {
           <Card>
             <h3 className="font-semibold text-lg mb-2">Security gaps</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              No MFA, shared passwords, unclear access controls. We implement identity and access baselines so you're secure from day one.
+              No MFA, shared passwords, unclear access controls. We implement identity and access baselines so you&apos;re secure from day one.
             </p>
           </Card>
         </div>
@@ -198,10 +198,10 @@ export default function StartupsPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Let's talk about your roadmap
+            Let&apos;s talk about your roadmap
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
-            Book a free discovery call and we'll help you prioritize the right next step.
+            Book a free discovery call and we&apos;ll help you prioritize the right next step.
           </p>
           <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
             Book a Free Discovery Call

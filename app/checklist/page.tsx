@@ -26,7 +26,7 @@ export default function ChecklistPage() {
             </div>
 
             <div className="border-t border-[rgba(177,227,199,0.16)] pt-6 mb-6">
-              <h3 className="text-lg font-semibold mb-3">What's included:</h3>
+              <h3 className="text-lg font-semibold mb-3">What&apos;s included:</h3>
               <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -63,7 +63,7 @@ export default function ChecklistPage() {
 
             <div className="bg-polus-surface2 border border-polus-mint/20 rounded-lg p-6 mb-6">
               <p className="text-sm text-[rgba(254,255,255,0.78)] mb-4">
-                <strong className="text-polus-mint">Note:</strong> You don't need to answer every question. Fill out what you can, and leave the rest blank. We'll work through it together during your discovery call.
+                <strong className="text-polus-mint">Note:</strong> You don&apos;t need to answer every question. Fill out what you can, and leave the rest blank. We&apos;ll work through it together during your discovery call.
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export default function ChecklistPage() {
             Ready to get started?
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
-            Book a free 30-minute discovery call. You'll leave with clear next steps and a recommended starting point.
+            Book a free 30-minute discovery call. You&apos;ll leave with clear next steps and a recommended starting point.
           </p>
           <Button href="/book" variant="primary" className="px-8 py-3">
             Book a Free Discovery Call

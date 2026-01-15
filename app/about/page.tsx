@@ -3,6 +3,7 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { OperatingSystem } from "@/components/OperatingSystem";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,10 +35,12 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-cardHover border border-[rgba(177,227,199,0.12)]">
-            <img 
+            <Image 
               src="/about/workspace.jpg" 
               alt="Professional workspace with code editor and coffee" 
-              className="object-cover w-full h-full"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -53,7 +56,7 @@ export default function AboutPage() {
             </div>
             <h3 className="font-semibold text-lg mb-2">Integrity</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-              We do what's right for your business, not what's easiest for us. Honest recommendations, transparent pricing, no overselling.
+              We do what&apos;s right for your business, not what&apos;s easiest for us. Honest recommendations, transparent pricing, no overselling.
             </p>
           </Card>
 
@@ -85,7 +88,7 @@ export default function AboutPage() {
 
       <Section title="How we work" eyebrow="Our Operating System" className="bg-polus-surface1">
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
-          Every engagement follows a clear four-phase framework: assess, plan, implement, adopt. You'll always know what's happening and what you're getting.
+          Every engagement follows a clear four-phase framework: assess, plan, implement, adopt. You&apos;ll always know what&apos;s happening and what you&apos;re getting.
         </p>
         <OperatingSystem variant="full" />
       </Section>
@@ -93,7 +96,7 @@ export default function AboutPage() {
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Let's talk about your systems
+            Let&apos;s talk about your systems
           </h2>
           <p className="text-lg text-[rgba(254,255,255,0.78)] mb-8">
             Book a free 30-minute discovery call and leave with clear next steps.

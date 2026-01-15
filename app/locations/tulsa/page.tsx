@@ -160,7 +160,7 @@ export default function TulsaPage() {
         <Card className="max-w-2xl mx-auto text-center p-8">
           <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
           <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mb-6">
-            Book a free 30-minute discovery call. We'll discuss your needs and recommend the right next step—no obligation.
+            Book a free 30-minute discovery call. We&apos;ll discuss your needs and recommend the right next step—no obligation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
