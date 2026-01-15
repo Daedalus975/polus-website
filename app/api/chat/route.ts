@@ -50,8 +50,8 @@ AVAILABLE SERVICES WITH DISCOUNT PRICING:
 19. Acquisition Integration - $4,000+ (was $5,000+) - Post-merger IT integration
 
 **Bundles:**
-- New Foundation Bundle - $8,400 (was $10,500) - Identity & Device + Email & Backup + M365
-- Growth Acceleration Bundle - $12,000 (was $15,000) - New Foundation + Process Clarity + Financial Integrations
+- IT Foundation Package - $8,400 (was $10,500) - Identity & Device + Email & Backup + M365
+- Growth Package - $12,000 (was $15,000) - New Foundation + Process Clarity + Financial Integrations
 
 **Add-Ons:**
 - Documentation Updates - $400 (was $500)

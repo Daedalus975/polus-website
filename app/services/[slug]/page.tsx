@@ -257,7 +257,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "it-operations-toolkit",
-    title: "Operations Toolkit",
+    title: "IT Operations Setup",
     description: "Service desk, asset tracking, and operational foundation",
     overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory, admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, IT operations runbook, MSP transition package, and 30-day post-implementation support.",
     startingPrice: "$4,500",
@@ -405,7 +405,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "mvp-prd",
-    title: "MVP Kickoff",
+    title: "Product Planning",
     description: "Turn your product idea into a clear, actionable roadmap",
     overview: "Work with you to scope your Minimum Viable Product, define features, prioritize development phases, and create a detailed Product Requirements Document (PRD) ready for development. 1-day workshop format with comprehensive deliverables.",
     startingPrice: "$2,000",
@@ -426,7 +426,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "new-foundation-bundle",
-    title: "New Foundation Bundle",
+    title: "IT Foundation Package",
     description: "Complete foundational IT setup for growing businesses",
     overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security, M365 Governance, and Employee Lifecycle to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
     startingPrice: "$13,500",
@@ -455,7 +455,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "growth-acceleration-bundle",
-    title: "Growth Acceleration Bundle",
+    title: "Growth Package",
     description: "Assessment, implementation, and ongoing guidance",
     overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review to identify priorities, implements your Identity & Security foundation, then includes 3 months of IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
     startingPrice: "$8,500",

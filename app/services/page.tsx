@@ -40,7 +40,7 @@ export default function ServicesPage() {
       tag: "HR and Security"
     },
     {
-      title: "Operations Toolkit",
+      title: "IT Operations Setup",
       description: "Service desk, asset tracking, and operational foundation. Get structured support workflows, inventory management, and handoff-ready documentation.",
       slug: "it-operations-toolkit",
       tag: "Operational Maturity"
@@ -64,7 +64,7 @@ export default function ServicesPage() {
       tag: "Digital Presence"
     },
     {
-      title: "MVP Kickoff",
+      title: "Product Planning",
       description: "Turn your product idea into a clear, actionable roadmap. 1-day workshop with detailed Product Requirements Document.",
       slug: "mvp-prd",
       tag: "Product Planning"
@@ -76,13 +76,13 @@ export default function ServicesPage() {
       tag: "M&A Support"
     },
     {
-      title: "New Foundation Bundle",
+      title: "IT Foundation Package",
       description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
       slug: "new-foundation-bundle",
       tag: "Bundle Deal"
     },
     {
-      title: "Growth Acceleration Bundle",
+      title: "Growth Package",
       description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,299. Complete modernization with ongoing guidance.",
       slug: "growth-acceleration-bundle",
       tag: "Bundle Deal"

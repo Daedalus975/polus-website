@@ -309,7 +309,7 @@ export default function StartAssessmentPage() {
     },
     "new-foundation-bundle": {
       slug: "new-foundation-bundle",
-      title: "New Foundation Bundle",
+      title: "IT Foundation Package",
       description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000.",
       deliverables: [
         "Complete Azure AD/Intune setup",
@@ -324,7 +324,7 @@ export default function StartAssessmentPage() {
     },
     "growth-acceleration-bundle": {
       slug: "growth-acceleration-bundle",
-      title: "Growth Acceleration Bundle",
+      title: "Growth Package",
       description: "Assessment, Identity & Security, and 3 months IT Advisory. Complete modernization with ongoing guidance.",
       deliverables: [
         "Systems review",

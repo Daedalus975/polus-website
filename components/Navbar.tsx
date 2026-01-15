@@ -15,7 +15,7 @@ export function Navbar() {
     { name: "Identity & Security", href: "/services/identity-device-foundation" },
     { name: "M365 Governance", href: "/services/m365-governance" },
     { name: "Employee Lifecycle", href: "/services/employee-lifecycle" },
-    { name: "Operations Toolkit", href: "/services/it-operations-toolkit" },
+    { name: "IT Operations Setup", href: "/services/it-operations-toolkit" },
     { name: "Backup & DR", href: "/services/backup-dr-readiness" },
     { name: "Acquisition Integration", href: "/services/acquisition-integration" },
   ];
