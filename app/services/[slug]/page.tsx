@@ -975,6 +975,13 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
 
   return (
     <>
+      {/* Service Schema Markup */}
+      <StructuredData data={getServiceSchema(
+        service.title,
+        service.description,
+        service.startingPrice
+      )} />
+      
       <Section title={service.title} className="pt-20 md:pt-24">
         <p className="text-xl text-[rgba(254,255,255,0.88)] max-w-3xl">
           {service.description}
