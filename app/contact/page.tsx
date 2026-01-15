@@ -196,7 +196,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
   const sortedServices = topServices.sort((a, b) => (serviceScores[b] || 0) - (serviceScores[a] || 0));
   
   const serviceNames: Record<string, string> = {
-    'systems-assessment': 'Systems Assessment',
+    'systems-assessment': 'Systems Review',
     'process-clarity-pack': 'Process Documentation',
     'm365-governance': 'M365 Governance',
     'employee-lifecycle': 'Employee Lifecycle',

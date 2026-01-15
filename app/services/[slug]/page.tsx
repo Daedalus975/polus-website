@@ -24,7 +24,7 @@ type ServiceData = {
 const services: ServiceData[] = [
   {
     slug: "systems-assessment",
-    title: "Systems Assessment",
+    title: "Systems Review",
     description: "Get clarity on what to fix first—fast",
     overview: "Go beyond a quick conversation. This paid assessment includes hands-on review of your systems, documented findings, prioritized recommendations, and a clear roadmap with effort estimates and pricing. Perfect for teams ready to move from 'what's wrong?' to 'what do we fix first?'",
     startingPrice: "$299",
@@ -457,11 +457,11 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Acceleration Bundle",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Assessment to identify priorities, implements your Identity & Security foundation, then includes 3 months of IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review to identify priorities, implements your Identity & Security foundation, then includes 3 months of IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
     startingPrice: "$8,500",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
-      "Systems Assessment with prioritized roadmap",
+      "Systems Review with prioritized roadmap",
       "Identity & Security implementation (Tier 1)",
       "3 months Strategic IT Advisory (Essentials tier: 4 hours/month)",
       "Monthly strategic planning sessions",

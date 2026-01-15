@@ -10,7 +10,7 @@ export function Navbar() {
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
 
   const services = [
-    { name: "Systems Assessment", href: "/services/systems-assessment" },
+    { name: "Systems Review", href: "/services/systems-assessment" },
     { name: "IT Advisory", href: "/services/strategic-advisory" },
     { name: "Identity & Security", href: "/services/identity-device-foundation" },
     { name: "M365 Governance", href: "/services/m365-governance" },

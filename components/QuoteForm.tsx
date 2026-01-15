@@ -41,7 +41,7 @@ type PrefillData = {
 
 function mapServiceSlugToCheckboxLabel(slug: string): string {
   const mapping: Record<string, string> = {
-    "systems-assessment": "Systems assessment",
+    "systems-assessment": "Systems review",
     "process-clarity-pack": "Process mapping / SOPs",
     "m365-governance": "M365 governance",
     "employee-lifecycle": "Employee lifecycle (onboarding/offboarding)",
@@ -60,7 +60,7 @@ function mapServiceSlugToCheckboxLabel(slug: string): string {
     "compliance-documentation": "Compliance documentation",
     "technology-roadmap-workshop": "Technology roadmap workshop"
   };
-  return mapping[slug] || "Systems assessment";
+  return mapping[slug] || "Systems review";
 }
 
 function buildPrefilledMessage(data: PrefillData): string {
@@ -280,7 +280,7 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
     "Onboarding / Offboarding",
     "Endpoint management",
     "Service desk setup",
-    "Systems assessment",
+    "Systems review",
     "Web development",
     "Managed IT support"
   ];

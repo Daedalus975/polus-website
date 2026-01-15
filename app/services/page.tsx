@@ -10,7 +10,7 @@ export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const services = [
     {
-      title: "Systems Assessment",
+      title: "Systems Review",
       description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
       slug: "systems-assessment",
       tag: "Start Here"

@@ -159,7 +159,7 @@ export default function StartAssessmentPage() {
   const services: Record<string, ServiceRecommendation> = {
     "systems-assessment": {
       slug: "systems-assessment",
-      title: "Systems Assessment",
+      title: "Systems Review",
       description: "A 90-minute deep-dive session where we evaluate your current operations, IT setup, and workflows. You'll walk away with a prioritized roadmap and clear next steps.",
       deliverables: [
         "Documented findings report",
@@ -327,7 +327,7 @@ export default function StartAssessmentPage() {
       title: "Growth Acceleration Bundle",
       description: "Assessment, Identity & Security, and 3 months IT Advisory. Complete modernization with ongoing guidance.",
       deliverables: [
-        "Systems assessment",
+        "Systems review",
         "Identity & Device implementation",
         "3 months strategic advisory",
         "Technology roadmap"

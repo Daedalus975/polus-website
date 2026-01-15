@@ -19,7 +19,7 @@ CORE BUSINESS INFO:
 AVAILABLE SERVICES WITH DISCOUNT PRICING:
 
 **Assessments & Advisory:**
-1. Systems Assessment - $239 (was $299) - 90-minute assessment with priority plan
+1. Systems Review - $239 (was $299) - 90-minute assessment with priority plan
 2. IT Advisory - $400/month (was $500/month) - Ongoing strategic guidance
 3. Technology Roadmap Workshop - $3,200 (was $4,000) - Multi-year technology planning
 
