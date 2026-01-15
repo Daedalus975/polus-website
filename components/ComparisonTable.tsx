@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Card } from "./Card";
+import { track } from "@/lib/track";
 
 type ComparisonRow = {
   category: string;
@@ -91,6 +92,12 @@ export function ComparisonTable() {
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState<'diy' | 'polus' | 'msp' | null>(null);
 
+  const handleCellHover = (category: string, option: 'diy' | 'polus' | 'msp') => {
+    const cellKey = `${category}-${option}`;
+    setHoveredCell(cellKey);
+    track("comparison_cell_hovered", { category, option });
+  };
+
   return (
     <div className="max-w-5xl mx-auto">
       {/* Mobile: Option Selector */}
@@ -151,11 +158,11 @@ export function ComparisonTable() {
                 {/* DIY Column */}
                 <td
                   className="py-4 px-4 text-center text-[rgba(254,255,255,0.78)] relative group cursor-help"
-                  onMouseEnter={() => setHoveredCell(`diy-${idx}`)}
+                  onMouseEnter={() => handleCellHover(row.category, 'diy')}
                   onMouseLeave={() => setHoveredCell(null)}
                 >
                   <div dangerouslySetInnerHTML={{ __html: row.diy }} />
-                  {row.diyDetail && hoveredCell === `diy-${idx}` && (
+                  {row.diyDetail && hoveredCell === `${row.category}-diy` && (
                     <div className="absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-polus-forest border border-polus-gold/30 rounded-lg shadow-xl text-xs text-left">
                       <div className="text-polus-gold font-semibold mb-1">DIY Approach</div>
                       <div className="text-[rgba(254,255,255,0.78)]">{row.diyDetail}</div>
@@ -169,14 +176,14 @@ export function ComparisonTable() {
                   className={`py-4 px-4 text-center text-polus-text bg-polus-emerald/5 relative group cursor-help ${
                     idx === comparisons.length - 1 ? 'rounded-b-lg' : ''
                   }`}
-                  onMouseEnter={() => setHoveredCell(`polus-${idx}`)}
+                  onMouseEnter={() => handleCellHover(row.category, 'polus')}
                   onMouseLeave={() => setHoveredCell(null)}
                 >
                   <div dangerouslySetInnerHTML={{ __html: row.polus }} />
                   {row.polusDetail && (
                     <div className="text-xs text-[rgba(254,255,255,0.62)] mt-1">{row.polusDetail.split('.')[0]}.</div>
                   )}
-                  {row.polusDetail && hoveredCell === `polus-${idx}` && (
+                  {row.polusDetail && hoveredCell === `${row.category}-polus` && (
                     <div className="absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-polus-forest border border-polus-mint/30 rounded-lg shadow-xl text-xs text-left">
                       <div className="text-polus-mint font-semibold mb-1">Polus Approach</div>
                       <div className="text-[rgba(254,255,255,0.78)]">{row.polusDetail}</div>
@@ -188,11 +195,11 @@ export function ComparisonTable() {
                 {/* MSP Column */}
                 <td
                   className="py-4 px-4 text-center text-[rgba(254,255,255,0.78)] relative group cursor-help"
-                  onMouseEnter={() => setHoveredCell(`msp-${idx}`)}
+                  onMouseEnter={() => handleCellHover(row.category, 'msp')}
                   onMouseLeave={() => setHoveredCell(null)}
                 >
                   <div dangerouslySetInnerHTML={{ __html: row.msp }} />
-                  {row.mspDetail && hoveredCell === `msp-${idx}` && (
+                  {row.mspDetail && hoveredCell === `${row.category}-msp` && (
                     <div className="absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-polus-forest border border-polus-gold/30 rounded-lg shadow-xl text-xs text-left">
                       <div className="text-polus-gold font-semibold mb-1">MSP Approach</div>
                       <div className="text-[rgba(254,255,255,0.78)]">{row.mspDetail}</div>

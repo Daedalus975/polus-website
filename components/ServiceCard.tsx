@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { track } from "@/lib/track";
 
 type ServiceCardProps = {
   title: string;
@@ -12,6 +13,7 @@ export function ServiceCard({ title, description, slug, icon, tag }: ServiceCard
   return (
     <Link
       href={`/services/${slug}`}
+      onClick={() => track("service_card_clicked", { service: title, slug, tag })}
       className="group rounded-lg border border-[rgba(177,227,199,0.16)] bg-polus-surface1 shadow-card p-6 transition hover:-translate-y-1 hover:border-[rgba(177,227,199,0.28)] hover:shadow-cardHover"
     >
       {tag && (

@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 import { NURTURE_SEQUENCES } from "@/lib/emailTemplates";
 import { promises as fs } from 'fs';
 import path from 'path';
+import { trackLeadEvent } from "@/lib/leadTracking";
 
 const Schema = z.object({ 
   email: z.string().email(), 
@@ -99,6 +100,9 @@ export async function POST(req: Request) {
           day14_still_thinking: 'pending'
         }
       });
+
+      // Track lead event for scoring
+      await trackLeadEvent(email, 'checklist_downloaded', {}, name);
 
       console.log(`Day 1 email sent to ${email}`);
     } else {

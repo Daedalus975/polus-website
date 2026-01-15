@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { track } from "@/lib/track";
 
 type FAQItem = {
   question: string;
@@ -17,7 +18,12 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
           className="rounded-lg border border-[rgba(177,227,199,0.16)] bg-polus-surface1 overflow-hidden"
         >
           <button
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            onClick={() => {
+              setOpenIndex(openIndex === index ? null : index);
+              if (openIndex !== index) {
+                track("faq_clicked", { question: item.question });
+              }
+            }}
             className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-[rgba(177,227,199,0.05)] transition"
             aria-expanded={openIndex === index}
             aria-controls={`faq-answer-${index}`}

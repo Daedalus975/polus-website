@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import nodemailer from "nodemailer";
+import { trackLeadEvent } from "@/lib/leadTracking";
 
 const Schema = z.object({
   email: z.string().email(),
@@ -44,6 +45,12 @@ export async function POST(req: Request) {
 
   // Log for CRM/analytics
   console.log('[ROI Calculator] Lead captured:', { email, scenario, results });
+
+  // Track lead event for scoring
+  await trackLeadEvent(email, 'roi_emailed', { 
+    roi: results.roi,
+    annual_savings: results.annualSavings 
+  });
 
   // Send email via Resend
   try {
