@@ -123,10 +123,10 @@ export default function LocationsPage() {
             Book a free 30-minute discovery call to discuss your IT challenges. No obligation—just clarity on what needs fixing and what it would cost.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/book" variant="primary" size="large">
+            <Button href="/book" variant="primary">
               Book Free Discovery Call
             </Button>
-            <Button href="/contact" variant="secondary" size="large">
+            <Button href="/contact" variant="secondary">
               Contact Us
             </Button>
           </div>

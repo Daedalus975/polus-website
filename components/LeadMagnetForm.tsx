@@ -52,7 +52,11 @@ export function LeadMagnetForm({ leadMagnetLabel = "Operations Checklist" }: Lea
       <p className="mt-2 text-sm text-[rgba(254,255,255,0.78)]">One page. Practical. Straight to the point.</p>
       
       <form onSubmit={handleSubmit} className="mt-4 space-y-3">
+        <label htmlFor="lead-magnet-email" className="sr-only">
+          Email Address
+        </label>
         <input
+          id="lead-magnet-email"
           type="email"
           placeholder="your@email.com"
           value={email}

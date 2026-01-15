@@ -45,6 +45,8 @@ export function Navbar() {
               className="hover:text-polus-gold transition flex items-center gap-1 py-2"
               aria-expanded={servicesDropdownOpen}
               aria-haspopup="true"
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              onFocus={() => setServicesDropdownOpen(true)}
             >
               Services
               <svg 
@@ -93,6 +95,8 @@ export function Navbar() {
               className="hover:text-polus-gold transition flex items-center gap-1 py-2"
               aria-expanded={industriesDropdownOpen}
               aria-haspopup="true"
+              onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
+              onFocus={() => setIndustriesDropdownOpen(true)}
             >
               Industries
               <svg 

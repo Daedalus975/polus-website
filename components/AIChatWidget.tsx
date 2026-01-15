@@ -265,12 +265,14 @@ export default function AIChatWidget() {
           <div className="flex gap-2">
             <button
               onClick={() => handleRating(true)}
+              aria-label="Yes, the chat was helpful"
               className="flex-1 px-4 py-2 bg-polus-emerald/20 text-polus-mint border border-polus-mint/30 rounded-md hover:bg-polus-emerald/30 transition-colors text-sm font-medium"
             >
               👍 Yes
             </button>
             <button
               onClick={() => handleRating(false)}
+              aria-label="No, the chat was not helpful"
               className="flex-1 px-4 py-2 bg-polus-surface2 text-polus-paper border border-[rgba(177,227,199,0.12)] rounded-md hover:bg-polus-surface3 transition-colors text-sm font-medium"
             >
               👎 No
@@ -296,7 +298,12 @@ export default function AIChatWidget() {
 
       {/* Chat window */}
       {isOpen && (
-        <div className={`fixed ${isMobile ? 'inset-0' : 'bottom-6 right-6 w-96 h-[600px]'} bg-polus-surface1 border border-[rgba(177,227,199,0.12)] ${isMobile ? '' : 'rounded-lg'} shadow-2xl flex flex-col z-50 animate-slideUp`}>
+        <div 
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="chat-title"
+          className={`fixed ${isMobile ? 'inset-0' : 'bottom-6 right-6 w-96 h-[600px]'} bg-polus-surface1 border border-[rgba(177,227,199,0.12)] ${isMobile ? '' : 'rounded-lg'} shadow-2xl flex flex-col z-50 animate-slideUp`}
+        >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-[rgba(177,227,199,0.12)] bg-polus-surface2">
             <div className="flex items-center gap-3">
@@ -305,7 +312,7 @@ export default function AIChatWidget() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <div>
+              <div id="chat-title">
                 <h3 className="font-semibold text-polus-paper">Polus Assistant</h3>
                 <div className="flex items-center gap-1">
                   <span className={`w-2 h-2 rounded-full ${isBusinessHours() ? 'bg-green-500' : 'bg-yellow-500'}`}></span>
@@ -386,7 +393,11 @@ export default function AIChatWidget() {
                   }}
                   className="flex gap-2"
                 >
+                  <label htmlFor="chat-email-capture" className="sr-only">
+                    Email Address
+                  </label>
                   <input
+                    id="chat-email-capture"
                     type="email"
                     name="email"
                     placeholder="your@email.com"

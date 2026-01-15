@@ -7,7 +7,7 @@ import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { useState } from "react";
 
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = "");
   const services = [
     {
       title: "Systems Snapshot Assessment",
@@ -139,7 +139,8 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Section title="Operations & IT services built for small businesses" className="pt-20 md:pt-24">
+      <Section className="pt-20 md:pt-24">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-polus-paper mb-6">Operations and IT services built for small businesses</h1>
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
           Pick a service to learn what you get, typical timelines, and starting-at pricing. Need something not listed? <a href="/contact" className="text-polus-gold hover:text-polus-mint transition underline">Just ask</a>—we offer additional services beyond what's shown here.
         </p>

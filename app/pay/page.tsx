@@ -14,8 +14,9 @@ export default function PayPage() {
   const invoiceUrl = process.env.NEXT_PUBLIC_STRIPE_INVOICE_URL;
 
   return (
-    <Section title="Pay an invoice or deposit" className="pt-20 md:pt-24">
-      <div className="max-w-4xl mx-auto">
+    <>
+      <Section className="pt-20 md:pt-24">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-polus-paper mb-6">Pay an invoice or deposit</h1>
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-10 text-center">
           Guest checkout supported. No login required.
         </p>
@@ -86,7 +87,7 @@ export default function PayPage() {
             Questions? <a href="/contact" className="text-polus-mint hover:text-polus-gold underline">Contact us</a>
           </p>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }
