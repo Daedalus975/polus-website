@@ -41,7 +41,6 @@ export function Navbar() {
           <div className="h-[72px] flex items-center justify-between">
             <Link href="/" className="font-bold text-xl text-polus-gold hover:text-polus-mint transition">Polus</Link>
             
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6 text-sm text-polus-paper/80">
               {/* Services Dropdown */}
               <div 
@@ -67,6 +66,30 @@ export function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+                {servicesDropdownOpen && (
+                  <div className="absolute top-full left-0 pt-0 w-72 z-50">
+                    <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
+                      <div className="max-h-[60vh] overflow-y-auto">
+                        {services.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
+                      <Link
+                        href="/services"
+                        className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Industries Dropdown */}
@@ -93,6 +116,28 @@ export function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+                {industriesDropdownOpen && (
+                  <div className="absolute top-full left-0 pt-0 w-64 z-50">
+                    <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
+                      <Link
+                        href="/industries"
+                        className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
+                      >
+                        View All Industries →
+                      </Link>
+                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
+                      {industries.map((industry) => (
+                        <Link
+                          key={industry.href}
+                          href={industry.href}
+                          className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                        >
+                          {industry.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Resources Dropdown */}
@@ -119,6 +164,21 @@ export function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+                {resourcesDropdownOpen && (
+                  <div className="absolute top-full left-0 pt-0 w-56 z-50">
+                    <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
+                      {resources.map((resource) => (
+                        <Link
+                          key={resource.href}
+                          href={resource.href}
+                          className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                        >
+                          {resource.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
@@ -152,73 +212,7 @@ export function Navbar() {
           </div>
 
           {/* Dropdown Menus - Built into Navbar */}
-          {(servicesDropdownOpen || industriesDropdownOpen || resourcesDropdownOpen) && (
-            <div className="hidden md:block border-t border-[rgba(177,227,199,0.12)] bg-polus-surface1/95 backdrop-blur-sm">
-              <div className="py-4 grid grid-cols-3 gap-8">
-                {/* Services Column */}
-                <div className={servicesDropdownOpen ? '' : 'invisible'}>
-                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Services</h3>
-                  <div className="space-y-1">
-                    {services.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                    <div className="border-t border-[rgba(177,227,199,0.12)] my-2"></div>
-                    <Link
-                      href="/services"
-                      className="block px-2 py-2 text-sm text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold rounded"
-                    >
-                      View All Services →
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Industries Column */}
-                <div className={industriesDropdownOpen ? '' : 'invisible'}>
-                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Industries</h3>
-                  <div className="space-y-1">
-                    <Link
-                      href="/industries"
-                      className="block px-2 py-2 text-sm text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold rounded"
-                    >
-                      View All Industries →
-                    </Link>
-                    <div className="border-t border-[rgba(177,227,199,0.12)] my-2"></div>
-                    {industries.map((industry) => (
-                      <Link
-                        key={industry.href}
-                        href={industry.href}
-                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
-                      >
-                        {industry.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Resources Column */}
-                <div className={resourcesDropdownOpen ? '' : 'invisible'}>
-                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Resources</h3>
-                  <div className="space-y-1">
-                    {resources.map((resource) => (
-                      <Link
-                        key={resource.href}
-                        href={resource.href}
-                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
-                      >
-                        {resource.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Removed - now using individual dropdowns above each nav item */}
         </div>
 
       {/* Mobile Menu */}
