@@ -153,22 +153,24 @@ export function Navbar() {
                 {industriesDropdownOpen && (
                   <div className="absolute top-full left-0 pt-0 w-64 z-50">
                     <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
+                      <div className="px-3 py-1.5">
+                        {industries.map((industry) => (
+                          <Link
+                            key={industry.href}
+                            href={industry.href}
+                            className="block px-2 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                          >
+                            {industry.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
                       <Link
                         href="/industries"
                         className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
                       >
                         View All Industries →
                       </Link>
-                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
-                      {industries.map((industry) => (
-                        <Link
-                          key={industry.href}
-                          href={industry.href}
-                          className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
-                        >
-                          {industry.name}
-                        </Link>
-                      ))}
                     </div>
                   </div>
                 )}
@@ -323,14 +325,6 @@ export function Navbar() {
               </button>
               {industriesDropdownOpen && (
                 <div className="pl-4 space-y-1 mt-3">
-                  <Link
-                    href="/industries"
-                    className="block py-2 text-polus-gold text-sm font-semibold"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    View All Industries
-                  </Link>
-                  <div className="border-t border-[rgba(177,227,199,0.08)] my-2"></div>
                   {industries.map((industry) => (
                     <Link
                       key={industry.href}
@@ -341,6 +335,14 @@ export function Navbar() {
                       {industry.name}
                     </Link>
                   ))}
+                  <div className="border-t border-[rgba(177,227,199,0.08)] my-2"></div>
+                  <Link
+                    href="/industries"
+                    className="block py-2 text-polus-gold text-sm font-semibold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    View All Industries
+                  </Link>
                 </div>
               )}
             </div>
