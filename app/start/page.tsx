@@ -174,18 +174,19 @@ export default function StartAssessmentPage() {
     },
     "process-clarity-pack": {
       slug: "process-clarity-pack",
-      title: "Process Clarity Pack",
-      description: "Document your core workflows and create standard operating procedures so your team has clear, repeatable processes—and new hires can ramp faster.",
+      title: "Process Documentation",
+      description: "Document critical workflows and create Standard Operating Procedures your team will actually use. Visual process maps, written SOPs, templates, and training.",
       deliverables: [
-        "Visual process maps",
-        "Written SOPs",
-        "Training materials",
-        "SOP template for future use"
+        "Visual process maps (swimlane or flowchart)",
+        "Written SOP documents with decision trees",
+        "SOP template library",
+        "Team training session",
+        "30-day post-delivery support"
       ],
-      price: "$1,500+",
+      price: "$1,800+",
       timeline: "1-2 weeks per process",
-      minBudget: 1500,
-      idealFor: ["Construction", "Nonprofits", "Growing teams with no documentation"]
+      minBudget: 1800,
+      idealFor: ["Construction", "Nonprofits", "Growing teams", "Teams with tribal knowledge"]
     },
     "m365-governance": {
       slug: "m365-governance",

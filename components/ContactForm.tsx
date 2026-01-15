@@ -95,7 +95,7 @@ export function ContactForm() {
   }
 
   const needOptions = [
-    "Process mapping / SOPs",
+    "Process Documentation",
     "Microsoft 365 setup",
     "Backup / DR",
     "Onboarding / Offboarding",

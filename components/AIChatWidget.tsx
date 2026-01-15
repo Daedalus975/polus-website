@@ -209,7 +209,7 @@ export default function AIChatWidget() {
       let content = data.message;
       const serviceNames = [
         'Systems Review', 'Identity & Security', 'Backup Verification',
-        'Strategic Advisory', 'M365 Optimization', 'Process Clarity Pack', 'Employee Lifecycle',
+        'Strategic Advisory', 'M365 Optimization', 'Process Documentation', 'Employee Lifecycle',
         'Email Migration', 'Backup & DR Readiness', 'Business Continuity Plan'
       ];
       

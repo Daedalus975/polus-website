@@ -34,7 +34,7 @@ AVAILABLE SERVICES WITH DISCOUNT PRICING:
 9. Business Continuity Plan - $2,000 (was $2,500) - DR documentation and runbooks
 
 **Process & Documentation:**
-10. Process Clarity Pack - $2,400 (was $3,000) - Document 3-5 core processes
+10. Process Documentation - Single Process: $1,440 (was $1,800) | 3-Process Package: $3,600 (was $4,500) | 5-Process Package: $5,600 (was $7,000) - Document critical workflows with visual maps, written SOPs, templates, and training
 11. Employee Lifecycle - $1,200 (was $1,500) - Onboarding/offboarding automation
 12. Vendor & License Audit - $1,600 (was $2,000) - Inventory, cost optimization
 
@@ -50,8 +50,8 @@ AVAILABLE SERVICES WITH DISCOUNT PRICING:
 19. Acquisition Integration - $4,000+ (was $5,000+) - Post-merger IT integration
 
 **Bundles:**
-- IT Foundation Package - $8,400 (was $10,500) - Identity & Device + Email & Backup + M365
-- Growth Package - $12,000 (was $15,000) - New Foundation + Process Clarity + Financial Integrations
+- IT Foundation Package - $10,800 (was $13,500) - Identity & Security, M365 Governance, Employee Lifecycle for 10-25 employees
+- Growth Package - $6,800 (was $8,500) - Systems Review + Identity & Security (Tier 1) + 3 months IT Advisory
 
 **Add-Ons:**
 - Documentation Updates - $400 (was $500)
