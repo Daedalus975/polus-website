@@ -8,6 +8,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   const services = [
     { name: "Systems Review", href: "/services/systems-assessment" },
@@ -24,6 +25,12 @@ export function Navbar() {
     { name: "Construction & Trades", href: "/industries/construction" },
     { name: "Nonprofits", href: "/industries/nonprofits" },
     { name: "Startups", href: "/industries/startups" },
+  ];
+
+  const resources = [
+    { name: "Resource Library", href: "/resources" },
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
   ];
 
   return (
@@ -60,8 +67,8 @@ export function Navbar() {
               </svg>
             </button>
             {servicesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-2 w-72">
-                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] rounded-lg shadow-2xl py-3 backdrop-blur-sm">
+              <div className="absolute top-full left-0 pt-1 w-72">
+                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
                   <div className="max-h-[60vh] overflow-y-auto">
                     {services.map((service) => (
                       <Link
@@ -110,8 +117,8 @@ export function Navbar() {
               </svg>
             </button>
             {industriesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-2 w-64">
-                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] rounded-lg shadow-2xl py-3 backdrop-blur-sm">
+              <div className="absolute top-full left-0 pt-1 w-64">
+                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
                   <Link
                     href="/industries"
                     className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
@@ -133,11 +140,51 @@ export function Navbar() {
             )}
           </div>
 
+          {/* Resources Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setResourcesDropdownOpen(true)}
+            onMouseLeave={() => setResourcesDropdownOpen(false)}
+          >
+            <button
+              className="hover:text-polus-gold transition flex items-center gap-1 py-2"
+              aria-expanded={resourcesDropdownOpen}
+              aria-haspopup="true"
+              onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
+              onFocus={() => setResourcesDropdownOpen(true)}
+            >
+              Resources
+              <svg 
+                className={`w-4 h-4 transition-transform ${resourcesDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24" 
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {resourcesDropdownOpen && (
+              <div className="absolute top-full left-0 pt-1 w-56">
+                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
+                  {resources.map((resource) => (
+                    <Link
+                      key={resource.href}
+                      href={resource.href}
+                      className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                    >
+                      {resource.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
           {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
             <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
           )}
           <Link href="/about" className="hover:text-polus-gold transition">About</Link>
-          <Link href="/blog" className="hover:text-polus-gold transition">Blog</Link>
           <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
         </nav>
         
@@ -252,6 +299,40 @@ export function Navbar() {
               )}
             </div>
 
+            {/* Resources Mobile Section */}
+            <div className="border-b border-[rgba(177,227,199,0.08)] pb-3">
+              <button
+                onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
+                className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 flex items-center justify-between w-full"
+                aria-expanded={resourcesDropdownOpen}
+              >
+                <span className="font-medium">Resources</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform ${resourcesDropdownOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {resourcesDropdownOpen && (
+                <div className="pl-4 space-y-1 mt-3">
+                  {resources.map((resource) => (
+                    <Link
+                      key={resource.href}
+                      href={resource.href}
+                      className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm leading-relaxed"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {resource.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
               <Link 
                 href="/start" 
@@ -267,13 +348,6 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </Link>
-            <Link 
-              href="/blog" 
-              className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Blog
             </Link>
             <Link 
               href="/contact" 

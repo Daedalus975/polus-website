@@ -246,15 +246,6 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      {FEATURE_FLAGS.DELIVERABLES_GALLERY_ENABLED && (
-        <Section title="Sample Deliverables" eyebrow="What you receive">
-          <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
-            Every engagement includes clear, actionable deliverables. Here are examples of what you&apos;ll receive (sanitized for confidentiality).
-          </p>
-          {/* <DeliverableGallery /> */}
-        </Section>
-      )}
-
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
