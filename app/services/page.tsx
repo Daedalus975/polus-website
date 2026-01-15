@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      title: "Systems Review",
+      title: "IT Assessment",
       description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
       slug: "systems-assessment",
       tag: "Start Here"
@@ -23,19 +23,19 @@ export default function ServicesPage() {
       tag: "Recurring Revenue"
     },
     {
-      title: "Identity & Security",
+      title: "Microsoft 365 / Entra ID Setup",
       description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies.",
       slug: "identity-device-foundation",
       tag: "Core Infrastructure"
     },
     {
-      title: "M365 Governance",
+      title: "Teams & SharePoint Governance",
       description: "Tame Teams/SharePoint sprawl and establish sustainable governance. Naming conventions, retention policies, permissions cleanup, and external sharing controls.",
       slug: "m365-governance",
       tag: "For Growing Teams"
     },
     {
-      title: "Employee Lifecycle",
+      title: "Onboarding & Offboarding Automation",
       description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures.",
       slug: "employee-lifecycle",
       tag: "HR and Security"
@@ -47,13 +47,13 @@ export default function ServicesPage() {
       tag: "Operational Maturity"
     },
     {
-      title: "Backup & DR",
+      title: "Backup & Disaster Recovery",
       description: "Know your backups work before you need them. Coverage assessment, restore testing, and disaster recovery playbook with step-by-step procedures.",
       slug: "backup-dr-readiness",
       tag: "Risk Mitigation"
     },
     {
-      title: "Process Documentation",
+      title: "Process Mapping & SOP Development",
       description: "Document critical workflows so your team stops reinventing the wheel. Visual process maps, written SOPs, and training. Priced per process or as a bundle.",
       slug: "process-clarity-pack",
       tag: "Operational Excellence"

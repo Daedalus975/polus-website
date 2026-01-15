@@ -29,13 +29,13 @@ export function Navbar() {
   }, []);
 
   const services = [
-    { name: "Systems Review", href: "/services/systems-assessment" },
+    { name: "IT Assessment", href: "/services/systems-assessment" },
     { name: "IT Advisory", href: "/services/strategic-advisory" },
-    { name: "Identity & Security", href: "/services/identity-device-foundation" },
-    { name: "M365 Governance", href: "/services/m365-governance" },
-    { name: "Employee Lifecycle", href: "/services/employee-lifecycle" },
+    { name: "Microsoft 365 / Entra ID", href: "/services/identity-device-foundation" },
+    { name: "Teams & SharePoint Governance", href: "/services/m365-governance" },
+    { name: "Onboarding & Offboarding", href: "/services/employee-lifecycle" },
     { name: "IT Operations Setup", href: "/services/it-operations-toolkit" },
-    { name: "Backup & DR", href: "/services/backup-dr-readiness" },
+    { name: "Backup & Disaster Recovery", href: "/services/backup-dr-readiness" },
     { name: "Acquisition Integration", href: "/services/acquisition-integration" },
   ];
 
