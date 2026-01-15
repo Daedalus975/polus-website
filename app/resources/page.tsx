@@ -26,53 +26,18 @@ const resources: Resource[] = [
     icon: "clipboard"
   },
   {
-    title: "M365 Security Checklist",
-    description: "Essential security configurations for Microsoft 365. Multi-factor authentication, conditional access, data loss prevention, and more.",
+    title: "M365 Security Audit Checklist",
+    description: "70+ security items for Microsoft 365. Identity, email, SharePoint, Teams, endpoint security, monitoring, and compliance. Includes scoring system.",
     category: "Checklist",
-    downloadUrl: "/downloads/m365-security-checklist.pdf",
+    downloadUrl: "/checklists/m365-security-audit-checklist.md",
     icon: "shield"
   },
   {
-    title: "IT Budget Template",
-    description: "Spreadsheet template to plan your annual IT spending. Categories for software, hardware, security, training, and consulting.",
-    category: "Template",
-    downloadUrl: "/downloads/it-budget-template.xlsx",
-    icon: "calculator"
-  },
-  {
-    title: "Employee Onboarding Template",
-    description: "Step-by-step checklist for onboarding new employees. IT access, equipment, training, and first-week tasks.",
-    category: "Template",
-    downloadUrl: "/downloads/employee-onboarding-template.pdf",
-    icon: "users"
-  },
-  {
-    title: "Password Policy Guide",
-    description: "How to create and enforce a secure password policy. Length requirements, complexity rules, and password manager recommendations.",
-    category: "Guide",
-    downloadUrl: "/downloads/password-policy-guide.pdf",
-    icon: "lock"
-  },
-  {
-    title: "Backup & Recovery Guide",
-    description: "3-2-1 backup strategy explained. What to back up, how often, where to store it, and how to test your backups.",
-    category: "Guide",
-    downloadUrl: "/downloads/backup-recovery-guide.pdf",
+    title: "Backup & DR Verification Checklist",
+    description: "50+ backup verification items. Ensure your backups work before you need them. Includes RTO/RPO documentation and restore testing procedures.",
+    category: "Checklist",
+    downloadUrl: "/checklists/backup-verification-checklist.md",
     icon: "server"
-  },
-  {
-    title: "Process Mapping Template",
-    description: "Visual template for documenting workflows. Identify bottlenecks, redundancies, and automation opportunities.",
-    category: "Template",
-    downloadUrl: "/downloads/process-mapping-template.pdf",
-    icon: "workflow"
-  },
-  {
-    title: "Incident Response Plan",
-    description: "Template for handling security incidents. Who to contact, what to document, and how to communicate during a breach.",
-    category: "Template",
-    downloadUrl: "/downloads/incident-response-plan.pdf",
-    icon: "alert"
   }
 ];
 
@@ -97,16 +62,16 @@ export default function ResourcesPage() {
           Free tools, templates, and guides to help Oklahoma small businesses improve their IT and operations.
         </p>
 
-        <div className="bg-polus-gold/10 border border-polus-gold/30 rounded-lg p-6 mb-10">
+        <div className="bg-polus-mint/10 border border-polus-mint/30 rounded-lg p-6 mb-10">
           <div className="flex items-start gap-4">
-            <svg className="w-6 h-6 text-polus-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div>
-              <h3 className="font-semibold text-polus-gold mb-2">Note on Downloads</h3>
+              <h3 className="font-semibold text-polus-mint mb-2">More Resources Coming Soon</h3>
               <p className="text-[rgba(254,255,255,0.78)] text-sm">
-                Some resources are marked as downloadable but files don&apos;t exist yet. We&apos;re actively creating these resources. 
-                Want a specific resource prioritized? <a href="/contact" className="text-polus-mint hover:underline">Let us know</a>.
+                We&apos;re actively creating more checklists, templates, and guides. 
+                Want a specific resource? <a href="/contact" className="text-polus-gold hover:underline">Let us know</a>.
               </p>
             </div>
           </div>
@@ -137,16 +102,25 @@ export default function ResourcesPage() {
 
               {resource.pageUrl ? (
                 <Button href={resource.pageUrl} variant="secondary" className="w-full">
-                  View Resource
+                  View Checklist
                 </Button>
+              ) : resource.downloadUrl ? (
+                <a 
+                  href={resource.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-semibold text-[15px] transition-all duration-200 border-2 border-polus-mint text-polus-mint hover:bg-polus-mint hover:text-polus-surface1 w-full"
+                >
+                  View Checklist
+                </a>
               ) : (
                 <Button 
-                  href={resource.downloadUrl || "#"} 
+                  href="#" 
                   variant="secondary" 
-                  className="w-full"
-                  disabled={!resource.downloadUrl}
+                  className="w-full opacity-50 cursor-not-allowed"
+                  disabled
                 >
-                  {resource.downloadUrl ? "Download" : "Coming Soon"}
+                  Coming Soon
                 </Button>
               )}
             </Card>

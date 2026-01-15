@@ -82,6 +82,7 @@ export default function StartAssessmentPage() {
       showIf: (answers) => answers.primary_pain !== "build_something",
       options: [
         { label: "Yes, but it's a mess (files everywhere, can't find anything)", value: "messy", weights: { "m365-governance": 4 } },
+        { label: "Yes, but worried about security (breaches, phishing, no MFA)", value: "security_concern", weights: { "identity-device-foundation": 4, "m365-governance": 2 } },
         { label: "Yes, and it's mostly organized", value: "organized", weights: { "automation-no-code": 1 } },
         { label: "We have it but barely use it", value: "underutilized", weights: { "m365-governance": 2, "process-clarity-pack": 1 } },
         { label: "No, we use Google Workspace/AWS/Other", value: "google", weights: { "automation-no-code": 1 } },
@@ -126,6 +127,38 @@ export default function StartAssessmentPage() {
         { label: "Soon—need to address this within the next month", value: "soon", weights: {} },
         { label: "Planning ahead—want to fix it in the next 1-3 months", value: "planning", weights: {} },
         { label: "Just exploring options for now", value: "exploring", weights: { "systems-assessment": 1 } }
+      ]
+    },
+    {
+      id: "previous_consulting",
+      question: "Have you worked with IT consultants or MSPs before?",
+      options: [
+        { label: "Yes, and it was great—just need help with a new project", value: "good_experience", weights: {} },
+        { label: "Yes, but they didn't understand our business or gave cookie-cutter advice", value: "bad_experience", weights: { "systems-assessment": 3, "strategic-advisory": 2 } },
+        { label: "Yes, but they tried to lock us in or oversell services we didn't need", value: "oversold", weights: { "systems-assessment": 2 } },
+        { label: "No, this would be our first time", value: "first_time", weights: { "systems-assessment": 1 } }
+      ]
+    },
+    {
+      id: "roi_awareness",
+      question: "Have you looked at our ROI Calculator?",
+      helpText: "Our ROI Calculator shows how much downtime, security incidents, and inefficiency are costing you.",
+      showIf: (answers) => {
+        const budgetMapping: Record<string, number> = {
+          "low": 1500,
+          "mid": 3000,
+          "mid_high": 7000,
+          "high": 15000,
+          "enterprise": 50000,
+          "unsure": 100000
+        };
+        const userBudget = budgetMapping[answers.budget] || 100000;
+        return userBudget < 5000; // Only show for budgets under $5k
+      },
+      options: [
+        { label: "Yes, and it opened my eyes—the costs are real", value: "saw_roi", weights: {} },
+        { label: "No, but I'll check it out", value: "interested", weights: {} },
+        { label: "Not yet—just exploring services first", value: "not_yet", weights: {} }
       ]
     },
     {
@@ -382,6 +415,39 @@ export default function StartAssessmentPage() {
       timeline: "1-day workshop + 1 week",
       minBudget: 2000,
       idealFor: ["Annual planning", "Funding rounds", "Multi-year decisions"]
+    },
+    "security-first-package": {
+      slug: "security-first-package",
+      title: "Security First Package",
+      description: "Identity & Security + Backup & DR Verification. Lock down access and ensure recovery. Perfect for healthcare, finance, or security-conscious teams.",
+      deliverables: [
+        "Azure AD/Entra ID with MFA",
+        "Device management (Intune)",
+        "Conditional Access policies",
+        "Backup verification",
+        "DR runbooks",
+        "Security training"
+      ],
+      price: "$7,500",
+      timeline: "6-8 weeks",
+      minBudget: 7500,
+      idealFor: ["Healthcare", "Finance", "Security-conscious", "Compliance requirements"]
+    },
+    "process-compliance-package": {
+      slug: "process-compliance-package",
+      title: "Process & Compliance Package",
+      description: "Process Documentation + M365 Governance + Employee Lifecycle. Document everything, organize M365, and automate onboarding/offboarding. Save $1,800.",
+      deliverables: [
+        "5 core processes documented",
+        "M365 governance setup",
+        "Automated employee workflows",
+        "Compliance documentation",
+        "Training materials"
+      ],
+      price: "$6,000",
+      timeline: "6-8 weeks",
+      minBudget: 6000,
+      idealFor: ["Nonprofits", "Regulated industries", "Audit preparation", "Growing teams"]
     }
   };
 
@@ -396,10 +462,17 @@ export default function StartAssessmentPage() {
   };
 
   const handleAnswer = (questionId: string, value: string) => {
+    const visibleQuestions = getVisibleQuestions();
     const newAnswers = { ...answers, [questionId]: value };
     setAnswers(newAnswers);
     
-    const visibleQuestions = getVisibleQuestions();
+    track("quiz_answer", { 
+      question: questionId, 
+      answer: value,
+      question_number: currentQuestionIndex + 1,
+      total_questions: visibleQuestions.length
+    });
+    
     const currentQ = visibleQuestions[currentQuestionIndex];
     
     // Check if the selected option has a nextQuestion override
@@ -426,6 +499,10 @@ export default function StartAssessmentPage() {
 
   const handleBack = () => {
     if (currentQuestionIndex > 0) {
+      track("quiz_back", { 
+        from_question: currentQuestionIndex + 1,
+        total_questions: visibleQuestions.length 
+      });
       setCurrentQuestionIndex(currentQuestionIndex - 1);
       // Remove last question from path
       const newPath = [...questionPath];
