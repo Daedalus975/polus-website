@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function BookPage() {
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/jack-washmon/discovery-call";
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/jack-washmon-polus-cs/30min";
 
   return (
     <Section title="Book a Free Discovery Call" className="pt-20 md:pt-24">
