@@ -93,6 +93,20 @@ const services: ServiceData[] = [
         description: "10 hours monthly strategic consulting"
       }
     ],
+    faqs: [
+      {
+        question: "Is this a helpdesk or support service?",
+        answer: "No. This is strategic planning and advisory work—not reactive IT support. We help with technology strategy, vendor decisions, budgeting, and roadmap planning. If you need helpdesk or ticket-based support, that's a different service."
+      },
+      {
+        question: "Can I cancel anytime?",
+        answer: "Yes. This is a month-to-month subscription with no long-term contract. Cancel anytime with 30 days notice. We recommend staying engaged for at least 3-6 months to see strategic progress."
+      },
+      {
+        question: "What if I don't use all my hours in a month?",
+        answer: "Unused hours don't roll over. This service is designed for consistent monthly engagement—strategic planning, vendor reviews, and technology decisions. If you only need occasional help, consider project-based services instead."
+      }
+    ],
     isBundle: false
   },
   {
@@ -193,6 +207,20 @@ const services: ServiceData[] = [
         description: "Stabilization & handoff (2-4 weeks)"
       }
     ],
+    faqs: [
+      {
+        question: "Do I have to commit to all phases upfront?",
+        answer: "No. Start with Phase A (assessment). After you see the integration plan and risk analysis, you decide whether to proceed with Phases B and C. Phase A is valuable on its own for understanding what you're getting into."
+      },
+      {
+        question: "What if we have more than 50 users to integrate?",
+        answer: "We have experience with integrations up to 400+ users. For larger deployments (50+ users), we'll provide custom pricing based on your specific complexity, timeline, and requirements. Contact us for a quote."
+      },
+      {
+        question: "How long does the actual migration take?",
+        answer: "Phase B typically takes 6-12 weeks depending on tenant complexity, user count, and your preferred timeline. We work around your business operations to minimize disruption and can phase the migration by department if needed."
+      }
+    ],
     isBundle: true
   },
   {
@@ -266,6 +294,20 @@ const services: ServiceData[] = [
       "Teams with tribal knowledge that needs to be documented",
       "Businesses preparing for growth or delegation",
       "Companies with high staff turnover or inconsistent execution"
+    ],
+    faqs: [
+      {
+        question: "How do you choose which processes to document?",
+        answer: "We work with you to identify the highest-impact processes—typically those with the most pain, dependencies on key people, or risk if done incorrectly. Common choices include customer onboarding, project handoffs, month-end close, or critical IT procedures."
+      },
+      {
+        question: "What format will the documentation be in?",
+        answer: "We deliver visual process maps (flowcharts or swimlanes) and written SOPs in the format you prefer—Google Docs, SharePoint, Notion, or PDF. The goal is to make it accessible and easy for your team to maintain."
+      },
+      {
+        question: "Will my team actually use these SOPs?",
+        answer: "That depends on adoption. We design SOPs to be practical and include a training session to show your team how to use them. The template library we provide makes it easier to continue documenting on your own."
+      }
     ]
   },
   {
@@ -298,6 +340,20 @@ const services: ServiceData[] = [
         name: "Tier 2",
         price: "$3,500",
         description: "26-50 employees"
+      }
+    ],
+    faqs: [
+      {
+        question: "Does this integrate with our HR system?",
+        answer: "It depends. We integrate with common HR platforms like BambooHR, Workday, and ADP if they support webhooks or APIs. If your HR system doesn't support automation, we can set up manual triggers (e.g., email or form submission) to start workflows."
+      },
+      {
+        question: "What happens if someone is offboarded but needs to come back?",
+        answer: "The workflow can be reversed or adjusted. We build in flexibility for scenarios like contractors returning, employees taking leave, or rehires. Manager approval workflows ensure nothing happens automatically without review."
+      },
+      {
+        question: "Will this work with our existing IT setup?",
+        answer: "This service is designed for Microsoft 365 environments (Azure AD, Intune, Exchange). If you use different identity systems (Google Workspace, Okta, etc.), contact us—we may be able to accommodate with custom pricing."
       }
     ],
     isBundle: true
@@ -336,6 +392,20 @@ const services: ServiceData[] = [
         description: "Essentials, automation, and MSP transition"
       }
     ],
+    faqs: [
+      {
+        question: "What service desk platforms do you support?",
+        answer: "We work with Jira Service Management, Zendesk, Freshdesk, and osTicket. If you already have a platform, we can configure it. If not, we'll recommend one based on your budget and needs (free open-source to enterprise)."
+      },
+      {
+        question: "Will you manage the service desk after setup?",
+        answer: "No. This is a setup and configuration service. We'll train your team to manage it ongoing. If you need ongoing service desk management, ask about our Managed IT packages or consider the MSP transition package in Plus tier."
+      },
+      {
+        question: "What kind of automation scripts are included in Plus tier?",
+        answer: "Common examples: user provisioning scripts, backup verification automation, license audit reports, or asset inventory updates. We'll work with you to identify 2-3 repetitive tasks that would benefit most from automation."
+      }
+    ],
     isBundle: true
   },
   {
@@ -370,6 +440,20 @@ const services: ServiceData[] = [
         name: "Full DR Package",
         price: "$3,500",
         description: "Verification, restore testing, and playbook"
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you provide the backup solution itself?",
+        answer: "No. This service verifies and tests your existing backup solution. We assess what you have, test if it works, and document recovery procedures. If you need a new backup solution, we can recommend options, but implementation is separate."
+      },
+      {
+        question: "What if the restore test fails?",
+        answer: "We'll document what failed and why, then provide remediation recommendations. Fixing the backup configuration or implementing a new solution would be a separate engagement—but at least you'll know before a real disaster."
+      },
+      {
+        question: "How often should we do this?",
+        answer: "At minimum, annually. For critical businesses or compliance requirements, quarterly testing is recommended. We offer a recurring DR Testing Service ($1,500/quarter) for ongoing confidence."
       }
     ],
     isBundle: false
@@ -410,6 +494,20 @@ const services: ServiceData[] = [
         description: "After purchasing bundle"
       }
     ],
+    faqs: [
+      {
+        question: "How is this different from the Process Mapping and SOP Starter Pack?",
+        answer: "They're very similar. The 'Starter Pack' is designed for teams new to documentation (includes templates and training). This 'Process Documentation' service is per-process pricing with a bundle discount if you need multiple processes documented. Choose whichever pricing model fits your needs."
+      },
+      {
+        question: "Can you document technical IT processes or just business processes?",
+        answer: "Both. We document business workflows (sales, onboarding, project management) and technical procedures (server patching, backup verification, incident response). The deliverables are the same—process maps and written SOPs."
+      },
+      {
+        question: "Who needs to be involved from our team?",
+        answer: "The person who currently owns the process (the expert) and ideally a manager or stakeholder who approves the final documentation. We'll interview the expert, observe the workflow, then draft the documentation for review."
+      }
+    ],
     isBundle: false
   },
   {
@@ -448,6 +546,20 @@ const services: ServiceData[] = [
         description: "Custom features, integrations, CMS training"
       }
     ],
+    faqs: [
+      {
+        question: "Do you provide content and images, or do we?",
+        answer: "You provide the content (text, images, branding). We handle site structure, design implementation, and optimization. If you need help with content writing or professional photography, we can recommend partners, but that's separate from web development pricing."
+      },
+      {
+        question: "What platform do you build on?",
+        answer: "We primarily build with modern frameworks (Next.js, React) for performance and flexibility. For simpler sites needing easy content updates, we may recommend WordPress or similar CMS platforms. We'll suggest the best fit for your needs and technical comfort."
+      },
+      {
+        question: "Is hosting included?",
+        answer: "Hosting setup is included—we'll deploy your site to Vercel, Netlify, or your preferred host. Ongoing hosting costs are separate and typically $10-50/month depending on your platform and traffic."
+      }
+    ],
     isBundle: false
   },
   {
@@ -468,6 +580,20 @@ const services: ServiceData[] = [
       "Founders with product ideas but unclear next steps",
       "Startups preparing to hire developers or agencies",
       "Teams needing structured planning before building"
+    ],
+    faqs: [
+      {
+        question: "Do you build the product after the PRD is complete?",
+        answer: "Not typically. This is a planning and scoping service. We deliver the PRD and recommendations so you can hire developers, agencies, or build in-house with clarity. If you want us to build it, we can discuss that separately."
+      },
+      {
+        question: "What if my product idea changes during the workshop?",
+        answer: "That's normal and expected. The workshop process often reveals new insights or priorities. We'll help you refine the scope and ensure the PRD reflects your best thinking by the end."
+      },
+      {
+        question: "How technical do I need to be to participate?",
+        answer: "Not very. We facilitate the workshop for founders and business stakeholders. You bring the product vision and business requirements—we'll translate that into technical architecture and development requirements in the PRD."
+      }
     ],
     isBundle: false
   },
@@ -498,6 +624,20 @@ const services: ServiceData[] = [
         description: "Complete foundation for 10-25 employees (save $2,000 vs. separate)"
       }
     ],
+    faqs: [
+      {
+        question: "Can I purchase just one part of this bundle instead of the whole thing?",
+        answer: "Yes. Each component is available separately: Identity & Security ($6,500), M365 Governance ($3,500), and Employee Lifecycle ($2,500). The bundle saves you $2,000 if you need all three. We recommend the bundle for companies starting fresh."
+      },
+      {
+        question: "What if we have more than 25 employees?",
+        answer: "The individual services have tiered pricing that goes up to 50 employees. For larger organizations (50+ employees), we'll provide custom bundle pricing. Contact us for a quote."
+      },
+      {
+        question: "Do we need to have Microsoft 365 already?",
+        answer: "Yes. This bundle assumes you have M365 Business Premium or equivalent licenses. If you're not on M365 yet, we can help you get set up, but licensing costs are separate from this bundle."
+      }
+    ],
     isBundle: true
   },
   {
@@ -525,6 +665,20 @@ const services: ServiceData[] = [
         name: "Bundle Package",
         price: "$8,500",
         description: "Assessment, implementation, and 3 months advisory (save $1,299)"
+      }
+    ],
+    faqs: [
+      {
+        question: "What happens after the 3 months of advisory end?",
+        answer: "You can continue the IT Advisory on a month-to-month basis ($500/month Essentials or $1,000/month Plus), or you can stop. There's no long-term contract. Many clients continue because they value the ongoing strategic guidance."
+      },
+      {
+        question: "Can I skip the assessment and just do implementation?",
+        answer: "Yes, but we don't recommend it. The Systems Review ensures we're implementing the right priorities for your business. If you're certain about what you need, you can purchase services individually instead of the bundle."
+      },
+      {
+        question: "Is this bundle only for the Identity & Security implementation, or can I choose a different service?",
+        answer: "This specific bundle includes Identity & Security (Tier 1). If you want a different service implemented, we can create a custom bundle. The standard Growth Package is designed for the most common modernization path."
       }
     ],
     isBundle: true
@@ -558,6 +712,20 @@ const services: ServiceData[] = [
         name: "3-Session Package",
         price: "$2,500",
         description: "3 training sessions (different topics or audiences)"
+      }
+    ],
+    faqs: [
+      {
+        question: "Can training be delivered remotely, or does it have to be in-person?",
+        answer: "Both options are available. Remote training via Teams or Zoom is most common and included in the pricing. In-person training in the Oklahoma City or Tulsa metro areas is available—travel fees may apply for locations outside those areas."
+      },
+      {
+        question: "What topics do you cover in the training?",
+        answer: "We customize based on your needs, but common topics include: Teams fundamentals, SharePoint collaboration, OneDrive best practices, Outlook calendar/task management, and security awareness (MFA, phishing). Tell us your pain points and we'll design the session accordingly."
+      },
+      {
+        question: "Will you record the session for employees who can't attend?",
+        answer: "Yes. All training sessions are recorded (with your permission) and delivered to you for future onboarding or reference. You'll also receive quick reference guides and documentation."
       }
     ],
     isBundle: false
@@ -595,6 +763,20 @@ const services: ServiceData[] = [
         description: "26-50 devices and complex environments"
       }
     ],
+    faqs: [
+      {
+        question: "How do we keep the documentation up to date after you finish?",
+        answer: "We'll set up a SharePoint site or wiki with version control and provide update procedures. You'll own the maintenance going forward. The key is establishing a process where changes to infrastructure trigger documentation updates—we'll help you design that workflow."
+      },
+      {
+        question: "What if we don't know all the details about our current setup?",
+        answer: "That's common and exactly why documentation is valuable. We'll help you discover what you have through interviews, system scans, and configuration reviews. If we find gaps or missing information, we'll document what we can and flag unknowns for investigation."
+      },
+      {
+        question: "Can you include our vendor contacts and support information?",
+        answer: "Absolutely. The documentation includes vendor contact lists, support procedures, license keys (stored securely), renewal dates, and escalation paths. This is critical for incident response and staff transitions."
+      }
+    ],
     isBundle: false
   },
   {
@@ -624,6 +806,20 @@ const services: ServiceData[] = [
         description: "Recurring DR testing (annual commitment)"
       }
     ],
+    faqs: [
+      {
+        question: "Do I have to commit to a full year?",
+        answer: "Yes. This is an annual subscription service with quarterly testing. The annual commitment ensures consistent DR validation and allows us to track trends and improvements over time. Cancel with 30 days notice before renewal."
+      },
+      {
+        question: "What happens if a test fails?",
+        answer: "We document the failure, root cause, and provide remediation recommendations. Fixing the issue is a separate engagement. The value of this service is finding problems before a real disaster—not during one."
+      },
+      {
+        question: "Can you test different systems each quarter, or is it always the same?",
+        answer: "We can rotate systems or test the same critical systems every quarter—your choice. Most clients test their 1-2 most critical systems (domain controller, database, file server) every quarter to ensure consistent recovery capability."
+      }
+    ],
     isBundle: false
   },
   {
@@ -651,6 +847,20 @@ const services: ServiceData[] = [
         name: "Standard Review",
         price: "$1,200",
         description: "M365 and basic Azure analysis"
+      }
+    ],
+    faqs: [
+      {
+        question: "How much money will we actually save?",
+        answer: "It varies. Most clients save 15-30% on annual cloud spend by eliminating unused licenses, right-sizing resources, and removing redundant services. Savings depend on your current waste and implementation of our recommendations."
+      },
+      {
+        question: "Do you implement the cost-saving changes, or do we?",
+        answer: "We provide the analysis and recommendations with implementation steps. You can implement them yourself, have your IT team do it, or hire us for implementation (separate engagement). Most recommendations are simple license removals or configuration changes."
+      },
+      {
+        question: "Will cost-cutting impact our service quality or user experience?",
+        answer: "No. We only recommend removing unused or redundant services. If a license or resource is actively used, we leave it. The goal is to eliminate waste, not degrade service. If right-sizing is needed, we explain the tradeoffs clearly."
       }
     ],
     isBundle: false
@@ -687,6 +897,20 @@ const services: ServiceData[] = [
         description: "Full policy suite and evidence collection"
       }
     ],
+    faqs: [
+      {
+        question: "Does this service make us compliant, or just prepare documentation?",
+        answer: "Documentation only. We prepare policies, procedures, and evidence for your auditor. We don't certify compliance or provide legal advice. You'll still need a compliance auditor or consultant to certify your organization meets the framework requirements."
+      },
+      {
+        question: "Do we need to have a compliance auditor already lined up?",
+        answer: "Ideally, yes. We work best when coordinating with your auditor or consultant to ensure our documentation aligns with their requirements. If you don't have one yet, we can recommend partners, but this service assumes you're already pursuing compliance."
+      },
+      {
+        question: "Which compliance frameworks do you support?",
+        answer: "We primarily support HIPAA (healthcare), SOC 2 (SaaS/tech companies), and CMMC (government contractors). We can also help with ISO 27001, PCI-DSS, or custom frameworks—contact us to discuss your specific needs."
+      }
+    ],
     isBundle: false
   },
   {
@@ -715,6 +939,20 @@ const services: ServiceData[] = [
         name: "Workshop Package",
         price: "$2,000",
         description: "1-day workshop + roadmap documentation"
+      }
+    ],
+    faqs: [
+      {
+        question: "Who from our team should attend the workshop?",
+        answer: "Key stakeholders who make technology decisions: typically the CEO/owner, CFO or finance lead, and any heads of department affected by technology. The ideal group is 3-6 people who can speak to business goals and operational needs."
+      },
+      {
+        question: "Do we need to know what technology we want before the workshop?",
+        answer: "No. The workshop process helps you identify what you need. You bring business goals and pain points—we'll facilitate discussion, evaluate technology options, and create the roadmap together. Come with problems, not predetermined solutions."
+      },
+      {
+        question: "Will you implement the roadmap after the workshop?",
+        answer: "That's separate. This service delivers the strategic plan. Implementation can be done by your team, other vendors, or us (separate engagement). Many clients use the roadmap for budgeting and phased implementation over 1-3 years."
       }
     ],
     isBundle: false
