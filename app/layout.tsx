@@ -37,7 +37,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <StructuredData data={getOrganizationSchema()} />
         <StructuredData data={getWebSiteSchema()} />
-        <GoogleAnalytics />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMS0FPEQPD"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RMS0FPEQPD');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* Skip to main content link for keyboard navigation */}
