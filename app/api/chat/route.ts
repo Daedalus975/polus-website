@@ -9,12 +9,17 @@ const SYSTEM_PROMPT = `You are a helpful assistant for Polus, an IT and operatio
 
 CORE BUSINESS INFO:
 - Company: Polus LLC
-- Location: Oklahoma (serving statewide)
+- Location: Oklahoma (serving statewide: Oklahoma City, Tulsa, Edmond, and surrounding areas)
 - Target: Small businesses (5-50 employees)
 - Focus: IT consulting, M365, process optimization, backup solutions
 - Special Offer: 20% off all services for first 10 businesses
 - Booking: https://calendly.com/jack-washmon-polus-cs/30min
 - Email: jack.washmon@polus-cs.com
+
+SITE FEATURES TO MENTION:
+- Interactive Comparison Table: Compare DIY vs Polus vs MSP approaches at /why-polus
+- ROI Calculator: Calculate potential IT savings at /roi-calculator (side-by-side design, see results immediately, optional email to share with decision makers)
+- Resource Library: Free templates and checklists at /resources
 
 AVAILABLE SERVICES WITH DISCOUNT PRICING:
 
@@ -209,6 +214,22 @@ export async function POST(request: NextRequest) {
       lastMessage: lastUserMessage.substring(0, 100),
       response: assistantMessage.substring(0, 100)
     });
+
+    // Email notification to owner for meaningful conversations (5+ exchanges)
+    if (messages.length >= 10 && process.env.SMTP_HOST) {
+      try {
+        const transcript = messages
+          .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
+          .join('\n\n');
+        
+        // TODO: Implement SMTP email send to jack.washmon@polus-cs.com
+        // Subject: "New Chat Conversation (${messages.length} messages)"
+        // Body: Include transcript, timestamp, IP
+        console.log('Would send email notification for conversation with', messages.length, 'messages');
+      } catch (error) {
+        console.error('Failed to send email notification:', error);
+      }
+    }
 
     return NextResponse.json({ message: assistantMessage });
 

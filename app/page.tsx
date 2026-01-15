@@ -12,20 +12,28 @@ import { track } from "@/lib/track";
 export default function HomePage() {
   const faqs = [
     {
+      question: "How is Polus different from a traditional MSP?",
+      answer: "We're project-based consultants, not break-fix responders. We focus on fixing root causes—optimizing your Microsoft 365 setup, documenting processes, and building systems that prevent fires instead of constantly putting them out. You get expert-level work without the MSP price tag or long-term contract."
+    },
+    {
       question: "What happens after the free discovery call?",
-      answer: "You'll get a 1-page Next Steps recap within 24 hours. It includes what we heard, top priorities, and recommended packages with starting-at pricing. No obligation—just clarity."
+      answer: "You'll get a 1-page Next Steps recap within 24 hours. It includes what we heard, top priorities, and recommended packages with starting-at pricing. No obligation—just clarity on what needs fixing and what it would cost."
     },
     {
-      question: "Do you work with Microsoft 365?",
-      answer: "Yes! Microsoft 365 is our primary ecosystem. We help with governance, identity/access, endpoint management, Teams/SharePoint structure, and more."
+      question: "Do I need to sign a long-term contract?",
+      answer: "Nope. Most of our services are one-time projects (assessments, documentation, M365 setup). We also offer monthly IT Advisory for ongoing strategic help, but even that's month-to-month. No lock-in, no cancellation fees."
     },
     {
-      question: "Do you offer monthly support?",
-      answer: "Yes. We offer Managed IT packages (Essentials and Plus) for ongoing support, or you can book one-time projects and hourly work as needed."
+      question: "My team is only 5-10 people. Are we too small?",
+      answer: "Not at all. Small teams are our specialty. You're big enough to need real IT systems, but too small for a full-time IT person or expensive MSP contract. That's exactly who we help—Oklahoma businesses with 5-50 employees who need expert guidance without the overhead."
     },
     {
-      question: "Can I pay as a guest?",
-      answer: "Absolutely. Our payment links support guest checkout—no account required. Just use our secure Stripe links to pay deposits or invoices."
+      question: "Can you help with Microsoft 365 and Teams setup?",
+      answer: "Yes! Microsoft 365 is our primary focus. We help with governance, identity/access management (Entra ID, MFA), endpoint security (Intune), Teams/SharePoint structure, email migration, license optimization, and backup protection. Most small businesses only use 20% of what M365 can do—we unlock the rest."
+    },
+    {
+      question: "How quickly can you start?",
+      answer: "Usually within 1-2 weeks after the discovery call, depending on the project. Assessments can often start same-week. More complex projects (like M365 governance or process documentation) need a bit more planning, but we move fast once you're ready."
     }
   ];
 

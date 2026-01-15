@@ -134,17 +134,23 @@ export default function AIChatWidget() {
 
   const handleEmailCapture = async (email: string) => {
     try {
-      // Log email capture (you could also send to your backend)
+      // Log email capture
       console.log('Email captured:', email);
       localStorage.setItem('polus_email_captured', 'true');
       
-      // Generate transcript
-      const transcript = messages
-        .map(m => `${m.role === 'user' ? 'You' : 'Polus'}: ${m.content}`)
-        .join('\n\n');
+      // Send notification to owner with transcript
+      await fetch('/api/chat-notification', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages,
+          userEmail: email
+        })
+      }).catch(err => console.error('Failed to notify owner:', err));
       
-      // In production, you'd send this to your backend to email the transcript
-      // For now, just show success message
+      // In production, you'd also send transcript to user's email via backend
+      // TODO: Send user email with transcript and booking link
+      
       setMessages(prev => [...prev, {
         role: 'assistant',
         content: `Great! I'll send this conversation to ${email} along with a link to book a call. Check your inbox in a few minutes!`
@@ -155,10 +161,22 @@ export default function AIChatWidget() {
     }
   };
 
-  const handleRating = (helpful: boolean) => {
+  const handleRating = async (helpful: boolean) => {
     console.log('Chat rating:', helpful ? 'helpful' : 'not helpful');
     localStorage.setItem('polus_chat_rated', helpful ? 'helpful' : 'not-helpful');
     setShowRating(false);
+    
+    // Send notification to owner for rated conversations (even without email)
+    if (messages.length >= 6) {
+      await fetch('/api/chat-notification', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages,
+          userEmail: undefined
+        })
+      }).catch(err => console.error('Failed to notify owner:', err));
+    }
     
     // Show thank you message
     if (helpful) {
