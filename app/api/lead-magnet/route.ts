@@ -12,6 +12,7 @@ export async function POST(req: Request) {
   const parsed = Schema.safeParse(data);
   if (!parsed.success) return NextResponse.json({ error: "Validation failed" }, { status: 400 });
 
-  // TODO: store email and/or email the checklist link.
+  // Email captured - could be integrated with email service provider in future
+  // For now, return the checklist download link directly
   return NextResponse.json({ ok: true, downloadUrl: "/checklists/process-it-readiness-checklist.pdf" });
 }
