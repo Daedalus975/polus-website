@@ -7,7 +7,7 @@ import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { useState } from "react";
 
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = "");
+  const [searchQuery, setSearchQuery] = useState("");
   const services = [
     {
       title: "Systems Snapshot Assessment",
