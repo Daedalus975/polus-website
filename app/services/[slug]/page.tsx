@@ -204,7 +204,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "process-mapping-sops",
-    title: "Process Mapping + SOP Starter Pack",
+    title: "Process Mapping and SOP Starter Pack",
     description: "Map workflows, create SOPs, and reduce day-to-day chaos",
     overview: "Document your core workflows and build Standard Operating Procedures that your team will actually use. Includes process mapping, SOP templates, and adoption support.",
     startingPrice: "$1,250",
@@ -281,12 +281,12 @@ const services: ServiceData[] = [
       {
         name: "Essentials",
         price: "$4,500",
-        description: "Service desk + asset management"
+        description: "Service desk and asset management"
       },
       {
         name: "Plus",
         price: "$7,500",
-        description: "Essentials + automation + MSP transition"
+        description: "Essentials, automation, and MSP transition"
       }
     ],
     isBundle: true
@@ -317,12 +317,12 @@ const services: ServiceData[] = [
       {
         name: "Verification Package",
         price: "$1,500",
-        description: "Coverage assessment + gap analysis"
+        description: "Coverage assessment and gap analysis"
       },
       {
         name: "Full DR Package",
         price: "$3,500",
-        description: "Verification + restore testing + playbook"
+        description: "Verification, restore testing, and playbook"
       }
     ],
     isBundle: false
@@ -477,7 +477,7 @@ const services: ServiceData[] = [
       {
         name: "Bundle Package",
         price: "$8,500",
-        description: "Assessment + implementation + 3 months advisory (save $1,299)"
+        description: "Assessment, implementation, and 3 months advisory (save $1,299)"
       }
     ],
     isBundle: true

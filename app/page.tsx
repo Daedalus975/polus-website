@@ -110,7 +110,7 @@ export default function HomePage() {
               <div>
                 <div className="font-semibold text-lg text-polus-paper mb-2">Systems that stick</div>
                 <div className="text-sm text-polus-paper/80 leading-relaxed">
-                  SOPs + training + adoption support—built to last.
+                  SOPs, training, and adoption support.
                 </div>
               </div>
             </div>

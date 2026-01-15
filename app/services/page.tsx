@@ -37,7 +37,7 @@ export default function ServicesPage() {
       title: "Employee Lifecycle System",
       description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures.",
       slug: "employee-lifecycle",
-      tag: "HR + Security"
+      tag: "HR and Security"
     },
     {
       title: "IT Operations Toolkit",
@@ -77,7 +77,7 @@ export default function ServicesPage() {
     },
     {
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Identity & Device Foundation + M365 Governance + Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
+      description: "Complete foundational IT setup: Identity and Device Foundation, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
       slug: "new-foundation-bundle",
       tag: "Bundle Deal"
     },

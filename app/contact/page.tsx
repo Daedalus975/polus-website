@@ -109,7 +109,7 @@ function getServiceExplanations(prefillData: any) {
     }
 
     if (slug === 'growth-acceleration-bundle') {
-      if (prefillData.it_support === 'none') reasons.push("Assessment + implementation + ongoing guidance");
+      if (prefillData.it_support === 'none') reasons.push("Assessment, implementation, and ongoing guidance");
       if (prefillData.primary_pain === 'unclear') reasons.push("Start with assessment, then modernize");
       if (reasons.length === 0) reasons.push("Complete modernization path (save $1,299)");
     }

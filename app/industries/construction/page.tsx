@@ -5,7 +5,7 @@ import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Construction IT + Operations — Polus LLC",
+  title: "Construction IT and Operations — Polus LLC",
   description: "Reduce rework, standardize handoffs, and keep construction projects moving with better systems."
 };
 

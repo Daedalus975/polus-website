@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-6">
-              Polus is built around one idea: small businesses deserve systems that are clear, supportable, and built to last.
+              Polus is a Tulsa, Oklahoma-based IT consulting firm built around one idea: small businesses deserve systems that are clear, supportable, and built to last.
             </p>
             <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed">
               We help Oklahoma startups and small businesses strengthen their operations and IT through practical, straightforward consulting. Whether you need clearer workflows, better Microsoft 365 governance, or a plan to reduce downtime risk, we build solutions that fit your reality.

@@ -310,7 +310,7 @@ export default function StartQuizPage() {
     "new-foundation-bundle": {
       slug: "new-foundation-bundle",
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Identity & Device Foundation + M365 Governance + Employee Lifecycle. Save $2,000.",
+      description: "Complete foundational IT setup: Identity and Device Foundation, M365 Governance, and Employee Lifecycle. Save $2,000.",
       deliverables: [
         "Complete Azure AD/Intune setup",
         "M365 governance framework",
@@ -325,7 +325,7 @@ export default function StartQuizPage() {
     "growth-acceleration-bundle": {
       slug: "growth-acceleration-bundle",
       title: "Growth Acceleration Bundle",
-      description: "Assessment + Identity & Device Foundation + 3 months Strategic Advisory. Complete modernization with ongoing guidance.",
+      description: "Assessment, Identity and Device Foundation, and 3 months Strategic Advisory. Complete modernization with ongoing guidance.",
       deliverables: [
         "Systems assessment",
         "Identity & Device implementation",

@@ -44,7 +44,7 @@ export default function ResultsPage() {
           </Card>
 
           <Card>
-            <h3 className="font-semibold text-lg mb-3">Microsoft 365 + Identity</h3>
+            <h3 className="font-semibold text-lg mb-3">Microsoft 365 and Identity</h3>
             <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
               <li className="flex items-start gap-2">
                 <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -68,7 +68,7 @@ export default function ResultsPage() {
           </Card>
 
           <Card>
-            <h3 className="font-semibold text-lg mb-3">Backup + Disaster Recovery</h3>
+            <h3 className="font-semibold text-lg mb-3">Backup and Disaster Recovery</h3>
             <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
               <li className="flex items-start gap-2">
                 <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -92,7 +92,7 @@ export default function ResultsPage() {
           </Card>
 
           <Card>
-            <h3 className="font-semibold text-lg mb-3">Web + MVP</h3>
+            <h3 className="font-semibold text-lg mb-3">Web and MVP</h3>
             <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
               <li className="flex items-start gap-2">
                 <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">

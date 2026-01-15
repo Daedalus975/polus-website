@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries We Help — Oklahoma IT + Operations | Polus",
+  title: "Industries We Help — Oklahoma IT and Operations | Polus",
   description: "Tailored systems for construction, nonprofits, and startups in Oklahoma."
 };
 

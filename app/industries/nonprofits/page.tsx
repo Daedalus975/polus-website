@@ -5,7 +5,7 @@ import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nonprofit IT + Operations — Polus LLC",
+  title: "Nonprofit IT and Operations — Polus LLC",
   description: "Less admin overhead. More mission impact. Cleaner systems for nonprofit organizations."
 };
 
