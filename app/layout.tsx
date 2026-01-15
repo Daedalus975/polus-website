@@ -13,21 +13,21 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Polus LLC — Operations + IT Consulting (Oklahoma)",
-  description: "Fix processes. Strengthen Microsoft 365 + IT reliability. Book a free discovery call.",
+  title: "Polus LLC — IT Consulting & Operations for Oklahoma Small Businesses",
+  description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off. Free discovery call.",
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: baseUrl,
     siteName: "Polus LLC",
-    title: "Polus LLC — Operations + IT Consulting (Oklahoma)",
-    description: "Fix processes. Strengthen Microsoft 365 + IT reliability. Book a free discovery call."
+    title: "Polus LLC — IT Consulting & Operations for Oklahoma Small Businesses",
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off."
   },
   twitter: {
     card: "summary_large_image",
-    title: "Polus LLC — Operations + IT Consulting (Oklahoma)",
-    description: "Fix processes. Strengthen Microsoft 365 + IT reliability. Book a free discovery call."
+    title: "Polus LLC — IT Consulting & Operations for Oklahoma Small Businesses",
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off."
   }
 };
 
