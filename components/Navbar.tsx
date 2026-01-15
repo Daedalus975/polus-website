@@ -37,179 +37,189 @@ export function Navbar() {
     <>
       {/* Main Navbar */}
       <div className="sticky top-0 z-50 border-b border-[rgba(177,227,199,0.12)] bg-polus-forest/90 backdrop-blur-navbar">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 h-[72px] flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-polus-gold hover:text-polus-mint transition">Polus</Link>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-polus-paper/80">
-          {/* Services Dropdown */}
-          <div 
-            className="relative"
-            onMouseEnter={() => setServicesDropdownOpen(true)}
-            onMouseLeave={() => setServicesDropdownOpen(false)}
-          >
-            <button
-              className="hover:text-polus-gold transition flex items-center gap-1 py-2"
-              aria-expanded={servicesDropdownOpen}
-              aria-haspopup="true"
-              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              onFocus={() => setServicesDropdownOpen(true)}
-            >
-              Services
-              <svg 
-                className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`}
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
-                aria-hidden="true"
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <div className="h-[72px] flex items-center justify-between">
+            <Link href="/" className="font-bold text-xl text-polus-gold hover:text-polus-mint transition">Polus</Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-6 text-sm text-polus-paper/80">
+              {/* Services Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+                <button
+                  className="hover:text-polus-gold transition flex items-center gap-1 py-2"
+                  aria-expanded={servicesDropdownOpen}
+                  aria-haspopup="true"
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  onFocus={() => setServicesDropdownOpen(true)}
+                >
+                  Services
+                  <svg 
+                    className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Industries Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIndustriesDropdownOpen(true)}
+                onMouseLeave={() => setIndustriesDropdownOpen(false)}
+              >
+                <button
+                  className="hover:text-polus-gold transition flex items-center gap-1 py-2"
+                  aria-expanded={industriesDropdownOpen}
+                  aria-haspopup="true"
+                  onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
+                  onFocus={() => setIndustriesDropdownOpen(true)}
+                >
+                  Industries
+                  <svg 
+                    className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Resources Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setResourcesDropdownOpen(true)}
+                onMouseLeave={() => setResourcesDropdownOpen(false)}
+              >
+                <button
+                  className="hover:text-polus-gold transition flex items-center gap-1 py-2"
+                  aria-expanded={resourcesDropdownOpen}
+                  aria-haspopup="true"
+                  onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
+                  onFocus={() => setResourcesDropdownOpen(true)}
+                >
+                  Resources
+                  <svg 
+                    className={`w-4 h-4 transition-transform ${resourcesDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
+                <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
+              )}
+              <Link href="/about" className="hover:text-polus-gold transition">About</Link>
+              <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
+            </nav>
+            
+            <div className="hidden md:block">
+              <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-polus-mint p-2 hover:bg-polus-emerald/10 rounded transition"
+              aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
-            {servicesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-1 w-72">
-                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
-                  <div className="max-h-[60vh] overflow-y-auto">
+          </div>
+
+          {/* Dropdown Menus - Built into Navbar */}
+          {(servicesDropdownOpen || industriesDropdownOpen || resourcesDropdownOpen) && (
+            <div className="hidden md:block border-t border-[rgba(177,227,199,0.12)] bg-polus-surface1/95 backdrop-blur-sm">
+              <div className="py-4 grid grid-cols-3 gap-8">
+                {/* Services Column */}
+                <div className={servicesDropdownOpen ? '' : 'invisible'}>
+                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Services</h3>
+                  <div className="space-y-1">
                     {services.map((service) => (
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
                       >
                         {service.name}
                       </Link>
                     ))}
+                    <div className="border-t border-[rgba(177,227,199,0.12)] my-2"></div>
+                    <Link
+                      href="/services"
+                      className="block px-2 py-2 text-sm text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold rounded"
+                    >
+                      View All Services →
+                    </Link>
                   </div>
-                  <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
-                  <Link
-                    href="/services"
-                    className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
-                  >
-                    More Services
-                  </Link>
                 </div>
-              </div>
-            )}
-          </div>
 
-          {/* Industries Dropdown */}
-          <div 
-            className="relative"
-            onMouseEnter={() => setIndustriesDropdownOpen(true)}
-            onMouseLeave={() => setIndustriesDropdownOpen(false)}
-          >
-            <button
-              className="hover:text-polus-gold transition flex items-center gap-1 py-2"
-              aria-expanded={industriesDropdownOpen}
-              aria-haspopup="true"
-              onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
-              onFocus={() => setIndustriesDropdownOpen(true)}
-            >
-              Industries
-              <svg 
-                className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? 'rotate-180' : ''}`}
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {industriesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-1 w-64">
-                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
-                  <Link
-                    href="/industries"
-                    className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
-                  >
-                    View All Industries
-                  </Link>
-                  <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
-                  {industries.map((industry) => (
+                {/* Industries Column */}
+                <div className={industriesDropdownOpen ? '' : 'invisible'}>
+                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Industries</h3>
+                  <div className="space-y-1">
                     <Link
-                      key={industry.href}
-                      href={industry.href}
-                      className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                      href="/industries"
+                      className="block px-2 py-2 text-sm text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold rounded"
                     >
-                      {industry.name}
+                      View All Industries →
                     </Link>
-                  ))}
+                    <div className="border-t border-[rgba(177,227,199,0.12)] my-2"></div>
+                    {industries.map((industry) => (
+                      <Link
+                        key={industry.href}
+                        href={industry.href}
+                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
+                      >
+                        {industry.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resources Column */}
+                <div className={resourcesDropdownOpen ? '' : 'invisible'}>
+                  <h3 className="text-xs font-semibold text-polus-gold uppercase tracking-wider mb-3 px-2">Resources</h3>
+                  <div className="space-y-1">
+                    {resources.map((resource) => (
+                      <Link
+                        key={resource.href}
+                        href={resource.href}
+                        className="block px-2 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed rounded"
+                      >
+                        {resource.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            )}
-          </div>
-
-          {/* Resources Dropdown */}
-          <div 
-            className="relative"
-            onMouseEnter={() => setResourcesDropdownOpen(true)}
-            onMouseLeave={() => setResourcesDropdownOpen(false)}
-          >
-            <button
-              className="hover:text-polus-gold transition flex items-center gap-1 py-2"
-              aria-expanded={resourcesDropdownOpen}
-              aria-haspopup="true"
-              onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
-              onFocus={() => setResourcesDropdownOpen(true)}
-            >
-              Resources
-              <svg 
-                className={`w-4 h-4 transition-transform ${resourcesDropdownOpen ? 'rotate-180' : ''}`}
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {resourcesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-1 w-56">
-                <div className="bg-polus-surface1 border border-[rgba(177,227,199,0.16)] shadow-2xl py-2 backdrop-blur-sm">
-                  {resources.map((resource) => (
-                    <Link
-                      key={resource.href}
-                      href={resource.href}
-                      className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
-                    >
-                      {resource.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
-            <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
+            </div>
           )}
-          <Link href="/about" className="hover:text-polus-gold transition">About</Link>
-          <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
-        </nav>
-        
-        <div className="hidden md:block">
-          <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-polus-mint p-2 hover:bg-polus-emerald/10 rounded transition"
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
