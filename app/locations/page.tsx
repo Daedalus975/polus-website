@@ -30,7 +30,7 @@ export default function LocationsPage() {
 
   return (
     <>
-      <Section width="default" className="py-20 lg:py-32">
+      <Section className="py-20 lg:py-32">
         <div className="max-w-3xl">
           <h1 className="font-display text-4xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
             IT Consulting for Oklahoma Small Businesses
@@ -44,7 +44,7 @@ export default function LocationsPage() {
         </div>
       </Section>
 
-      <Section width="default" className="pb-20 lg:pb-32">
+      <Section className="pb-20 lg:pb-32">
         <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-8">
           Service Areas
         </h2>
@@ -60,7 +60,7 @@ export default function LocationsPage() {
         </div>
       </Section>
 
-      <Section width="default" className="pb-20 lg:pb-32">
+      <Section className="pb-20 lg:pb-32">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-6">
@@ -114,7 +114,7 @@ export default function LocationsPage() {
         </div>
       </Section>
 
-      <Section width="default" className="pb-20 lg:pb-32">
+      <Section className="pb-20 lg:pb-32">
         <Card className="text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-4">
             Ready to Strengthen Your IT?

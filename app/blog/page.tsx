@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <Section width="default" className="py-20 lg:py-32">
+      <Section className="py-20 lg:py-32">
         <div className="max-w-3xl">
           <h1 className="font-display text-4xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
             IT Insights & Resources
@@ -26,7 +26,7 @@ export default function BlogPage() {
         </div>
       </Section>
 
-      <Section width="default" className="pb-20 lg:pb-32">
+      <Section className="pb-20 lg:pb-32">
         <Card className="text-center py-16">
           <div className="max-w-2xl mx-auto">
             <div className="mb-6">
@@ -65,7 +65,7 @@ export default function BlogPage() {
         </Card>
       </Section>
 
-      <Section width="default" className="pb-20 lg:pb-32">
+      <Section className="pb-20 lg:pb-32">
         <div className="max-w-3xl">
           <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-6">
             Topics We'll Cover
