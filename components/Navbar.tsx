@@ -2,13 +2,31 @@
 import Link from "next/link";
 import { Button } from "./Button";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const industriesRef = useRef<HTMLDivElement>(null);
+  const resourcesRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setServicesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
 
   const services = [
     { name: "Systems Review", href: "/services/systems-assessment" },
@@ -45,6 +63,7 @@ export function Navbar() {
               {/* Services Dropdown */}
               <div 
                 className="relative"
+                ref={servicesRef}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
@@ -52,8 +71,15 @@ export function Navbar() {
                   className="hover:text-polus-gold transition flex items-center gap-1 py-2"
                   aria-expanded={servicesDropdownOpen}
                   aria-haspopup="true"
+                  aria-label="Services menu"
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                   onFocus={() => setServicesDropdownOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setServicesDropdownOpen(!servicesDropdownOpen);
+                    }
+                  }}
                 >
                   Services
                   <svg 
@@ -95,6 +121,7 @@ export function Navbar() {
               {/* Industries Dropdown */}
               <div 
                 className="relative"
+                ref={industriesRef}
                 onMouseEnter={() => setIndustriesDropdownOpen(true)}
                 onMouseLeave={() => setIndustriesDropdownOpen(false)}
               >
@@ -102,8 +129,15 @@ export function Navbar() {
                   className="hover:text-polus-gold transition flex items-center gap-1 py-2"
                   aria-expanded={industriesDropdownOpen}
                   aria-haspopup="true"
+                  aria-label="Industries menu"
                   onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
                   onFocus={() => setIndustriesDropdownOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setIndustriesDropdownOpen(!industriesDropdownOpen);
+                    }
+                  }}
                 >
                   Industries
                   <svg 
@@ -143,6 +177,7 @@ export function Navbar() {
               {/* Resources Dropdown */}
               <div 
                 className="relative"
+                ref={resourcesRef}
                 onMouseEnter={() => setResourcesDropdownOpen(true)}
                 onMouseLeave={() => setResourcesDropdownOpen(false)}
               >
@@ -150,8 +185,15 @@ export function Navbar() {
                   className="hover:text-polus-gold transition flex items-center gap-1 py-2"
                   aria-expanded={resourcesDropdownOpen}
                   aria-haspopup="true"
+                  aria-label="Resources menu"
                   onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
                   onFocus={() => setResourcesDropdownOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setResourcesDropdownOpen(!resourcesDropdownOpen);
+                    }
+                  }}
                 >
                   Resources
                   <svg 

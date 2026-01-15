@@ -33,80 +33,80 @@ export default function LocationsPage() {
 
   return (
     <>
-      <Section className="py-20 lg:py-32">
+      <Section className="pt-20 md:pt-24">
         <div className="max-w-3xl">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-polus-paper mb-6">
             IT Consulting for Oklahoma Small Businesses
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="text-xl text-[rgba(254,255,255,0.88)] leading-relaxed mb-4">
             Polus LLC provides expert IT consulting and operations services to small businesses throughout Oklahoma—with deep expertise in Microsoft 365, process optimization, backup/disaster recovery, and systems management.
           </p>
-          <p className="mt-4 text-lg text-neutral-600">
+          <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed">
             Whether you&apos;re in Oklahoma City, Tulsa, or anywhere else in the state, we help Oklahoma businesses strengthen their IT infrastructure and optimize their operations.
           </p>
         </div>
       </Section>
 
-      <Section className="pb-20 lg:pb-32">
-        <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-8">
+      <Section className="bg-polus-surface1">
+        <h2 className="text-3xl font-bold tracking-tight text-polus-paper mb-8">
           Service Areas
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {serviceAreas.map((area) => (
-            <Card key={area.name}>
-              <h3 className="font-display text-xl font-semibold text-neutral-950 mb-2">
+            <Card key={area.name} className="p-6">
+              <h3 className="text-xl font-semibold text-polus-mint mb-2">
                 {area.name}
               </h3>
-              <p className="text-neutral-600 mb-4">{area.description}</p>
+              <p className="text-[rgba(254,255,255,0.78)] mb-4">{area.description}</p>
               <Button href={area.href} variant="secondary" className="w-full">
                 Learn More
               </Button>
             </Card>
           ))}
         </div>
-        <p className="text-neutral-600 text-center mt-8">
+        <p className="text-[rgba(254,255,255,0.62)] text-center mt-8">
           Remote IT consulting available throughout Oklahoma
         </p>
       </Section>
 
-      <Section className="pb-20 lg:pb-32">
+      <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-polus-paper mb-6">
               Why Oklahoma Businesses Choose Polus
             </h2>
-            <ul className="space-y-4 text-neutral-600">
+            <ul className="space-y-4 text-[rgba(254,255,255,0.78)]">
               <li className="flex gap-3">
-                <span className="text-neutral-950 font-semibold">✓</span>
-                <span><strong>Local understanding:</strong> We understand the unique needs of Oklahoma small businesses</span>
+                <span className="text-polus-mint font-semibold">✓</span>
+                <span><strong className="text-polus-paper">Local understanding:</strong> We understand the unique needs of Oklahoma small businesses</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-neutral-950 font-semibold">✓</span>
-                <span><strong>Remote-first expertise:</strong> Serve clients statewide with secure remote support</span>
+                <span className="text-polus-mint font-semibold">✓</span>
+                <span><strong className="text-polus-paper">Remote-first expertise:</strong> Serve clients statewide with secure remote support</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-neutral-950 font-semibold">✓</span>
-                <span><strong>Microsoft 365 specialists:</strong> Deep expertise in the tools Oklahoma businesses use daily</span>
+                <span className="text-polus-mint font-semibold">✓</span>
+                <span><strong className="text-polus-paper">Microsoft 365 specialists:</strong> Deep expertise in the tools Oklahoma businesses use daily</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-neutral-950 font-semibold">✓</span>
-                <span><strong>Fair pricing:</strong> Transparent pricing designed for small business budgets</span>
+                <span className="text-polus-mint font-semibold">✓</span>
+                <span><strong className="text-polus-paper">Fair pricing:</strong> Transparent pricing designed for small business budgets</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-neutral-950 font-semibold">✓</span>
-                <span><strong>First 10 clients get 20% off:</strong> New business promotion for early customers</span>
+                <span className="text-polus-mint font-semibold">✓</span>
+                <span><strong className="text-polus-paper">First 10 clients get 20% off:</strong> New business promotion for early customers</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-polus-paper mb-6">
               Services We Provide
             </h2>
-            <p className="text-neutral-600 mb-4">
+            <p className="text-[rgba(254,255,255,0.78)] mb-4 leading-relaxed">
               From Microsoft 365 optimization to backup strategy and systems management, we help Oklahoma businesses:
             </p>
-            <ul className="space-y-3 text-neutral-600">
+            <ul className="space-y-3 text-[rgba(254,255,255,0.78)]">
               <li>• Secure and optimize Microsoft 365 environments</li>
               <li>• Implement reliable backup and disaster recovery</li>
               <li>• Streamline business processes and workflows</li>
@@ -123,12 +123,12 @@ export default function LocationsPage() {
         </div>
       </Section>
 
-      <Section className="pb-20 lg:pb-32">
-        <Card className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-4">
+      <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest">
+        <Card className="text-center p-8">
+          <h2 className="text-3xl font-bold tracking-tight text-polus-paper mb-4">
             Ready to Strengthen Your IT?
           </h2>
-          <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[rgba(254,255,255,0.78)] mb-8 max-w-2xl mx-auto leading-relaxed">
             Book a free 30-minute discovery call to discuss your IT challenges. No obligation—just clarity on what needs fixing and what it would cost.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

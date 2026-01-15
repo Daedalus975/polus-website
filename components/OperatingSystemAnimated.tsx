@@ -66,6 +66,15 @@ export function OperatingSystemAnimated({ variant = "full" }: OperatingSystemAni
   ], []);
 
   useEffect(() => {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // If reduced motion is preferred, show all phases immediately
+    if (prefersReducedMotion) {
+      setVisiblePhases(new Set([1, 2, 3, 4]));
+      return;
+    }
+
     const observers: IntersectionObserver[] = [];
 
     phaseRefs.current.forEach((ref, index) => {
