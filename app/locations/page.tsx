@@ -16,15 +16,18 @@ export default function LocationsPage() {
   const serviceAreas = [
     {
       name: "Oklahoma City Metro",
-      description: "Serving OKC, Edmond, Norman, Moore, and surrounding communities"
+      description: "Serving OKC, Edmond, Norman, Moore, and surrounding communities",
+      href: "/locations/oklahoma-city"
     },
     {
       name: "Tulsa Metro",
-      description: "Supporting Tulsa, Broken Arrow, Owasso, Bixby, and nearby areas"
+      description: "Supporting Tulsa, Broken Arrow, Owasso, Bixby, and nearby areas",
+      href: "/locations/tulsa"
     },
     {
-      name: "Statewide Coverage",
-      description: "Remote IT consulting available throughout Oklahoma"
+      name: "Edmond",
+      description: "Dedicated service for Edmond and north OKC metro businesses",
+      href: "/locations/edmond"
     }
   ];
 
@@ -54,10 +57,16 @@ export default function LocationsPage() {
               <h3 className="font-display text-xl font-semibold text-neutral-950 mb-2">
                 {area.name}
               </h3>
-              <p className="text-neutral-600">{area.description}</p>
+              <p className="text-neutral-600 mb-4">{area.description}</p>
+              <Button href={area.href} variant="secondary" className="w-full">
+                Learn More
+              </Button>
             </Card>
           ))}
         </div>
+        <p className="text-neutral-600 text-center mt-8">
+          Remote IT consulting available throughout Oklahoma
+        </p>
       </Section>
 
       <Section className="pb-20 lg:pb-32">
