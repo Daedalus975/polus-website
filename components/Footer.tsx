@@ -23,8 +23,9 @@ export function Footer() {
               <h4 className="text-sm font-semibold text-polus-gold mb-4 uppercase tracking-wider">Company</h4>
               <div className="grid gap-3 text-sm">
                 <Link href="/about" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">About</Link>
-                <Link href="/results" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Results</Link>
-                <Link href="/blog" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Blog</Link>
+                <Link href="/case-studies" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Case Studies</Link>
+                <Link href="/resources" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Resources</Link>
+                <Link href="/referral" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Referral Program</Link>
                 <Link href="/contact" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Contact</Link>
               </div>
             </div>
