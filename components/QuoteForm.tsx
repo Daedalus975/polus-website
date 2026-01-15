@@ -277,15 +277,25 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
   }
 
   const needOptions = [
-    "Process Documentation",
-    "Microsoft 365 governance",
-    "Backup / DR",
-    "Onboarding / Offboarding",
-    "Endpoint management",
-    "Service desk setup",
     "Systems review",
+    "Process Documentation",
+    "M365 governance",
+    "Employee lifecycle (onboarding/offboarding)",
+    "Backup / DR",
+    "Identity & Security",
+    "IT Advisory",
+    "IT operations setup",
+    "Product planning",
     "Web development",
-    "Managed IT support"
+    "IT Foundation Package",
+    "Growth Package",
+    "Microsoft 365 training",
+    "IT documentation",
+    "DR testing service",
+    "Cloud cost optimization",
+    "Compliance documentation",
+    "Technology roadmap workshop",
+    "Other / Not sure yet"
   ];
 
   if (status === "success") {

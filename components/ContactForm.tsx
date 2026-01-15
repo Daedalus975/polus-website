@@ -98,13 +98,25 @@ export function ContactForm() {
   }
 
   const needOptions = [
+    "Systems review",
     "Process Documentation",
-    "Microsoft 365 setup",
+    "M365 governance",
+    "Employee lifecycle (onboarding/offboarding)",
     "Backup / DR",
-    "Onboarding / Offboarding",
-    "Endpoint management",
-    "Service desk setup",
-    "Website / MVP"
+    "Identity & Security",
+    "IT Advisory",
+    "IT operations setup",
+    "Product planning",
+    "Web development",
+    "IT Foundation Package",
+    "Growth Package",
+    "Microsoft 365 training",
+    "IT documentation",
+    "DR testing service",
+    "Cloud cost optimization",
+    "Compliance documentation",
+    "Technology roadmap workshop",
+    "Other / Not sure yet"
   ];
 
   return (
