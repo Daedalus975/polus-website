@@ -10,13 +10,13 @@ export function Navbar() {
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
 
   const services = [
-    { name: "Systems Snapshot Assessment", href: "/services/systems-assessment" },
-    { name: "Strategic IT Advisory", href: "/services/strategic-advisory" },
-    { name: "Cloud Identity & Security Setup", href: "/services/identity-device-foundation" },
-    { name: "M365 Cleanup & Governance", href: "/services/m365-governance" },
-    { name: "Employee Lifecycle System", href: "/services/employee-lifecycle" },
-    { name: "IT Operations Toolkit", href: "/services/it-operations-toolkit" },
-    { name: "Backup Verification & DR", href: "/services/backup-dr-readiness" },
+    { name: "Systems Assessment", href: "/services/systems-assessment" },
+    { name: "IT Advisory", href: "/services/strategic-advisory" },
+    { name: "Identity & Security", href: "/services/identity-device-foundation" },
+    { name: "M365 Governance", href: "/services/m365-governance" },
+    { name: "Employee Lifecycle", href: "/services/employee-lifecycle" },
+    { name: "Operations Toolkit", href: "/services/it-operations-toolkit" },
+    { name: "Backup & DR", href: "/services/backup-dr-readiness" },
     { name: "Acquisition Integration", href: "/services/acquisition-integration" },
   ];
 

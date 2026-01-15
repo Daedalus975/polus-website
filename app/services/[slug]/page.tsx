@@ -24,7 +24,7 @@ type ServiceData = {
 const services: ServiceData[] = [
   {
     slug: "systems-assessment",
-    title: "Systems Snapshot Assessment",
+    title: "Systems Assessment",
     description: "Get clarity on what to fix first—fast",
     overview: "Go beyond a quick conversation. This paid assessment includes hands-on review of your systems, documented findings, prioritized recommendations, and a clear roadmap with effort estimates and pricing. Perfect for teams ready to move from 'what's wrong?' to 'what do we fix first?'",
     startingPrice: "$299",
@@ -45,7 +45,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "strategic-advisory",
-    title: "Strategic IT Advisory",
+    title: "IT Advisory",
     description: "Monthly strategic guidance without support tickets",
     overview: "Get consistent IT leadership without hiring full-time. Monthly subscription includes strategic planning, vendor management, technology roadmap guidance, and executive decision support. This is advisory and planning work—not reactive support tickets or helpdesk services.",
     startingPrice: "$500/month",
@@ -78,7 +78,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "identity-device-foundation",
-    title: "Cloud Identity & Security Setup",
+    title: "Identity & Security",
     description: "Move to modern cloud identity and centralized device management",
     overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation.",
     startingPrice: "$6,500",
@@ -164,7 +164,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "m365-governance",
-    title: "M365 Cleanup & Governance",
+    title: "M365 Governance",
     description: "Tame Teams/SharePoint sprawl and establish sustainable governance",
     overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing: $3,500 (1-25 sites/Teams), $5,500 (26-75 sites), $8,500 (76-150 sites).",
     startingPrice: "$3,500",
@@ -223,7 +223,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "employee-lifecycle",
-    title: "Employee Lifecycle System",
+    title: "Employee Lifecycle",
     description: "Automate onboarding and offboarding for security and consistency",
     overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $3,500 (26-50 employees).",
     startingPrice: "$2,500",
@@ -257,7 +257,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "it-operations-toolkit",
-    title: "IT Operations Toolkit",
+    title: "Operations Toolkit",
     description: "Service desk, asset tracking, and operational foundation",
     overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory, admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, IT operations runbook, MSP transition package, and 30-day post-implementation support.",
     startingPrice: "$4,500",
@@ -293,7 +293,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "backup-dr-readiness",
-    title: "Backup Verification & DR Readiness",
+    title: "Backup & DR",
     description: "Know your backups work before you need them",
     overview: "Know your backups work before you need them. Verification Package ($1,500): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,500): Everything in Verification plus live restore test (1-2 critical systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist.",
     startingPrice: "$1,500",
@@ -329,7 +329,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "process-clarity-pack",
-    title: "Process Clarity Pack",
+    title: "Process Documentation",
     description: "Document critical workflows so your team stops reinventing the wheel",
     overview: "Document critical workflows so your team stops reinventing the wheel. Each process includes visual process mapping (swimlane or flowchart), written SOP document, decision trees for common variations, SOP template for future use, and team training session. Available per-process or as a cost-saving bundle.",
     startingPrice: "$1,500",
@@ -405,7 +405,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "mvp-prd",
-    title: "MVP / PRD Kickoff",
+    title: "MVP Kickoff",
     description: "Turn your product idea into a clear, actionable roadmap",
     overview: "Work with you to scope your Minimum Viable Product, define features, prioritize development phases, and create a detailed Product Requirements Document (PRD) ready for development. 1-day workshop format with comprehensive deliverables.",
     startingPrice: "$2,000",
@@ -428,7 +428,7 @@ const services: ServiceData[] = [
     slug: "new-foundation-bundle",
     title: "New Foundation Bundle",
     description: "Complete foundational IT setup for growing businesses",
-    overview: "Get your entire IT foundation built right from the start. This bundle combines Cloud Identity & Security Setup, M365 Cleanup & Governance, and Employee Lifecycle System to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
+    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security, M365 Governance, and Employee Lifecycle to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
     startingPrice: "$13,500",
     timeline: "8-12 weeks for complete implementation",
     deliverables: [
@@ -457,12 +457,12 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Acceleration Bundle",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Snapshot Assessment to identify priorities, implements your Cloud Identity & Security Setup, then includes 3 months of Strategic IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Assessment to identify priorities, implements your Identity & Security foundation, then includes 3 months of IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
     startingPrice: "$8,500",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
-      "Systems Snapshot Assessment with prioritized roadmap",
-      "Cloud Identity & Security Setup implementation (Tier 1)",
+      "Systems Assessment with prioritized roadmap",
+      "Identity & Security implementation (Tier 1)",
       "3 months Strategic IT Advisory (Essentials tier: 4 hours/month)",
       "Monthly strategic planning sessions",
       "Technology roadmap development",

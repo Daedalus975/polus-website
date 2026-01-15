@@ -10,49 +10,49 @@ export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const services = [
     {
-      title: "Systems Snapshot Assessment",
+      title: "Systems Assessment",
       description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
       slug: "systems-assessment",
       tag: "Start Here"
     },
     {
-      title: "Strategic IT Advisory",
+      title: "IT Advisory",
       description: "Ongoing monthly strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets. $500/mo (4 hrs) or $1,000/mo (10 hrs).",
       slug: "strategic-advisory",
       tag: "Recurring Revenue"
     },
     {
-      title: "Cloud Identity & Security Setup",
+      title: "Identity & Security",
       description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies.",
       slug: "identity-device-foundation",
       tag: "Core Infrastructure"
     },
     {
-      title: "M365 Cleanup & Governance",
+      title: "M365 Governance",
       description: "Tame Teams/SharePoint sprawl and establish sustainable governance. Naming conventions, retention policies, permissions cleanup, and external sharing controls.",
       slug: "m365-governance",
       tag: "For Growing Teams"
     },
     {
-      title: "Employee Lifecycle System",
+      title: "Employee Lifecycle",
       description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures.",
       slug: "employee-lifecycle",
       tag: "HR and Security"
     },
     {
-      title: "IT Operations Toolkit",
+      title: "Operations Toolkit",
       description: "Service desk, asset tracking, and operational foundation. Get structured support workflows, inventory management, and handoff-ready documentation.",
       slug: "it-operations-toolkit",
       tag: "Operational Maturity"
     },
     {
-      title: "Backup Verification & DR Readiness",
+      title: "Backup & DR",
       description: "Know your backups work before you need them. Coverage assessment, restore testing, and disaster recovery playbook with step-by-step procedures.",
       slug: "backup-dr-readiness",
       tag: "Risk Mitigation"
     },
     {
-      title: "Process Clarity Pack",
+      title: "Process Documentation",
       description: "Document critical workflows so your team stops reinventing the wheel. Visual process maps, written SOPs, and training. Priced per process or as a bundle.",
       slug: "process-clarity-pack",
       tag: "Operational Excellence"
@@ -64,7 +64,7 @@ export default function ServicesPage() {
       tag: "Digital Presence"
     },
     {
-      title: "MVP / PRD Kickoff",
+      title: "MVP Kickoff",
       description: "Turn your product idea into a clear, actionable roadmap. 1-day workshop with detailed Product Requirements Document.",
       slug: "mvp-prd",
       tag: "Product Planning"
@@ -77,13 +77,13 @@ export default function ServicesPage() {
     },
     {
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Cloud Identity & Security Setup, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
+      description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
       slug: "new-foundation-bundle",
       tag: "Bundle Deal"
     },
     {
       title: "Growth Acceleration Bundle",
-      description: "Assessment, Cloud Identity & Security Setup, and 3 months Strategic IT Advisory. Save $1,299. Complete modernization with ongoing guidance.",
+      description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,299. Complete modernization with ongoing guidance.",
       slug: "growth-acceleration-bundle",
       tag: "Bundle Deal"
     },

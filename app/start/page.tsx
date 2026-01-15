@@ -159,7 +159,7 @@ export default function StartAssessmentPage() {
   const services: Record<string, ServiceRecommendation> = {
     "systems-assessment": {
       slug: "systems-assessment",
-      title: "Systems Snapshot Assessment",
+      title: "Systems Assessment",
       description: "A 90-minute deep-dive session where we evaluate your current operations, IT setup, and workflows. You'll walk away with a prioritized roadmap and clear next steps.",
       deliverables: [
         "Documented findings report",
@@ -234,7 +234,7 @@ export default function StartAssessmentPage() {
     },
     "identity-device-foundation": {
       slug: "identity-device-foundation",
-      title: "Cloud Identity & Security Setup",
+      title: "Identity & Security",
       description: "Modern cloud identity (Azure AD) and centralized device management (Intune) with MFA, SSO, and baseline security policies.",
       deliverables: [
         "Azure AD/Entra ID setup",
@@ -249,7 +249,7 @@ export default function StartAssessmentPage() {
     },
     "strategic-advisory": {
       slug: "strategic-advisory",
-      title: "Strategic IT Advisory",
+      title: "IT Advisory",
       description: "Ongoing strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets.",
       deliverables: [
         "Monthly strategic sessions",
@@ -310,7 +310,7 @@ export default function StartAssessmentPage() {
     "new-foundation-bundle": {
       slug: "new-foundation-bundle",
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Cloud Identity & Security Setup, M365 Governance, and Employee Lifecycle. Save $2,000.",
+      description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000.",
       deliverables: [
         "Complete Azure AD/Intune setup",
         "M365 governance framework",
@@ -325,7 +325,7 @@ export default function StartAssessmentPage() {
     "growth-acceleration-bundle": {
       slug: "growth-acceleration-bundle",
       title: "Growth Acceleration Bundle",
-      description: "Assessment, Cloud Identity & Security Setup, and 3 months Strategic IT Advisory. Complete modernization with ongoing guidance.",
+      description: "Assessment, Identity & Security, and 3 months IT Advisory. Complete modernization with ongoing guidance.",
       deliverables: [
         "Systems assessment",
         "Identity & Device implementation",

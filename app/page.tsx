@@ -145,7 +145,7 @@ export default function HomePage() {
       <Section title="Start with a fixed-scope package" eyebrow="Packages">
         <div className="grid gap-6 md:grid-cols-3">
           <Card className="hover:shadow-cardHover flex flex-col">
-            <div className="font-semibold text-lg">Systems Snapshot Assessment</div>
+            <div className="font-semibold text-lg">Systems Assessment</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
               A clear priority plan and next steps in 90 minutes.
             </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
             </div>
           </Card>
           <Card className="hover:shadow-cardHover border-polus-gold/40 flex flex-col">
-            <div className="font-semibold text-lg">Cloud Identity & Security Setup</div>
+            <div className="font-semibold text-lg">Identity & Security</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
               Set up cloud identity, MFA, and device management for your team.
             </div>
