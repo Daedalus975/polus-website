@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import nodemailer from 'nodemailer';
 
 const NotificationSchema = z.object({
   messages: z.array(z.object({
@@ -48,24 +49,39 @@ ${transcript}
 This is an automated notification from your Polus website chat system.
 `.trim();
 
-    // TODO: In production, integrate with your email provider (SendGrid, Mailgun, Resend, etc.)
-    // Example with SendGrid:
-    // await sendgrid.send({
-    //   to: 'jack.washmon@polus-cs.com',
-    //   from: 'notifications@polus-cs.com',
-    //   subject: `New Chat: ${userMessageCount} messages${userEmail ? ` from ${userEmail}` : ''}`,
-    //   text: emailBody,
-    //   html: emailBody.replace(/\n/g, '<br>')
-    // });
+    // Send email via Resend (existing setup)
+    const inbox = process.env.BUSINESS_INBOX_EMAIL;
+    const host = process.env.SMTP_HOST;
+    const user = process.env.SMTP_USER;
+    const pass = process.env.SMTP_PASS;
+    const from = process.env.SMTP_FROM || 'Polus <no-reply@polus-cs.com>';
 
-    // For now, just log it (you'll see this in Vercel logs)
-    console.log('=== CHAT NOTIFICATION ===');
-    console.log(emailBody);
-    console.log('========================');
+    if (!inbox || !host || !user || !pass) {
+      console.error('Missing email configuration for chat notification');
+      return NextResponse.json({ 
+        success: false, 
+        message: 'Email not configured' 
+      }, { status: 500 });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: false,
+      auth: { user, pass }
+    });
+
+    await transporter.sendMail({
+      from,
+      to: inbox,
+      replyTo: userEmail || undefined,
+      subject: `[CHAT] ${userMessageCount} messages${userEmail ? ` from ${userEmail}` : ' (no email)'}`,
+      text: emailBody
+    });
 
     return NextResponse.json({ 
       success: true, 
-      message: 'Notification logged (production email pending)' 
+      message: 'Notification sent' 
     });
 
   } catch (error: any) {
