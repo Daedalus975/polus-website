@@ -31,11 +31,11 @@ export function Navbar() {
   const services = [
     { name: "IT Assessment", href: "/services/systems-assessment" },
     { name: "IT Advisory", href: "/services/strategic-advisory" },
-    { name: "Microsoft 365 / Entra ID", href: "/services/identity-device-foundation" },
-    { name: "Teams & SharePoint Governance", href: "/services/m365-governance" },
+    { name: "M365 / Entra ID", href: "/services/identity-device-foundation" },
+    { name: "Teams/SharePoint", href: "/services/m365-governance" },
     { name: "Onboarding & Offboarding", href: "/services/employee-lifecycle" },
     { name: "IT Operations Setup", href: "/services/it-operations-toolkit" },
-    { name: "Backup & Disaster Recovery", href: "/services/backup-dr-readiness" },
+    { name: "Backup & DR", href: "/services/backup-dr-readiness" },
     { name: "Acquisition Integration", href: "/services/acquisition-integration" },
   ];
 
