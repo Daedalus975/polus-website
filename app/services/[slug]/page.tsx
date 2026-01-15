@@ -45,11 +45,11 @@ const services: ServiceData[] = [
   },
   {
     slug: "strategic-advisory",
-    title: "Strategic IT Advisory (Retainer)",
-    description: "Monthly retainer for ongoing strategic guidance without support tickets",
-    overview: "Get consistent IT leadership without hiring full-time. Monthly retainer includes strategic planning, vendor management, technology roadmap guidance, and executive decision support. This is advisory and planning work—not reactive support tickets or helpdesk services.",
+    title: "Strategic IT Advisory",
+    description: "Monthly strategic guidance without support tickets",
+    overview: "Get consistent IT leadership without hiring full-time. Monthly subscription includes strategic planning, vendor management, technology roadmap guidance, and executive decision support. This is advisory and planning work—not reactive support tickets or helpdesk services.",
     startingPrice: "$500/month",
-    timeline: "Ongoing monthly retainer",
+    timeline: "Ongoing monthly",
     deliverables: [
       "Monthly strategic planning sessions (4 hours Essentials, 10 hours Plus)",
       "Technology roadmap development and updates",
@@ -78,9 +78,9 @@ const services: ServiceData[] = [
   },
   {
     slug: "identity-device-foundation",
-    title: "Identity & Device Foundation",
+    title: "Cloud Identity & Security Setup",
     description: "Move to modern cloud identity and centralized device management",
-    overview: "Move to modern cloud identity and centralized device management. Includes Azure AD Connect setup, Intune enrollment, MFA rollout, conditional access policies, SSO for up to 3 apps, BitLocker enforcement, and Windows Update configuration. This package combines identity migration with endpoint management for a complete modern infrastructure foundation.",
+    overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation.",
     startingPrice: "$6,500",
     timeline: "4-6 weeks (depends on device count and complexity)",
     deliverables: [
@@ -428,7 +428,7 @@ const services: ServiceData[] = [
     slug: "new-foundation-bundle",
     title: "New Foundation Bundle",
     description: "Complete foundational IT setup for growing businesses",
-    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Device Foundation, M365 Cleanup & Governance, and Employee Lifecycle System to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
+    overview: "Get your entire IT foundation built right from the start. This bundle combines Cloud Identity & Security Setup, M365 Cleanup & Governance, and Employee Lifecycle System to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
     startingPrice: "$13,500",
     timeline: "8-12 weeks for complete implementation",
     deliverables: [
@@ -457,12 +457,12 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Acceleration Bundle",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Snapshot Assessment to identify priorities, implements your Identity & Device Foundation, then includes 3 months of Strategic IT Advisory retainer for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Snapshot Assessment to identify priorities, implements your Cloud Identity & Security Setup, then includes 3 months of Strategic IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
     startingPrice: "$8,500",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
       "Systems Snapshot Assessment with prioritized roadmap",
-      "Identity & Device Foundation implementation (Tier 1)",
+      "Cloud Identity & Security Setup implementation (Tier 1)",
       "3 months Strategic IT Advisory (Essentials tier: 4 hours/month)",
       "Monthly strategic planning sessions",
       "Technology roadmap development",

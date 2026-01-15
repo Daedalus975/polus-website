@@ -15,7 +15,7 @@ export function OperatingSystem({ variant = "full" }: OperatingSystemProps) {
   const phases: Phase[] = [
     {
       number: 1,
-      title: "Discovery + Assessment",
+      title: "Discovery and Assessment",
       description: "We start by understanding your current state: what's working, what's not, and where the biggest risks or inefficiencies are.",
       deliverables: [
         "Documented findings report",
@@ -26,7 +26,7 @@ export function OperatingSystem({ variant = "full" }: OperatingSystemProps) {
     },
     {
       number: 2,
-      title: "Planning + Design",
+      title: "Planning and Design",
       description: "We design the solution—whether that's a process map, governance plan, or technical implementation—and get your approval before execution.",
       deliverables: [
         "Detailed project plan",
@@ -48,7 +48,7 @@ export function OperatingSystem({ variant = "full" }: OperatingSystemProps) {
     },
     {
       number: 4,
-      title: "Training + Adoption",
+      title: "Training and Adoption",
       description: "We don't just hand off documentation—we train your team, answer questions, and ensure the solution sticks.",
       deliverables: [
         "User training sessions",

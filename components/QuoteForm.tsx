@@ -46,8 +46,8 @@ function mapServiceSlugToCheckboxLabel(slug: string): string {
     "m365-governance": "Microsoft 365 governance",
     "employee-lifecycle": "Employee lifecycle (onboarding/offboarding)",
     "backup-dr-readiness": "Backup / DR",
-    "identity-device-foundation": "Identity & Device Foundation",
-    "strategic-advisory": "Strategic IT advisory (retainer)",
+    "identity-device-foundation": "Cloud Identity & Security Setup",
+    "strategic-advisory": "Strategic IT Advisory",
     "it-operations-toolkit": "IT operations / service desk",
     "mvp-prd": "MVP / PRD Kickoff",
     "web-development": "Web development",
@@ -67,7 +67,7 @@ function buildPrefilledMessage(data: PrefillData): string {
   if (!data.service_title) return "";
   
   const lines: string[] = [
-    `I completed the Polus quiz and received a recommendation for: ${data.service_title}`,
+    `I completed the Polus assessment and received a recommendation for: ${data.service_title}`,
     ""
   ];
   

@@ -24,7 +24,7 @@ AVAILABLE SERVICES WITH DISCOUNT PRICING:
 3. Technology Roadmap Workshop - $3,200 (was $4,000) - Multi-year technology planning
 
 **Identity & Security:**
-4. Identity & Device Foundation - $5,200 (was $6,500) - Microsoft Entra ID, Intune, MFA setup
+4. Cloud Identity & Security Setup - $5,200 (was $6,500) - Microsoft Entra ID, Intune, MFA setup
 5. M365 Governance - $1,600 (was $2,000) - Policies, compliance, security hardening
 6. Device Compliance & Hardening - $2,000 (was $2,500) - Intune policies, BitLocker, security
 

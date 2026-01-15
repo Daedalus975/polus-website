@@ -149,7 +149,7 @@ function getServiceExplanations(prefillData: any) {
     
     // Always provide at least one reason
     if (reasons.length === 0) {
-      reasons.push("Recommended based on your quiz responses");
+      reasons.push("Recommended based on your assessment responses");
     }
     
     explanations[slug] = reasons;
@@ -201,8 +201,8 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
     'm365-governance': 'M365 Cleanup & Governance',
     'employee-lifecycle': 'Employee Lifecycle System',
     'backup-dr-readiness': 'Backup Verification & DR Readiness',
-    'identity-device-foundation': 'Identity & Device Foundation',
-    'strategic-advisory': 'Strategic IT Advisory (Retainer)',
+    'identity-device-foundation': 'Cloud Identity & Security Setup',
+    'strategic-advisory': 'Strategic IT Advisory',
     'it-operations-toolkit': 'IT Operations Toolkit',
     'mvp-prd': 'MVP / PRD Kickoff',
     'web-development': 'Web Development',
@@ -218,7 +218,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
 
   return (
     <>
-      <Section title="Get a Quote" eyebrow={fromQuiz ? "Based on your quiz results" : "Start here"} className="pt-20 md:pt-24">
+      <Section title="Get a Quote" eyebrow={fromQuiz ? "Based on your assessment results" : "Start here"} className="pt-20 md:pt-24">
         <div className="max-w-3xl mb-8">
           {fromQuiz && prefillData.service_title && (
             <>
@@ -228,7 +228,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p className="text-polus-mint font-semibold mb-1">Quiz Completed — Here's What We Recommend</p>
+                    <p className="text-polus-mint font-semibold mb-1">Assessment Completed — Here's What We Recommend</p>
                     <div className="text-sm text-[rgba(254,255,255,0.78)] mb-4">
                       Based on your answers, we've pre-selected the services that best match your needs. The form below is ready to submit—just add your contact info.
                     </div>

@@ -168,9 +168,9 @@ export default function HomePage() {
             </div>
           </Card>
           <Card className="hover:shadow-cardHover border-polus-gold/40 flex flex-col">
-            <div className="font-semibold text-lg">Identity & Device Foundation</div>
+            <div className="font-semibold text-lg">Cloud Identity & Security Setup</div>
             <div className="mt-3 text-sm text-[rgba(254,255,255,0.78)] leading-relaxed flex-grow">
-              Modern cloud identity and centralized device management.
+              Set up cloud identity, MFA, and device management for your team.
             </div>
             <div className="mt-5">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide mb-2">
@@ -239,7 +239,7 @@ export default function HomePage() {
           </p>
           {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
             <p className="mt-3 text-sm text-[rgba(254,255,255,0.65)]">
-              Not sure where to start? <a href="/start" className="text-polus-mint hover:text-polus-gold underline">Take our 2-minute quiz</a> for a personalized recommendation.
+              Not sure where to start? <a href="/start" className="text-polus-mint hover:text-polus-gold underline">Take our 2-minute assessment</a> for a personalized recommendation.
             </p>
           )}
           <div className="mt-8 flex flex-wrap gap-4 justify-center">

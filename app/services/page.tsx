@@ -16,14 +16,14 @@ export default function ServicesPage() {
       tag: "Start Here"
     },
     {
-      title: "Strategic IT Advisory (Retainer)",
-      description: "Ongoing strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets. $500/mo (4 hrs) or $1,000/mo (10 hrs).",
+      title: "Strategic IT Advisory",
+      description: "Ongoing monthly strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets. $500/mo (4 hrs) or $1,000/mo (10 hrs).",
       slug: "strategic-advisory",
       tag: "Recurring Revenue"
     },
     {
-      title: "Identity & Device Foundation",
-      description: "Move to modern cloud identity and centralized device management. Includes Azure AD, Intune, MFA, SSO, and baseline security policies.",
+      title: "Cloud Identity & Security Setup",
+      description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies.",
       slug: "identity-device-foundation",
       tag: "Core Infrastructure"
     },
@@ -77,13 +77,13 @@ export default function ServicesPage() {
     },
     {
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Identity and Device Foundation, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
+      description: "Complete foundational IT setup: Cloud Identity & Security Setup, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
       slug: "new-foundation-bundle",
       tag: "Bundle Deal"
     },
     {
       title: "Growth Acceleration Bundle",
-      description: "Assessment + Identity & Device Foundation + 3 months Strategic Advisory. Save $1,299. Complete modernization with ongoing guidance.",
+      description: "Assessment, Cloud Identity & Security Setup, and 3 months Strategic IT Advisory. Save $1,299. Complete modernization with ongoing guidance.",
       slug: "growth-acceleration-bundle",
       tag: "Bundle Deal"
     },

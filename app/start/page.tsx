@@ -29,7 +29,7 @@ type ServiceRecommendation = {
   idealFor: string[];
 };
 
-export default function StartQuizPage() {
+export default function StartAssessmentPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [recommendation, setRecommendation] = useState<{ service: ServiceRecommendation; confidence: number; topServices: string[]; serviceScores: Record<string, number> } | null>(null);
@@ -234,7 +234,7 @@ export default function StartQuizPage() {
     },
     "identity-device-foundation": {
       slug: "identity-device-foundation",
-      title: "Identity & Device Foundation",
+      title: "Cloud Identity & Security Setup",
       description: "Modern cloud identity (Azure AD) and centralized device management (Intune) with MFA, SSO, and baseline security policies.",
       deliverables: [
         "Azure AD/Entra ID setup",
@@ -249,7 +249,7 @@ export default function StartQuizPage() {
     },
     "strategic-advisory": {
       slug: "strategic-advisory",
-      title: "Strategic IT Advisory (Retainer)",
+      title: "Strategic IT Advisory",
       description: "Ongoing strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets.",
       deliverables: [
         "Monthly strategic sessions",
@@ -310,7 +310,7 @@ export default function StartQuizPage() {
     "new-foundation-bundle": {
       slug: "new-foundation-bundle",
       title: "New Foundation Bundle",
-      description: "Complete foundational IT setup: Identity and Device Foundation, M365 Governance, and Employee Lifecycle. Save $2,000.",
+      description: "Complete foundational IT setup: Cloud Identity & Security Setup, M365 Governance, and Employee Lifecycle. Save $2,000.",
       deliverables: [
         "Complete Azure AD/Intune setup",
         "M365 governance framework",
@@ -325,7 +325,7 @@ export default function StartQuizPage() {
     "growth-acceleration-bundle": {
       slug: "growth-acceleration-bundle",
       title: "Growth Acceleration Bundle",
-      description: "Assessment, Identity and Device Foundation, and 3 months Strategic Advisory. Complete modernization with ongoing guidance.",
+      description: "Assessment, Cloud Identity & Security Setup, and 3 months Strategic IT Advisory. Complete modernization with ongoing guidance.",
       deliverables: [
         "Systems assessment",
         "Identity & Device implementation",
@@ -560,7 +560,7 @@ export default function StartQuizPage() {
 
   if (!started) {
     return (
-      <Section title="Find Your Starting Point" eyebrow="Guided Quiz" className="pt-20 md:pt-24">
+      <Section title="Find Your Starting Point" eyebrow="Guided Assessment" className="pt-20 md:pt-24">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
             Answer 10 targeted questions and we'll recommend the exact service you need—based on your specific challenges, budget, and industry.
@@ -597,7 +597,7 @@ export default function StartQuizPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleStart} variant="primary" className="px-8 py-3">
-                Start the Quiz →
+                Start the Assessment →
               </Button>
               <Button 
                 onClick={() => {
@@ -607,11 +607,11 @@ export default function StartQuizPage() {
                 variant="secondary" 
                 className="px-8 py-3"
               >
-                Skip Quiz - Book a Call Instead
+                Skip Assessment - Book a Call Instead
               </Button>
             </div>
             <p className="text-sm text-[rgba(254,255,255,0.58)] mt-6">
-              Not sure which option to choose? The quiz helps us understand your situation so we can point you in the right direction—or book a discovery call and we'll figure it out together.
+              Not sure which option to choose? The assessment helps us understand your situation so we can point you in the right direction—or book a discovery call and we'll figure it out together.
             </p>
           </Card>
         </div>
@@ -773,7 +773,7 @@ export default function StartQuizPage() {
               }}
               className="text-polus-mint hover:text-polus-gold underline text-sm"
             >
-              Retake the quiz
+              Retake the assessment
             </button>
           </div>
         </div>

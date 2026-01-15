@@ -11,8 +11,8 @@ export function Navbar() {
 
   const services = [
     { name: "Systems Snapshot Assessment", href: "/services/systems-assessment" },
-    { name: "Strategic IT Advisory (Retainer)", href: "/services/strategic-advisory" },
-    { name: "Identity & Device Foundation", href: "/services/identity-device-foundation" },
+    { name: "Strategic IT Advisory", href: "/services/strategic-advisory" },
+    { name: "Cloud Identity & Security Setup", href: "/services/identity-device-foundation" },
     { name: "M365 Cleanup & Governance", href: "/services/m365-governance" },
     { name: "Employee Lifecycle System", href: "/services/employee-lifecycle" },
     { name: "IT Operations Toolkit", href: "/services/it-operations-toolkit" },
@@ -134,7 +134,7 @@ export function Navbar() {
           </div>
 
           {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
-            <Link href="/start" className="hover:text-polus-gold transition">Quiz</Link>
+            <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
           )}
           <Link href="/about" className="hover:text-polus-gold transition">About</Link>
           <Link href="/blog" className="hover:text-polus-gold transition">Blog</Link>
@@ -142,7 +142,7 @@ export function Navbar() {
         </nav>
         
         <div className="hidden md:block">
-          <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book Call</Button>
+          <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -258,7 +258,7 @@ export function Navbar() {
                 className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Quiz
+                Assessment
               </Link>
             )}
             <Link 

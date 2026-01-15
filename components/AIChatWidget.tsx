@@ -208,7 +208,7 @@ export default function AIChatWidget() {
       // Parse service links in response
       let content = data.message;
       const serviceNames = [
-        'Systems Snapshot Assessment', 'Identity & Device Foundation', 'Backup Verification',
+        'Systems Snapshot Assessment', 'Cloud Identity & Security Setup', 'Backup Verification',
         'Strategic Advisory', 'M365 Optimization', 'Process Clarity Pack', 'Employee Lifecycle',
         'Email Migration', 'Backup & DR Readiness', 'Business Continuity Plan'
       ];
