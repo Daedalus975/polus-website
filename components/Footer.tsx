@@ -46,6 +46,7 @@ export function Footer() {
             <div className="grid gap-3 text-sm">
               <Link href="/privacy" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Privacy Policy</Link>
               <Link href="/terms" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Terms of Service</Link>
+              <Link href="/cookies" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Cookie Policy</Link>
               <Link href="/accessibility" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Accessibility</Link>
             </div>
           </div>

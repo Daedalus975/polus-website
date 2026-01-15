@@ -173,7 +173,7 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="company" className="block text-sm font-medium mb-1.5">
-            Company
+            Company <span className="text-polus-gold">*</span>
           </label>
           <input
             type="text"
@@ -181,6 +181,7 @@ export function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
+            required
             disabled={status === "loading"}
             className="w-full rounded-md border border-[rgba(177,227,199,0.28)] bg-polus-surface2 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[rgba(17,98,56,0.55)] disabled:opacity-50"
           />

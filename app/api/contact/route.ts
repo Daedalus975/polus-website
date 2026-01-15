@@ -44,7 +44,7 @@ const Schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().optional(),
-  company: z.string().optional(),
+  company: z.string().min(2, "Company name is required"),
   industry: z.string().optional(),
   team_size: z.string().optional(),
   primary_need: z.array(z.string()).optional(),

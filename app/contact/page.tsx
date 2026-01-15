@@ -213,7 +213,9 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
     'dr-testing-service': 'Disaster Recovery Testing Service',
     'cloud-cost-optimization': 'Cloud Cost Optimization Review',
     'compliance-documentation': 'Compliance Documentation Prep',
-    'technology-roadmap-workshop': 'Technology Roadmap Workshop'
+    'technology-roadmap-workshop': 'Technology Roadmap Workshop',
+    'security-first-package': 'Security First Package',
+    'process-compliance-package': 'Process & Compliance Package'
   };
 
   return (
