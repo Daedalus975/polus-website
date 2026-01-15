@@ -3,6 +3,7 @@ import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { StructuredData, getFAQSchema, getServiceSchema, getBreadcrumbSchema } from "@/components/StructuredData";
 
 type ServiceData = {
   slug: string;
@@ -13,6 +14,10 @@ type ServiceData = {
   timeline: string;
   deliverables: string[];
   idealFor: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
   pricingTiers?: Array<{
     name: string;
     price: string;
@@ -40,6 +45,20 @@ const services: ServiceData[] = [
       "Teams who've had the free discovery call and want deeper analysis",
       "Business owners ready to invest in planning before execution",
       "Companies needing documentation for leadership buy-in or budgeting"
+    ],
+    faqs: [
+      {
+        question: "How is this different from the free discovery call?",
+        answer: "The free discovery call is a 30-minute conversation about your business and pain points. The Systems Review is a paid, hands-on 90-minute working session where we actually look at your systems, document specific findings, and provide a prioritized roadmap with pricing. You get a written report within 24 hours."
+      },
+      {
+        question: "What do I need to prepare before the session?",
+        answer: "We'll send a prep checklist before the session, but generally: admin access to your key systems (M365, backup tools, etc.), a list of your current pain points, and any budget or timeline constraints you're working with."
+      },
+      {
+        question: "Do I have to hire you for implementation afterward?",
+        answer: "No. The assessment is valuable on its own. You'll get documented recommendations and pricing that you can use however you want—implement yourself, use another vendor, or hire us. No pressure."
+      }
     ],
     isBundle: false
   },
@@ -97,6 +116,20 @@ const services: ServiceData[] = [
       "Businesses moving from on-prem to cloud-first infrastructure",
       "Remote/hybrid teams needing centralized device control",
       "Companies tired of local admin chaos and password resets"
+    ],
+    faqs: [
+      {
+        question: "Do we need on-premise servers for this to work?",
+        answer: "No. While we can set up hybrid identity (Azure AD Connect) if you have on-prem Active Directory, this package is designed for cloud-first or cloud-only businesses. If you're fully cloud, we'll configure everything in Microsoft Entra ID (Azure AD) directly."
+      },
+      {
+        question: "Will MFA disrupt our team's workflow?",
+        answer: "We design the rollout to minimize disruption. Users typically authenticate once per device with the Microsoft Authenticator app, then stay signed in. We'll train your team and provide documentation to make the transition smooth."
+      },
+      {
+        question: "What if we have more than 50 devices?",
+        answer: "This package is designed for 10-50 devices. For larger deployments (51+ devices), we'll provide custom pricing based on your specific needs. Contact us for a quote."
+      }
     ],
     pricingTiers: [
       {
@@ -182,6 +215,20 @@ const services: ServiceData[] = [
       "Organizations drowning in duplicate Teams and shadow sites",
       "Companies with compliance requirements (client data handling)",
       "Businesses preparing for audits or rapid growth"
+    ],
+    faqs: [
+      {
+        question: "Will this delete any of our existing Teams or SharePoint sites?",
+        answer: "Not without your approval. We'll audit your current state, identify inactive or duplicate sites, and provide recommendations. You'll review and approve any cleanup actions before we make changes."
+      },
+      {
+        question: "How do you determine which tier we need?",
+        answer: "We count your active Teams and SharePoint sites. Tier 1 covers 1-25 sites, Tier 2 covers 26-75, and Tier 3 covers 76-150. If you're not sure, we can do a quick count during your discovery call."
+      },
+      {
+        question: "Will this prevent users from creating new Teams?",
+        answer: "We'll work with you to define the right balance. Some organizations restrict Team creation to IT or specific approvers, while others allow it but enforce naming conventions and lifecycle policies. You choose what makes sense for your culture."
+      }
     ],
     pricingTiers: [
       {
@@ -831,6 +878,23 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
           </div>
         </div>
       </Section>
+
+      {service.faqs && service.faqs.length > 0 && (
+        <>
+          <StructuredData data={getFAQSchema(service.faqs)} />
+          <Section>
+            <h2 className="text-2xl font-semibold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6 max-w-3xl">
+              {service.faqs.map((faq, idx) => (
+                <div key={idx} className="border-b border-[rgba(177,227,199,0.12)] pb-6 last:border-0">
+                  <h3 className="text-lg font-semibold mb-3 text-polus-mint">{faq.question}</h3>
+                  <p className="text-[rgba(254,255,255,0.78)] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </>
+      )}
 
       <Section className="text-center">
         <h2 className="text-2xl font-semibold mb-4">Ready to get started?</h2>

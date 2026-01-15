@@ -83,8 +83,21 @@ export type WebSiteSchema = {
   };
 };
 
+export type FAQPageSchema = {
+  "@context": "https://schema.org";
+  "@type": "FAQPage";
+  mainEntity: {
+    "@type": "Question";
+    name: string;
+    acceptedAnswer: {
+      "@type": "Answer";
+      text: string;
+    };
+  }[];
+};
+
 type StructuredDataProps = {
-  data: OrganizationSchema | LocalBusinessSchema | ServiceSchema | BreadcrumbSchema | WebSiteSchema;
+  data: OrganizationSchema | LocalBusinessSchema | ServiceSchema | BreadcrumbSchema | WebSiteSchema | FAQPageSchema;
 };
 
 export function StructuredData({ data }: StructuredDataProps) {
@@ -192,6 +205,21 @@ export function getBreadcrumbSchema(items: { name: string; url?: string }[]): Br
       position: index + 1,
       name: item.name,
       ...(item.url && { item: item.url })
+    }))
+  };
+}
+
+export function getFAQSchema(faqs: { question: string; answer: string }[]): FAQPageSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
     }))
   };
 }
