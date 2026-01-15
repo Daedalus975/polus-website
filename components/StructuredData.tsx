@@ -116,7 +116,7 @@ export function getOrganizationSchema(): OrganizationSchema {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Polus LLC",
+    name: "Polus Consulting",
     url: baseUrl,
     description: "Oklahoma IT and operations consulting for small businesses. Process mapping, Microsoft 365 governance, backup/DR, and more.",
     contactPoint: {
@@ -139,7 +139,7 @@ export function getLocalBusinessSchema(): LocalBusinessSchema {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Polus LLC",
+    name: "Polus Consulting",
     url: baseUrl,
     email: businessEmail,
     priceRange: "$$",
@@ -159,7 +159,7 @@ export function getWebSiteSchema(): WebSiteSchema {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Polus LLC",
+    name: "Polus Consulting",
     url: baseUrl,
     description: "Oklahoma IT and operations consulting. Fix your processes. Strengthen your IT. Get more time back."
   };
@@ -174,7 +174,7 @@ export function getServiceSchema(serviceType: string, description: string, price
     serviceType,
     provider: {
       "@type": "Organization",
-      name: "Polus LLC",
+      name: "Polus Consulting",
       url: baseUrl
     },
     areaServed: {
