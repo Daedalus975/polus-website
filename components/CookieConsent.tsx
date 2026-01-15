@@ -35,10 +35,12 @@ export function CookieConsent() {
   };
 
   const loadGoogleAnalytics = () => {
+    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-RMS0FPEQPD';
+    
     // Dynamically load Google Analytics
     const script1 = document.createElement("script");
     script1.async = true;
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-RMS0FPEQPD";
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     document.head.appendChild(script1);
 
     const script2 = document.createElement("script");
@@ -46,7 +48,7 @@ export function CookieConsent() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-RMS0FPEQPD');
+      gtag('config', '${measurementId}');
     `;
     document.head.appendChild(script2);
   };
