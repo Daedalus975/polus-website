@@ -2,7 +2,6 @@
 
 import { Section } from "@/components/Section";
 import { ServiceCard } from "@/components/ServiceCard";
-import { ROICalculator } from "@/components/ROICalculator";
 // import { DeliverableGallery } from "@/components/DeliverableGallery";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { useState } from "react";
@@ -212,13 +211,6 @@ export default function ServicesPage() {
             </button>
           </div>
         )}
-      </Section>
-
-      <Section title="Calculate Your ROI" eyebrow="See the Numbers" className="bg-polus-surface1">
-        <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
-          How much are inefficient processes really costing you? Use our calculator to see your potential savings.
-        </p>
-        <ROICalculator />
       </Section>
 
       <Section className="bg-polus-surface1">

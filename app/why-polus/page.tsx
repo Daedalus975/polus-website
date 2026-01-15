@@ -1,7 +1,6 @@
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
-import { ROICalculator } from "@/components/ROICalculator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -88,13 +87,6 @@ export default function WhyPolusPage() {
             </div>
           </Card>
         </div>
-      </Section>
-
-      <Section title="Calculate Your Potential ROI" eyebrow="Run the numbers" className="bg-polus-surface1">
-        <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
-          See what stronger IT systems could mean for your business. Adjust the inputs based on your reality.
-        </p>
-        <ROICalculator />
       </Section>
 
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
