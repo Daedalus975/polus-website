@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { TrustBadgeStrip } from "@/components/TrustBadgeStrip";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { OperatingSystem } from "@/components/OperatingSystem";
+import { OperatingSystemAnimated } from "@/components/OperatingSystemAnimated";
 import { StructuredData, getLocalBusinessSchema } from "@/components/StructuredData";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { track } from "@/lib/track";
@@ -138,7 +138,7 @@ export default function HomePage() {
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
           Clear phases, clear deliverables. No surprises.
         </p>
-        <OperatingSystem variant="condensed" />
+        <OperatingSystemAnimated variant="condensed" />
       </Section>
 
       {/* Packages Preview */}

@@ -2,7 +2,7 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { OperatingSystem } from "@/components/OperatingSystem";
+import { OperatingSystemAnimated } from "@/components/OperatingSystemAnimated";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -86,13 +86,6 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section title="How we work" eyebrow="Our Operating System" className="bg-polus-surface1">
-        <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
-          Every engagement follows a clear four-phase framework: assess, plan, implement, adopt. You&apos;ll always know what&apos;s happening and what you&apos;re getting.
-        </p>
-        <OperatingSystem variant="full" />
-      </Section>
-
       <Section title="Why Polus?" eyebrow="How We're Different">
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
           We fit between doing it yourself and hiring a traditional MSP. You get expert implementation without the overhead.
@@ -169,6 +162,13 @@ export default function AboutPage() {
             </div>
           </Card>
         </div>
+      </Section>
+
+      <Section title="How we work" eyebrow="Our Operating System" className="bg-polus-surface1">
+        <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mx-auto text-center mb-10">
+          Every engagement follows a clear four-phase framework: assess, plan, implement, adopt. You&apos;ll always know what&apos;s happening and what you&apos;re getting.
+        </p>
+        <OperatingSystemAnimated variant="full" />
       </Section>
 
       <Section className="bg-gradient-to-b from-polus-surface1 to-polus-forest text-center">
