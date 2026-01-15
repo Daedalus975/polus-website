@@ -15,26 +15,27 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <Section className="py-20 lg:py-32">
+      <Section className="pt-20 md:pt-24">
         <div className="max-w-3xl">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-polus-paper [text-wrap:balance] sm:text-5xl">
             IT Insights & Resources
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-[rgba(254,255,255,0.78)] leading-relaxed">
             Practical guides, best practices, and expert insights for Oklahoma small businesses navigating IT, Microsoft 365, and operations.
           </p>
         </div>
       </Section>
 
-      <Section className="pb-20 lg:pb-32">
+      <Section className="bg-polus-surface1">
         <Card className="text-center py-16">
           <div className="max-w-2xl mx-auto">
             <div className="mb-6">
               <svg
-                className="w-16 h-16 mx-auto text-neutral-300"
+                className="w-16 h-16 mx-auto text-polus-mint/40"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -44,20 +45,20 @@ export default function BlogPage() {
                 />
               </svg>
             </div>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-neutral-950 mb-4">
+            <h2 className="font-display text-2xl font-bold tracking-tight text-polus-paper mb-4">
               Blog Coming Soon
             </h2>
-            <p className="text-lg text-neutral-600 mb-8">
+            <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
               We're working on publishing helpful content about IT management, Microsoft 365 best practices, backup strategies, and more for Oklahoma small businesses.
             </p>
-            <p className="text-neutral-600 mb-8">
+            <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mb-8">
               In the meantime, have questions about IT or operations? Let's talk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/book" variant="primary">
+              <Button href="/book" variant="primary" className="rounded-lg text-base px-6 py-3">
                 Book Free Discovery Call
               </Button>
-              <Button href="/services" variant="secondary">
+              <Button href="/services" variant="secondary" className="rounded-lg text-base px-6 py-3">
                 View Our Services
               </Button>
             </div>
@@ -65,41 +66,61 @@ export default function BlogPage() {
         </Card>
       </Section>
 
-      <Section className="pb-20 lg:pb-32">
+      <Section>
         <div className="max-w-3xl">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-neutral-950 mb-6">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-polus-paper mb-6">
             Topics We'll Cover
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
             <Card>
-              <h3 className="font-display text-lg font-semibold text-neutral-950 mb-2">
+              <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg font-semibold text-polus-paper mb-2">
                 Microsoft 365
               </h3>
-              <p className="text-sm text-neutral-600">
+              <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
                 Security, governance, Teams optimization, and getting the most from your M365 investment
               </p>
             </Card>
             <Card>
-              <h3 className="font-display text-lg font-semibold text-neutral-950 mb-2">
-                Backup & DR
+              <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg font-semibold text-polus-paper mb-2">
+                Backup and DR
               </h3>
-              <p className="text-sm text-neutral-600">
+              <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
                 Disaster recovery planning, backup strategies, and business continuity for small businesses
               </p>
             </Card>
             <Card>
-              <h3 className="font-display text-lg font-semibold text-neutral-950 mb-2">
+              <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg font-semibold text-polus-paper mb-2">
                 Process Optimization
               </h3>
-              <p className="text-sm text-neutral-600">
+              <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
                 Streamlining workflows, documentation, and operational efficiency improvements
               </p>
             </Card>
             <Card>
-              <h3 className="font-display text-lg font-semibold text-neutral-950 mb-2">
+              <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg font-semibold text-polus-paper mb-2">
                 IT Best Practices
               </h3>
-              <p className="text-sm text-neutral-600">
+              <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
                 Security fundamentals, systems management, and practical IT guidance for growing teams
               </p>
             </Card>
