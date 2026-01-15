@@ -636,6 +636,15 @@ export default function StartAssessmentPage() {
   const currentQ = visibleQuestions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / visibleQuestions.length) * 100;
 
+  // Safety check: if currentQ is undefined, reset to start
+  if (!currentQ && started && !recommendation) {
+    setCurrentQuestionIndex(0);
+    setAnswers({});
+    setStarted(false);
+    setQuestionPath([]);
+    return null;
+  }
+
   if (!started) {
     return (
       <Section title="Find Your Starting Point" eyebrow="Guided Assessment" className="pt-20 md:pt-24">
