@@ -133,6 +133,7 @@ export function Navbar() {
             <Link href="/start" className="hover:text-polus-gold transition">Quiz</Link>
           )}
           <Link href="/about" className="hover:text-polus-gold transition">About</Link>
+          <Link href="/blog" className="hover:text-polus-gold transition">Blog</Link>
           <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
         </nav>
         
@@ -262,6 +263,13 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               About
+            </Link>
+            <Link 
+              href="/blog" 
+              className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link 
               href="/contact" 

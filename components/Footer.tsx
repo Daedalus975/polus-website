@@ -24,6 +24,7 @@ export function Footer() {
               <div className="grid gap-3 text-sm">
                 <Link href="/about" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">About</Link>
                 <Link href="/results" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Results</Link>
+                <Link href="/blog" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Blog</Link>
                 <Link href="/contact" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Contact</Link>
               </div>
             </div>
@@ -32,6 +33,7 @@ export function Footer() {
               <div className="grid gap-3 text-sm">
                 <Link href="/services" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">All Services</Link>
                 <Link href="/industries" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Industries</Link>
+                <Link href="/locations" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Locations</Link>
                 <Link href="/pay" className="text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition">Pay Invoice</Link>
               </div>
             </div>

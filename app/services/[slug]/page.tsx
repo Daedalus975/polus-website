@@ -700,9 +700,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const service = services.find(s => s.slug === params.slug);
   if (!service) return { title: "Service Not Found" };
   
+  // Add Oklahoma keyword for better local SEO
+  const metaDescription = `${service.description}. Oklahoma IT consulting for small businesses. ${service.startingPrice} starting price. 20% off for first 10 clients.`;
+  
   return {
-    title: `${service.title} — Polus Services`,
-    description: service.description
+    title: `${service.title} | Oklahoma IT Consulting — Polus`,
+    description: metaDescription,
+    openGraph: {
+      title: `${service.title} | Oklahoma IT Consulting — Polus`,
+      description: metaDescription
+    }
   };
 }
 

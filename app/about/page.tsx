@@ -6,17 +6,17 @@ import { OperatingSystem } from "@/components/OperatingSystem";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Polus — Oklahoma IT + Operations Consulting",
-  description: "Small businesses deserve systems that are clear, supportable, and built to last. Learn about our approach.",
+  title: "About Polus | Oklahoma IT Consulting for Small Businesses",
+  description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses. Clear, supportable systems built to last. First 10 clients get 20% off.",
   openGraph: {
-    title: "About Polus — Oklahoma IT + Operations Consulting",
-    description: "Small businesses deserve systems that are clear, supportable, and built to last. Learn about our approach.",
+    title: "About Polus | Oklahoma IT Consulting for Small Businesses",
+    description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses. Clear, supportable systems built to last.",
     type: "website"
   },
   twitter: {
     card: "summary",
-    title: "About Polus — Oklahoma IT + Operations Consulting",
-    description: "Small businesses deserve systems that are clear, supportable, and built to last."
+    title: "About Polus | Oklahoma IT Consulting for Small Businesses",
+    description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses."
   }
 };
 

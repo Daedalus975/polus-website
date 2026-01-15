@@ -4,17 +4,17 @@ import { QuoteForm } from "@/components/QuoteForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Polus — Oklahoma IT + Operations Consulting",
-  description: "Tell us what you need. We'll reply within 1 business day. Book a free discovery call or request a quote.",
+  title: "Contact Polus | Oklahoma IT Consulting — Free Discovery Call",
+  description: "Get IT help for your Oklahoma small business. Book a free 30-minute discovery call or request a quote. Microsoft 365, backup/DR, process optimization. Reply within 1 business day.",
   openGraph: {
-    title: "Contact Polus — Oklahoma IT + Operations Consulting",
-    description: "Tell us what you need. We'll reply within 1 business day. Book a free discovery call or request a quote.",
+    title: "Contact Polus | Oklahoma IT Consulting — Free Discovery Call",
+    description: "Get IT help for your Oklahoma small business. Book a free 30-minute discovery call or request a quote. Microsoft 365, backup/DR, process optimization. Reply within 1 business day.",
     type: "website"
   },
   twitter: {
     card: "summary",
-    title: "Contact Polus — Oklahoma IT + Operations Consulting",
-    description: "Tell us what you need. We'll reply within 1 business day."
+    title: "Contact Polus | Oklahoma IT Consulting — Free Discovery Call",
+    description: "Get IT help for your Oklahoma small business. Book a free discovery call or request a quote. Reply within 1 business day."
   }
 };
 
