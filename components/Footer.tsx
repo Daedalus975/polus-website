@@ -10,7 +10,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <h3 className="text-2xl font-bold text-polus-gold mb-4">Polus</h3>
             <p className="text-[rgba(254,255,255,0.72)] leading-relaxed max-w-sm mb-4">
-              Operations + Microsoft 365 systems for Oklahoma small businesses.
+              Operations and IT systems for Oklahoma small businesses.
             </p>
             <div className="text-sm text-[rgba(254,255,255,0.65)] space-y-1">
               <p><strong className="text-polus-gold">Service Area:</strong> All of Oklahoma</p>
