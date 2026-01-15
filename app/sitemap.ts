@@ -5,7 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const services = [
     "systems-assessment",
-    "process-mapping-sops",
     "onboarding-offboarding",
     "m365-governance",
     "endpoint-standardization",

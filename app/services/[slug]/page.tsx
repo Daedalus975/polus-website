@@ -278,39 +278,6 @@ const services: ServiceData[] = [
     isBundle: true
   },
   {
-    slug: "process-mapping-sops",
-    title: "Process Mapping and SOP Starter Pack",
-    description: "Map workflows, create SOPs, and reduce day-to-day chaos",
-    overview: "Document your core workflows and build Standard Operating Procedures that your team will actually use. Includes process mapping, SOP templates, and adoption support.",
-    startingPrice: "$1,250",
-    timeline: "2-4 weeks depending on scope",
-    deliverables: [
-      "Visual process maps for 2-4 core workflows",
-      "Written SOPs in accessible format (Google Docs or SharePoint)",
-      "SOP template library for future documentation",
-      "Team training session on using and maintaining SOPs"
-    ],
-    idealFor: [
-      "Teams with tribal knowledge that needs to be documented",
-      "Businesses preparing for growth or delegation",
-      "Companies with high staff turnover or inconsistent execution"
-    ],
-    faqs: [
-      {
-        question: "How do you choose which processes to document?",
-        answer: "We work with you to identify the highest-impact processes—typically those with the most pain, dependencies on key people, or risk if done incorrectly. Common choices include customer onboarding, project handoffs, month-end close, or critical IT procedures."
-      },
-      {
-        question: "What format will the documentation be in?",
-        answer: "We deliver visual process maps (flowcharts or swimlanes) and written SOPs in the format you prefer—Google Docs, SharePoint, Notion, or PDF. The goal is to make it accessible and easy for your team to maintain."
-      },
-      {
-        question: "Will my team actually use these SOPs?",
-        answer: "That depends on adoption. We design SOPs to be practical and include a training session to show your team how to use them. The template library we provide makes it easier to continue documenting on your own."
-      }
-    ]
-  },
-  {
     slug: "employee-lifecycle",
     title: "Employee Lifecycle",
     description: "Automate onboarding and offboarding for security and consistency",
@@ -462,15 +429,16 @@ const services: ServiceData[] = [
     slug: "process-clarity-pack",
     title: "Process Documentation",
     description: "Document critical workflows so your team stops reinventing the wheel",
-    overview: "Document critical workflows so your team stops reinventing the wheel. Each process includes visual process mapping (swimlane or flowchart), written SOP document, decision trees for common variations, SOP template for future use, and team training session. Available per-process or as a cost-saving bundle.",
-    startingPrice: "$1,500",
+    overview: "Document critical workflows and build Standard Operating Procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Choose single process or multi-process packages for better value.",
+    startingPrice: "$1,800",
     timeline: "1-2 weeks per process",
     deliverables: [
       "Visual process map (swimlane or flowchart format)",
       "Written standard operating procedure (SOP) document",
-      "Decision trees for common variations",
-      "SOP template for future documentation",
-      "Team training session on using and maintaining SOPs"
+      "Decision trees for common variations and exceptions",
+      "SOP template library for future documentation",
+      "Team training session on using and maintaining SOPs",
+      "30-day post-delivery support for refinements"
     ],
     idealFor: [
       "Teams with tribal knowledge that needs documentation",
@@ -480,24 +448,24 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Single Process",
-        price: "$1,500",
-        description: "1 critical process documented"
+        price: "$1,800",
+        description: "1 critical process fully documented"
       },
       {
-        name: "3-Process Bundle",
-        price: "$3,500",
-        description: "Save $1,000 on 3 processes"
+        name: "3-Process Package",
+        price: "$4,500",
+        description: "Save $900 on 3 processes"
       },
       {
-        name: "Additional Processes",
-        price: "$1,000 each",
-        description: "After purchasing bundle"
+        name: "5-Process Package",
+        price: "$7,000",
+        description: "Save $2,000 on 5 processes"
       }
     ],
     faqs: [
       {
-        question: "How is this different from the Process Mapping and SOP Starter Pack?",
-        answer: "They're very similar. The 'Starter Pack' is designed for teams new to documentation (includes templates and training). This 'Process Documentation' service is per-process pricing with a bundle discount if you need multiple processes documented. Choose whichever pricing model fits your needs."
+        question: "How do you choose which processes to document?",
+        answer: "We work with you to identify the highest-impact processes—typically those with the most pain, dependencies on key people, or risk if done incorrectly. Common choices include customer onboarding, project handoffs, month-end close, or critical IT procedures."
       },
       {
         question: "Can you document technical IT processes or just business processes?",

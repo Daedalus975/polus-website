@@ -83,7 +83,7 @@ export default function StartAssessmentPage() {
       options: [
         { label: "Yes, but it's a mess (files everywhere, can't find anything)", value: "messy", weights: { "m365-governance": 4 } },
         { label: "Yes, and it's mostly organized", value: "organized", weights: { "automation-no-code": 1 } },
-        { label: "We have it but barely use it", value: "underutilized", weights: { "m365-governance": 2, "process-mapping-sops": 1 } },
+        { label: "We have it but barely use it", value: "underutilized", weights: { "m365-governance": 2, "process-clarity-pack": 1 } },
         { label: "No, we use Google Workspace/AWS/Other", value: "google", weights: { "automation-no-code": 1 } },
         { label: "We don't currently use any web service", value: "none", weights: { "m365-governance": 1, "systems-assessment": 1 } }
       ]
