@@ -165,8 +165,8 @@ export default function HomePage() {
                 20% Off
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-[rgba(254,255,255,0.48)] text-sm line-through">$299</span>
-                <span className="text-2xl font-semibold text-polus-gold">$239</span>
+                <span className="text-[rgba(254,255,255,0.48)] text-sm line-through">$799</span>
+                <span className="text-2xl font-semibold text-polus-gold">$639</span>
               </div>
             </div>
             <div className="mt-4">
