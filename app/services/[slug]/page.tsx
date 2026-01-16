@@ -31,15 +31,15 @@ const services: ServiceData[] = [
     slug: "systems-assessment",
     title: "Systems Review",
     description: "Get clarity on what to fix first—fast",
-    overview: "Go beyond a quick conversation. This paid assessment includes hands-on review of your systems, documented findings, prioritized recommendations, and a clear roadmap with effort estimates and pricing. Perfect for teams ready to move from 'what's wrong?' to 'what do we fix first?'",
-    startingPrice: "$299",
-    timeline: "1 week (scheduling + report delivery within 24 hours)",
+    overview: "Strategic IT assessment with hands-on systems review, documented findings, prioritized recommendations, and actionable roadmap with effort estimates and pricing. This is a focused 90-minute working session plus 3-4 hours of analysis and documentation—real strategic work, not just a conversation.",
+    startingPrice: "$799",
+    timeline: "1 week (scheduling + report delivery within 48 hours)",
     deliverables: [
       "90-minute working session reviewing systems, workflows, and pain points",
       "Documented findings report with specific issues and root causes",
       "Priority roadmap with quick wins vs. long-term improvements",
-      "Effort estimates and recommended packages with transparent pricing",
-      "Written Next Steps recap delivered within 24 hours"
+      "Effort estimates for each recommendation with transparent pricing",
+      "Written Next Steps recap with implementation priorities delivered within 48 hours"
     ],
     idealFor: [
       "Teams who've had the free discovery call and want deeper analysis",
@@ -49,7 +49,7 @@ const services: ServiceData[] = [
     faqs: [
       {
         question: "How is this different from the free discovery call?",
-        answer: "The free discovery call is a 30-minute conversation about your business and pain points. The Systems Review is a paid, hands-on 90-minute working session where we actually look at your systems, document specific findings, and provide a prioritized roadmap with pricing. You get a written report within 24 hours."
+        answer: "The free discovery call is a 30-minute conversation about your business and pain points. The Systems Review is a paid, hands-on 90-minute working session where we actually look at your systems, document specific findings, and provide a prioritized roadmap with pricing. You get a comprehensive written report within 48 hours."
       },
       {
         question: "What do I need to prepare before the session?",
@@ -58,6 +58,10 @@ const services: ServiceData[] = [
       {
         question: "Do I have to hire you for implementation afterward?",
         answer: "No. The assessment is valuable on its own. You'll get documented recommendations and pricing that you can use however you want—implement yourself, use another vendor, or hire us. No pressure."
+      },
+      {
+        question: "Why $799 instead of $299?",
+        answer: "This is 4-6 hours of strategic consulting work, not a quick conversation. You're getting hands-on systems review, root cause analysis, effort estimates, and a comprehensive roadmap—the same work many consultants charge $1,250+ for. We price it to deliver real value while ensuring quality analysis."
       }
     ],
     isBundle: false
@@ -66,37 +70,45 @@ const services: ServiceData[] = [
     slug: "strategic-advisory",
     title: "IT Advisory",
     description: "Monthly strategic guidance without support tickets",
-    overview: "Get consistent IT leadership without hiring full-time. Monthly subscription includes strategic planning, vendor management, technology roadmap guidance, and executive decision support. This is advisory and planning work—not reactive support tickets or helpdesk services.",
+    overview: "Get consistent IT leadership without hiring full-time. Monthly subscription includes strategic planning, vendor management, technology roadmap guidance, and executive decision support. This is advisory and planning work—not reactive support tickets or helpdesk services. Structured engagement with clear boundaries to ensure you get strategic value, not unlimited email support.",
     startingPrice: "$500/month",
     timeline: "Ongoing monthly",
     deliverables: [
       "Monthly strategic planning sessions (4 hours Essentials, 10 hours Plus)",
-      "Technology roadmap development and updates",
-      "Vendor evaluation and contract review",
+      "Meeting includes prep, facilitation, and follow-up documentation",
+      "Technology roadmap development and quarterly updates",
+      "Vendor evaluation and contract review support",
       "Budget planning and prioritization guidance",
-      "Ad-hoc strategic questions via email between meetings"
+      "Monthly agenda and decision log (you set priorities, we provide guidance)",
+      "Email support for strategic questions (15 minutes total per month for quick answers)",
+      "Response time: Within 2 business days for email questions"
     ],
     idealFor: [
-      "Growing businesses needing IT strategy without full-time staff",
+      "Growing businesses needing IT strategy without full-time staff (10-50 employees)",
       "Leadership teams making technology investment decisions",
-      "Companies managing multiple vendors and need coordination"
+      "Companies managing multiple vendors and need coordination",
+      "Businesses with limited IT budget who need strategic guidance, not helpdesk"
     ],
     pricingTiers: [
       {
         name: "Essentials",
         price: "$500/month",
-        description: "4 hours monthly strategic consulting"
+        description: "4 hours monthly strategic consulting + limited email support"
       },
       {
         name: "Plus",
         price: "$1,000/month",
-        description: "10 hours monthly strategic consulting"
+        description: "10 hours monthly strategic consulting + limited email support"
       }
     ],
     faqs: [
       {
         question: "Is this a helpdesk or support service?",
         answer: "No. This is strategic planning and advisory work—not reactive IT support. We help with technology strategy, vendor decisions, budgeting, and roadmap planning. If you need helpdesk or ticket-based support, that's a different service."
+      },
+      {
+        question: "What about email questions between meetings?",
+        answer: "Email support is limited to strategic questions that can be answered in 15 minutes or less per month (quick clarifications or guidance). If questions require research, analysis, or more time, we'll address them in the next monthly meeting or recommend a project engagement."
       },
       {
         question: "Can I cancel anytime?",
@@ -113,23 +125,25 @@ const services: ServiceData[] = [
     slug: "identity-device-foundation",
     title: "Identity & Security",
     description: "Move to modern cloud identity and centralized device management",
-    overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation.",
+    overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation. Pricing assumes Microsoft 365 Business Premium (or equivalent) licensing. SSO limited to 3 applications; additional apps +$500 each. Additional locations beyond primary office: +$1,000 per location for on-site coordination.",
     startingPrice: "$6,500",
     timeline: "4-6 weeks (depends on device count and complexity)",
     deliverables: [
-      "Azure AD Connect setup (hybrid identity configuration)",
+      "Azure AD Connect setup (hybrid identity configuration if needed)",
       "Intune enrollment and baseline device policies",
       "MFA rollout (Microsoft Authenticator or similar)",
-      "Conditional access policies (location, device compliance, MFA)",
-      "SSO setup for up to 3 core applications",
-      "BitLocker encryption enforcement",
-      "Windows Update rings configuration",
-      "Admin training and handoff documentation"
+      "Conditional access policies (location, device compliance, MFA enforcement)",
+      "SSO setup for up to 3 core applications (additional apps +$500 each)",
+      "BitLocker encryption enforcement across all devices",
+      "Windows Update rings configuration (Pilot, Production, Critical)",
+      "Admin training and handoff documentation",
+      "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
+      "Additional locations beyond primary office: +$1,000 per location"
     ],
     idealFor: [
       "Businesses moving from on-prem to cloud-first infrastructure",
       "Remote/hybrid teams needing centralized device control",
-      "Companies tired of local admin chaos and password resets"
+      "Companies tired of local admin chaos and password resets (10-50 employees)"
     ],
     faqs: [
       {
@@ -143,23 +157,27 @@ const services: ServiceData[] = [
       {
         question: "What if we have more than 50 devices?",
         answer: "This package is designed for 10-50 devices. For larger deployments (51+ devices), we'll provide custom pricing based on your specific needs. Contact us for a quote."
+      },
+      {
+        question: "What if we need SSO for more than 3 applications?",
+        answer: "Base pricing includes up to 3 SSO applications. Additional apps are +$500 each (includes configuration, testing, and user training). Common SSO apps: Salesforce, Dropbox, QuickBooks Online, Zoom, etc."
       }
     ],
     pricingTiers: [
       {
         name: "Tier 1",
         price: "$6,500",
-        description: "10-15 users/devices"
+        description: "10-15 users/devices, up to 3 SSO apps, single location"
       },
       {
         name: "Tier 2",
         price: "$8,500",
-        description: "16-35 users/devices"
+        description: "16-35 users/devices, up to 3 SSO apps, single location"
       },
       {
         name: "Tier 3",
         price: "$11,000",
-        description: "36-50 users/devices"
+        description: "36-50 users/devices, up to 3 SSO apps, single location"
       }
     ],
     isBundle: true
@@ -227,22 +245,24 @@ const services: ServiceData[] = [
     slug: "m365-governance",
     title: "M365 Governance",
     description: "Tame Teams/SharePoint sprawl and establish sustainable governance",
-    overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing: $3,500 (1-25 sites/Teams), $5,500 (26-75 sites), $8,500 (76-150 sites).",
+    overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing based on active Teams/SharePoint site count. Tier 1: 1-25 sites ($3,500), Tier 2: 26-75 sites ($5,500), Tier 3: 76-150 sites ($8,500). Additional sites beyond tier caps: +$50 per site. Includes cleanup of up to 50% inactive sites (archival and documentation).",
     startingPrice: "$3,500",
     timeline: "4-6 weeks",
     deliverables: [
-      "Current state audit (sites, Teams, permissions sprawl)",
-      "Governance policy documentation (naming, lifecycle, ownership)",
-      "Permissions cleanup and baseline configuration",
-      "External sharing and guest access controls",
-      "Retention and deletion policies setup",
-      "Template library for new Teams/SharePoint sites",
-      "Admin and end-user training session"
+      "Current state audit (active and inactive sites, Teams, permissions sprawl analysis)",
+      "Governance policy documentation (naming conventions, lifecycle management, ownership requirements)",
+      "Permissions cleanup and baseline configuration (external sharing, guest access, member vs. owner roles)",
+      "External sharing and guest access controls (tenant-wide and site-specific)",
+      "Retention and deletion policies setup (auto-archive inactive sites after X days)",
+      "Template library for new Teams/SharePoint sites (pre-approved structures)",
+      "Cleanup of up to 50% inactive sites (archival or deletion with approval)",
+      "Admin and end-user training session (governance adoption and ongoing maintenance)",
+      "Additional sites beyond tier cap: +$50 per site"
     ],
     idealFor: [
       "Organizations drowning in duplicate Teams and shadow sites",
-      "Companies with compliance requirements (client data handling)",
-      "Businesses preparing for audits or rapid growth"
+      "Companies with compliance requirements (client data handling, retention policies)",
+      "Businesses preparing for audits or rapid growth (need governance before chaos)"
     ],
     faqs: [
       {
@@ -251,28 +271,32 @@ const services: ServiceData[] = [
       },
       {
         question: "How do you determine which tier we need?",
-        answer: "We count your active Teams and SharePoint sites. Tier 1 covers 1-25 sites, Tier 2 covers 26-75, and Tier 3 covers 76-150. If you're not sure, we can do a quick count during your discovery call."
+        answer: "We count your active Teams and SharePoint sites. Tier 1 covers 1-25 sites, Tier 2 covers 26-75, and Tier 3 covers 76-150. If you're not sure, we can do a quick count during your discovery call. Additional sites beyond tier caps are +$50 per site."
       },
       {
         question: "Will this prevent users from creating new Teams?",
         answer: "We'll work with you to define the right balance. Some organizations restrict Team creation to IT or specific approvers, while others allow it but enforce naming conventions and lifecycle policies. You choose what makes sense for your culture."
+      },
+      {
+        question: "What if we have more than 150 sites?",
+        answer: "For very large environments (150+ sites), we'll provide custom pricing. Tier 3 covers up to 150 sites with +$50 per additional site. Beyond 200 sites, we recommend a discovery call to scope the work properly."
       }
     ],
     pricingTiers: [
       {
         name: "Tier 1",
         price: "$3,500",
-        description: "1-25 sites/Teams"
+        description: "1-25 active sites/Teams. Cleanup up to 12 inactive sites."
       },
       {
         name: "Tier 2",
         price: "$5,500",
-        description: "26-75 sites/Teams"
+        description: "26-75 active sites/Teams. Cleanup up to 37 inactive sites."
       },
       {
         name: "Tier 3",
         price: "$8,500",
-        description: "76-150 sites/Teams"
+        description: "76-150 active sites/Teams. Cleanup up to 75 inactive sites. +$50 per additional site."
       }
     ],
     isBundle: true
@@ -281,32 +305,33 @@ const services: ServiceData[] = [
     slug: "employee-lifecycle",
     title: "Employee Lifecycle",
     description: "Automate onboarding and offboarding for security and consistency",
-    overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $3,500 (26-50 employees).",
+    overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $3,500 (26-50 employees). Includes up to 5 role-based templates (e.g., Sales, Finance, Operations, Executive, Contractor). Additional role templates: +$300 each. Additional users beyond 50: contact for custom pricing.",
     startingPrice: "$2,500",
     timeline: "3-4 weeks",
     deliverables: [
-      "Onboarding workflow automation (accounts, groups, welcome emails)",
-      "Offboarding workflow automation (access revocation, licenses, checklists)",
-      "Integration with Microsoft 365 and HR systems (if supported)",
-      "Security group and role templates",
-      "Manager approval workflows",
+      "Onboarding workflow automation (accounts, security groups, email distribution lists, welcome emails)",
+      "Offboarding workflow automation (access revocation, license recovery, exit checklists, archive procedures)",
+      "Integration with Microsoft 365 and HR systems (if API/webhook supported: BambooHR, Workday, ADP)",
+      "Security group and role templates (up to 5 role-based templates included)",
+      "Additional role templates: +$300 each (e.g., Sales, Finance, Operations, Executive, Contractor, Intern)",
+      "Manager approval workflows (request, approve, execute)",
       "Documentation and admin training"
     ],
     idealFor: [
-      "Growing teams with frequent hiring",
-      "Companies with security or compliance concerns",
-      "HR teams tired of manual provisioning work"
+      "Growing teams with frequent hiring (5+ new employees per year)",
+      "Companies with security or compliance concerns (access controls, audit trails)",
+      "HR teams tired of manual provisioning work and Excel checklists"
     ],
     pricingTiers: [
       {
         name: "Tier 1",
         price: "$2,500",
-        description: "10-25 employees"
+        description: "10-25 employees, up to 5 role templates"
       },
       {
         name: "Tier 2",
         price: "$3,500",
-        description: "26-50 employees"
+        description: "26-50 employees, up to 5 role templates (+$300 per additional role)"
       }
     ],
     faqs: [
@@ -321,6 +346,10 @@ const services: ServiceData[] = [
       {
         question: "Will this work with our existing IT setup?",
         answer: "This service is designed for Microsoft 365 environments (Azure AD, Intune, Exchange). If you use different identity systems (Google Workspace, Okta, etc.), contact us—we may be able to accommodate with custom pricing."
+      },
+      {
+        question: "What if we need more than 5 role templates?",
+        answer: "Base pricing includes up to 5 role-based templates (e.g., Sales, Finance, Operations, Executive, Contractor). Additional role templates are +$300 each. Most clients start with 3-5 core roles and add more later as needed."
       }
     ],
     isBundle: true
@@ -329,16 +358,16 @@ const services: ServiceData[] = [
     slug: "it-operations-toolkit",
     title: "IT Operations Setup",
     description: "Service desk, asset tracking, and operational foundation",
-    overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory, admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, IT operations runbook, MSP transition package, and 30-day post-implementation support.",
+    overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory (up to 50 assets), admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, IT operations runbook, MSP transition package, and 30-day post-implementation support. Asset import limited to 50 assets; additional assets +$50 per 10 assets.",
     startingPrice: "$4,500",
     timeline: "3-5 weeks (Essentials), 5-7 weeks (Plus)",
     deliverables: [
       "Service desk platform selection and setup (Jira, Zendesk, Freshdesk, osTicket)",
       "Ticket categories, priorities, workflows, and SLA definitions",
       "Asset management platform setup (Jira Asset Manager, Snipe-IT, etc.)",
-      "Initial asset inventory import (up to 50 assets)",
+      "Initial asset inventory import (up to 50 assets; +$50 per additional 10 assets)",
       "Admin training and knowledge base starter templates",
-      "Plus tier: 2-3 PowerShell automation scripts",
+      "Plus tier: 2-3 PowerShell automation scripts (user provisioning, backup verification, or license audits)",
       "Plus tier: IT operations runbook and SOPs",
       "Plus tier: MSP partner transition package and 30-day support"
     ],
@@ -351,12 +380,12 @@ const services: ServiceData[] = [
       {
         name: "Essentials",
         price: "$4,500",
-        description: "Service desk and asset management"
+        description: "Service desk and asset management (up to 50 assets)"
       },
       {
         name: "Plus",
         price: "$7,500",
-        description: "Essentials, automation, and MSP transition"
+        description: "Essentials, automation, and MSP transition (up to 50 assets, +$50 per 10 additional)"
       }
     ],
     faqs: [
@@ -371,6 +400,10 @@ const services: ServiceData[] = [
       {
         question: "What kind of automation scripts are included in Plus tier?",
         answer: "Common examples: user provisioning scripts, backup verification automation, license audit reports, or asset inventory updates. We'll work with you to identify 2-3 repetitive tasks that would benefit most from automation."
+      },
+      {
+        question: "What if we have more than 50 assets to import?",
+        answer: "Base pricing includes up to 50 assets. Additional assets are +$50 per 10 assets (e.g., 60 assets = base + $50, 100 assets = base + $250). This ensures we scope the work accurately for larger environments."
       }
     ],
     isBundle: true
@@ -379,7 +412,7 @@ const services: ServiceData[] = [
     slug: "backup-dr-readiness",
     title: "Backup & DR",
     description: "Know your backups work before you need them",
-    overview: "Know your backups work before you need them. Verification Package ($1,500): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,500): Everything in Verification plus live restore test (1-2 critical systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist.",
+    overview: "Know your backups work before you need them. Verification Package ($1,500): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,500): Everything in Verification plus live restore test (up to 2 systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist. System = one application/data store (file server, database, M365 tenant, single VM). Additional systems +$500 each.",
     startingPrice: "$1,500",
     timeline: "1-2 weeks (Verification), 2-3 weeks (Full DR)",
     deliverables: [
@@ -387,7 +420,9 @@ const services: ServiceData[] = [
       "Backup configuration review (retention, frequency, offsite)",
       "Gap analysis and risk documentation",
       "Disaster recovery checklist (high-level procedures)",
-      "Full DR: Live restore test (1-2 critical systems)",
+      "Full DR: Live restore test (up to 2 critical systems)",
+      "Full DR: System = one application or data store (e.g., file server, database, M365 tenant, single VM)",
+      "Full DR: Additional systems tested: +$500 per system",
       "Full DR: Detailed recovery playbook with step-by-step procedures",
       "Full DR: RTO/RPO analysis and documentation",
       "Full DR: Recovery contact list and quarterly verification checklist"
@@ -401,18 +436,22 @@ const services: ServiceData[] = [
       {
         name: "Verification Package",
         price: "$1,500",
-        description: "Coverage assessment and gap analysis"
+        description: "Coverage assessment and gap analysis only (no restore testing)"
       },
       {
         name: "Full DR Package",
         price: "$3,500",
-        description: "Verification, restore testing, and playbook"
+        description: "Verification, restore testing (up to 2 systems), and playbook. +$500 per additional system."
       }
     ],
     faqs: [
       {
         question: "Do you provide the backup solution itself?",
         answer: "No. This service verifies and tests your existing backup solution. We assess what you have, test if it works, and document recovery procedures. If you need a new backup solution, we can recommend options, but implementation is separate."
+      },
+      {
+        question: "What counts as a 'system' for restore testing?",
+        answer: "A system is one application or data store. Examples: file server (1 system), SQL database (1 system), M365 tenant (1 system), single VM (1 system). If you have a complex environment with 3-4 critical systems, we'll test up to 2 in the base package, and charge +$500 per additional system."
       },
       {
         question: "What if the restore test fails?",
@@ -429,8 +468,8 @@ const services: ServiceData[] = [
     slug: "process-clarity-pack",
     title: "Process Documentation",
     description: "Document critical workflows so your team stops reinventing the wheel",
-    overview: "Document critical workflows and build Standard Operating Procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Choose single process or multi-process packages for better value.",
-    startingPrice: "$1,800",
+    overview: "Document critical workflows and build Standard Operating Procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Complexity tiers ensure you pay for what you need—simple linear processes vs. complex multi-branch workflows. Choose single process or multi-process packages for better value.",
+    startingPrice: "$1,200",
     timeline: "1-2 weeks per process",
     deliverables: [
       "Visual process map (swimlane or flowchart format)",
@@ -447,22 +486,36 @@ const services: ServiceData[] = [
     ],
     pricingTiers: [
       {
-        name: "Single Process",
+        name: "Simple Process",
+        price: "$1,200",
+        description: "Linear process, 3-5 steps, single department (e.g., expense approval, time-off request)"
+      },
+      {
+        name: "Standard Process",
         price: "$1,800",
-        description: "1 critical process fully documented"
+        description: "Multi-step process, 6-10 steps, some cross-functional work (e.g., customer onboarding, project intake)"
       },
       {
-        name: "3-Process Package",
+        name: "Complex Process",
+        price: "$3,000",
+        description: "Multi-branch logic, 10+ steps, multiple departments, integrations (e.g., contract approval, incident response)"
+      },
+      {
+        name: "3-Standard Package",
         price: "$4,500",
-        description: "Save $900 on 3 processes"
+        description: "3 standard processes (save $900)"
       },
       {
-        name: "5-Process Package",
+        name: "5-Standard Package",
         price: "$7,000",
-        description: "Save $2,000 on 5 processes"
+        description: "5 standard processes (save $2,000)"
       }
     ],
     faqs: [
+      {
+        question: "How do you determine if my process is simple, standard, or complex?",
+        answer: "Simple: Linear flow, few steps, one department. Standard: Some branching, multiple steps, light cross-functional work. Complex: Heavy branching logic, many stakeholders, system integrations, exception handling. During discovery, we'll assess your process and recommend the right tier."
+      },
       {
         question: "How do you choose which processes to document?",
         answer: "We work with you to identify the highest-impact processes—typically those with the most pain, dependencies on key people, or risk if done incorrectly. Common choices include customer onboarding, project handoffs, month-end close, or critical IT procedures."
@@ -482,15 +535,16 @@ const services: ServiceData[] = [
     slug: "web-development",
     title: "Web Development",
     description: "Professional websites and digital tools for small businesses",
-    overview: "Lead-generation websites built for small businesses. Custom website development, landing pages, or web applications built with modern frameworks. Fast, secure, SEO-friendly, and designed for conversion. Tiered packages available: Starter ($3,500), Standard ($5,500), Growth ($8,500).",
+    overview: "Lead-generation websites built for small businesses. Custom website development, landing pages, or web applications built with modern frameworks (Next.js, React). Fast, secure, mobile-responsive, and designed for conversion. Includes technical SEO (meta tags, sitemaps, performance optimization)—not content strategy or ongoing SEO campaigns. Tiered packages available based on complexity and page count.",
     startingPrice: "$3,500",
     timeline: "4-8 weeks depending on scope",
     deliverables: [
-      "Custom website or web application",
+      "Custom website or web application (modern frameworks: Next.js, React, or WordPress for simpler sites)",
       "Responsive design (mobile, tablet, desktop)",
-      "SEO optimization and performance tuning",
-      "Content management system or admin panel",
-      "Hosting setup and deployment support"
+      "Technical SEO optimization: meta tags, sitemap.xml, page speed optimization, mobile-friendly configuration",
+      "On-page SEO basics: proper heading structure, alt text, internal linking (content strategy and link building are separate services)",
+      "Content management system or admin panel (CMS training included)",
+      "Hosting setup and deployment support (ongoing hosting costs separate: $10-50/month typical)"
     ],
     idealFor: [
       "Businesses needing a professional web presence",
@@ -501,17 +555,17 @@ const services: ServiceData[] = [
       {
         name: "Starter",
         price: "$3,500",
-        description: "5-page website, basic SEO, contact forms"
+        description: "5-page website, basic SEO, contact forms, 1 round of revisions"
       },
       {
         name: "Standard",
         price: "$5,500",
-        description: "10-page website, advanced SEO, analytics integration"
+        description: "10-page website, advanced SEO, analytics integration, 2 rounds of revisions"
       },
       {
         name: "Growth",
         price: "$8,500",
-        description: "Custom features, integrations, CMS training"
+        description: "Custom features, CRM/tool integrations, advanced CMS, 3 rounds of revisions, training"
       }
     ],
     faqs: [
@@ -526,6 +580,10 @@ const services: ServiceData[] = [
       {
         question: "Is hosting included?",
         answer: "Hosting setup is included—we'll deploy your site to Vercel, Netlify, or your preferred host. Ongoing hosting costs are separate and typically $10-50/month depending on your platform and traffic."
+      },
+      {
+        question: "What's included in 'SEO optimization'?",
+        answer: "Technical SEO: meta tags, structured data, sitemap, page speed optimization, mobile-friendly configuration. On-page SEO: proper heading structure, alt text, internal linking. NOT included: content strategy, keyword research, link building, or ongoing SEO campaigns—those are separate services."
       }
     ],
     isBundle: false
@@ -569,16 +627,18 @@ const services: ServiceData[] = [
     slug: "new-foundation-bundle",
     title: "IT Foundation Package",
     description: "Complete foundational IT setup for growing businesses",
-    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security, M365 Governance, and Employee Lifecycle to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $2,000 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems.",
-    startingPrice: "$13,500",
+    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security (Tier 1), M365 Governance (Tier 1), and Employee Lifecycle (Tier 1) to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $1,500 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems. Assumes 10-25 employees, 1-25 Teams/SharePoint sites, Microsoft 365 Business Premium licensing, up to 5 role templates, single office location, up to 3 SSO apps.",
+    startingPrice: "$14,500",
     timeline: "8-12 weeks for complete implementation",
     deliverables: [
       "Complete Azure AD/Entra ID setup with MFA and Conditional Access",
       "Device enrollment in Microsoft Intune with security policies",
-      "M365 Teams/SharePoint cleanup and governance framework",
-      "Automated employee onboarding and offboarding workflows",
+      "M365 Teams/SharePoint cleanup and governance framework (1-25 sites)",
+      "Automated employee onboarding and offboarding workflows (up to 5 role templates)",
+      "SSO setup for up to 3 core applications",
       "Documentation package: runbooks, policies, and admin guides",
-      "Training sessions for IT admins and end users"
+      "Training sessions for IT admins and end users",
+      "Assumes: 10-25 employees, M365 Business Premium, single location, 1-25 sites"
     ],
     idealFor: [
       "Companies with 10-25 employees starting fresh",
@@ -588,22 +648,26 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Bundle Package",
-        price: "$13,500",
-        description: "Complete foundation for 10-25 employees (save $2,000 vs. separate)"
+        price: "$14,500",
+        description: "Complete foundation for 10-25 employees (save $1,500 vs. separate: $6,500 + $3,500 + $2,500 + $3,000 adders)"
       }
     ],
     faqs: [
       {
         question: "Can I purchase just one part of this bundle instead of the whole thing?",
-        answer: "Yes. Each component is available separately: Identity & Security ($6,500), M365 Governance ($3,500), and Employee Lifecycle ($2,500). The bundle saves you $2,000 if you need all three. We recommend the bundle for companies starting fresh."
+        answer: "Yes. Each component is available separately: Identity & Security ($6,500), M365 Governance ($3,500), and Employee Lifecycle ($2,500). The bundle saves you $1,500 if you need all three. We recommend the bundle for companies starting fresh."
       },
       {
         question: "What if we have more than 25 employees?",
-        answer: "The individual services have tiered pricing that goes up to 50 employees. For larger organizations (50+ employees), we'll provide custom bundle pricing. Contact us for a quote."
+        answer: "The individual services have tiered pricing that goes up to 50 employees. For 26-50 employees, expect $18,500-$22,000 for the bundle. For larger organizations (50+ employees), we'll provide custom bundle pricing. Contact us for a quote."
       },
       {
         question: "Do we need to have Microsoft 365 already?",
         answer: "Yes. This bundle assumes you have M365 Business Premium or equivalent licenses. If you're not on M365 yet, we can help you get set up, but licensing costs are separate from this bundle."
+      },
+      {
+        question: "What's included vs. not included?",
+        answer: "Included: 10-25 users, 1-25 Teams/SharePoint sites, up to 5 role templates, single office location, up to 3 SSO apps. NOT included: Additional users beyond 25, additional sites beyond 25, additional role templates beyond 5, multi-location setups (+$1,000 per location), additional SSO apps beyond 3 (+$500 each)."
       }
     ],
     isBundle: true
@@ -612,27 +676,28 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Package",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review to identify priorities, implements your Identity & Security foundation, then includes 3 months of IT Advisory for ongoing guidance. Save $1,299 compared to purchasing separately. This package ensures you have expert guidance through the entire modernization journey.",
-    startingPrice: "$8,500",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review ($799) to identify priorities, implements your Identity & Security foundation (Tier 1: $6,500), then includes 3 months of IT Advisory ($500/month × 3 = $1,500) for ongoing guidance. Total value: $8,799. Bundle price: $9,299—saving you $1,000 vs. separate purchases. This package ensures you have expert guidance through the entire modernization journey, from strategic planning to implementation to ongoing optimization.",
+    startingPrice: "$9,299",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
-      "Systems Review with prioritized roadmap",
-      "Identity & Security implementation (Tier 1)",
-      "3 months Strategic IT Advisory (Essentials tier: 4 hours/month)",
-      "Monthly strategic planning sessions",
-      "Technology roadmap development",
-      "Vendor evaluation and contract review support"
+      "Systems Review with prioritized roadmap ($799 value)",
+      "Identity & Security implementation (Tier 1: 10-15 users, $6,500 value)",
+      "3 months Strategic IT Advisory (Essentials tier: 4 hours/month, $1,500 value)",
+      "Monthly strategic planning sessions during advisory period",
+      "Technology roadmap development and quarterly updates",
+      "Vendor evaluation and contract review support",
+      "Total component value: $8,799 | Bundle savings: $1,000"
     ],
     idealFor: [
-      "Companies ready to modernize but unsure where to start",
+      "Companies ready to modernize but unsure where to start (10-25 employees)",
       "Businesses wanting expert guidance through transformation",
       "Teams needing ongoing strategic support after implementation"
     ],
     pricingTiers: [
       {
         name: "Bundle Package",
-        price: "$8,500",
-        description: "Assessment, implementation, and 3 months advisory (save $1,299)"
+        price: "$9,299",
+        description: "Assessment + Tier 1 implementation + 3 months advisory (save $1,000)"
       }
     ],
     faqs: [
@@ -646,7 +711,11 @@ const services: ServiceData[] = [
       },
       {
         question: "Is this bundle only for the Identity & Security implementation, or can I choose a different service?",
-        answer: "This specific bundle includes Identity & Security (Tier 1). If you want a different service implemented, we can create a custom bundle. The standard Growth Package is designed for the most common modernization path."
+        answer: "This specific bundle includes Identity & Security (Tier 1: 10-15 users). If you want a different service implemented (M365 Governance, Employee Lifecycle, etc.), we can create a custom bundle. The standard Growth Package is designed for the most common modernization path: assessment → identity/security → ongoing strategy."
+      },
+      {
+        question: "What if I have more than 15 users?",
+        answer: "This bundle includes Identity & Security Tier 1 (10-15 users). For 16-35 users (Tier 2: $8,500) or 36-50 users (Tier 3: $11,000), the bundle price increases accordingly. Contact us for a quote on larger implementations."
       }
     ],
     isBundle: true
@@ -655,14 +724,14 @@ const services: ServiceData[] = [
     slug: "m365-training",
     title: "Microsoft 365 End-User Training",
     description: "Help your team actually use the tools you've invested in",
-    overview: "Drive adoption of Microsoft 365 with targeted training sessions. Cover Teams, SharePoint, OneDrive, Outlook best practices, and collaborative workflows. Training can be delivered in-person or remote, with custom focus areas based on your needs. Includes training materials, quick reference guides, and recorded sessions for future onboarding.",
+    overview: "Drive adoption of Microsoft 365 with targeted training sessions. Cover Teams, SharePoint, OneDrive, Outlook best practices, and collaborative workflows. Training can be delivered in-person or remote, with custom focus areas based on your needs. Includes training materials, quick reference guides, and recorded sessions for future onboarding. Follow-up support is capped to ensure value delivery and prevent unlimited scope creep.",
     startingPrice: "$1,200",
     timeline: "1-2 weeks from booking to delivery",
     deliverables: [
       "2-hour training session (in-person or remote)",
       "Custom training materials and quick reference guides",
-      "Recorded session for future reference",
-      "Q&A session and follow-up support (2 weeks)",
+      "Recorded session for future reference and onboarding",
+      "Follow-up support: Up to 30 minutes or 5 email questions per session (within 2 weeks)",
       "Adoption tips and best practices documentation"
     ],
     idealFor: [
@@ -674,12 +743,12 @@ const services: ServiceData[] = [
       {
         name: "Single Session",
         price: "$1,200",
-        description: "2-hour training for up to 25 people"
+        description: "2-hour training for up to 25 people + capped follow-up"
       },
       {
         name: "3-Session Package",
         price: "$2,500",
-        description: "3 training sessions (different topics or audiences)"
+        description: "3 training sessions (different topics or audiences) + capped follow-up per session"
       }
     ],
     faqs: [
@@ -694,6 +763,10 @@ const services: ServiceData[] = [
       {
         question: "Will you record the session for employees who can't attend?",
         answer: "Yes. All training sessions are recorded (with your permission) and delivered to you for future onboarding or reference. You'll also receive quick reference guides and documentation."
+      },
+      {
+        question: "What if we need more follow-up support after the 2 weeks?",
+        answer: "Follow-up support is capped at 30 minutes or 5 email questions per session to ensure focused value delivery. If you need ongoing support beyond that, consider the IT Advisory service or book an additional training session to address remaining questions."
       }
     ],
     isBundle: false
@@ -702,33 +775,34 @@ const services: ServiceData[] = [
     slug: "it-documentation",
     title: "IT Documentation Package",
     description: "Document your entire IT environment so nothing lives in one person's head",
-    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks. Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures.",
-    startingPrice: "$2,000",
-    timeline: "3-4 weeks",
+    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks. Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep.",
+    startingPrice: "$3,500",
+    timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
     deliverables: [
       "Network topology diagrams (physical and logical)",
-      "Complete system inventory (servers, devices, licenses)",
-      "Application and service catalog with owners",
-      "Configuration standards and baselines",
-      "Operational runbooks for common tasks",
-      "Disaster recovery documentation",
-      "SharePoint or wiki site setup for ongoing maintenance"
+      "Complete system inventory with owners and support contacts",
+      "Application and service catalog with dependencies",
+      "Configuration standards and security baselines",
+      "Operational runbooks for common IT tasks (patching, backups, incident response)",
+      "Disaster recovery procedures documentation",
+      "Vendor contact list with contracts and renewal dates",
+      "SharePoint or wiki site setup for ongoing maintenance with update procedures"
     ],
     idealFor: [
-      "Companies with no IT documentation",
-      "Organizations preparing for IT staff transitions",
-      "Businesses facing audit or compliance requirements"
+      "Companies with no IT documentation or outdated documentation",
+      "Organizations preparing for IT staff transitions or MSP onboarding",
+      "Businesses facing audit or compliance requirements (SOC 2, ISO 27001)"
     ],
     pricingTiers: [
       {
         name: "Standard Package",
-        price: "$2,000",
-        description: "Up to 25 devices and 5 core systems"
+        price: "$3,500",
+        description: "Up to 25 devices, 5 core systems, 10 applications. Ideal for small businesses."
       },
       {
         name: "Comprehensive Package",
-        price: "$4,000",
-        description: "26-50 devices and complex environments"
+        price: "$6,000",
+        description: "26-50 devices, 10 systems, 20 applications. Includes detailed runbooks and advanced network documentation."
       }
     ],
     faqs: [
@@ -743,6 +817,10 @@ const services: ServiceData[] = [
       {
         question: "Can you include our vendor contacts and support information?",
         answer: "Absolutely. The documentation includes vendor contact lists, support procedures, license keys (stored securely), renewal dates, and escalation paths. This is critical for incident response and staff transitions."
+      },
+      {
+        question: "What if we have more than 50 devices?",
+        answer: "For larger environments (50+ devices), we'll provide custom pricing based on complexity. The tiered packages are designed for most small-to-midsize Oklahoma businesses. Contact us for a quote if you're beyond these caps."
       }
     ],
     isBundle: false
@@ -751,11 +829,13 @@ const services: ServiceData[] = [
     slug: "dr-testing-service",
     title: "Disaster Recovery Testing Service",
     description: "Quarterly restore tests to ensure your backups actually work",
-    overview: "Don't wait for a disaster to find out your backups don't work. Recurring quarterly service that tests restore procedures, validates backup coverage, updates recovery documentation, and provides executive-ready reports. This is a subscription service that provides ongoing confidence in your disaster recovery capabilities.",
+    overview: "Don't wait for a disaster to find out your backups don't work. Recurring quarterly service that tests restore procedures (up to 2 systems per quarter), validates backup coverage, updates recovery documentation, and provides executive-ready reports. System = one application or data store (file server, database, M365 tenant, single VM). Additional systems +$250 each. Annual subscription ensures consistent validation and trend tracking.",
     startingPrice: "$1,500/quarter",
     timeline: "Ongoing quarterly service",
     deliverables: [
-      "Quarterly restore testing (1-2 critical systems per quarter)",
+      "Quarterly restore testing (up to 2 critical systems per quarter)",
+      "System definition: One application or data store (file server, database, M365 tenant, single VM)",
+      "Additional systems tested: +$250 per system per quarter",
       "Backup coverage validation and gap analysis",
       "Updated disaster recovery playbook",
       "RTO/RPO validation and documentation",
@@ -763,21 +843,25 @@ const services: ServiceData[] = [
       "Remediation recommendations for any issues found"
     ],
     idealFor: [
-      "Organizations with compliance requirements",
+      "Organizations with compliance requirements (SOC 2, HIPAA, ISO 27001)",
       "Companies managing critical business data",
-      "Businesses wanting ongoing DR confidence"
+      "Businesses wanting ongoing DR confidence without surprises"
     ],
     pricingTiers: [
       {
         name: "Quarterly Service",
         price: "$1,500/quarter",
-        description: "Recurring DR testing (annual commitment)"
+        description: "Recurring DR testing (up to 2 systems per quarter, annual commitment). +$250 per additional system."
       }
     ],
     faqs: [
       {
         question: "Do I have to commit to a full year?",
         answer: "Yes. This is an annual subscription service with quarterly testing. The annual commitment ensures consistent DR validation and allows us to track trends and improvements over time. Cancel with 30 days notice before renewal."
+      },
+      {
+        question: "What counts as a 'system' for quarterly testing?",
+        answer: "A system is one application or data store. Examples: file server (1 system), SQL database (1 system), M365 tenant (1 system), single VM (1 system). Base price includes testing up to 2 systems per quarter. Need more? +$250 per additional system per quarter."
       },
       {
         question: "What happens if a test fails?",
@@ -794,27 +878,28 @@ const services: ServiceData[] = [
     slug: "cloud-cost-optimization",
     title: "Cloud Cost Optimization Review",
     description: "Find waste in your Azure and Microsoft 365 spending",
-    overview: "Comprehensive audit of your Azure and Microsoft 365 licensing and usage. Identify unused licenses, right-size resources, eliminate redundant services, and implement cost controls. Most clients save 15-30% on their annual cloud spend. One-time engagement with ongoing monitoring recommendations.",
+    overview: "Comprehensive audit of your Azure and Microsoft 365 licensing and usage. Identify unused licenses, right-size resources, eliminate redundant services, and implement cost controls. Most clients save 15-30% on their annual cloud spend. One-time engagement with ongoing monitoring recommendations. Standard review covers one Azure subscription and one M365 tenant (up to 100 users). Additional subscriptions or tenants: +$500 each.",
     startingPrice: "$1,200",
     timeline: "1-2 weeks",
     deliverables: [
-      "License utilization audit (M365, Azure, Dynamics)",
-      "Cost analysis and waste identification",
-      "Right-sizing recommendations for Azure resources",
+      "License utilization audit (M365, Azure, Dynamics) for one tenant (up to 100 users)",
+      "Cost analysis and waste identification for one Azure subscription",
+      "Right-sizing recommendations for Azure resources (VMs, storage, databases)",
       "Unused license and redundant service report",
-      "Cost-saving implementation roadmap",
-      "Ongoing monitoring and alerting setup"
+      "Cost-saving implementation roadmap with priority and effort estimates",
+      "Ongoing monitoring and alerting setup (budget alerts, anomaly detection)",
+      "Additional subscriptions or tenants: +$500 each"
     ],
     idealFor: [
-      "Companies with growing cloud costs",
+      "Companies with growing cloud costs and unclear usage",
       "Organizations with 25+ M365 licenses",
-      "Businesses using Azure without cost controls"
+      "Businesses using Azure without cost controls or governance"
     ],
     pricingTiers: [
       {
         name: "Standard Review",
         price: "$1,200",
-        description: "M365 and basic Azure analysis"
+        description: "M365 (1 tenant, up to 100 users) and Azure (1 subscription) analysis. +$500 per additional."
       }
     ],
     faqs: [
@@ -829,6 +914,10 @@ const services: ServiceData[] = [
       {
         question: "Will cost-cutting impact our service quality or user experience?",
         answer: "No. We only recommend removing unused or redundant services. If a license or resource is actively used, we leave it. The goal is to eliminate waste, not degrade service. If right-sizing is needed, we explain the tradeoffs clearly."
+      },
+      {
+        question: "What if we have multiple Azure subscriptions or M365 tenants?",
+        answer: "Base pricing covers one Azure subscription and one M365 tenant (up to 100 users). Additional subscriptions or tenants are +$500 each. For complex multi-tenant environments, contact us for custom pricing."
       }
     ],
     isBundle: false
@@ -837,16 +926,18 @@ const services: ServiceData[] = [
     slug: "compliance-documentation",
     title: "Compliance Documentation Prep",
     description: "Prepare IT documentation for HIPAA, SOC 2, or CMMC audits",
-    overview: "Get your IT documentation audit-ready. We help you prepare policies, procedures, system documentation, and evidence collection for HIPAA, SOC 2, CMMC, or other compliance frameworks. This is documentation preparation only—not legal advice or certification services. Work is performed in collaboration with your compliance auditor or consultant.",
+    overview: "Get your IT documentation audit-ready. We help you prepare policies, procedures, system documentation, and evidence collection for HIPAA, SOC 2, CMMC, or other compliance frameworks. This is documentation preparation only—not legal advice or certification services. Work is performed in collaboration with your compliance auditor or consultant. Basic Prep: 10 policy templates, network diagram, asset inventory, access controls. Comprehensive Prep: All Basic plus 20 detailed SOPs, evidence templates, gap analysis, remediation roadmap.",
     startingPrice: "$3,500",
     timeline: "4-6 weeks depending on scope",
     deliverables: [
-      "IT policy documentation aligned to framework requirements",
-      "System security documentation and diagrams",
-      "Access control and user management procedures",
-      "Incident response and disaster recovery documentation",
-      "Evidence collection and organization",
-      "Gap analysis with remediation roadmap"
+      "Basic Prep: 10 IT policy templates aligned to framework requirements (Acceptable Use, Access Control, Incident Response, etc.)",
+      "Basic Prep: Network topology diagram and system security documentation",
+      "Basic Prep: Asset inventory with owners and access levels",
+      "Basic Prep: Access control and user management procedures",
+      "Comprehensive Prep: All Basic deliverables plus 20 detailed Standard Operating Procedures (SOPs)",
+      "Comprehensive Prep: Evidence collection templates and organization system",
+      "Comprehensive Prep: Gap analysis with control mappings",
+      "Comprehensive Prep: Remediation roadmap with priority and effort estimates"
     ],
     idealFor: [
       "Healthcare organizations pursuing HIPAA compliance",
@@ -857,12 +948,12 @@ const services: ServiceData[] = [
       {
         name: "Basic Prep",
         price: "$3,500",
-        description: "Core IT documentation for compliance"
+        description: "10 policy templates + core IT documentation for compliance"
       },
       {
         name: "Comprehensive Prep",
         price: "$7,500",
-        description: "Full policy suite and evidence collection"
+        description: "Full policy suite (10 policies + 20 SOPs) + evidence collection + gap analysis"
       }
     ],
     faqs: [
@@ -885,28 +976,31 @@ const services: ServiceData[] = [
     slug: "technology-roadmap-workshop",
     title: "Technology Roadmap Workshop",
     description: "Build a 3-5 year technology plan aligned to business goals",
-    overview: "Full-day workshop with leadership to develop a strategic technology roadmap. We'll assess current state, identify business goals, evaluate technology gaps, prioritize initiatives, and create a phased implementation plan with budget estimates. Perfect for annual planning or preparing for growth/funding rounds. Delivered as a facilitated workshop with executive-ready deliverables.",
-    startingPrice: "$2,000",
+    overview: "Strategic technology roadmap workshop for leadership teams. Full-day facilitated session to assess current state, identify business goals, evaluate technology gaps, and create an executive-ready multi-year plan. Includes comprehensive documentation, budget modeling, and phased implementation roadmap. This is board-ready strategic planning, not a brainstorming session.",
+    startingPrice: "$5,000",
     timeline: "1-day workshop + 1 week documentation",
     deliverables: [
-      "Current state technology assessment",
+      "Pre-workshop discovery (current state technology assessment)",
+      "Full-day facilitated workshop with leadership team",
       "Business goal and technology gap analysis",
-      "3-5 year technology roadmap with phases",
-      "Initiative prioritization and dependencies",
-      "Budget estimates and resource requirements",
-      "Executive presentation deck",
-      "Quarterly milestone tracking framework"
+      "3-5 year technology roadmap with detailed phases",
+      "Initiative prioritization matrix with dependencies and risks",
+      "Budget estimates and resource requirements by phase",
+      "Executive presentation deck (board-ready)",
+      "Quarterly milestone tracking framework with KPIs",
+      "30-day follow-up session to refine and adjust roadmap"
     ],
     idealFor: [
-      "Growing businesses planning for scale",
-      "Companies preparing for funding rounds",
-      "Leadership teams making multi-year technology decisions"
+      "Growing businesses planning for scale (25-100 employees)",
+      "Companies preparing for funding rounds or major investments",
+      "Leadership teams making multi-year technology decisions",
+      "Businesses facing technology debt or infrastructure rebuilds"
     ],
     pricingTiers: [
       {
-        name: "Workshop Package",
-        price: "$2,000",
-        description: "1-day workshop + roadmap documentation"
+        name: "Comprehensive Package",
+        price: "$5,000",
+        description: "Full workshop, executive deliverables, and 30-day follow-up"
       }
     ],
     faqs: [
@@ -921,6 +1015,10 @@ const services: ServiceData[] = [
       {
         question: "Will you implement the roadmap after the workshop?",
         answer: "That's separate. This service delivers the strategic plan. Implementation can be done by your team, other vendors, or us (separate engagement). Many clients use the roadmap for budgeting and phased implementation over 1-3 years."
+      },
+      {
+        question: "Why is this more expensive than the Systems Review?",
+        answer: "This is executive-level strategic planning with board-ready deliverables—budget modeling, multi-year phasing, ROI analysis, and risk assessment. It's a full-day workshop plus 8-12 hours of documentation work. Many consultants charge $7,500-$10,000 for this level of strategic deliverable. We price it to be accessible to growing Oklahoma businesses while ensuring quality work."
       }
     ],
     isBundle: false
