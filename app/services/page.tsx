@@ -78,13 +78,13 @@ export default function ServicesPage() {
     },
     {
       title: "IT Foundation Package",
-      description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000. Perfect for 10-25 employees.",
+      description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $1,500. Perfect for 10-25 employees.",
       slug: "new-foundation-bundle",
       tag: "Bundle Deal"
     },
     {
       title: "Growth Package",
-      description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,299. Complete modernization with ongoing guidance.",
+      description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,000. Complete modernization with ongoing guidance.",
       slug: "growth-acceleration-bundle",
       tag: "Bundle Deal"
     },
