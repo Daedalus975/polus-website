@@ -92,7 +92,7 @@ export default function DisclaimerPage() {
               <li>Recommend but cannot enforce adherence to third-party licensing agreements and terms of service</li>
             </ul>
             <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mt-4">
-              <strong>You are responsible for reviewing and accepting third-party service terms, licensing costs, and ongoing subscription management.</strong> Polus does not manage, maintain, or assume responsibility for:
+              <strong>You are responsible for reviewing and accepting third-party service terms, licensing costs, and ongoing subscription management.</strong> For project-based implementation services (e.g., Identity & Device Foundation, M365 Governance, Process Documentation), Polus does not manage, maintain, or assume responsibility for:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-[rgba(254,255,255,0.78)] mt-3">
               <li>Ongoing subscription renewals, billing, or license management for third-party services</li>
@@ -103,21 +103,27 @@ export default function DisclaimerPage() {
               <li>Support tickets, SLA enforcement, or vendor escalations for third-party platforms</li>
             </ul>
             <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mt-4">
-              Unless explicitly stated in a separate ongoing service agreement (e.g., IT Advisory retainer), our services are project-based implementations only. Ongoing operational responsibility for systems, subscriptions, and services remains with the client.
+              <strong>For managed services or ongoing service agreements</strong> (e.g., IT Advisory retainer, Disaster Recovery Testing Service with recurring engagements), Polus responsibilities are explicitly defined in the service agreement and may include monitoring, maintenance, updates, or vendor management as specified. Refer to your specific service agreement for details.
+            </p>
+            <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mt-4">
+              Unless otherwise stated in your service agreement, our services are project-based implementations only. Ongoing operational responsibility for systems, subscriptions, and third-party services remains with the client.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-polus-gold mb-4">Project-Based Services</h2>
+            <h2 className="text-2xl font-semibold text-polus-gold mb-4">Project-Based vs. Managed Services</h2>
             <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
-              Unless otherwise specified in a separate service agreement, all services are provided on a project basis with defined scope and deliverables. This means:
+              Unless otherwise specified in a separate service agreement, most services are provided on a <strong>project basis</strong> with defined scope and deliverables. This means:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-[rgba(254,255,255,0.78)]">
-              <li><strong>Project completion does not include ongoing support:</strong> Once deliverables are provided and the project is closed, post-project support is not included unless purchased separately (e.g., IT Advisory retainer).</li>
-              <li><strong>Systems require ongoing maintenance:</strong> IT systems, processes, and documentation require regular updates and maintenance. Clients are responsible for ongoing upkeep unless contracted under a separate maintenance agreement.</li>
+              <li><strong>Project completion does not include ongoing support:</strong> Once deliverables are provided and the project is closed, post-project support is not included unless purchased separately.</li>
+              <li><strong>Systems require ongoing maintenance:</strong> IT systems, processes, and documentation require regular updates and maintenance. Clients are responsible for ongoing upkeep of project-based implementations.</li>
               <li><strong>Training does not guarantee adoption:</strong> User training and documentation are provided, but successful adoption depends on organizational change management, which is the client&apos;s responsibility.</li>
               <li><strong>Implementations require testing and validation:</strong> While we test configurations in controlled environments, clients must validate implementations in their specific production environments before relying on them for critical operations.</li>
             </ul>
+            <p className="text-[rgba(254,255,255,0.78)] leading-relaxed mt-4">
+              <strong>Managed services and recurring engagements</strong> (e.g., IT Advisory retainer, Disaster Recovery Testing Service with quarterly testing) include ongoing responsibilities as explicitly defined in those service agreements. These may include system monitoring, vendor management, regular testing, advisory sessions, or other ongoing activities. Scope and deliverables for managed services are detailed in individual service agreements.
+            </p>
           </div>
 
           <div>
