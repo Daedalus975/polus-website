@@ -31,3 +31,27 @@ body { background: var(--polus-bg); color: var(--polus-text); }
 .animate-slideUp {
   animation: slideUp 0.3s ease-out;
 }
+
+/* Custom scrollbar for horizontal category tabs */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(194, 163, 25, 0.3) rgba(177, 227, 199, 0.1);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(177, 227, 199, 0.1);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(194, 163, 25, 0.3);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(194, 163, 25, 0.5);
+}

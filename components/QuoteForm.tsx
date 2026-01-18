@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "./Button";
 import { Card } from "./Card";
 import { track } from "@/lib/track";
+import { getCheckboxLabels, mapServiceSlugToCheckboxLabel } from "@/lib/serviceData";
 
 type Step1Data = {
   primary_need: string[];
@@ -39,30 +40,6 @@ type PrefillData = {
   backup_confidence?: string;
   outcome?: string;
 };
-
-function mapServiceSlugToCheckboxLabel(slug: string): string {
-  const mapping: Record<string, string> = {
-    "systems-assessment": "Systems review",
-    "process-clarity-pack": "Process Documentation",
-    "m365-governance": "M365 governance",
-    "employee-lifecycle": "Employee lifecycle (onboarding/offboarding)",
-    "backup-dr-readiness": "Backup & DR",
-    "identity-device-foundation": "Identity & Security",
-    "strategic-advisory": "IT Advisory",
-    "it-operations-toolkit": "IT operations setup",
-    "mvp-prd": "Product planning",
-    "web-development": "Web development",
-    "new-foundation-bundle": "IT Foundation Package",
-    "growth-acceleration-bundle": "Growth Package",
-    "m365-training": "Microsoft 365 training",
-    "it-documentation": "IT documentation",
-    "dr-testing-service": "DR testing service",
-    "cloud-cost-optimization": "Cloud cost optimization",
-    "compliance-documentation": "Compliance documentation",
-    "technology-roadmap-workshop": "Technology roadmap workshop"
-  };
-  return mapping[slug] || "Systems review";
-}
 
 function buildPrefilledMessage(data: PrefillData): string {
   if (!data.service_title) return "";
@@ -276,27 +253,7 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
     }
   }
 
-  const needOptions = [
-    "Systems review",
-    "Process Documentation",
-    "M365 governance",
-    "Employee lifecycle (onboarding/offboarding)",
-    "Backup / DR",
-    "Identity & Security",
-    "IT Advisory",
-    "IT operations setup",
-    "Product planning",
-    "Web development",
-    "IT Foundation Package",
-    "Growth Package",
-    "Microsoft 365 training",
-    "IT documentation",
-    "DR testing service",
-    "Cloud cost optimization",
-    "Compliance documentation",
-    "Technology roadmap workshop",
-    "Other / Not sure yet"
-  ];
+  const needOptions = getCheckboxLabels();
 
   if (status === "success") {
     return (

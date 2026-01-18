@@ -3,13 +3,8 @@
 import { useState } from "react";
 import { Card } from "@/components/Card";
 import Link from "next/link";
-
-type Service = {
-  title: string;
-  description: string;
-  slug: string;
-  tag?: string;
-};
+import type { Service, ServiceCategory } from "@/lib/serviceData";
+import { SERVICE_CATEGORIES } from "@/lib/serviceData";
 
 type ServicesGridProps = {
   services: Service[];
@@ -17,9 +12,15 @@ type ServicesGridProps = {
 
 export function ServicesGrid({ services }: ServicesGridProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState<ServiceCategory>("all");
 
-  // Filter services based on search query
+  // Filter services based on category and search query
   const filteredServices = services.filter((service) => {
+    // Category filter
+    const categoryMatch = activeCategory === "all" || service.category === activeCategory;
+    if (!categoryMatch) return false;
+    
+    // Search filter
     if (!searchQuery) return true;
     
     const query = searchQuery.toLowerCase();
@@ -32,6 +33,34 @@ export function ServicesGrid({ services }: ServicesGridProps) {
 
   return (
     <>
+      {/* Category Tabs */}
+      <div className="mb-8">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+          {Object.entries(SERVICE_CATEGORIES).map(([key, { label, count }]) => (
+            <button
+              key={key}
+              onClick={() => {
+                setActiveCategory(key as ServiceCategory);
+                setSearchQuery(""); // Clear search when changing category
+              }}
+              className={`
+                flex-shrink-0 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all
+                ${
+                  activeCategory === key
+                    ? "bg-polus-gold text-polus-forest"
+                    : "bg-polus-surface1 text-polus-paper/80 hover:bg-polus-surface2 hover:text-polus-paper border border-[rgba(177,227,199,0.16)]"
+                }
+              `}
+            >
+              {label}
+              <span className={`ml-2 ${activeCategory === key ? "opacity-70" : "opacity-50"}`}>
+                ({count})
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Search Input */}
       <div className="max-w-2xl mx-auto mb-10">
         <div className="relative">

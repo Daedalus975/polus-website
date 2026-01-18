@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { track } from "@/lib/track";
+import { getCheckboxLabels } from "@/lib/serviceData";
 
 type FormData = {
   name: string;
@@ -97,27 +98,7 @@ export function ContactForm() {
     }
   }
 
-  const needOptions = [
-    "Systems review",
-    "Process Documentation",
-    "M365 governance",
-    "Employee lifecycle (onboarding/offboarding)",
-    "Backup / DR",
-    "Identity & Security",
-    "IT Advisory",
-    "IT operations setup",
-    "Product planning",
-    "Web development",
-    "IT Foundation Package",
-    "Growth Package",
-    "Microsoft 365 training",
-    "IT documentation",
-    "DR testing service",
-    "Cloud cost optimization",
-    "Compliance documentation",
-    "Technology roadmap workshop",
-    "Other / Not sure yet"
-  ];
+  const needOptions = getCheckboxLabels();
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
