@@ -8,6 +8,7 @@ type PricingTier = {
   name: string;
   price: string;
   description: string;
+  deliverables?: string[];
 };
 
 type ServiceDetailClientProps = {
@@ -46,25 +47,9 @@ export function ServiceDetailClient({
 }: ServiceDetailClientProps) {
   const [selectedTier, setSelectedTier] = useState<number | null>(null);
 
-  // Filter deliverables based on selected tier
-  const filteredDeliverables = selectedTier !== null && pricingTiers
-    ? deliverables.filter(item => {
-        const lowerItem = item.toLowerCase();
-        const selectedTierName = pricingTiers[selectedTier].name.toLowerCase();
-        
-        // Include if: doesn't mention any tier, or mentions the selected tier or lower
-        if (!lowerItem.includes('tier')) return true;
-        
-        // Check if it's for this tier or a lower tier
-        const tierMatch = lowerItem.match(/tier (\d+)/i);
-        if (tierMatch) {
-          const itemTierNum = parseInt(tierMatch[1]);
-          const selectedTierNum = parseInt(selectedTierName.match(/\d+/)?.[0] || '0');
-          return itemTierNum <= selectedTierNum;
-        }
-        
-        return lowerItem.includes(selectedTierName);
-      })
+  // Use tier-specific deliverables if tier is selected and has deliverables defined
+  const displayDeliverables = selectedTier !== null && pricingTiers?.[selectedTier]?.deliverables
+    ? pricingTiers[selectedTier].deliverables!
     : deliverables;
 
   return (
@@ -96,7 +81,7 @@ export function ServiceDetailClient({
         )}
         
         <ul className="space-y-3 mb-8">
-          {filteredDeliverables.map((item, idx) => (
+          {displayDeliverables.map((item, idx) => (
             <li key={idx} className="flex items-start gap-3">
               <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

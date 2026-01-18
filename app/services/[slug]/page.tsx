@@ -23,6 +23,7 @@ type ServiceData = {
     name: string;
     price: string;
     description: string;
+    deliverables?: string[];
   }>;
   isBundle?: boolean;
 };
@@ -90,12 +91,32 @@ const services: ServiceData[] = [
       {
         name: "Essentials",
         price: "$500/month",
-        description: "4 hours monthly strategic consulting + limited email support"
+        description: "4 hours monthly strategic consulting + limited email support",
+        deliverables: [
+          "Monthly strategic planning sessions (4 hours)",
+          "Meeting includes prep, facilitation, and follow-up documentation",
+          "Technology roadmap development and quarterly updates",
+          "Vendor evaluation and contract review support",
+          "Budget planning and prioritization guidance",
+          "Monthly agenda and decision log (you set priorities, we provide guidance)",
+          "Email support for strategic questions (15 minutes total per month for quick answers)",
+          "Response time: Within 2 business days for email questions"
+        ]
       },
       {
         name: "Plus",
         price: "$1,000/month",
-        description: "10 hours monthly strategic consulting + limited email support"
+        description: "10 hours monthly strategic consulting + limited email support",
+        deliverables: [
+          "Monthly strategic planning sessions (10 hours)",
+          "Meeting includes prep, facilitation, and follow-up documentation",
+          "Technology roadmap development and quarterly updates",
+          "Vendor evaluation and contract review support",
+          "Budget planning and prioritization guidance",
+          "Monthly agenda and decision log (you set priorities, we provide guidance)",
+          "Email support for strategic questions (15 minutes total per month for quick answers)",
+          "Response time: Within 2 business days for email questions"
+        ]
       }
     ],
     faqs: [
@@ -164,17 +185,53 @@ const services: ServiceData[] = [
       {
         name: "Tier 1",
         price: "$6,500",
-        description: "10-15 users/devices, up to 3 SSO apps, single location"
+        description: "10-15 users/devices, up to 3 SSO apps, single location",
+        deliverables: [
+          "Azure AD Connect setup (hybrid identity configuration if needed)",
+          "Intune enrollment and baseline device policies",
+          "MFA rollout (Microsoft Authenticator or similar)",
+          "Conditional access policies (location, device compliance, MFA enforcement)",
+          "SSO setup for up to 3 core applications (additional apps +$500 each)",
+          "BitLocker encryption enforcement across all devices",
+          "Windows Update rings configuration (Pilot, Production, Critical)",
+          "Admin training and handoff documentation",
+          "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
+          "Additional locations beyond primary office: +$1,000 per location"
+        ]
       },
       {
         name: "Tier 2",
         price: "$8,500",
-        description: "16-35 users/devices, up to 3 SSO apps, single location"
+        description: "16-35 users/devices, up to 3 SSO apps, single location",
+        deliverables: [
+          "Azure AD Connect setup (hybrid identity configuration if needed)",
+          "Intune enrollment and baseline device policies",
+          "MFA rollout (Microsoft Authenticator or similar)",
+          "Conditional access policies (location, device compliance, MFA enforcement)",
+          "SSO setup for up to 3 core applications (additional apps +$500 each)",
+          "BitLocker encryption enforcement across all devices",
+          "Windows Update rings configuration (Pilot, Production, Critical)",
+          "Admin training and handoff documentation",
+          "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
+          "Additional locations beyond primary office: +$1,000 per location"
+        ]
       },
       {
         name: "Tier 3",
         price: "$11,000",
-        description: "36-50 users/devices, up to 3 SSO apps, single location"
+        description: "36-50 users/devices, up to 3 SSO apps, single location",
+        deliverables: [
+          "Azure AD Connect setup (hybrid identity configuration if needed)",
+          "Intune enrollment and baseline device policies",
+          "MFA rollout (Microsoft Authenticator or similar)",
+          "Conditional access policies (location, device compliance, MFA enforcement)",
+          "SSO setup for up to 3 core applications (additional apps +$500 each)",
+          "BitLocker encryption enforcement across all devices",
+          "Windows Update rings configuration (Pilot, Production, Critical)",
+          "Admin training and handoff documentation",
+          "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
+          "Additional locations beyond primary office: +$1,000 per location"
+        ]
       }
     ],
     isBundle: true
@@ -204,22 +261,58 @@ const services: ServiceData[] = [
       {
         name: "Phase A",
         price: "$3,500",
-        description: "Integration assessment & planning (2 weeks)"
+        description: "Integration assessment & planning (2 weeks)",
+        deliverables: [
+          "Pre-acquisition IT assessment and integration roadmap",
+          "Current state analysis of both organizations' IT systems",
+          "Risk analysis and go/no-go recommendation",
+          "Integration timeline and phase planning",
+          "Cost estimates for Phase B and Phase C",
+          "Executive summary and decision support documentation"
+        ]
       },
       {
         name: "Phase B (10-25 users)",
         price: "$12,000",
-        description: "Identity migration & system consolidation (6-12 weeks)"
+        description: "Identity migration & system consolidation (6-12 weeks)",
+        deliverables: [
+          "Identity migration (AD, Azure AD, email accounts for 10-25 users)",
+          "M365 tenant consolidation or co-management setup",
+          "User communication and training materials",
+          "Phased migration by department or role",
+          "Data migration coordination (files, SharePoint, Teams)",
+          "Post-migration validation and issue tracking",
+          "Weekly status updates during migration period"
+        ]
       },
       {
         name: "Phase B (26-50 users)",
         price: "$18,000",
-        description: "Identity migration & system consolidation (6-12 weeks)"
+        description: "Identity migration & system consolidation (6-12 weeks)",
+        deliverables: [
+          "Identity migration (AD, Azure AD, email accounts for 26-50 users)",
+          "M365 tenant consolidation or co-management setup",
+          "User communication and training materials",
+          "Phased migration by department or role",
+          "Data migration coordination (files, SharePoint, Teams)",
+          "Post-migration validation and issue tracking",
+          "Weekly status updates during migration period",
+          "Extended testing and validation for larger user base",
+          "Department-specific migration planning"
+        ]
       },
       {
         name: "Phase C",
         price: "$2,500",
-        description: "Stabilization & handoff (2-4 weeks)"
+        description: "Stabilization & handoff (2-4 weeks)",
+        deliverables: [
+          "Post-migration validation and issue resolution",
+          "30-day stabilization support period",
+          "Documentation and knowledge transfer",
+          "Final integration verification",
+          "Admin training for ongoing management",
+          "Lessons learned and recommendations document"
+        ]
       }
     ],
     faqs: [
@@ -283,17 +376,53 @@ const services: ServiceData[] = [
       {
         name: "Tier 1",
         price: "$3,500",
-        description: "1-25 active sites/Teams. Cleanup up to 12 inactive sites."
+        description: "1-25 active sites/Teams. Cleanup up to 12 inactive sites.",
+        deliverables: [
+          "Current state audit (1-25 active sites, permissions sprawl analysis)",
+          "Governance policy documentation (naming conventions, lifecycle management)",
+          "Permissions cleanup and baseline configuration",
+          "External sharing and guest access controls",
+          "Retention and deletion policies setup",
+          "Template library for new Teams/SharePoint sites (3 pre-approved templates)",
+          "Cleanup of up to 12 inactive sites (archival or deletion with approval)",
+          "Admin training session (2 hours)"
+        ]
       },
       {
         name: "Tier 2",
         price: "$5,500",
-        description: "26-75 active sites/Teams. Cleanup up to 37 inactive sites."
+        description: "26-75 active sites/Teams. Cleanup up to 37 inactive sites.",
+        deliverables: [
+          "Current state audit (26-75 active sites, permissions sprawl analysis)",
+          "Governance policy documentation (naming conventions, lifecycle management)",
+          "Permissions cleanup and baseline configuration",
+          "External sharing and guest access controls",
+          "Retention and deletion policies setup",
+          "Template library for new Teams/SharePoint sites (5 pre-approved templates)",
+          "Cleanup of up to 37 inactive sites (archival or deletion with approval)",
+          "Admin training session (2 hours)",
+          "End-user training session (1 hour)",
+          "Advanced permission inheritance review"
+        ]
       },
       {
         name: "Tier 3",
         price: "$8,500",
-        description: "76-150 active sites/Teams. Cleanup up to 75 inactive sites. +$50 per additional site."
+        description: "76-150 active sites/Teams. Cleanup up to 75 inactive sites. +$50 per additional site.",
+        deliverables: [
+          "Current state audit (76-150 active sites, permissions sprawl analysis)",
+          "Governance policy documentation (naming conventions, lifecycle management)",
+          "Permissions cleanup and baseline configuration",
+          "External sharing and guest access controls",
+          "Retention and deletion policies setup",
+          "Template library for new Teams/SharePoint sites (10 pre-approved templates)",
+          "Cleanup of up to 75 inactive sites (archival or deletion with approval)",
+          "Admin training session (3 hours)",
+          "End-user training session (2 hours)",
+          "Advanced permission inheritance review",
+          "Automated lifecycle management policies",
+          "Quarterly governance review checklist"
+        ]
       }
     ],
     isBundle: true
@@ -323,12 +452,33 @@ const services: ServiceData[] = [
       {
         name: "Tier 1",
         price: "$2,500",
-        description: "10-25 employees, up to 5 role templates"
+        description: "10-25 employees, up to 5 role templates",
+        deliverables: [
+          "Onboarding workflow automation (accounts, security groups, email distribution lists)",
+          "Offboarding workflow automation (access revocation, license recovery, exit checklists)",
+          "Integration with Microsoft 365",
+          "Security group and role templates (up to 5 role-based templates)",
+          "Manager approval workflows (request, approve, execute)",
+          "Documentation and admin training (2 hours)",
+          "Welcome email templates and user guides"
+        ]
       },
       {
         name: "Tier 2",
         price: "$4,200",
-        description: "26-50 employees, up to 5 role templates (+$300 per additional role)"
+        description: "26-50 employees, up to 5 role templates (+$300 per additional role)",
+        deliverables: [
+          "Onboarding workflow automation (accounts, security groups, email distribution lists)",
+          "Offboarding workflow automation (access revocation, license recovery, exit checklists)",
+          "Integration with Microsoft 365 and HR systems (if API/webhook supported)",
+          "Security group and role templates (up to 5 role-based templates)",
+          "Manager approval workflows (request, approve, execute)",
+          "Documentation and admin training (3 hours)",
+          "Welcome email templates and user guides",
+          "Archive procedures for departing employees",
+          "Department-specific onboarding variations",
+          "Audit log and compliance reporting setup"
+        ]
       }
     ],
     faqs: [
@@ -377,12 +527,34 @@ const services: ServiceData[] = [
       {
         name: "Essentials",
         price: "$4,500",
-        description: "Service desk and asset management (up to 50 assets)"
+        description: "Service desk and asset management (up to 50 assets)",
+        deliverables: [
+          "Service desk platform selection and setup",
+          "Ticket categories, priorities, and workflows",
+          "SLA definitions and response time standards",
+          "Asset management platform setup",
+          "Initial asset inventory import (up to 50 assets)",
+          "Admin training (2 hours)",
+          "Knowledge base starter templates (10 articles)"
+        ]
       },
       {
         name: "Plus",
         price: "$7,500",
-        description: "Essentials, automation, and MSP transition (up to 50 assets, +$50 per 10 additional)"
+        description: "Essentials, automation, and MSP transition (up to 50 assets, +$50 per 10 additional)",
+        deliverables: [
+          "Service desk platform selection and setup",
+          "Ticket categories, priorities, and workflows",
+          "SLA definitions and response time standards",
+          "Asset management platform setup",
+          "Initial asset inventory import (up to 50 assets)",
+          "Admin training (3 hours)",
+          "Knowledge base starter templates (20 articles)",
+          "2-3 PowerShell automation scripts (user provisioning, backup verification, or license audits)",
+          "IT operations runbook and SOPs",
+          "MSP partner transition package",
+          "30-day post-implementation support"
+        ]
       }
     ],
     faqs: [
@@ -433,12 +605,30 @@ const services: ServiceData[] = [
       {
         name: "Verification Package",
         price: "$1,500",
-        description: "Coverage assessment and gap analysis only (no restore testing)"
+        description: "Coverage assessment and gap analysis only (no restore testing)",
+        deliverables: [
+          "Backup coverage assessment (systems, data, apps)",
+          "Backup configuration review (retention, frequency, offsite)",
+          "Gap analysis and risk documentation",
+          "Disaster recovery checklist (high-level procedures)",
+          "Recommendations report with prioritized improvements"
+        ]
       },
       {
         name: "Full DR Package",
         price: "$3,500",
-        description: "Verification, restore testing (up to 2 systems), and playbook. +$500 per additional system."
+        description: "Verification, restore testing (up to 2 systems), and playbook. +$500 per additional system.",
+        deliverables: [
+          "Backup coverage assessment (systems, data, apps)",
+          "Backup configuration review (retention, frequency, offsite)",
+          "Gap analysis and risk documentation",
+          "Live restore test (up to 2 critical systems)",
+          "Detailed recovery playbook with step-by-step procedures",
+          "RTO/RPO analysis and documentation",
+          "Recovery contact list and escalation procedures",
+          "Quarterly backup verification checklist",
+          "Executive summary report with findings and recommendations"
+        ]
       }
     ],
     faqs: [
@@ -485,22 +675,52 @@ const services: ServiceData[] = [
       {
         name: "Simple Process",
         price: "$1,200",
-        description: "Linear process, 3-5 steps, single department (e.g., expense approval, time-off request)"
+        description: "Linear process, 3-5 steps, single department (e.g., expense approval, time-off request)",
+        deliverables: [
+          "Visual process map (swimlane or flowchart format)",
+          "Written standard operating procedure (SOP) document",
+          "1-2 decision trees for common variations",
+          "30-day post-delivery support for refinements"
+        ]
       },
       {
         name: "Standard Process",
         price: "$1,800",
-        description: "Multi-step process, 6-10 steps, some cross-functional work (e.g., customer onboarding, project intake)"
+        description: "Multi-step process, 6-10 steps, some cross-functional work (e.g., customer onboarding, project intake)",
+        deliverables: [
+          "Visual process map (swimlane or flowchart format)",
+          "Written standard operating procedure (SOP) document",
+          "Decision trees for common variations and exceptions",
+          "Team training session on using and maintaining SOPs (1 hour)",
+          "30-day post-delivery support for refinements"
+        ]
       },
       {
         name: "Complex Process",
         price: "$3,000",
-        description: "Multi-branch logic, 10+ steps, multiple departments, integrations (e.g., contract approval, incident response)"
+        description: "Multi-branch logic, 10+ steps, multiple departments, integrations (e.g., contract approval, incident response)",
+        deliverables: [
+          "Visual process map (swimlane or flowchart format)",
+          "Written standard operating procedure (SOP) document",
+          "Decision trees for common variations and exceptions",
+          "Integration and handoff documentation",
+          "Exception handling procedures",
+          "Team training session on using and maintaining SOPs (2 hours)",
+          "30-day post-delivery support for refinements"
+        ]
       },
       {
         name: "5-Process Package",
         price: "$7,500",
-        description: "5 standard processes (save $1,500 vs. individual)"
+        description: "5 standard processes (save $1,500 vs. individual)",
+        deliverables: [
+          "5 visual process maps (swimlane or flowchart format)",
+          "5 written standard operating procedure (SOP) documents",
+          "Decision trees for common variations and exceptions (all 5 processes)",
+          "SOP template library for future documentation",
+          "Team training session on using and maintaining SOPs (2 hours)",
+          "30-day post-delivery support for refinements"
+        ]
       }
     ],
     faqs: [
@@ -547,17 +767,51 @@ const services: ServiceData[] = [
       {
         name: "Starter",
         price: "$3,500",
-        description: "5-page website, basic SEO, contact forms, 1 round of revisions"
+        description: "5-page website, basic SEO, contact forms, 1 round of revisions",
+        deliverables: [
+          "5-page custom website (Home, About, Services, Contact, and 1 additional page)",
+          "Responsive design (mobile, tablet, desktop)",
+          "Contact forms with email notifications",
+          "Technical SEO optimization (meta tags, sitemap.xml, page speed)",
+          "Basic on-page SEO (heading structure, alt text)",
+          "Hosting setup and deployment support",
+          "1 round of revisions"
+        ]
       },
       {
         name: "Standard",
         price: "$5,500",
-        description: "10-page website, advanced SEO, analytics integration, 2 rounds of revisions"
+        description: "10-page website, advanced SEO, analytics integration, 2 rounds of revisions",
+        deliverables: [
+          "10-page custom website",
+          "Responsive design (mobile, tablet, desktop)",
+          "Contact forms with email notifications",
+          "Technical SEO optimization (meta tags, sitemap.xml, page speed, structured data)",
+          "Advanced on-page SEO (internal linking, content optimization)",
+          "Google Analytics and Search Console integration",
+          "Hosting setup and deployment support",
+          "Content management system with admin training",
+          "2 rounds of revisions"
+        ]
       },
       {
         name: "Growth",
         price: "$8,500",
-        description: "Custom features, CRM/tool integrations, advanced CMS, 3 rounds of revisions, training"
+        description: "Custom features, CRM/tool integrations, advanced CMS, 3 rounds of revisions, training",
+        deliverables: [
+          "Custom website with unlimited pages",
+          "Responsive design (mobile, tablet, desktop)",
+          "Contact forms and custom form builders",
+          "Technical SEO optimization (meta tags, sitemap.xml, page speed, structured data)",
+          "Advanced on-page SEO (internal linking, content optimization)",
+          "Google Analytics and Search Console integration",
+          "Custom features (e.g., booking systems, member portals, calculators)",
+          "CRM/tool integrations (up to 3 integrations)",
+          "Advanced content management system",
+          "Hosting setup and deployment support",
+          "Admin and editor training (2 hours)",
+          "3 rounds of revisions"
+        ]
       }
     ],
     faqs: [
@@ -641,7 +895,21 @@ const services: ServiceData[] = [
       {
         name: "Bundle Package",
         price: "$14,500",
-        description: "Complete foundation for 10-25 employees ($15,500 value with integrated delivery)"
+        description: "Complete foundation for 10-25 employees ($15,500 value with integrated delivery)",
+        deliverables: [
+          "Complete Azure AD/Entra ID setup with MFA and Conditional Access",
+          "Device enrollment in Microsoft Intune with security policies",
+          "SSO setup for up to 3 core applications",
+          "BitLocker encryption enforcement across all devices",
+          "Windows Update rings configuration",
+          "M365 Teams/SharePoint cleanup and governance framework (1-25 sites)",
+          "Governance policy documentation (naming conventions, lifecycle management)",
+          "Automated employee onboarding and offboarding workflows (up to 5 role templates)",
+          "Manager approval workflows",
+          "Documentation package: runbooks, policies, and admin guides",
+          "Training sessions for IT admins and end users (4 hours total)",
+          "Integrated implementation with coordinated planning across all services"
+        ]
       }
     ],
     faqs: [
@@ -689,7 +957,19 @@ const services: ServiceData[] = [
       {
         name: "Bundle Package",
         price: "$7,999",
-        description: "Assessment + Tier 1 implementation + 3 months advisory (save $800)"
+        description: "Assessment + Tier 1 implementation + 3 months advisory (save $800)",
+        deliverables: [
+          "Systems Review: 90-minute working session + documented findings report",
+          "Systems Review: Priority roadmap with effort estimates and pricing",
+          "Identity & Security: Azure AD/Entra ID setup with MFA (10-15 users)",
+          "Identity & Security: Intune device management and security policies",
+          "Identity & Security: SSO setup for up to 3 applications",
+          "Identity & Security: BitLocker encryption and Windows Update rings",
+          "3 months IT Advisory: Monthly 4-hour strategic planning sessions",
+          "3 months IT Advisory: Technology roadmap and vendor guidance",
+          "3 months IT Advisory: Budget planning and prioritization support",
+          "Complete documentation and admin training"
+        ]
       }
     ],
     faqs: [
@@ -735,12 +1015,27 @@ const services: ServiceData[] = [
       {
         name: "Single Session",
         price: "$1,200",
-        description: "2-hour training for up to 25 people + capped follow-up"
+        description: "2-hour training for up to 25 people + capped follow-up",
+        deliverables: [
+          "2-hour training session (in-person or remote)",
+          "Custom training materials and quick reference guides",
+          "Recorded session for future reference and onboarding",
+          "Follow-up support: Up to 30 minutes or 5 email questions (within 2 weeks)",
+          "Adoption tips and best practices documentation"
+        ]
       },
       {
         name: "3-Session Package",
         price: "$2,500",
-        description: "3 training sessions (different topics or audiences) + capped follow-up per session"
+        description: "3 training sessions (different topics or audiences) + capped follow-up per session",
+        deliverables: [
+          "3 x 2-hour training sessions (different topics or audiences)",
+          "Custom training materials and quick reference guides for each session",
+          "Recorded sessions for future reference and onboarding",
+          "Follow-up support: Up to 30 minutes or 5 email questions per session (within 2 weeks)",
+          "Adoption tips and best practices documentation",
+          "Training effectiveness survey and recommendations"
+        ]
       }
     ],
     faqs: [
@@ -789,12 +1084,32 @@ const services: ServiceData[] = [
       {
         name: "Standard Package",
         price: "$3,500",
-        description: "Up to 25 devices, 5 core systems, 10 applications. Ideal for small businesses."
+        description: "Up to 25 devices, 5 core systems, 10 applications. Ideal for small businesses.",
+        deliverables: [
+          "Network topology diagrams (physical and logical)",
+          "Complete system inventory (up to 25 devices) with owners and support contacts",
+          "Application and service catalog (up to 10 applications) with dependencies",
+          "Configuration standards and security baselines",
+          "Operational runbooks for common IT tasks (5 core procedures)",
+          "Vendor contact list with contracts and renewal dates",
+          "SharePoint or wiki site setup for ongoing maintenance"
+        ]
       },
       {
         name: "Comprehensive Package",
         price: "$6,000",
-        description: "26-50 devices, 10 systems, 20 applications. Includes detailed runbooks and advanced network documentation."
+        description: "26-50 devices, 10 systems, 20 applications. Includes detailed runbooks and advanced network documentation.",
+        deliverables: [
+          "Network topology diagrams (physical and logical with VLANs and segmentation)",
+          "Complete system inventory (up to 50 devices) with owners and support contacts",
+          "Application and service catalog (up to 20 applications) with dependencies",
+          "Configuration standards and security baselines",
+          "Operational runbooks for common IT tasks (10+ detailed procedures)",
+          "Disaster recovery procedures documentation",
+          "Vendor contact list with contracts and renewal dates",
+          "SharePoint or wiki site setup with version control",
+          "Update procedures and maintenance workflow documentation"
+        ]
       }
     ],
     faqs: [
@@ -940,12 +1255,30 @@ const services: ServiceData[] = [
       {
         name: "Basic Prep",
         price: "$3,500",
-        description: "10 policy templates + core IT documentation for compliance"
+        description: "10 policy templates + core IT documentation for compliance",
+        deliverables: [
+          "10 IT policy templates aligned to framework requirements (Acceptable Use, Access Control, Incident Response, etc.)",
+          "Network topology diagram and system security documentation",
+          "Asset inventory with owners and access levels",
+          "Access control and user management procedures",
+          "Basic evidence organization system"
+        ]
       },
       {
         name: "Comprehensive Prep",
         price: "$9,000",
-        description: "Full policy suite (10 policies + 20 SOPs) + evidence collection + gap analysis"
+        description: "Full policy suite (10 policies + 20 SOPs) + evidence collection + gap analysis",
+        deliverables: [
+          "10 IT policy templates aligned to framework requirements",
+          "20 detailed Standard Operating Procedures (SOPs)",
+          "Network topology diagram and system security documentation",
+          "Asset inventory with owners and access levels",
+          "Access control and user management procedures",
+          "Evidence collection templates and organization system",
+          "Gap analysis with control mappings to compliance framework",
+          "Remediation roadmap with priority and effort estimates",
+          "Audit preparation checklist and coordination guide"
+        ]
       }
     ],
     faqs: [
