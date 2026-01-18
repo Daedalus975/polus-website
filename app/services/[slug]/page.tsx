@@ -302,7 +302,7 @@ const services: ServiceData[] = [
     slug: "employee-lifecycle",
     title: "Onboarding & Offboarding Automation",
     description: "Automate onboarding and offboarding for security and consistency",
-    overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $3,500 (26-50 employees). Includes up to 5 role-based templates (e.g., Sales, Finance, Operations, Executive, Contractor). Additional role templates: +$300 each. Additional users beyond 50: contact for custom pricing.",
+    overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $4,200 (26-50 employees). Includes up to 5 role-based templates (e.g., Sales, Finance, Operations, Executive, Contractor). Additional role templates: +$300 each. Additional users beyond 50: contact for custom pricing.",
     startingPrice: "$2,500",
     timeline: "3-4 weeks",
     deliverables: [
@@ -327,7 +327,7 @@ const services: ServiceData[] = [
       },
       {
         name: "Tier 2",
-        price: "$3,500",
+        price: "$4,200",
         description: "26-50 employees, up to 5 role templates (+$300 per additional role)"
       }
     ],
@@ -498,14 +498,9 @@ const services: ServiceData[] = [
         description: "Multi-branch logic, 10+ steps, multiple departments, integrations (e.g., contract approval, incident response)"
       },
       {
-        name: "3-Standard Package",
-        price: "$4,500",
-        description: "3 standard processes (save $900)"
-      },
-      {
-        name: "5-Standard Package",
-        price: "$7,000",
-        description: "5 standard processes (save $2,000)"
+        name: "5-Process Package",
+        price: "$7,500",
+        description: "5 standard processes (save $1,500 vs. individual)"
       }
     ],
     faqs: [
@@ -624,7 +619,7 @@ const services: ServiceData[] = [
     slug: "new-foundation-bundle",
     title: "IT Foundation Package",
     description: "Complete foundational IT setup for growing businesses",
-    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security (Tier 1), M365 Governance (Tier 1), and Employee Lifecycle (Tier 1) to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Save $1,500 compared to purchasing separately. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems. Assumes 10-25 employees, 1-25 Teams/SharePoint sites, Microsoft 365 Business Premium licensing, up to 5 role templates, single office location, up to 3 SSO apps.",
+    overview: "Get your entire IT foundation built right from the start. This bundle combines Identity & Security (Tier 1), M365 Governance (Tier 1), and Employee Lifecycle (Tier 1) to give you a complete, modern IT infrastructure. Perfect for companies starting fresh or completely rebuilding. Bundle includes integrated implementation with coordinated planning across all three services—normally $12,700 separate + $2,800 integration overhead = $15,500 value. Bundle price: $14,500. Bundle includes everything from cloud identity migration to governance policies to automated onboarding/offboarding systems. Assumes 10-25 employees, 1-25 Teams/SharePoint sites, Microsoft 365 Business Premium licensing, up to 5 role templates, single office location, up to 3 SSO apps.",
     startingPrice: "$14,500",
     timeline: "8-12 weeks for complete implementation",
     deliverables: [
@@ -646,7 +641,7 @@ const services: ServiceData[] = [
       {
         name: "Bundle Package",
         price: "$14,500",
-        description: "Complete foundation for 10-25 employees (save $1,500 vs. separate: $6,500 + $3,500 + $2,500 + $3,000 adders)"
+        description: "Complete foundation for 10-25 employees ($15,500 value with integrated delivery)"
       }
     ],
     faqs: [
@@ -673,8 +668,8 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Package",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review ($799) to identify priorities, implements your Identity & Security foundation (Tier 1: $6,500), then includes 3 months of IT Advisory ($500/month × 3 = $1,500) for ongoing guidance. Total value: $8,799. Bundle price: $9,299—saving you $1,000 vs. separate purchases. This package ensures you have expert guidance through the entire modernization journey, from strategic planning to implementation to ongoing optimization.",
-    startingPrice: "$9,299",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review ($799) to identify priorities, implements your Identity & Security foundation (Tier 1: $6,500), then includes 3 months of IT Advisory ($500/month × 3 = $1,500) for ongoing guidance. Total value: $8,799. Bundle price: $7,999—saving you $800. This package ensures you have expert guidance through the entire modernization journey, from strategic planning to implementation to ongoing optimization.",
+    startingPrice: "$7,999",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
       "Systems Review with prioritized roadmap ($799 value)",
@@ -693,8 +688,8 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Bundle Package",
-        price: "$9,299",
-        description: "Assessment + Tier 1 implementation + 3 months advisory (save $1,000)"
+        price: "$7,999",
+        description: "Assessment + Tier 1 implementation + 3 months advisory (save $800)"
       }
     ],
     faqs: [
@@ -708,7 +703,7 @@ const services: ServiceData[] = [
       },
       {
         question: "Is this bundle only for the Identity & Security implementation, or can I choose a different service?",
-        answer: "This specific bundle includes Identity & Security (Tier 1: 10-15 users). If you want a different service implemented (M365 Governance, Employee Lifecycle, etc.), we can create a custom bundle. The standard Growth Package is designed for the most common modernization path: assessment → identity/security → ongoing strategy."
+        answer: "This specific bundle includes Identity & Security (Tier 1: 10-15 users) for $7,999 (save $800 vs. $8,799 separate). If you want a different service implemented (M365 Governance, Employee Lifecycle, etc.), we can create a custom bundle. The standard Growth Package is designed for the most common modernization path: assessment → identity/security → ongoing strategy."
       },
       {
         question: "What if I have more than 15 users?",
@@ -949,7 +944,7 @@ const services: ServiceData[] = [
       },
       {
         name: "Comprehensive Prep",
-        price: "$7,500",
+        price: "$9,000",
         description: "Full policy suite (10 policies + 20 SOPs) + evidence collection + gap analysis"
       }
     ],
