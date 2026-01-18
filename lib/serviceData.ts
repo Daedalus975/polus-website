@@ -31,7 +31,7 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES: Service[] = [
   // Infrastructure (4)
   {
-    title: "Systems Review",
+    title: "IT Assessment",
     description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
     slug: "systems-assessment",
     category: "infrastructure",
