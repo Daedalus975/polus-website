@@ -47,10 +47,43 @@ export function ServiceDetailClient({
 }: ServiceDetailClientProps) {
   const [selectedTier, setSelectedTier] = useState<number | null>(null);
 
-  // Use tier-specific deliverables if tier is selected and has deliverables defined
-  const displayDeliverables = selectedTier !== null && pricingTiers?.[selectedTier]?.deliverables
-    ? pricingTiers[selectedTier].deliverables!
-    : deliverables;
+  // Calculate what to display based on tier selection
+  const getDeliverablesDisplay = () => {
+    if (selectedTier === null || !pricingTiers) {
+      return { baseDeliverables: deliverables, additions: null, tierName: null };
+    }
+
+    const currentTier = pricingTiers[selectedTier];
+    if (!currentTier.deliverables) {
+      return { baseDeliverables: deliverables, additions: null, tierName: null };
+    }
+
+    // For first tier (idx 0), show all deliverables as base
+    if (selectedTier === 0) {
+      return { 
+        baseDeliverables: currentTier.deliverables, 
+        additions: null,
+        tierName: currentTier.name
+      };
+    }
+
+    // For higher tiers, show base tier deliverables + additions
+    const baseTier = pricingTiers[0];
+    const baseDeliverables = baseTier.deliverables || [];
+    
+    // Find items that are ONLY in current tier (not in base)
+    const additions = currentTier.deliverables.filter(
+      item => !baseDeliverables.includes(item)
+    );
+
+    return {
+      baseDeliverables,
+      additions: additions.length > 0 ? additions : null,
+      tierName: currentTier.name
+    };
+  };
+
+  const { baseDeliverables, additions, tierName } = getDeliverablesDisplay();
 
   return (
     <div className="grid lg:grid-cols-3 gap-8">
@@ -72,16 +105,9 @@ export function ServiceDetailClient({
           )}
         </div>
         
-        {selectedTier !== null && pricingTiers && (
-          <div className="mb-4 px-4 py-2 bg-polus-gold/10 border border-polus-gold/30 rounded-lg">
-            <span className="text-sm text-polus-gold font-semibold">
-              Showing: {pricingTiers[selectedTier].name}
-            </span>
-          </div>
-        )}
-        
+        {/* Base Deliverables */}
         <ul className="space-y-3 mb-8">
-          {displayDeliverables.map((item, idx) => (
+          {baseDeliverables.map((item, idx) => (
             <li key={idx} className="flex items-start gap-3">
               <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -90,6 +116,25 @@ export function ServiceDetailClient({
             </li>
           ))}
         </ul>
+
+        {/* Additions for Higher Tiers */}
+        {additions && additions.length > 0 && (
+          <div className="mb-8 p-4 bg-polus-gold/5 border border-polus-gold/20 rounded-lg">
+            <h4 className="text-lg font-semibold text-polus-gold mb-3">
+              ✨ Additional features in {tierName}
+            </h4>
+            <ul className="space-y-3">
+              {additions.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-polus-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                  </svg>
+                  <span className="text-[rgba(254,255,255,0.88)] font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <h3 className="text-xl font-semibold mb-4">Ideal for</h3>
         <ul className="space-y-3">
@@ -126,19 +171,18 @@ export function ServiceDetailClient({
                         key={idx}
                         onClick={() => setSelectedTier(idx)}
                         className={`w-full border rounded-lg p-4 text-left transition ${
-                          isSelected 
-                            ? 'border-polus-gold bg-polus-gold/5 ring-2 ring-polus-gold/40' 
+                          isSelected
+                            ? 'border-polus-gold bg-polus-gold/5 ring-2 ring-polus-gold/40'
                             : 'border-[rgba(177,227,199,0.16)] hover:border-polus-gold/40'
                         }`}
                       >
-                        <div className="flex items-baseline justify-between mb-1">
+                        <div className="flex items-baseline justify-between">
                           <div className="font-semibold text-polus-gold">{tier.name}</div>
                           <div className="flex flex-col items-end">
                             <div className="text-sm text-[rgba(254,255,255,0.48)] line-through">{pricing.original}</div>
                             <div className="text-xl font-bold text-polus-mint">{pricing.discounted}</div>
                           </div>
                         </div>
-                        <div className="text-sm text-[rgba(254,255,255,0.62)]">{tier.description}</div>
                         {isSelected && (
                           <div className="mt-2 text-xs text-polus-gold flex items-center gap-1">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

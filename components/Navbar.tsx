@@ -354,13 +354,17 @@ export function Navbar() {
                           </Link>
                         ))}
                       </div>
-                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
-                      <Link
-                        href="/industries"
-                        className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
-                      >
-                        View All Industries →
-                      </Link>
+                      <div className="border-t border-[rgba(177,227,199,0.12)] mt-2 pt-2">
+                        <Link
+                          href="/industries"
+                          className="block px-4 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition font-semibold text-sm flex items-center justify-between"
+                        >
+                          <span>View All Industries</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 )}
