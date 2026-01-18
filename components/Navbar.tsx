@@ -281,7 +281,77 @@ export function Navbar() {
                   <div className="absolute top-full left-0 pt-0 w-56 z-50">
                     <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
                       {resources.map((resource) => (
-                        <Link3 mt-3">
+                        <Link
+                          key={resource.href}
+                          href={resource.href}
+                          className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
+                        >
+                          {resource.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
+                <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
+              )}
+              <Link href="/about" className="hover:text-polus-gold transition">About</Link>
+              <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
+            </nav>
+            
+            <div className="hidden md:block">
+              <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-polus-mint p-2 hover:bg-polus-emerald/10 rounded transition"
+              aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+
+          {/* Dropdown Menus - Built into Navbar */}
+          {/* Removed - now using individual dropdowns above each nav item */}
+        </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-[rgba(177,227,199,0.12)] bg-polus-forest">
+          <nav className="flex flex-col px-4 py-4 space-y-3">
+            {/* Services Mobile Section */}
+            <div className="border-b border-[rgba(177,227,199,0.08)] pb-3">
+              <button
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 flex items-center justify-between w-full"
+                aria-expanded={servicesDropdownOpen}
+              >
+                <span className="font-medium">Services</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {servicesDropdownOpen && (
+                <div className="pl-4 space-y-3 mt-3">
                   <Link
                     href="/services"
                     className="block py-2 text-polus-gold text-sm font-semibold"
@@ -375,42 +445,6 @@ export function Navbar() {
                       </Link>
                     ))}
                   </div>
-                </div>
-              )}
-            </div>
-
-            {/* Industries Mobile Section */}
-                <span className="font-medium">Services</span>
-                <svg 
-                  className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {servicesDropdownOpen && (
-                <div className="pl-4 space-y-1 mt-3">
-                  <Link
-                    href="/services"
-                    className="block py-2 text-polus-gold text-sm font-semibold"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    View All Services
-                  </Link>
-                  <div className="border-t border-[rgba(177,227,199,0.08)] my-2"></div>
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm leading-relaxed"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
                 </div>
               )}
             </div>
