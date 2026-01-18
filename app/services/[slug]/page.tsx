@@ -1022,7 +1022,7 @@ const services: ServiceData[] = [
     slug: "it-documentation",
     title: "IT Documentation Package",
     description: "Document your entire IT environment so nothing lives in one person's head",
-    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks. Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep.",
+    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks. Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep. Note: For tested disaster recovery procedures, see Backup & DR service—this package documents your current environment and operational procedures.",
     startingPrice: "$3,500",
     timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
     deliverables: [
@@ -1030,8 +1030,7 @@ const services: ServiceData[] = [
       "Complete system inventory with owners and support contacts",
       "Application and service catalog with dependencies",
       "Configuration standards and security baselines",
-      "Operational runbooks for common IT tasks (patching, backups, incident response)",
-      "Disaster recovery procedures documentation",
+      "Operational runbooks for common IT tasks (patching, incident response, user provisioning)",
       "Vendor contact list with contracts and renewal dates",
       "SharePoint or wiki site setup for ongoing maintenance with update procedures"
     ],
@@ -1060,14 +1059,11 @@ const services: ServiceData[] = [
         price: "$6,000",
         description: "26-50 devices, 10 systems, 20 applications. Includes detailed runbooks and advanced network documentation.",
         deliverables: [
-          "Network topology diagrams (physical and logical with VLANs and segmentation)",
-          "Complete system inventory (up to 50 devices) with owners and support contacts",
-          "Application and service catalog (up to 20 applications) with dependencies",
-          "Configuration standards and security baselines",
-          "Operational runbooks for common IT tasks (10+ detailed procedures)",
-          "Disaster recovery procedures documentation",
-          "Vendor contact list with contracts and renewal dates",
-          "SharePoint or wiki site setup with version control",
+          "Expanded to 26-50 devices vs. 25 in Standard (with VLANs and segmentation)",
+          "Expanded to 20 applications vs. 10 in Standard",
+          "10+ detailed operational runbooks vs. 5 in Standard",
+          "Reference documentation for existing DR procedures (if available from Backup & DR service)",
+          "SharePoint site with version control (vs. basic setup in Standard)",
           "Update procedures and maintenance workflow documentation"
         ]
       }
@@ -1088,6 +1084,10 @@ const services: ServiceData[] = [
       {
         question: "What if we have more than 50 devices?",
         answer: "For larger environments (50+ devices), we'll provide custom pricing based on complexity. The tiered packages are designed for most small-to-midsize Oklahoma businesses. Contact us for a quote if you're beyond these caps."
+      },
+      {
+        question: "Does this include disaster recovery planning?",
+        answer: "This service documents your current environment and operational procedures. For tested disaster recovery procedures (backup validation, restore testing, recovery playbooks), see our Backup & DR service. If you've already completed Backup & DR, we'll reference and organize those procedures in your documentation library."
       }
     ],
     isBundle: false
