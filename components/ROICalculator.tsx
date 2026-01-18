@@ -85,10 +85,13 @@ export function ROICalculator() {
   };
 
   const handleEmailResults = async () => {
-    if (!email || !email.includes('@')) return;
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address');
+      return;
+    }
 
     try {
-      await fetch("/api/roi-results", {
+      const response = await fetch("/api/roi-results", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -98,10 +101,19 @@ export function ROICalculator() {
         })
       });
 
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Failed to send email:", data);
+        alert(`Failed to send email: ${data.error || 'Unknown error'}`);
+        return;
+      }
+
       track("roi_results_emailed", { email });
       setEmailSent(true);
     } catch (error) {
       console.error("Failed to send email:", error);
+      alert('Network error: Could not send email. Please try again.');
     }
   };
 

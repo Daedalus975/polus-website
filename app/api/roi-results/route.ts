@@ -64,6 +64,15 @@ export async function POST(req: Request) {
       },
     });
 
+    // Log SMTP configuration (without password)
+    console.log('[ROI Calculator] SMTP Config:', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      from: process.env.SMTP_FROM,
+      hasPassword: !!process.env.SMTP_PASS
+    });
+
     const htmlContent = `
 <!DOCTYPE html>
 <html>
@@ -209,6 +218,8 @@ https://polus-cs.com`;
       text: textContent,
     });
 
+    console.log('[ROI Calculator] Email sent successfully to:', email);
+
     return NextResponse.json({ 
       ok: true,
       message: "Results emailed successfully!"
@@ -216,8 +227,17 @@ https://polus-cs.com`;
 
   } catch (error) {
     console.error('[ROI Calculator] Email send error:', error);
+    
+    // More detailed error logging
+    if (error instanceof Error) {
+      console.error('[ROI Calculator] Error details:', {
+        message: error.message,
+        stack: error.stack
+      });
+    }
+    
     return NextResponse.json({ 
-      error: "Failed to send email",
+      error: error instanceof Error ? error.message : "Failed to send email",
       ok: false 
     }, { status: 500 });
   }
