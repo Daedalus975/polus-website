@@ -93,92 +93,29 @@ export function Navbar() {
                   </svg>
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 pt-0 w-[600px] z-50">
-                    <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm">
-                      <div className="flex">
-                        {/* Categories Sidebar */}
-                        <div className="w-52 border-r border-[rgba(177,227,199,0.12)] py-3">
-                          <button
-                            onMouseEnter={() => setActiveServiceCategory("infrastructure")}
-                            className={`w-full text-left px-4 py-2.5 text-sm transition ${
-                              activeServiceCategory === "infrastructure"
-                                ? "text-polus-gold bg-[rgba(177,227,199,0.08)]"
-                                : "text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)]"
-                            }`}
-                          >
-                            <div className="font-semibold">{SERVICE_CATEGORIES.infrastructure.label}</div>
-                            <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
-                              {SERVICE_CATEGORIES.infrastructure.count} services
+                  <div className="absolute top-full left-0 pt-0 w-64 z-50">
+                    <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-2">
+                      {/* Core Infrastructure */}
+                      <div 
+                        className="relative group"
+                        onMouseEnter={() => setActiveServiceCategory("infrastructure")}
+                      >
+                        <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-semibold text-sm">{SERVICE_CATEGORIES.infrastructure.label}</div>
+                              <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
+                                {SERVICE_CATEGORIES.infrastructure.count} services
+                              </div>
                             </div>
-                          </button>
-                          <button
-                            onMouseEnter={() => setActiveServiceCategory("operations")}
-                            className={`w-full text-left px-4 py-2.5 text-sm transition ${
-                              activeServiceCategory === "operations"
-                                ? "text-polus-gold bg-[rgba(177,227,199,0.08)]"
-                                : "text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)]"
-                            }`}
-                          >
-                            <div className="font-semibold">{SERVICE_CATEGORIES.operations.label}</div>
-                            <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
-                              {SERVICE_CATEGORIES.operations.count} services
-                            </div>
-                          </button>
-                          <button
-                            onMouseEnter={() => setActiveServiceCategory("security")}
-                            className={`w-full text-left px-4 py-2.5 text-sm transition ${
-                              activeServiceCategory === "security"
-                                ? "text-polus-gold bg-[rgba(177,227,199,0.08)]"
-                                : "text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)]"
-                            }`}
-                          >
-                            <div className="font-semibold">{SERVICE_CATEGORIES.security.label}</div>
-                            <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
-                              {SERVICE_CATEGORIES.security.count} services
-                            </div>
-                          </button>
-                          <button
-                            onMouseEnter={() => setActiveServiceCategory("advisory")}
-                            className={`w-full text-left px-4 py-2.5 text-sm transition ${
-                              activeServiceCategory === "advisory"
-                                ? "text-polus-gold bg-[rgba(177,227,199,0.08)]"
-                                : "text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)]"
-                            }`}
-                          >
-                            <div className="font-semibold">{SERVICE_CATEGORIES.advisory.label}</div>
-                            <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
-                              {SERVICE_CATEGORIES.advisory.count} services
-                            </div>
-                          </button>
-                          <button
-                            onMouseEnter={() => setActiveServiceCategory("bundles")}
-                            className={`w-full text-left px-4 py-2.5 text-sm transition ${
-                              activeServiceCategory === "bundles"
-                                ? "text-polus-gold bg-[rgba(177,227,199,0.08)]"
-                                : "text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)]"
-                            }`}
-                          >
-                            <div className="font-semibold">{SERVICE_CATEGORIES.bundles.label}</div>
-                            <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
-                              {SERVICE_CATEGORIES.bundles.count} services
-                            </div>
-                          </button>
-                          <div className="border-t border-[rgba(177,227,199,0.12)] mt-3 pt-3 px-4">
-                            <Link
-                              href="/services"
-                              className="text-polus-gold hover:text-polus-mint transition text-sm font-semibold flex items-center gap-1"
-                            >
-                              View All Services
-                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
+                            <svg className="w-4 h-4 text-[rgba(254,255,255,0.48)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
                           </div>
                         </div>
-
-                        {/* Services Display */}
-                        <div className="flex-1 py-3 px-4 max-h-[400px] overflow-y-auto">
-                          {activeServiceCategory === "infrastructure" && (
+                        {/* Submenu */}
+                        {activeServiceCategory === "infrastructure" && (
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
                             <div className="space-y-1">
                               {servicesByCategory.infrastructure.map((service) => (
                                 <Link
@@ -186,13 +123,36 @@ export function Navbar() {
                                   href={`/services/${service.slug}`}
                                   className="block px-3 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
                                 >
-                                  <div className="font-medium">{service.title}</div>
-                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-0.5">{service.description}</div>
+                                  <div className="font-medium text-sm">{service.title}</div>
+                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-1 leading-relaxed">{service.description}</div>
                                 </Link>
                               ))}
                             </div>
-                          )}
-                          {activeServiceCategory === "operations" && (
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Operations & Process */}
+                      <div 
+                        className="relative group"
+                        onMouseEnter={() => setActiveServiceCategory("operations")}
+                      >
+                        <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-semibold text-sm">{SERVICE_CATEGORIES.operations.label}</div>
+                              <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
+                                {SERVICE_CATEGORIES.operations.count} services
+                              </div>
+                            </div>
+                            <svg className="w-4 h-4 text-[rgba(254,255,255,0.48)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                        {/* Submenu */}
+                        {activeServiceCategory === "operations" && (
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
                             <div className="space-y-1">
                               {servicesByCategory.operations.map((service) => (
                                 <Link
@@ -200,13 +160,36 @@ export function Navbar() {
                                   href={`/services/${service.slug}`}
                                   className="block px-3 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
                                 >
-                                  <div className="font-medium">{service.title}</div>
-                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-0.5">{service.description}</div>
+                                  <div className="font-medium text-sm">{service.title}</div>
+                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-1 leading-relaxed">{service.description}</div>
                                 </Link>
                               ))}
                             </div>
-                          )}
-                          {activeServiceCategory === "security" && (
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Security & Risk */}
+                      <div 
+                        className="relative group"
+                        onMouseEnter={() => setActiveServiceCategory("security")}
+                      >
+                        <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-semibold text-sm">{SERVICE_CATEGORIES.security.label}</div>
+                              <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
+                                {SERVICE_CATEGORIES.security.count} services
+                              </div>
+                            </div>
+                            <svg className="w-4 h-4 text-[rgba(254,255,255,0.48)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                        {/* Submenu */}
+                        {activeServiceCategory === "security" && (
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
                             <div className="space-y-1">
                               {servicesByCategory.security.map((service) => (
                                 <Link
@@ -214,13 +197,36 @@ export function Navbar() {
                                   href={`/services/${service.slug}`}
                                   className="block px-3 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
                                 >
-                                  <div className="font-medium">{service.title}</div>
-                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-0.5">{service.description}</div>
+                                  <div className="font-medium text-sm">{service.title}</div>
+                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-1 leading-relaxed">{service.description}</div>
                                 </Link>
                               ))}
                             </div>
-                          )}
-                          {activeServiceCategory === "advisory" && (
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Advisory & Planning */}
+                      <div 
+                        className="relative group"
+                        onMouseEnter={() => setActiveServiceCategory("advisory")}
+                      >
+                        <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-semibold text-sm">{SERVICE_CATEGORIES.advisory.label}</div>
+                              <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
+                                {SERVICE_CATEGORIES.advisory.count} services
+                              </div>
+                            </div>
+                            <svg className="w-4 h-4 text-[rgba(254,255,255,0.48)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                        {/* Submenu */}
+                        {activeServiceCategory === "advisory" && (
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
                             <div className="space-y-1">
                               {servicesByCategory.advisory.map((service) => (
                                 <Link
@@ -228,13 +234,36 @@ export function Navbar() {
                                   href={`/services/${service.slug}`}
                                   className="block px-3 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
                                 >
-                                  <div className="font-medium">{service.title}</div>
-                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-0.5">{service.description}</div>
+                                  <div className="font-medium text-sm">{service.title}</div>
+                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-1 leading-relaxed">{service.description}</div>
                                 </Link>
                               ))}
                             </div>
-                          )}
-                          {activeServiceCategory === "bundles" && (
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Package Deals */}
+                      <div 
+                        className="relative group"
+                        onMouseEnter={() => setActiveServiceCategory("bundles")}
+                      >
+                        <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-semibold text-sm">{SERVICE_CATEGORIES.bundles.label}</div>
+                              <div className="text-xs text-[rgba(254,255,255,0.48)] mt-0.5">
+                                {SERVICE_CATEGORIES.bundles.count} services
+                              </div>
+                            </div>
+                            <svg className="w-4 h-4 text-[rgba(254,255,255,0.48)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                        {/* Submenu */}
+                        {activeServiceCategory === "bundles" && (
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
                             <div className="space-y-1">
                               {servicesByCategory.bundles.map((service) => (
                                 <Link
@@ -242,13 +271,26 @@ export function Navbar() {
                                   href={`/services/${service.slug}`}
                                   className="block px-3 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
                                 >
-                                  <div className="font-medium">{service.title}</div>
-                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-0.5">{service.description}</div>
+                                  <div className="font-medium text-sm">{service.title}</div>
+                                  <div className="text-xs text-[rgba(254,255,255,0.58)] mt-1 leading-relaxed">{service.description}</div>
                                 </Link>
                               ))}
                             </div>
-                          )}
-                        </div>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* View All Services */}
+                      <div className="border-t border-[rgba(177,227,199,0.12)] mt-2 pt-2">
+                        <Link
+                          href="/services"
+                          className="block px-4 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition font-semibold text-sm flex items-center justify-between"
+                        >
+                          <span>View All Services</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
                       </div>
                     </div>
                   </div>
