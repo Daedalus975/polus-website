@@ -1,6 +1,7 @@
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
+import { PricingTiers } from "@/components/PricingTiers";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { StructuredData, getFAQSchema, getServiceSchema, getBreadcrumbSchema } from "@/components/StructuredData";
@@ -1125,28 +1126,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
 
               <div className="space-y-6">
                 {service.pricingTiers && service.pricingTiers.length > 0 ? (
-                  <>
-                    <div>
-                      <div className="text-sm text-[rgba(254,255,255,0.62)] mb-3">Pricing Tiers</div>
-                      <div className="space-y-3">
-                        {service.pricingTiers.map((tier, idx) => {
-                          const pricing = calculateDiscount(tier.price);
-                          return (
-                            <div key={idx} className="border border-[rgba(177,227,199,0.16)] rounded-lg p-4 hover:border-polus-gold/40 transition">
-                              <div className="flex items-baseline justify-between mb-1">
-                                <div className="font-semibold text-polus-gold">{tier.name}</div>
-                                <div className="flex flex-col items-end">
-                                  <div className="text-sm text-[rgba(254,255,255,0.48)] line-through">{pricing.original}</div>
-                                  <div className="text-xl font-bold text-polus-mint">{pricing.discounted}</div>
-                                </div>
-                              </div>
-                              <div className="text-sm text-[rgba(254,255,255,0.62)]">{tier.description}</div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </>
+                  <PricingTiers tiers={service.pricingTiers} deliverables={service.deliverables} />
                 ) : (
                   <div>
                     <div className="text-sm text-[rgba(254,255,255,0.62)] mb-1">Starting at</div>
