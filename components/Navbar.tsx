@@ -122,7 +122,7 @@ export function Navbar() {
                         </div>
                         {/* Submenu */}
                         {activeServiceCategory === "infrastructure" && (
-                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4">
                             <div className="space-y-1">
                               {servicesByCategory.infrastructure.map((service) => (
                                 <Link
@@ -160,7 +160,7 @@ export function Navbar() {
                         </div>
                         {/* Submenu */}
                         {activeServiceCategory === "operations" && (
-                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4">
                             <div className="space-y-1">
                               {servicesByCategory.operations.map((service) => (
                                 <Link
@@ -198,7 +198,7 @@ export function Navbar() {
                         </div>
                         {/* Submenu */}
                         {activeServiceCategory === "security" && (
-                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4">
                             <div className="space-y-1">
                               {servicesByCategory.security.map((service) => (
                                 <Link
@@ -236,7 +236,7 @@ export function Navbar() {
                         </div>
                         {/* Submenu */}
                         {activeServiceCategory === "advisory" && (
-                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4">
                             <div className="space-y-1">
                               {servicesByCategory.advisory.map((service) => (
                                 <Link
@@ -274,7 +274,7 @@ export function Navbar() {
                         </div>
                         {/* Submenu */}
                         {activeServiceCategory === "bundles" && (
-                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4 max-h-[500px] overflow-y-auto">
+                          <div className="absolute left-full top-0 ml-0 w-80 bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3 px-4">
                             <div className="space-y-1">
                               {servicesByCategory.bundles.map((service) => (
                                 <Link
