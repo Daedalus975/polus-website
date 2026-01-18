@@ -10,7 +10,7 @@ export function Navbar() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
-  const [activeServiceCategory, setActiveServiceCategory] = useState<string>("infrastructure");
+  const [activeServiceCategory, setActiveServiceCategory] = useState<string | null>(null);
   
   const servicesRef = useRef<HTMLDivElement>(null);
   const industriesRef = useRef<HTMLDivElement>(null);
@@ -64,8 +64,14 @@ export function Navbar() {
               <div 
                 className="relative"
                 ref={servicesRef}
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
+                onMouseEnter={() => {
+                  setServicesDropdownOpen(true);
+                  setActiveServiceCategory(null);
+                }}
+                onMouseLeave={() => {
+                  setServicesDropdownOpen(false);
+                  setActiveServiceCategory(null);
+                }}
               >
                 <button
                   className="hover:text-polus-gold transition flex items-center gap-1 py-2"
@@ -99,6 +105,7 @@ export function Navbar() {
                       <div 
                         className="relative group"
                         onMouseEnter={() => setActiveServiceCategory("infrastructure")}
+                        onMouseLeave={() => setActiveServiceCategory(null)}
                       >
                         <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
                           <div className="flex items-center justify-between">
@@ -136,6 +143,7 @@ export function Navbar() {
                       <div 
                         className="relative group"
                         onMouseEnter={() => setActiveServiceCategory("operations")}
+                        onMouseLeave={() => setActiveServiceCategory(null)}
                       >
                         <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
                           <div className="flex items-center justify-between">
@@ -173,6 +181,7 @@ export function Navbar() {
                       <div 
                         className="relative group"
                         onMouseEnter={() => setActiveServiceCategory("security")}
+                        onMouseLeave={() => setActiveServiceCategory(null)}
                       >
                         <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
                           <div className="flex items-center justify-between">
@@ -210,6 +219,7 @@ export function Navbar() {
                       <div 
                         className="relative group"
                         onMouseEnter={() => setActiveServiceCategory("advisory")}
+                        onMouseLeave={() => setActiveServiceCategory(null)}
                       >
                         <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
                           <div className="flex items-center justify-between">
@@ -247,6 +257,7 @@ export function Navbar() {
                       <div 
                         className="relative group"
                         onMouseEnter={() => setActiveServiceCategory("bundles")}
+                        onMouseLeave={() => setActiveServiceCategory(null)}
                       >
                         <div className="px-4 py-2.5 text-[rgba(254,255,255,0.88)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.05)] transition cursor-pointer">
                           <div className="flex items-center justify-between">
