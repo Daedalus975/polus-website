@@ -478,7 +478,7 @@ const services: ServiceData[] = [
     slug: "it-operations-toolkit",
     title: "IT Operations Setup",
     description: "Service desk, asset tracking, and operational foundation",
-    overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory (up to 50 assets), admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, IT operations runbook, MSP transition package, and 30-day post-implementation support. Asset import limited to 50 assets; additional assets +$50 per 10 assets.",
+    overview: "Service desk, asset tracking, and operational foundation. Essentials tier ($4,500): Service desk setup, asset management platform, initial inventory (up to 50 assets), admin training, and KB templates. Plus tier ($7,500): Everything in Essentials plus 2-3 PowerShell automation scripts, service desk operations runbook (ticket handling, escalations, SLA procedures), MSP transition package, and 30-day post-implementation support. Asset import limited to 50 assets; additional assets +$50 per 10 assets. Note: For general IT maintenance runbooks (patching, incident response, etc.), see IT Documentation Package.",
     startingPrice: "$4,500",
     timeline: "3-5 weeks (Essentials), 5-7 weeks (Plus)",
     deliverables: [
@@ -488,7 +488,7 @@ const services: ServiceData[] = [
       "Initial asset inventory import (up to 50 assets; +$50 per additional 10 assets)",
       "Admin training and knowledge base starter templates",
       "Plus tier: 2-3 PowerShell automation scripts (user provisioning, backup verification, or license audits)",
-      "Plus tier: IT operations runbook and SOPs",
+      "Plus tier: Service desk operations runbook and SOPs (ticket handling, escalation procedures, SLA workflows)",
       "Plus tier: MSP partner transition package and 30-day support"
     ],
     idealFor: [
@@ -519,7 +519,7 @@ const services: ServiceData[] = [
           "Upgraded admin training to 3 hours (vs. 2 in Essentials)",
           "Upgraded knowledge base to 20 articles (vs. 10 in Essentials)",
           "2-3 PowerShell automation scripts (user provisioning, backup verification, or license audits)",
-          "IT operations runbook and SOPs",
+          "Service desk operations runbook and SOPs (ticket handling, escalation procedures, SLA workflows)",
           "MSP partner transition package",
           "30-day post-implementation support"
         ]
@@ -537,6 +537,10 @@ const services: ServiceData[] = [
       {
         question: "What kind of automation scripts are included in Plus tier?",
         answer: "Common examples: user provisioning scripts, backup verification automation, license audit reports, or asset inventory updates. We'll work with you to identify 2-3 repetitive tasks that would benefit most from automation."
+      },
+      {
+        question: "What's the difference between service desk operations runbooks and IT Documentation runbooks?",
+        answer: "Service desk operations runbooks (included in IT Operations Plus) cover how to use your ticketing system: ticket handling procedures, escalation workflows, SLA management, and knowledge base maintenance. IT Documentation Package runbooks cover general IT maintenance tasks like server patching, incident response procedures, and user provisioning workflows. Different focus areas."
       },
       {
         question: "What if we have more than 50 assets to import?",
@@ -1022,7 +1026,7 @@ const services: ServiceData[] = [
     slug: "it-documentation",
     title: "IT Documentation Package",
     description: "Document your entire IT environment so nothing lives in one person's head",
-    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks. Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep. Note: For tested disaster recovery procedures, see Backup & DR service—this package documents your current environment and operational procedures.",
+    overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks for general IT maintenance tasks (patching, incident response, user provisioning). Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep. Note: For tested disaster recovery procedures, see Backup & DR service. For service desk operations procedures, see IT Operations Setup.",
     startingPrice: "$3,500",
     timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
     deliverables: [
