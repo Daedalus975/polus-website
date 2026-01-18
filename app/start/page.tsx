@@ -53,13 +53,15 @@ export default function StartAssessmentPage() {
     {
       id: "team_size",
       question: "How many people are on your team?",
+      helpText: "This helps us recommend the right tier and scope for your services.",
       options: [
-        { label: "Just me (1 person)", value: "solo", weights: { "systems-assessment": 2, "web-development": 1, "mvp-prd": 1 } },
-        { label: "2-5 employees", value: "micro", weights: { "systems-assessment": 1, "process-clarity-pack": 1 } },
-        { label: "6-15 employees", value: "small", weights: { "process-clarity-pack": 2, "m365-governance": 1, "employee-lifecycle": 1 } },
-        { label: "16-30 employees", value: "medium", weights: { "m365-governance": 2, "it-operations-toolkit": 2, "employee-lifecycle": 2, "new-foundation-bundle": 2 } },
-        { label: "31-50 employees", value: "large", weights: { "strategic-advisory": 2, "identity-device-foundation": 2, "it-operations-toolkit": 2 } },
-        { label: "51+ employees", value: "enterprise", weights: { "strategic-advisory": 3, "it-operations-toolkit": 3 } }
+        { label: "Just me (1 person)", value: "solo", weights: { "systems-assessment": 2, "web-development": 1, "mvp-prd": 1, "strategic-advisory": 1 } },
+        { label: "2-5 employees", value: "micro", weights: { "systems-assessment": 1, "process-clarity-pack": 1, "m365-governance": 1 } },
+        { label: "6-15 employees", value: "small", weights: { "process-clarity-pack": 2, "m365-governance": 2, "employee-lifecycle": 2, "identity-device-foundation": 1 } },
+        { label: "16-25 employees", value: "medium", weights: { "m365-governance": 2, "it-operations-toolkit": 2, "employee-lifecycle": 2, "new-foundation-bundle": 3, "identity-device-foundation": 2 } },
+        { label: "26-35 employees", value: "medium_plus", weights: { "identity-device-foundation": 3, "employee-lifecycle": 3, "new-foundation-bundle": 2, "strategic-advisory": 2 } },
+        { label: "36-50 employees", value: "large", weights: { "strategic-advisory": 3, "identity-device-foundation": 3, "it-operations-toolkit": 3, "employee-lifecycle": 2 } },
+        { label: "51+ employees", value: "enterprise", weights: { "strategic-advisory": 4, "it-operations-toolkit": 3, "identity-device-foundation": 2 } }
       ]
     },
     {
@@ -81,12 +83,12 @@ export default function StartAssessmentPage() {
       question: "Do you use Microsoft 365 (Office 365)?",
       showIf: (answers) => answers.primary_pain !== "build_something",
       options: [
-        { label: "Yes, but it's a mess (files everywhere, can't find anything)", value: "messy", weights: { "m365-governance": 4 } },
-        { label: "Yes, but worried about security (breaches, phishing, no MFA)", value: "security_concern", weights: { "identity-device-foundation": 4, "m365-governance": 2 } },
-        { label: "Yes, and it's mostly organized", value: "organized", weights: { "automation-no-code": 1 } },
-        { label: "We have it but barely use it", value: "underutilized", weights: { "m365-governance": 2, "process-clarity-pack": 1 } },
-        { label: "No, we use Google Workspace/AWS/Other", value: "google", weights: { "automation-no-code": 1 } },
-        { label: "We don't currently use any web service", value: "none", weights: { "m365-governance": 1, "systems-assessment": 1 } }
+        { label: "Yes, but it's a mess (files everywhere, can't find anything)", value: "messy", weights: { "m365-governance": 5, "m365-training": 2 } },
+        { label: "Yes, but worried about security (no MFA, no device management)", value: "security_concern", weights: { "identity-device-foundation": 5, "new-foundation-bundle": 3 } },
+        { label: "Yes, and it's mostly organized but need better governance", value: "needs_governance", weights: { "m365-governance": 3, "employee-lifecycle": 2 } },
+        { label: "Yes, but low adoption (team doesn't use it effectively)", value: "underutilized", weights: { "m365-training": 4, "m365-governance": 2 } },
+        { label: "No, we use Google Workspace/Other", value: "google", weights: { "process-clarity-pack": 1, "it-documentation": 1 } },
+        { label: "Not yet—considering moving to cloud", value: "none", weights: { "identity-device-foundation": 2, "systems-assessment": 2 } }
       ]
     },
     {
@@ -207,49 +209,52 @@ export default function StartAssessmentPage() {
     },
     "process-clarity-pack": {
       slug: "process-clarity-pack",
-      title: "Process Documentation",
-      description: "Document critical workflows and create Standard Operating Procedures your team will actually use. Visual process maps, written SOPs, templates, and training.",
+      title: "Process Mapping & SOP Development",
+      description: "Document critical business workflows your team will actually use. Simple processes start at $1,200. Standard processes $1,800. Complex processes $3,000. Multi-process packages available.",
       deliverables: [
         "Visual process maps (swimlane or flowchart)",
         "Written SOP documents with decision trees",
-        "SOP template library",
-        "Team training session",
-        "30-day post-delivery support"
+        "SOP template library for future documentation",
+        "Team training session on adoption",
+        "30-day post-delivery support for refinements"
       ],
-      price: "$1,800+",
+      price: "$1,200+",
       timeline: "1-2 weeks per process",
-      minBudget: 1800,
-      idealFor: ["Construction", "Nonprofits", "Growing teams", "Teams with tribal knowledge"]
+      minBudget: 1200,
+      idealFor: ["Construction", "Nonprofits", "Professional Services", "Growing teams", "Teams with tribal knowledge"]
     },
     "m365-governance": {
       slug: "m365-governance",
-      title: "M365 Cleanup & Governance",
-      description: "Clean up your Teams, SharePoint, and file structure. Set clear permissions, establish naming conventions, and create sustainable governance rules.",
+      title: "Teams & SharePoint Governance",
+      description: "Tame Teams/SharePoint sprawl with sustainable governance. Tier 1 (1-25 sites): $3,500. Tier 2 (26-50 sites): $5,500. Tier 3 (51-100 sites): $8,500. Includes cleanup, permissions, naming conventions, and lifecycle policies.",
       deliverables: [
-        "Cleaned-up Teams/SharePoint structure",
-        "Permissions baseline",
-        "Governance playbook",
-        "User training"
+        "Complete Teams/SharePoint cleanup and reorganization",
+        "Permissions baseline and security group structure",
+        "Governance policy documentation (naming, lifecycle, retention)",
+        "User training session",
+        "Admin training on governance maintenance"
       ],
       price: "$3,500+",
       timeline: "4-6 weeks",
       minBudget: 3500,
-      idealFor: ["Teams using M365 but files are scattered", "6+ employees"]
+      idealFor: ["Teams using M365 but files are scattered", "6+ employees", "Growing organizations"]
     },
     "employee-lifecycle": {
       slug: "employee-lifecycle",
-      title: "Employee Lifecycle System",
-      description: "Build repeatable automated workflows for new hires and departures. Ensure smooth transitions and secure access management.",
+      title: "Onboarding & Offboarding Automation",
+      description: "Automate employee workflows for security and consistency. Tier 1 (10-25 employees): $2,500. Tier 2 (26-50 employees): $4,200. Includes up to 5 role templates. Additional roles +$300 each.",
       deliverables: [
-        "Onboarding automation",
-        "Offboarding automation",
-        "Access provisioning workflows",
-        "Manager playbooks"
+        "Onboarding workflow automation (accounts, groups, welcome emails)",
+        "Offboarding workflow automation (access revocation, license recovery)",
+        "Integration with Microsoft 365 and HR systems",
+        "Security group and role templates (up to 5 roles)",
+        "Manager approval workflows",
+        "Documentation and admin training"
       ],
       price: "$2,500+",
       timeline: "3-4 weeks",
       minBudget: 2500,
-      idealFor: ["Nonprofits with volunteers", "Growing teams", "High turnover"]
+      idealFor: ["Nonprofits", "Healthcare", "Growing teams", "High turnover", "Compliance requirements"]
     },
     "backup-dr-readiness": {
       slug: "backup-dr-readiness",
@@ -268,18 +273,21 @@ export default function StartAssessmentPage() {
     },
     "identity-device-foundation": {
       slug: "identity-device-foundation",
-      title: "Identity & Security",
-      description: "Modern cloud identity (Azure AD) and centralized device management (Intune) with MFA, SSO, and baseline security policies.",
+      title: "Microsoft 365 / Entra ID Setup",
+      description: "Modern cloud identity and device management. Tier 1 (10-15 users): $6,500. Tier 2 (16-35 users): $8,500. Tier 3 (36-50 users): $11,000. Includes Azure AD, Intune, MFA, SSO, and baseline security.",
       deliverables: [
-        "Azure AD/Entra ID setup",
-        "Device enrollment in Intune",
-        "MFA and Conditional Access",
-        "Security baseline policies"
+        "Complete Azure AD/Entra ID setup with MFA",
+        "Device enrollment in Microsoft Intune",
+        "Conditional Access policies (location, device compliance, MFA)",
+        "SSO setup for up to 3 core applications",
+        "BitLocker encryption enforcement",
+        "Windows Update rings configuration",
+        "Admin training and handoff documentation"
       ],
       price: "$6,500+",
-      timeline: "6-8 weeks",
+      timeline: "4-6 weeks",
       minBudget: 6500,
-      idealFor: ["Teams moving to cloud", "Security-conscious organizations", "10-50 employees"]
+      idealFor: ["Teams moving to cloud", "Security-conscious organizations", "Healthcare", "Legal", "10-50 employees"]
     },
     "strategic-advisory": {
       slug: "strategic-advisory",
@@ -298,18 +306,21 @@ export default function StartAssessmentPage() {
     },
     "it-operations-toolkit": {
       slug: "it-operations-toolkit",
-      title: "IT Operations Toolkit",
-      description: "Service desk, asset tracking, and operational foundation. Get structured support workflows and handoff-ready documentation.",
+      title: "IT Operations Setup",
+      description: "Service desk, asset tracking, and operational foundation. Essentials: $4,500. Plus (with automation & runbooks): $7,500. Up to 50 assets included, additional assets +$50 per 10.",
       deliverables: [
-        "Service desk platform setup",
-        "Asset management",
-        "Admin training",
-        "Knowledge base templates"
+        "Service desk platform selection and setup",
+        "Ticket categories, priorities, workflows, and SLA definitions",
+        "Asset management platform setup",
+        "Initial asset inventory import (up to 50 assets)",
+        "Admin training and knowledge base starter templates",
+        "Plus tier: PowerShell automation scripts",
+        "Plus tier: Service desk operations runbook"
       ],
       price: "$4,500+",
-      timeline: "3-7 weeks",
+      timeline: "3-5 weeks (Essentials), 5-7 weeks (Plus)",
       minBudget: 4500,
-      idealFor: ["Teams with existing IT support", "30+ employees"]
+      idealFor: ["Teams formalizing IT support", "30+ employees", "Companies needing audit trails"]
     },
     "mvp-prd": {
       slug: "mvp-prd",
@@ -344,32 +355,36 @@ export default function StartAssessmentPage() {
     "new-foundation-bundle": {
       slug: "new-foundation-bundle",
       title: "IT Foundation Package",
-      description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $2,000.",
+      description: "Complete foundational IT setup: Identity & Security (Tier 1), M365 Governance (Tier 1), and Employee Lifecycle (Tier 1). Normally $12,500 separate, bundle price $14,500 ($15,500 value with integrated delivery). For 10-25 employees.",
       deliverables: [
-        "Complete Azure AD/Intune setup",
-        "M365 governance framework",
-        "Automated employee workflows",
-        "Training and documentation"
+        "Complete Azure AD/Entra ID setup with MFA and Conditional Access",
+        "Device enrollment in Microsoft Intune with security policies",
+        "SSO setup for up to 3 core applications",
+        "M365 Teams/SharePoint cleanup and governance framework (1-25 sites)",
+        "Automated employee onboarding and offboarding workflows (up to 5 role templates)",
+        "Documentation package: runbooks, policies, and admin guides",
+        "Training sessions for IT admins and end users"
       ],
-      price: "$13,500",
-      timeline: "8-12 weeks",
-      minBudget: 13500,
-      idealFor: ["Companies starting fresh", "10-25 employees", "Complete IT rebuild"]
+      price: "$14,500",
+      timeline: "8-12 weeks for complete implementation",
+      minBudget: 14500,
+      idealFor: ["Companies starting fresh", "10-25 employees", "Complete IT rebuild", "Moving from on-premises to cloud"]
     },
     "growth-acceleration-bundle": {
       slug: "growth-acceleration-bundle",
       title: "Growth Package",
-      description: "Assessment, Identity & Security, and 3 months IT Advisory. Complete modernization with ongoing guidance.",
+      description: "Systems Assessment, Identity & Security (Tier 1), and 3 months IT Advisory. Normally $8,799 separate, bundle price $7,999 (save $800). Complete modernization with ongoing guidance.",
       deliverables: [
-        "Systems review",
-        "Identity & Device implementation",
-        "3 months strategic advisory",
-        "Technology roadmap"
+        "90-minute systems assessment with prioritized recommendations",
+        "Complete Identity & Device implementation (10-15 users)",
+        "3 months of strategic IT Advisory (monthly sessions)",
+        "Technology roadmap and vendor evaluation",
+        "Budget planning and decision support"
       ],
-      price: "$8,500",
-      timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
-      minBudget: 8500,
-      idealFor: ["Ready to modernize", "Want expert guidance", "Growing businesses"]
+      price: "$7,999",
+      timeline: "Assessment: 1 week | Implementation: 4-6 weeks | Advisory: 3 months",
+      minBudget: 7999,
+      idealFor: ["Ready to modernize", "Want expert guidance", "Growing businesses", "10-15 employees"]
     },
     "m365-training": {
       slug: "m365-training",
@@ -400,6 +415,23 @@ export default function StartAssessmentPage() {
       timeline: "1-2 weeks",
       minBudget: 1200,
       idealFor: ["Growing cloud costs", "25+ M365 licenses", "Need cost controls"]
+    },
+    "it-documentation": {
+      slug: "it-documentation",
+      title: "IT Documentation Package",
+      description: "Document your entire IT environment: network diagrams, system inventory, configuration standards, and operational runbooks. Standard (up to 25 devices): $3,500. Comprehensive (26-50 devices): $6,000.",
+      deliverables: [
+        "Network topology diagrams (physical and logical)",
+        "Complete system inventory with owners and support contacts",
+        "Application and service catalog with dependencies",
+        "Configuration standards and security baselines",
+        "Operational runbooks for common IT tasks",
+        "SharePoint or wiki site setup for ongoing maintenance"
+      ],
+      price: "$3,500+",
+      timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
+      minBudget: 3500,
+      idealFor: ["Companies with no IT documentation", "IT staff transitions", "Audit preparation", "Professional Services"]
     },
     "technology-roadmap-workshop": {
       slug: "technology-roadmap-workshop",
