@@ -33,13 +33,13 @@ const services: ServiceData[] = [
     description: "Get clarity on what to fix first—fast",
     overview: "Strategic IT assessment with hands-on systems review, documented findings, prioritized recommendations, and actionable roadmap with effort estimates and pricing. This is a focused 90-minute working session plus 3-4 hours of analysis and documentation—real strategic work, not just a conversation.",
     startingPrice: "$799",
-    timeline: "1 week (scheduling + report delivery within 48 hours)",
+    timeline: "1-2 weeks (scheduling + report delivery within 48-72 hours)",
     deliverables: [
       "90-minute working session reviewing systems, workflows, and pain points",
       "Documented findings report with specific issues and root causes",
       "Priority roadmap with quick wins vs. long-term improvements",
       "Effort estimates for each recommendation with transparent pricing",
-      "Written Next Steps recap with implementation priorities delivered within 48 hours"
+      "Written Next Steps recap with implementation priorities delivered within 48-72 hours"
     ],
     idealFor: [
       "Teams who've had the free discovery call and want deeper analysis",
@@ -49,7 +49,7 @@ const services: ServiceData[] = [
     faqs: [
       {
         question: "How is this different from the free discovery call?",
-        answer: "The free discovery call is a 30-minute conversation about your business and pain points. The Systems Review is a paid, hands-on 90-minute working session where we actually look at your systems, document specific findings, and provide a prioritized roadmap with pricing. You get a comprehensive written report within 48 hours."
+        answer: "The free discovery call is a 30-minute conversation about your business and pain points. The Systems Review is a paid, hands-on 90-minute working session where we actually look at your systems, document specific findings, and provide a prioritized roadmap with pricing. You get a comprehensive written report within 48-72 hours."
       },
       {
         question: "What do I need to prepare before the session?",
@@ -594,7 +594,7 @@ const services: ServiceData[] = [
     description: "Turn your product idea into a clear, actionable roadmap",
     overview: "Work with you to scope your Minimum Viable Product, define features, prioritize development phases, and create a detailed Product Requirements Document (PRD) ready for development. 1-day workshop format with comprehensive deliverables.",
     startingPrice: "$2,000",
-    timeline: "1-day workshop + 1 week documentation",
+    timeline: "1-day workshop + 1-2 weeks documentation",
     deliverables: [
       "MVP feature list and prioritization",
       "User stories and acceptance criteria",
@@ -978,7 +978,7 @@ const services: ServiceData[] = [
     description: "Build a 3-5 year technology plan aligned to business goals",
     overview: "Strategic technology roadmap workshop for leadership teams. Full-day facilitated session to assess current state, identify business goals, evaluate technology gaps, and create an executive-ready multi-year plan. Includes comprehensive documentation, budget modeling, and phased implementation roadmap. This is board-ready strategic planning, not a brainstorming session.",
     startingPrice: "$5,000",
-    timeline: "1-day workshop + 1 week documentation",
+    timeline: "1-day workshop + 1-2 weeks documentation",
     deliverables: [
       "Pre-workshop discovery (current state technology assessment)",
       "Full-day facilitated workshop with leadership team",

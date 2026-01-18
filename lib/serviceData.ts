@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
   // Infrastructure (4)
   {
     title: "IT Assessment",
-    description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
+    description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 48-72 hours.",
     slug: "systems-assessment",
     category: "infrastructure",
     checkboxLabel: "Systems review",
@@ -41,7 +41,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Microsoft 365 / Entra ID Setup",
-    description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies.",
+    description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies. 4-6 week implementation.",
     slug: "identity-device-foundation",
     category: "infrastructure",
     checkboxLabel: "Identity & Security",
@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Teams & SharePoint Governance",
-    description: "Tame Teams/SharePoint sprawl and establish sustainable governance. Naming conventions, retention policies, permissions cleanup, and external sharing controls.",
+    description: "Tame Teams/SharePoint sprawl and establish sustainable governance. Naming conventions, retention policies, permissions cleanup, and external sharing controls. 4-6 weeks.",
     slug: "m365-governance",
     category: "infrastructure",
     checkboxLabel: "M365 governance",
@@ -57,7 +57,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "IT Operations Setup",
-    description: "Service desk, asset tracking, and operational foundation. Get structured support workflows, inventory management, and handoff-ready documentation.",
+    description: "Service desk, asset tracking, and operational foundation. Get structured support workflows, inventory management, and handoff-ready documentation. 3-7 weeks.",
     slug: "it-operations-toolkit",
     category: "infrastructure",
     checkboxLabel: "IT operations setup",
@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Onboarding & Offboarding Automation",
-    description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures.",
+    description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures. 3-4 weeks.",
     slug: "employee-lifecycle",
     category: "operations",
     checkboxLabel: "Employee lifecycle (onboarding/offboarding)",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Microsoft 365 End-User Training",
-    description: "Drive M365 adoption with targeted training. Teams, SharePoint, OneDrive best practices. 2-hour sessions with materials and recordings.",
+    description: "Drive M365 adoption with targeted training. Teams, SharePoint, OneDrive best practices. 2-hour sessions with materials and recordings. 1-2 weeks from booking.",
     slug: "m365-training",
     category: "operations",
     checkboxLabel: "Microsoft 365 training",
@@ -91,7 +91,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "IT Documentation Package",
-    description: "Document your entire IT environment: network diagrams, system inventory, runbooks, and configuration standards. Nothing lives in one person's head.",
+    description: "Document your entire IT environment: network diagrams, system inventory, runbooks, and configuration standards. Nothing lives in one person's head. 3-6 weeks.",
     slug: "it-documentation",
     category: "operations",
     checkboxLabel: "IT documentation",
@@ -99,7 +99,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Web Development",
-    description: "Lead-generation websites for small businesses. Fast, secure, SEO-friendly, and designed for conversion. Tiered packages available.",
+    description: "Lead-generation websites for small businesses. Fast, secure, SEO-friendly, and designed for conversion. Tiered packages available. 4-8 weeks.",
     slug: "web-development",
     category: "operations",
     checkboxLabel: "Web development",
@@ -109,7 +109,7 @@ export const SERVICES: Service[] = [
   // Security & Risk (4)
   {
     title: "Backup & Disaster Recovery",
-    description: "Know your backups work before you need them. Coverage assessment, restore testing, and disaster recovery playbook with step-by-step procedures.",
+    description: "Know your backups work before you need them. Coverage assessment, restore testing, and disaster recovery playbook with step-by-step procedures. 1-3 weeks.",
     slug: "backup-dr-readiness",
     category: "security",
     checkboxLabel: "Backup / DR",
@@ -125,7 +125,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Compliance Documentation Prep",
-    description: "IT documentation for HIPAA, SOC 2, or CMMC audits. Policies, procedures, and evidence collection aligned to framework requirements.",
+    description: "IT documentation for HIPAA, SOC 2, or CMMC audits. Policies, procedures, and evidence collection aligned to framework requirements. 4-6 weeks.",
     slug: "compliance-documentation",
     category: "security",
     checkboxLabel: "Compliance documentation",
@@ -133,7 +133,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Cloud Cost Optimization Review",
-    description: "Find waste in Azure and M365 spending. License audits, right-sizing, and cost controls. Most clients save 15-30% annually.",
+    description: "Find waste in Azure and M365 spending. License audits, right-sizing, and cost controls. Most clients save 15-30% annually. 1-2 weeks.",
     slug: "cloud-cost-optimization",
     category: "security",
     checkboxLabel: "Cloud cost optimization",
@@ -151,7 +151,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Product Planning",
-    description: "Turn your product idea into a clear, actionable roadmap. 1-day workshop with detailed Product Requirements Document.",
+    description: "Turn your product idea into a clear, actionable roadmap. 1-day workshop with detailed Product Requirements Document. 1-2 weeks total.",
     slug: "mvp-prd",
     category: "advisory",
     checkboxLabel: "Product planning",
@@ -159,14 +159,14 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Technology Roadmap Workshop",
-    description: "Build a 3-5 year technology plan. Full-day workshop with leadership to align technology with business goals and create phased implementation plan.",
+    description: "Build a 3-5 year technology plan. Full-day workshop with leadership to align technology with business goals and create phased implementation plan. 1-2 weeks total.",
     slug: "technology-roadmap-workshop",
     category: "advisory",
     checkboxLabel: "Technology roadmap workshop"
   },
   {
     title: "Acquisition Integration (Phased)",
-    description: "Merge IT systems during a business acquisition—without the chaos. Proven experience with 400+ user integrations. Assessment required.",
+    description: "Merge IT systems during a business acquisition—without the chaos. Proven experience with 400+ user integrations. Assessment required. 10-18 weeks across phases.",
     slug: "acquisition-integration",
     category: "advisory",
     checkboxLabel: "Acquisition integration",
@@ -176,7 +176,7 @@ export const SERVICES: Service[] = [
   // Bundles (3)
   {
     title: "IT Foundation Package",
-    description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $1,500. Perfect for 10-25 employees.",
+    description: "Complete foundational IT setup: Identity & Security, M365 Governance, and Employee Lifecycle. Save $1,500. Perfect for 10-25 employees. 8-12 weeks.",
     slug: "new-foundation-bundle",
     category: "bundles",
     checkboxLabel: "IT Foundation Package",
@@ -184,7 +184,7 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Growth Package",
-    description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,000. Complete modernization with ongoing guidance.",
+    description: "Assessment, Identity & Security, and 3 months IT Advisory. Save $1,000. Complete modernization with ongoing guidance. 1-2 weeks assessment + 6-8 weeks implementation + 3 months advisory.",
     slug: "growth-acceleration-bundle",
     category: "bundles",
     checkboxLabel: "Growth Package",
