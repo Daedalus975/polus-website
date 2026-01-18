@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
     tag: "Cost Savings"
   },
 
-  // Advisory & Planning (5)
+  // Advisory & Planning (4)
   {
     title: "IT Advisory",
     description: "Ongoing monthly strategic guidance—roadmap planning, vendor management, and IT decision support. No support tickets. $500/mo (4 hrs) or $1,000/mo (10 hrs).",
