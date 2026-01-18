@@ -29,7 +29,7 @@ type ServiceData = {
 const services: ServiceData[] = [
   {
     slug: "systems-assessment",
-    title: "Systems Review",
+    title: "IT Assessment",
     description: "Get clarity on what to fix first—fast",
     overview: "Strategic IT assessment with hands-on systems review, documented findings, prioritized recommendations, and actionable roadmap with effort estimates and pricing. This is a focused 90-minute working session plus 3-4 hours of analysis and documentation—real strategic work, not just a conversation.",
     startingPrice: "$799",
@@ -58,10 +58,6 @@ const services: ServiceData[] = [
       {
         question: "Do I have to hire you for implementation afterward?",
         answer: "No. The assessment is valuable on its own. You'll get documented recommendations and pricing that you can use however you want—implement yourself, use another vendor, or hire us. No pressure."
-      },
-      {
-        question: "Why $799 instead of $299?",
-        answer: "This is 4-6 hours of strategic consulting work, not a quick conversation. You're getting hands-on systems review, root cause analysis, effort estimates, and a comprehensive roadmap—the same work many consultants charge $1,250+ for. We price it to deliver real value while ensuring quality analysis."
       }
     ],
     isBundle: false
@@ -123,7 +119,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "identity-device-foundation",
-    title: "Identity & Security",
+    title: "Microsoft 365 / Entra ID Setup",
     description: "Move to modern cloud identity and centralized device management",
     overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation. Pricing assumes Microsoft 365 Business Premium (or equivalent) licensing. SSO limited to 3 applications; additional apps +$500 each. Additional locations beyond primary office: +$1,000 per location for on-site coordination.",
     startingPrice: "$6,500",
@@ -243,7 +239,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "m365-governance",
-    title: "M365 Governance",
+    title: "Teams & SharePoint Governance",
     description: "Tame Teams/SharePoint sprawl and establish sustainable governance",
     overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing based on active Teams/SharePoint site count. Tier 1: 1-25 sites ($3,500), Tier 2: 26-75 sites ($5,500), Tier 3: 76-150 sites ($8,500). Additional sites beyond tier caps: +$50 per site. Includes cleanup of up to 50% inactive sites (archival and documentation).",
     startingPrice: "$3,500",
@@ -303,7 +299,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "employee-lifecycle",
-    title: "Employee Lifecycle",
+    title: "Onboarding & Offboarding Automation",
     description: "Automate onboarding and offboarding for security and consistency",
     overview: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, group memberships, welcome emails, access revocation, license recovery, and exit checklists. Integration with Microsoft 365 and supported HR systems. Tiered pricing: $2,500 (10-25 employees), $3,500 (26-50 employees). Includes up to 5 role-based templates (e.g., Sales, Finance, Operations, Executive, Contractor). Additional role templates: +$300 each. Additional users beyond 50: contact for custom pricing.",
     startingPrice: "$2,500",
@@ -410,7 +406,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "backup-dr-readiness",
-    title: "Backup & DR",
+    title: "Backup & Disaster Recovery",
     description: "Know your backups work before you need them",
     overview: "Know your backups work before you need them. Verification Package ($1,500): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,500): Everything in Verification plus live restore test (up to 2 systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist. System = one application/data store (file server, database, M365 tenant, single VM). Additional systems +$500 each.",
     startingPrice: "$1,500",
@@ -466,7 +462,7 @@ const services: ServiceData[] = [
   },
   {
     slug: "process-clarity-pack",
-    title: "Process Documentation",
+    title: "Process Mapping & SOP Development",
     description: "Document critical workflows so your team stops reinventing the wheel",
     overview: "Document critical workflows and build Standard Operating Procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Complexity tiers ensure you pay for what you need—simple linear processes vs. complex multi-branch workflows. Choose single process or multi-process packages for better value.",
     startingPrice: "$1,200",
