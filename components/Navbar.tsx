@@ -373,46 +373,13 @@ export function Navbar() {
                       >
                         {service.title}
                       </Link>
-              </nav>
-            
-            <div className="hidden md:block">
-              <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-polus-mint p-2 hover:bg-polus-emerald/10 rounded transition"
-              aria-label="Toggle mobile menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-
-          {/* Dropdown Menus - Built into Navbar */}
-          {/* Removed - now using individual dropdowns above each nav item */}
-        </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[rgba(177,227,199,0.12)] bg-polus-forest">
-          <nav className="flex flex-col px-4 py-4 space-y-3">
-            {/* Services Mobile Section */}
-            <div className="border-b border-[rgba(177,227,199,0.08)] pb-3">
-              <button
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="text-[rgba(254,255,255,0.78)] hover:text-polus-gold transition py-2 flex items-center justify-between w-full"
-                aria-expanded={servicesDropdownOpen}
-              >
+            {/* Industries Mobile Section */}
                 <span className="font-medium">Services</span>
                 <svg 
                   className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} 
