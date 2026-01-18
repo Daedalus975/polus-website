@@ -4,9 +4,20 @@ import { Button } from "@/components/Button";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: "Why Polus? | Compare IT Options for Oklahoma Businesses",
-  description: "See how Polus compares to DIY IT and traditional MSPs. Find the right IT solution for your Oklahoma small business."
+  description: "See how Polus compares to DIY IT and traditional MSPs. Project-based approach, transparent tiered pricing ($299-$11,000), Microsoft 365 expertise, no long-term contracts. 20% off for first 10 clients.",
+  keywords: ["IT consulting Oklahoma", "project-based IT services", "no contract IT consultant", "Microsoft 365 expert", "small business IT consultant", "transparent IT pricing", "vs MSP"],
+  alternates: {
+    canonical: `${baseUrl}/why-polus`,
+  },
+  openGraph: {
+    title: "Why Polus? | Compare IT Options for Oklahoma Businesses",
+    description: "Project-based IT consulting for Oklahoma small businesses. Transparent pricing, M365 expertise, no long-term contracts.",
+    url: `${baseUrl}/why-polus`,
+  }
 };
 
 export default function WhyPolusPage() {

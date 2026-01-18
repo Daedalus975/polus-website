@@ -4,9 +4,20 @@ import { SERVICES } from "@/lib/serviceData";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: "All Services — Oklahoma IT and Operations | Polus",
-  description: "Operations and IT services built for small businesses in Oklahoma. Systems review, M365 governance, backup/DR, process documentation, and more."
+  description: "Complete IT consulting services for Oklahoma small businesses. Microsoft 365 setup & governance, backup/DR, IT operations, process documentation. Tiered pricing from $299-$11,000. 20% off for first 10 clients.",
+  keywords: ["IT consulting services Oklahoma", "Microsoft 365 consulting", "M365 governance", "IT operations management", "backup and disaster recovery", "process documentation", "IT assessment", "small business IT services"],
+  alternates: {
+    canonical: `${baseUrl}/services`,
+  },
+  openGraph: {
+    title: "All Services — Oklahoma IT and Operations | Polus",
+    description: "Complete IT consulting services for Oklahoma small businesses. M365, backup/DR, operations, and process documentation.",
+    url: `${baseUrl}/services`,
+  }
 };
 
 export default function ServicesPage() {

@@ -5,7 +5,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { TrustBadgeStrip } from "@/components/TrustBadgeStrip";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { OperatingSystemAnimated } from "@/components/OperatingSystemAnimated";
-import { StructuredData, getLocalBusinessSchema } from "@/components/StructuredData";
+import { StructuredData, getLocalBusinessSchema, getFAQSchema } from "@/components/StructuredData";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { track } from "@/lib/track";
 
@@ -40,6 +40,7 @@ export default function HomePage() {
   return (
     <>
       <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getFAQSchema(faqs)} />
       {/* Hero Section */}
       <section 
         className="relative overflow-hidden min-h-[600px] md:min-h-[700px]"

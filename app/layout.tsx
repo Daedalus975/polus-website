@@ -20,21 +20,51 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Polus LLC — Operations and IT Consulting",
+  title: {
+    default: "Polus LLC — Operations and IT Consulting",
+    template: "%s | Polus LLC"
+  },
   description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off. Free discovery call.",
+  keywords: ["IT consulting Oklahoma", "Microsoft 365 consultant", "Oklahoma City IT", "Tulsa IT services", "small business IT", "M365 governance", "backup and disaster recovery", "IT operations", "process optimization", "Edmond IT consultant"],
+  authors: [{ name: "Jack Washmon", url: "https://www.linkedin.com/in/jackwashmon" }],
+  creator: "Polus LLC",
+  publisher: "Polus LLC",
+  alternates: {
+    canonical: baseUrl,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: baseUrl,
     siteName: "Polus Consulting",
     title: "Polus LLC — Operations and IT Consulting",
-    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off."
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off.",
+    images: [
+      {
+        url: "/hero/hero-bg.svg",
+        width: 1200,
+        height: 630,
+        alt: "Polus LLC - Oklahoma IT Consulting"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Polus LLC — Operations and IT Consulting",
-    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off."
-  }
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off.",
+    images: ["/hero/hero-bg.svg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

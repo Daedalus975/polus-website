@@ -5,21 +5,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const services = [
     "systems-assessment",
-    "onboarding-offboarding",
+    "identity-device-foundation",
     "m365-governance",
-    "endpoint-standardization",
+    "employee-lifecycle-automation",
     "backup-disaster-recovery",
-    "managed-it",
-    "service-desk-setup",
-    "web-development",
-    "mvp-prd",
-    "automation-no-code"
+    "it-operations-essentials",
+    "it-operations-plus",
+    "process-mapping",
+    "compliance-documentation",
+    "it-documentation-package",
+    "it-advisory",
+    "m365-cost-optimization",
+    "strategic-roadmapping",
+    "fractional-cto"
   ];
 
   const industries = [
     "construction",
     "nonprofits",
-    "startups"
+    "startups",
+    "healthcare",
+    "legal",
+    "professional-services"
+  ];
+
+  const locations = [
+    "oklahoma-city",
+    "tulsa",
+    "edmond"
   ];
 
   const staticPages = [
@@ -46,6 +59,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/roi-calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/why-polus`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/checklist`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/referral`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
@@ -117,5 +166,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...industryPages];
+  const locationPages = locations.map((slug) => ({
+    url: `${baseUrl}/locations/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...servicePages, ...industryPages, ...locationPages];
 }

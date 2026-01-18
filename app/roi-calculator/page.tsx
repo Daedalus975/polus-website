@@ -3,9 +3,20 @@ import { ROICalculator } from "@/components/ROICalculator";
 import { Button } from "@/components/Button";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "ROI Calculator | Polus LLC",
-  description: "Calculate the potential return on investment for improving your IT systems and operations. See what stronger IT could mean for your Oklahoma business."
+  title: "IT ROI Calculator | Polus LLC",
+  description: "Calculate the potential ROI from optimizing your IT systems. See how much you could save with better M365 governance, automation, backup/DR, and reduced downtime. Free personalized analysis for Oklahoma businesses.",
+  keywords: ["IT ROI calculator", "IT cost savings", "Microsoft 365 ROI", "IT optimization savings", "downtime cost calculator", "IT investment return"],
+  alternates: {
+    canonical: `${baseUrl}/roi-calculator`,
+  },
+  openGraph: {
+    title: "IT ROI Calculator | Calculate Your Potential Savings",
+    description: "Calculate your potential IT savings and ROI. See how much you could save with optimized systems.",
+    url: `${baseUrl}/roi-calculator`,
+  }
 };
 
 export default function ROICalculatorPage() {
