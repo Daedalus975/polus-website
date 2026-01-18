@@ -204,16 +204,6 @@ const services: ServiceData[] = [
         price: "$8,500",
         description: "16-35 users/devices, up to 3 SSO apps, single location",
         deliverables: [
-          "Azure AD Connect setup (hybrid identity configuration if needed)",
-          "Intune enrollment and baseline device policies",
-          "MFA rollout (Microsoft Authenticator or similar)",
-          "Conditional access policies (location, device compliance, MFA enforcement)",
-          "SSO setup for up to 3 core applications (additional apps +$500 each)",
-          "BitLocker encryption enforcement across all devices",
-          "Windows Update rings configuration (Pilot, Production, Critical)",
-          "Admin training and handoff documentation",
-          "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
-          "Additional locations beyond primary office: +$1,000 per location",
           "Department-specific device policies and app deployment",
           "Self-service password reset (SSPR) configuration",
           "Extended admin training (2 sessions) and detailed runbook documentation"
@@ -224,19 +214,6 @@ const services: ServiceData[] = [
         price: "$11,000",
         description: "36-50 users/devices, up to 3 SSO apps, single location",
         deliverables: [
-          "Azure AD Connect setup (hybrid identity configuration if needed)",
-          "Intune enrollment and baseline device policies",
-          "MFA rollout (Microsoft Authenticator or similar)",
-          "Conditional access policies (location, device compliance, MFA enforcement)",
-          "SSO setup for up to 3 core applications (additional apps +$500 each)",
-          "BitLocker encryption enforcement across all devices",
-          "Windows Update rings configuration (Pilot, Production, Critical)",
-          "Admin training and handoff documentation",
-          "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
-          "Additional locations beyond primary office: +$1,000 per location",
-          "Department-specific device policies and app deployment",
-          "Self-service password reset (SSPR) configuration",
-          "Extended admin training (2 sessions) and detailed runbook documentation",
           "Azure AD security groups automation for role-based access",
           "Advanced compliance policies (data loss prevention baselines)",
           "Phased rollout plan with pilot groups and staged deployment",
@@ -403,14 +380,9 @@ const services: ServiceData[] = [
         price: "$5,500",
         description: "26-75 active sites/Teams. Cleanup up to 37 inactive sites.",
         deliverables: [
-          "Current state audit (26-75 active sites, permissions sprawl analysis)",
-          "Governance policy documentation (naming conventions, lifecycle management)",
-          "Permissions cleanup and baseline configuration",
-          "External sharing and guest access controls",
-          "Retention and deletion policies setup",
-          "Template library for new Teams/SharePoint sites (5 pre-approved templates)",
-          "Cleanup of up to 37 inactive sites (archival or deletion with approval)",
-          "Admin training session (2 hours)",
+          "Expanded to 26-75 active sites (vs. 1-25 in Tier 1)",
+          "5 pre-approved site templates (vs. 3 in Tier 1)",
+          "Cleanup of up to 37 inactive sites (vs. 12 in Tier 1)",
           "End-user training session (1 hour)",
           "Advanced permission inheritance review"
         ]
@@ -420,16 +392,11 @@ const services: ServiceData[] = [
         price: "$8,500",
         description: "76-150 active sites/Teams. Cleanup up to 75 inactive sites. +$50 per additional site.",
         deliverables: [
-          "Current state audit (76-150 active sites, permissions sprawl analysis)",
-          "Governance policy documentation (naming conventions, lifecycle management)",
-          "Permissions cleanup and baseline configuration",
-          "External sharing and guest access controls",
-          "Retention and deletion policies setup",
-          "Template library for new Teams/SharePoint sites (10 pre-approved templates)",
-          "Cleanup of up to 75 inactive sites (archival or deletion with approval)",
-          "Admin training session (3 hours)",
-          "End-user training session (2 hours)",
-          "Advanced permission inheritance review",
+          "Expanded to 76-150 active sites (vs. 26-75 in Tier 2)",
+          "10 pre-approved site templates (vs. 5 in Tier 2)",
+          "Cleanup of up to 75 inactive sites (vs. 37 in Tier 2)",
+          "Admin training session upgraded to 3 hours (vs. 2 in Tier 1)",
+          "End-user training session upgraded to 2 hours (vs. 1 in Tier 2)",
           "Automated lifecycle management policies",
           "Quarterly governance review checklist"
         ]
@@ -478,13 +445,9 @@ const services: ServiceData[] = [
         price: "$4,200",
         description: "26-50 employees, up to 5 role templates (+$300 per additional role)",
         deliverables: [
-          "Onboarding workflow automation (accounts, security groups, email distribution lists)",
-          "Offboarding workflow automation (access revocation, license recovery, exit checklists)",
-          "Integration with Microsoft 365 and HR systems (if API/webhook supported)",
-          "Security group and role templates (up to 5 role-based templates)",
-          "Manager approval workflows (request, approve, execute)",
-          "Documentation and admin training (3 hours)",
-          "Welcome email templates and user guides",
+          "Expanded to 26-50 employees (vs. 10-25 in Tier 1)",
+          "Integration with HR systems added (BambooHR, Workday, ADP if API/webhook supported)",
+          "Admin training upgraded to 3 hours (vs. 2 in Tier 1)",
           "Archive procedures for departing employees",
           "Department-specific onboarding variations",
           "Audit log and compliance reporting setup"
@@ -553,13 +516,8 @@ const services: ServiceData[] = [
         price: "$7,500",
         description: "Essentials, automation, and MSP transition (up to 50 assets, +$50 per 10 additional)",
         deliverables: [
-          "Service desk platform selection and setup",
-          "Ticket categories, priorities, and workflows",
-          "SLA definitions and response time standards",
-          "Asset management platform setup",
-          "Initial asset inventory import (up to 50 assets)",
-          "Admin training (3 hours)",
-          "Knowledge base starter templates (20 articles)",
+          "Upgraded admin training to 3 hours (vs. 2 in Essentials)",
+          "Upgraded knowledge base to 20 articles (vs. 10 in Essentials)",
           "2-3 PowerShell automation scripts (user provisioning, backup verification, or license audits)",
           "IT operations runbook and SOPs",
           "MSP partner transition package",
@@ -793,15 +751,12 @@ const services: ServiceData[] = [
         price: "$5,500",
         description: "10-page website, advanced SEO, analytics integration, 2 rounds of revisions",
         deliverables: [
-          "10-page custom website",
-          "Responsive design (mobile, tablet, desktop)",
-          "Contact forms with email notifications",
-          "Technical SEO optimization (meta tags, sitemap.xml, page speed, structured data)",
-          "Advanced on-page SEO (internal linking, content optimization)",
+          "Expanded to 10 pages (vs. 5 in Starter)",
+          "Enhanced SEO with structured data (vs. basic in Starter)",
+          "Advanced on-page SEO: internal linking, content optimization (vs. basic in Starter)",
           "Google Analytics and Search Console integration",
-          "Hosting setup and deployment support",
           "Content management system with admin training",
-          "2 rounds of revisions"
+          "2 rounds of revisions (vs. 1 in Starter)"
         ]
       },
       {
@@ -809,18 +764,13 @@ const services: ServiceData[] = [
         price: "$8,500",
         description: "Custom features, CRM/tool integrations, advanced CMS, 3 rounds of revisions, training",
         deliverables: [
-          "Custom website with unlimited pages",
-          "Responsive design (mobile, tablet, desktop)",
-          "Contact forms and custom form builders",
-          "Technical SEO optimization (meta tags, sitemap.xml, page speed, structured data)",
-          "Advanced on-page SEO (internal linking, content optimization)",
-          "Google Analytics and Search Console integration",
-          "Custom features (e.g., booking systems, member portals, calculators)",
+          "Unlimited pages (vs. 10 in Standard)",
+          "Custom form builders (vs. basic contact forms in Standard)",
+          "Custom features (booking systems, member portals, calculators)",
           "CRM/tool integrations (up to 3 integrations)",
           "Advanced content management system",
-          "Hosting setup and deployment support",
           "Admin and editor training (2 hours)",
-          "3 rounds of revisions"
+          "3 rounds of revisions (vs. 2 in Standard)"
         ]
       }
     ],
