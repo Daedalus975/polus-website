@@ -1,0 +1,19 @@
+[
+  {
+    "email": "jack.washmon@polus-cs.com",
+    "source": "roi_emailed",
+    "created_at": "2026-01-18T11:29:27.365Z",
+    "lead_score": 15,
+    "events": [
+      {
+        "type": "roi_emailed",
+        "timestamp": "2026-01-18T11:29:27.365Z",
+        "metadata": {
+          "roi": 1237.7142857142858,
+          "annual_savings": 187280
+        }
+      }
+    ],
+    "has_booked_service": false
+  }
+]

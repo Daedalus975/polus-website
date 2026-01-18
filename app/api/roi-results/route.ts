@@ -32,14 +32,22 @@ const formatCurrency = (value: number) => {
 };
 
 export async function POST(req: Request) {
+  console.log('[ROI Calculator] ========== API CALLED ==========');
+  
   const data = await req.json().catch(() => null);
-  if (!data) return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  if (!data) {
+    console.log('[ROI Calculator] ERROR: Invalid JSON');
+    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  }
 
   // Honeypot check
   if (data.honeypot) return NextResponse.json({ ok: true });
 
   const parsed = Schema.safeParse(data);
-  if (!parsed.success) return NextResponse.json({ error: "Validation failed" }, { status: 400 });
+  if (!parsed.success) {
+    console.log('[ROI Calculator] ERROR: Validation failed', parsed.error);
+    return NextResponse.json({ error: "Validation failed" }, { status: 400 });
+  }
 
   const { email, scenario, results } = parsed.data;
 
