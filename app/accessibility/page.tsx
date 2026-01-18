@@ -83,7 +83,7 @@ export default function AccessibilityPage() {
 
             <div className="mt-10 p-6 bg-polus-surface1 rounded-lg border border-[rgba(177,227,199,0.16)]">
               <p className="text-sm text-[rgba(254,255,255,0.62)] mb-4">
-                <strong>Last Updated:</strong> January 4, 2026
+                <strong>Last Updated:</strong> January 18, 2026
               </p>
               <p className="text-sm text-[rgba(254,255,255,0.62)]">
                 This accessibility statement applies to the website located at the Polus LLC domain.
