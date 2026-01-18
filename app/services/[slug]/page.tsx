@@ -627,7 +627,7 @@ const services: ServiceData[] = [
     slug: "process-clarity-pack",
     title: "Process Mapping & SOP Development",
     description: "Document critical workflows so your team stops reinventing the wheel",
-    overview: "Document critical workflows and build Standard Operating Procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Complexity tiers ensure you pay for what you need—simple linear processes vs. complex multi-branch workflows. Choose single process or multi-process packages for better value.",
+    overview: "Document critical business workflows and operational procedures your team will actually use. Each process includes visual process mapping (swimlane or flowchart), written SOP document with decision trees, template library for future documentation, and team training on adoption and maintenance. Complexity tiers ensure you pay for what you need—simple linear processes vs. complex multi-branch workflows. Choose single process or multi-process packages for better value. Note: For compliance-specific IT policies and audit-ready SOPs (HIPAA, SOC 2, CMMC), see Compliance Documentation Prep.",
     startingPrice: "$1,200",
     timeline: "1-2 weeks per process",
     deliverables: [
@@ -706,7 +706,7 @@ const services: ServiceData[] = [
       },
       {
         question: "Can you document technical IT processes or just business processes?",
-        answer: "Both. We document business workflows (sales, onboarding, project management) and technical procedures (server patching, backup verification, incident response). The deliverables are the same—process maps and written SOPs."
+        answer: "Both. We document business workflows (sales, onboarding, project management) and general operational procedures (server patching, backup verification, incident response). However, if you need SOPs specifically for compliance audits (HIPAA, SOC 2, CMMC), use our Compliance Documentation Prep service instead—those SOPs are aligned to audit framework requirements."
       },
       {
         question: "Who needs to be involved from our team?",
@@ -1197,7 +1197,7 @@ const services: ServiceData[] = [
     slug: "compliance-documentation",
     title: "Compliance Documentation Prep",
     description: "Prepare IT documentation for HIPAA, SOC 2, or CMMC audits",
-    overview: "Get your IT documentation audit-ready. We help you prepare policies, procedures, system documentation, and evidence collection for HIPAA, SOC 2, CMMC, or other compliance frameworks. This is documentation preparation only—not legal advice or certification services. Work is performed in collaboration with your compliance auditor or consultant. Basic Prep: 10 policy templates, network diagram, asset inventory, access controls. Comprehensive Prep: All Basic plus 20 detailed SOPs, evidence templates, gap analysis, remediation roadmap.",
+    overview: "Get your IT documentation audit-ready. We help you prepare IT security policies, compliance-specific procedures, system documentation, and evidence collection for HIPAA, SOC 2, CMMC, or other compliance frameworks. SOPs included are aligned to audit framework requirements (access control procedures, incident response, data handling, etc.). This is documentation preparation only—not legal advice or certification services. Work is performed in collaboration with your compliance auditor or consultant. Basic Prep: 10 policy templates, network diagram, asset inventory, access controls. Comprehensive Prep: All Basic plus 20 detailed compliance SOPs, evidence templates, gap analysis, remediation roadmap. Note: For general business process documentation, see Process Mapping & SOP Development.",
     startingPrice: "$3,500",
     timeline: "4-6 weeks depending on scope",
     deliverables: [
@@ -1234,7 +1234,7 @@ const services: ServiceData[] = [
         description: "Full policy suite (10 policies + 20 SOPs) + evidence collection + gap analysis",
         deliverables: [
           "10 IT policy templates aligned to framework requirements",
-          "20 detailed Standard Operating Procedures (SOPs)",
+          "20 detailed Standard Operating Procedures (SOPs) for compliance (access control, incident response, data handling, backup procedures, etc.)",
           "Network topology diagram and system security documentation",
           "Asset inventory with owners and access levels",
           "Access control and user management procedures",
@@ -1257,6 +1257,10 @@ const services: ServiceData[] = [
       {
         question: "Which compliance frameworks do you support?",
         answer: "We primarily support HIPAA (healthcare), SOC 2 (SaaS/tech companies), and CMMC (government contractors). We can also help with ISO 27001, PCI-DSS, or custom frameworks—contact us to discuss your specific needs."
+      },
+      {
+        question: "What's the difference between Compliance Documentation SOPs and Process Mapping SOPs?",
+        answer: "Compliance Documentation SOPs are specifically designed for audit frameworks (access control procedures, incident response aligned to HIPAA/SOC 2, data handling procedures, etc.). Process Mapping & SOP Development is for general business workflows (customer onboarding, project intake, sales processes). Different purposes—audit readiness vs. operational efficiency."
       }
     ],
     isBundle: false
