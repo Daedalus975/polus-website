@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { useState, useEffect, useRef } from "react";
+import { SERVICES, SERVICE_CATEGORIES } from "@/lib/serviceData";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,16 +29,14 @@ export function Navbar() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
-  const services = [
-    { name: "IT Assessment", href: "/services/systems-assessment" },
-    { name: "IT Advisory", href: "/services/strategic-advisory" },
-    { name: "M365 / Entra ID", href: "/services/identity-device-foundation" },
-    { name: "Teams/SharePoint", href: "/services/m365-governance" },
-    { name: "Onboarding & Offboarding", href: "/services/employee-lifecycle" },
-    { name: "IT Operations Setup", href: "/services/it-operations-toolkit" },
-    { name: "Backup & DR", href: "/services/backup-dr-readiness" },
-    { name: "Acquisition Integration", href: "/services/acquisition-integration" },
-  ];
+  // Group services by category for navbar display
+  const servicesByCategory = {
+    infrastructure: SERVICES.filter(s => s.category === "infrastructure"),
+    operations: SERVICES.filter(s => s.category === "operations"),
+    security: SERVICES.filter(s => s.category === "security"),
+    advisory: SERVICES.filter(s => s.category === "advisory"),
+    bundles: SERVICES.filter(s => s.category === "bundles"),
+  };
 
   const industries = [
     { name: "Construction & Trades", href: "/industries/construction" },
@@ -93,20 +92,90 @@ export function Navbar() {
                   </svg>
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 pt-0 w-72 z-50">
+                  <div className="absolute top-full left-0 pt-0 w-80 z-50">
                     <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
-                      <div className="max-h-[60vh] overflow-y-auto">
-                        {services.map((service) => (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
+                      <div className="max-h-[70vh] overflow-y-auto px-2">
+                        {/* Core Infrastructure */}
+                        <div className="mb-4">
+                          <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-polus-gold/70">
+                            {SERVICE_CATEGORIES.infrastructure.label}
+                          </div>
+                          {servicesByCategory.infrastructure.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block px-3 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Operations & Process */}
+                        <div className="mb-4">
+                          <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-polus-gold/70">
+                            {SERVICE_CATEGORIES.operations.label}
+                          </div>
+                          {servicesByCategory.operations.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block px-3 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Security & Risk */}
+                        <div className="mb-4">
+                          <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-polus-gold/70">
+                            {SERVICE_CATEGORIES.security.label}
+                          </div>
+                          {servicesByCategory.security.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block px-3 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Advisory & Planning */}
+                        <div className="mb-4">
+                          <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-polus-gold/70">
+                            {SERVICE_CATEGORIES.advisory.label}
+                          </div>
+                          {servicesByCategory.advisory.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block px-3 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Package Deals */}
+                        <div>
+                          <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-polus-gold/70">
+                            {SERVICE_CATEGORIES.bundles.label}
+                          </div>
+                          {servicesByCategory.bundles.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block px-3 py-2 text-sm text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] rounded transition"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      <div className="border-t border-[rgba(177,227,199,0.12)] my-2 mx-3"></div>
+                      <div className="border-t border-[rgba(177,227,199,0.12)] mt-2 mb-2 mx-3"></div>
                       <Link
                         href="/services"
                         className="block px-5 py-2.5 text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition font-semibold text-base"
@@ -212,25 +281,99 @@ export function Navbar() {
                   <div className="absolute top-full left-0 pt-0 w-56 z-50">
                     <div className="bg-polus-forest/95 border-l border-r border-b border-[rgba(177,227,199,0.16)] backdrop-blur-sm py-3">
                       {resources.map((resource) => (
-                        <Link
-                          key={resource.href}
-                          href={resource.href}
-                          className="block px-5 py-2.5 text-[rgba(254,255,255,0.78)] hover:text-polus-gold hover:bg-[rgba(177,227,199,0.08)] transition leading-relaxed"
-                        >
-                          {resource.name}
-                        </Link>
-                      ))}
+                        <Link3 mt-3">
+                  <Link
+                    href="/services"
+                    className="block py-2 text-polus-gold text-sm font-semibold"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    View All Services →
+                  </Link>
+                  <div className="border-t border-[rgba(177,227,199,0.08)] my-2"></div>
+                  
+                  {/* Core Infrastructure */}
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-wider text-polus-gold/70 mb-2">
+                      {SERVICE_CATEGORIES.infrastructure.label}
                     </div>
+                    {servicesByCategory.infrastructure.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
                   </div>
-                )}
-              </div>
 
-              {FEATURE_FLAGS.STARTING_POINT_QUIZ_ENABLED && (
-                <Link href="/start" className="hover:text-polus-gold transition">Assessment</Link>
-              )}
-              <Link href="/about" className="hover:text-polus-gold transition">About</Link>
-              <Link href="/contact" className="hover:text-polus-gold transition">Contact</Link>
-            </nav>
+                  {/* Operations & Process */}
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-wider text-polus-gold/70 mb-2">
+                      {SERVICE_CATEGORIES.operations.label}
+                    </div>
+                    {servicesByCategory.operations.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Security & Risk */}
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-wider text-polus-gold/70 mb-2">
+                      {SERVICE_CATEGORIES.security.label}
+                    </div>
+                    {servicesByCategory.security.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Advisory & Planning */}
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-wider text-polus-gold/70 mb-2">
+                      {SERVICE_CATEGORIES.advisory.label}
+                    </div>
+                    {servicesByCategory.advisory.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Package Deals */}
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-wider text-polus-gold/70 mb-2">
+                      {SERVICE_CATEGORIES.bundles.label}
+                    </div>
+                    {servicesByCategory.bundles.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block py-2 text-[rgba(254,255,255,0.72)] hover:text-polus-gold transition text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+              </nav>
             
             <div className="hidden md:block">
               <Button href="/book" variant="primary" className="text-sm px-4 py-2">Book A Call</Button>
