@@ -31,7 +31,7 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES: Service[] = [
   // Infrastructure (4)
   {
-    title: "IT Assessment",
+    title: "Systems Review",
     description: "Get clarity on what to fix first—fast. 90-minute working session with documented recommendations and priority roadmap delivered within 24 hours.",
     slug: "systems-assessment",
     category: "infrastructure",
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     featured: true
   },
   {
-    title: "Microsoft 365 / Entra ID Setup",
+    title: "Identity & Security",
     description: "Move to modern cloud identity and centralized device management. Includes Microsoft Entra ID (Azure AD), Intune, MFA, SSO, and baseline security policies.",
     slug: "identity-device-foundation",
     category: "infrastructure",
@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
     tag: "Core Infrastructure"
   },
   {
-    title: "Teams & SharePoint Governance",
+    title: "M365 Governance",
     description: "Tame Teams/SharePoint sprawl and establish sustainable governance. Naming conventions, retention policies, permissions cleanup, and external sharing controls.",
     slug: "m365-governance",
     category: "infrastructure",
@@ -66,7 +66,7 @@ export const SERVICES: Service[] = [
 
   // Operations & Process (5)
   {
-    title: "Process Mapping & SOP Development",
+    title: "Process Documentation",
     description: "Document critical workflows so your team stops reinventing the wheel. Visual process maps, written SOPs, and training. Priced per process or as a bundle.",
     slug: "process-clarity-pack",
     category: "operations",
@@ -74,7 +74,7 @@ export const SERVICES: Service[] = [
     tag: "Operational Excellence"
   },
   {
-    title: "Onboarding & Offboarding Automation",
+    title: "Employee Lifecycle",
     description: "Automate onboarding and offboarding for security and consistency. Workflow automation for account creation, access provisioning, and exit procedures.",
     slug: "employee-lifecycle",
     category: "operations",
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
 
   // Security & Risk (4)
   {
-    title: "Backup & Disaster Recovery",
+    title: "Backup & DR",
     description: "Know your backups work before you need them. Coverage assessment, restore testing, and disaster recovery playbook with step-by-step procedures.",
     slug: "backup-dr-readiness",
     category: "security",
