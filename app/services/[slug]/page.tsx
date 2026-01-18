@@ -213,7 +213,10 @@ const services: ServiceData[] = [
           "Windows Update rings configuration (Pilot, Production, Critical)",
           "Admin training and handoff documentation",
           "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
-          "Additional locations beyond primary office: +$1,000 per location"
+          "Additional locations beyond primary office: +$1,000 per location",
+          "Department-specific device policies and app deployment",
+          "Self-service password reset (SSPR) configuration",
+          "Extended admin training (2 sessions) and detailed runbook documentation"
         ]
       },
       {
@@ -230,7 +233,14 @@ const services: ServiceData[] = [
           "Windows Update rings configuration (Pilot, Production, Critical)",
           "Admin training and handoff documentation",
           "Assumes Microsoft 365 Business Premium (or equivalent) licensing",
-          "Additional locations beyond primary office: +$1,000 per location"
+          "Additional locations beyond primary office: +$1,000 per location",
+          "Department-specific device policies and app deployment",
+          "Self-service password reset (SSPR) configuration",
+          "Extended admin training (2 sessions) and detailed runbook documentation",
+          "Azure AD security groups automation for role-based access",
+          "Advanced compliance policies (data loss prevention baselines)",
+          "Phased rollout plan with pilot groups and staged deployment",
+          "30-day post-implementation support and optimization"
         ]
       }
     ],
