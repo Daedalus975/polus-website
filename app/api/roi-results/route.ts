@@ -32,22 +32,23 @@ const formatCurrency = (value: number) => {
 };
 
 export async function POST(req: Request) {
-  console.log('[ROI Calculator] ========== API CALLED ==========');
-  
-  const data = await req.json().catch(() => null);
-  if (!data) {
-    console.log('[ROI Calculator] ERROR: Invalid JSON');
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
-  }
+  try {
+    console.log('[ROI Calculator] ========== API CALLED ==========');
+    
+    const data = await req.json().catch(() => null);
+    if (!data) {
+      console.log('[ROI Calculator] ERROR: Invalid JSON');
+      return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    }
 
-  // Honeypot check
-  if (data.honeypot) return NextResponse.json({ ok: true });
+    // Honeypot check
+    if (data.honeypot) return NextResponse.json({ ok: true });
 
-  const parsed = Schema.safeParse(data);
-  if (!parsed.success) {
-    console.log('[ROI Calculator] ERROR: Validation failed', parsed.error);
-    return NextResponse.json({ error: "Validation failed" }, { status: 400 });
-  }
+    const parsed = Schema.safeParse(data);
+    if (!parsed.success) {
+      console.log('[ROI Calculator] ERROR: Validation failed', parsed.error);
+      return NextResponse.json({ error: "Validation failed" }, { status: 400 });
+    }
 
   const { email, scenario, results } = parsed.data;
 
@@ -246,6 +247,14 @@ https://polus-cs.com`;
     
     return NextResponse.json({ 
       error: error instanceof Error ? error.message : "Failed to send email",
+      ok: false 
+    }, { status: 500 });
+  }
+  } catch (outerError) {
+    // Catch any unhandled errors in the entire function
+    console.error('[ROI Calculator] CRITICAL ERROR:', outerError);
+    return NextResponse.json({ 
+      error: "Internal server error",
       ok: false 
     }, { status: 500 });
   }
