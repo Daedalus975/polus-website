@@ -7,7 +7,7 @@ type CalendlyEmbedProps = {
   minHeight?: string;
 };
 
-export function CalendlyEmbed({ url, minHeight = "700px" }: CalendlyEmbedProps) {
+export function CalendlyEmbed({ url, minHeight = "1000px" }: CalendlyEmbedProps) {
   useEffect(() => {
     // Load Calendly widget script
     const script = document.createElement("script");
