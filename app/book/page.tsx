@@ -22,9 +22,7 @@ export default function BookPage() {
           </p>
         </div>
 
-        <div className="bg-polus-surface1 rounded-lg border border-[rgba(177,227,199,0.16)] p-2 md:p-4 overflow-hidden">
-          <CalendlyEmbed url={calendlyUrl} />
-        </div>
+        <CalendlyEmbed url={calendlyUrl} />
 
         <div className="mt-10 text-center">
           <p className="text-sm text-[rgba(254,255,255,0.62)] mb-2">
