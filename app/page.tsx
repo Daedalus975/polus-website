@@ -54,31 +54,32 @@ export default function HomePage() {
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-polus-forest/30" />
 
-        {/* Logo centered - positioned to span from discount banner to Limited Time badge */}
-        <div className="relative z-20 flex justify-center items-center pt-0">
-          <Image 
-            src="/Polus-Logo-RGB.png" 
-            alt="Polus" 
-            width={800} 
-            height={267}
-            priority
-            className="h-[280px] md:h-[340px] lg:h-[380px] w-auto"
-          />
-        </div>
-
         {/* Hero content */}
-        <Section className="relative z-20 pt-0 pb-20 md:pb-28">
-          <div className="max-w-4xl mx-auto">
+        <Section className="relative z-20 pt-32 md:pt-40 pb-20 md:pb-28">
+          <div className="flex flex-col items-center">
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
               </svg>
               Limited Time: 20% off for first 10 businesses
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper mb-6">
-              Fix your processes. Strengthen your IT. Get more time back.
-            </h1>
-            <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl mb-8">
+            
+            {/* Logo and heading side by side */}
+            <div className="flex items-center justify-center gap-8 mb-6">
+              <Image 
+                src="/Polus-Logo-RGB.png" 
+                alt="Polus" 
+                width={400} 
+                height={133}
+                priority
+                className="h-32 md:h-40 lg:h-48 w-auto"
+              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper">
+                Fix your processes. Strengthen your IT. Get more time back.
+              </h1>
+            </div>
+            
+            <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl mb-8 text-center">
               Stop wasting time on IT chaos and scattered processes. Get expert help for Oklahoma small businesses—without the MSP price tag.
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
