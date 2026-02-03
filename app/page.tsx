@@ -64,24 +64,26 @@ export default function HomePage() {
               Limited Time: 20% off for first 10 businesses
             </div>
             
-            {/* Logo and heading side by side */}
-            <div className="flex items-center justify-center gap-8 mb-6">
+            {/* Logo and text content side by side */}
+            <div className="flex items-start justify-center gap-8 mb-6">
               <Image 
                 src="/Polus-Logo-RGB.png" 
                 alt="Polus" 
                 width={400} 
                 height={133}
                 priority
-                className="h-32 md:h-40 lg:h-48 w-auto"
+                className="h-[280px] md:h-[320px] lg:h-[360px] w-auto flex-shrink-0"
               />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper">
-                Fix your processes. Strengthen your IT. Get more time back.
-              </h1>
+              <div className="flex flex-col">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper mb-6">
+                  Fix your processes. Strengthen your IT. Get more time back.
+                </h1>
+                <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl">
+                  Stop wasting time on IT chaos and scattered processes. Get expert help for Oklahoma small businesses—without the MSP price tag.
+                </p>
+              </div>
             </div>
             
-            <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl mb-8 text-center">
-              Stop wasting time on IT chaos and scattered processes. Get expert help for Oklahoma small businesses—without the MSP price tag.
-            </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <Button
                 href="/book"
