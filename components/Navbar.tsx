@@ -63,7 +63,7 @@ export function Navbar() {
           <div className="h-[72px] flex items-center justify-between">
             <Link href="/" className="block">
               <Image 
-                src="/Polus-Logo-RGB.png" 
+                src="/Polus-Logo-RGB text only.png" 
                 alt="Polus" 
                 width={120} 
                 height={40}
