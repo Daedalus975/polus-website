@@ -34,12 +34,13 @@ export default function AboutPage() {
               We help Oklahoma startups and small businesses strengthen their operations and IT through practical, straightforward consulting. Whether you need clearer workflows, better Microsoft 365 governance, or a plan to reduce downtime risk, we build solutions that fit your reality.
             </p>
           </div>
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-cardHover border border-[rgba(177,227,199,0.12)]">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-cardHover border border-[rgba(177,227,199,0.12)] flex items-center justify-center bg-polus-surface1">
             <Image 
-              src="/about/workspace.jpg" 
-              alt="Professional workspace with code editor and coffee" 
-              fill
-              className="object-cover"
+              src="/Polus-Logo-RGB.png" 
+              alt="Polus LLC Logo" 
+              width={400}
+              height={133}
+              className="object-contain p-8"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

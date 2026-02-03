@@ -61,10 +61,10 @@ export default function HomePage() {
               <Image 
                 src="/Polus-Logo-RGB.png" 
                 alt="Polus" 
-                width={280} 
-                height={93}
+                width={400} 
+                height={133}
                 priority
-                className="h-20 md:h-24 w-auto"
+                className="h-28 md:h-36 lg:h-40 w-auto"
               />
             </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
