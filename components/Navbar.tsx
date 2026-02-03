@@ -42,8 +42,6 @@ export function Navbar() {
 
   const industries = [
     { name: "Construction & Trades", href: "/industries/construction" },
-    { name: "Healthcare & Medical", href: "/industries/healthcare" },
-    { name: "Legal & Law Firms", href: "/industries/legal" },
     { name: "Nonprofits", href: "/industries/nonprofits" },
     { name: "Professional Services", href: "/industries/professional-services" },
     { name: "Startups", href: "/industries/startups" },

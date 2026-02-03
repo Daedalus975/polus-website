@@ -24,8 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "construction",
     "nonprofits",
     "startups",
-    "healthcare",
-    "legal",
     "professional-services"
   ];
 
