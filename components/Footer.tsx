@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -8,7 +9,13 @@ export function Footer() {
         <div className="py-12 lg:py-16 grid gap-10 md:gap-12 md:grid-cols-12">
           {/* Brand Section */}
           <div className="md:col-span-5">
-            <h3 className="text-2xl font-bold text-polus-gold mb-4">Polus</h3>
+            <Image 
+              src="/Polus-Logo-RGB text only.png" 
+              alt="Polus" 
+              width={120} 
+              height={40}
+              className="h-8 w-auto mb-4"
+            />
             <p className="text-[rgba(254,255,255,0.72)] leading-relaxed max-w-sm mb-4">
               Operations and IT systems for Oklahoma small businesses.
             </p>
