@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./Button";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { useState, useEffect, useRef } from "react";
@@ -60,7 +61,16 @@ export function Navbar() {
       <div className="sticky top-0 z-50 border-b border-[rgba(177,227,199,0.12)] bg-polus-forest/90 backdrop-blur-navbar">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="h-[72px] flex items-center justify-between">
-            <Link href="/" className="font-bold text-xl text-polus-gold hover:text-polus-mint transition">Polus</Link>
+            <Link href="/" className="flex items-center hover:opacity-80 transition">
+              <Image 
+                src="/Polus-Logo-RGB.png" 
+                alt="Polus LLC" 
+                width={120} 
+                height={40}
+                priority
+                className="h-10 w-auto"
+              />
+            </Link>
             
             <nav className="hidden md:flex items-center gap-6 text-sm text-polus-paper/80">
               {/* Services Dropdown */}
