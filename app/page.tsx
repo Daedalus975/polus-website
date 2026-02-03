@@ -44,7 +44,7 @@ export default function HomePage() {
       <StructuredData data={getFAQSchema(faqs)} />
       {/* Hero Section */}
       <section 
-        className="relative overflow-hidden min-h-[600px] md:min-h-[700px]"
+        className="relative overflow-hidden"
         style={{ 
           backgroundImage: "url(/hero/hero-bg.svg)", 
           backgroundSize: "cover", 
@@ -54,20 +54,21 @@ export default function HomePage() {
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-polus-forest/30" />
 
+        {/* Logo centered - positioned to span from discount banner to Limited Time badge */}
+        <div className="relative z-20 flex justify-center items-center pt-0">
+          <Image 
+            src="/Polus-Logo-RGB.png" 
+            alt="Polus" 
+            width={800} 
+            height={267}
+            priority
+            className="h-[280px] md:h-[340px] lg:h-[380px] w-auto"
+          />
+        </div>
+
         {/* Hero content */}
         <Section className="relative z-20 pt-0 pb-20 md:pb-28">
           <div className="max-w-4xl mx-auto">
-            {/* Logo centered at top - sized to span from discount banner to Limited Time badge */}
-            <div className="flex justify-center items-center mb-0">
-              <Image 
-                src="/Polus-Logo-RGB.png" 
-                alt="Polus" 
-                width={800} 
-                height={267}
-                priority
-                className="h-[320px] md:h-[400px] lg:h-[450px] w-auto"
-              />
-            </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
