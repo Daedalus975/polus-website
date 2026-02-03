@@ -57,14 +57,14 @@ export default function HomePage() {
         {/* Hero content */}
         <Section className="relative z-20 pt-32 md:pt-40 pb-20 md:pb-28">
           <div className="max-w-4xl">
-            <div className="mb-6">
+            <div className="mb-8 flex justify-center">
               <Image 
                 src="/Polus-Logo-RGB.png" 
                 alt="Polus" 
-                width={400} 
-                height={133}
+                width={600} 
+                height={200}
                 priority
-                className="h-28 md:h-36 lg:h-40 w-auto"
+                className="h-40 md:h-48 lg:h-56 w-auto"
               />
             </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
