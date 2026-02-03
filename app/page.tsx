@@ -54,21 +54,20 @@ export default function HomePage() {
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-polus-forest/30" />
 
-        {/* Logo positioned absolutely to span from discount banner to Limited Time badge */}
-        <div className="absolute top-0 left-0 right-0 z-20 flex justify-center items-center" style={{ height: 'calc(100vh - 128px - 60px)' }}>
-          <Image 
-            src="/Polus-Logo-RGB.png" 
-            alt="Polus" 
-            width={800} 
-            height={267}
-            priority
-            className="h-full w-auto max-h-[400px]"
-          />
-        </div>
-
         {/* Hero content */}
-        <Section className="relative z-20 pt-32 md:pt-40 pb-20 md:pb-28">
+        <Section className="relative z-20 pt-4 md:pt-6 pb-20 md:pb-28">
           <div className="max-w-4xl">
+            {/* Logo centered at top */}
+            <div className="flex justify-center mb-4">
+              <Image 
+                src="/Polus-Logo-RGB.png" 
+                alt="Polus" 
+                width={800} 
+                height={267}
+                priority
+                className="h-[280px] md:h-[320px] lg:h-[360px] w-auto"
+              />
+            </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
