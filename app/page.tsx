@@ -67,7 +67,7 @@ export default function HomePage() {
         </div>
 
         {/* Hero content */}
-        <Section className="relative z-20 pt-0 pb-20 md:pb-28">
+        <Section className="relative z-20 pt-8 md:pt-12 pb-20 md:pb-28">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
