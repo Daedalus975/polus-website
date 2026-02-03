@@ -8,6 +8,7 @@ import { OperatingSystemAnimated } from "@/components/OperatingSystemAnimated";
 import { StructuredData, getLocalBusinessSchema, getFAQSchema } from "@/components/StructuredData";
 import { FEATURE_FLAGS } from "@/src/config/featureFlags";
 import { track } from "@/lib/track";
+import Image from "next/image";
 
 export default function HomePage() {
   const faqs = [
@@ -56,8 +57,15 @@ export default function HomePage() {
         {/* Hero content */}
         <Section className="relative z-20 pt-32 md:pt-40 pb-20 md:pb-28">
           <div className="max-w-4xl">
-            <div className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-polus-gold mb-6">
-              Polus
+            <div className="mb-6">
+              <Image 
+                src="/Polus-Logo-RGB.png" 
+                alt="Polus" 
+                width={280} 
+                height={93}
+                priority
+                className="h-20 md:h-24 w-auto"
+              />
             </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
