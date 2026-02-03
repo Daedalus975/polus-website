@@ -54,15 +54,15 @@ export default function HomePage() {
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-polus-forest/30" />
 
-        {/* Logo at top center - positioned to span from discount banner to Limited Time badge */}
-        <div className="relative z-20 flex justify-center items-start" style={{ minHeight: 'calc(100vh - 72px - 56px)' }}>
+        {/* Logo at top center */}
+        <div className="relative z-20 pt-12 md:pt-16 flex justify-center">
           <Image 
             src="/Polus-Logo-RGB.png" 
             alt="Polus" 
             width={800} 
             height={267}
             priority
-            className="mt-0 h-[200px] md:h-[280px] lg:h-[320px] w-auto"
+            className="h-[200px] md:h-[280px] lg:h-[320px] w-auto"
           />
         </div>
 
