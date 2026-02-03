@@ -72,7 +72,7 @@ export default function HomePage() {
                 width={400} 
                 height={133}
                 priority
-                className="h-[280px] md:h-[320px] lg:h-[360px] w-auto flex-shrink-0"
+                className="h-[180px] md:h-[200px] lg:h-[220px] w-auto flex-shrink-0"
               />
               <div className="flex flex-col">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight leading-[1.05] text-polus-paper mb-6">
