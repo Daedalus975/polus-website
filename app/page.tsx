@@ -55,17 +55,17 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-polus-forest/30" />
 
         {/* Hero content */}
-        <Section className="relative z-20 pt-4 md:pt-6 pb-20 md:pb-28">
-          <div className="max-w-4xl">
-            {/* Logo centered at top */}
-            <div className="flex justify-center mb-4">
+        <Section className="relative z-20 pt-0 pb-20 md:pb-28">
+          <div className="max-w-4xl mx-auto">
+            {/* Logo centered at top - sized to span from discount banner to Limited Time badge */}
+            <div className="flex justify-center items-center mb-0">
               <Image 
                 src="/Polus-Logo-RGB.png" 
                 alt="Polus" 
                 width={800} 
                 height={267}
                 priority
-                className="h-[280px] md:h-[320px] lg:h-[360px] w-auto"
+                className="h-[320px] md:h-[400px] lg:h-[450px] w-auto"
               />
             </div>
             <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-4">
