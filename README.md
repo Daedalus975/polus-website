@@ -1,64 +1,98 @@
-# Polus LLC Website
+# Polus Website
 
-A professional lead-generation website for Polus LLC, an IT and operations consulting firm serving Oklahoma small businesses.
+Professional IT consulting website for Polus LLC, serving Oklahoma small businesses (5-50 employees) with project-based IT consulting services.
+
+**Live Site:** https://polus-cs.com  
+**Owner:** Jack Washmon (jack.washmon@polus-cs.com)  
+**Last Updated:** March 2026
+
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Current Promotions](#current-promotions-march-2026)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Pages & Routes](#pages--routes)
+- [Available Services](#available-services-19-total)
+- [API Endpoints](#api-endpoints)
+- [Form Submissions](#form-submissions)
+- [Recent Major Updates](#recent-major-updates)
+- [Design System](#design-system)
+- [Deployment](#deployment)
+- [Email Configuration](#email-configuration)
+- [Known Issues & Future Work](#known-issues--future-work)
+- [Common Development Tasks](#common-development-tasks)
+- [Documentation](#documentation)
+- [Business Model](#business-model)
+- [Git Workflow](#git-workflow)
+- [Support & Contact](#support--contact)
+
+---
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 14.2.0 (App Router)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Forms:** Zod validation + server actions
-- **Payments:** Stripe Payment Links
-- **Email:** Nodemailer (SMTP)
+- **Styling:** Tailwind CSS 3.4.1
+- **Deployment:** Vercel (automatic CI/CD)
+- **Email:** nodemailer with Resend SMTP
+- **Forms:** react-hook-form
+- **Scheduling:** Calendly embedded
 
 ## Features
 
-✅ Fully responsive design inspired by modern SaaS aesthetics  
-✅ Dark forest theme with gold accents  
+✅ Fully responsive design with forest, gold, and mint color scheme  
 ✅ SEO-optimized with metadata on all pages  
-✅ Contact form with honeypot spam protection  
-✅ Lead magnet capture (checklist download)  
-✅ Stripe payment links for deposits and invoices  
-✅ Service pages with detailed offerings  
-✅ Industry-specific landing pages  
-✅ FAQ accordion component  
-✅ Analytics tracking hooks ready  
+✅ 19 detailed service pages with pricing transparency  
+✅ Assessment quiz to recommend services  
+✅ ROI calculator with email results  
+✅ Multi-step quote form  
+✅ Contact form with service selection  
+✅ Referral program (10% discount, stackable)  
+✅ 8 industry-specific landing pages  
+✅ 4 location pages (OKC, Tulsa, Norman, Edmond)  
+✅ FAQ accordion components  
+✅ Calendly booking integration  
+✅ Pay invoice functionality  
+✅ Resources center (placeholder, content coming soon)  
+✅ Comprehensive legal pages (Privacy, Terms, Cookie Policy, Disclaimer, Accessibility)  
+✅ Current promotion: 20% off for first 10 businesses
+
+## Current Promotions (March 2026)
+
+- **20% Launch Discount:** First 10 businesses get 20% off all services
+- **Referral Program:** 10% discount for referrer and referee (stackable with 20% = 30% total)  
 
 ## Quick Start
 
 ### 1. Install Dependencies
 
-```bash
+```powershell
 npm install
 ```
 
 ### 2. Configure Environment Variables
 
-Copy `.env.example` to `.env.local` and fill in your values:
+Create `.env.local` in the root directory:
 
 ```bash
-# Business settings
-BUSINESS_INBOX_EMAIL=contact@polusllc.com
-BOOKING_URL=https://calendly.com/your-link-here
+# SMTP Configuration (Resend)
+SMTP_HOST=smtp.resend.com
+SMTP_PORT=465
+SMTP_USER=resend
+SMTP_PASS=re_YourResendAPIKey
 
-# Stripe payment links
-NEXT_PUBLIC_STRIPE_DEPOSIT_URL=https://buy.stripe.com/your-deposit-link
-NEXT_PUBLIC_STRIPE_INVOICE_URL=https://buy.stripe.com/your-invoice-link
+# Contact Form
+CONTACT_EMAIL=jack.washmon@polus-cs.com
 
-# SMTP for contact form emails
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your-smtp-username
-SMTP_PASS=your-smtp-password
-SMTP_FROM="Polus <no-reply@polusllc.com>"
-
-# Optional analytics
+# Google Analytics (configured but not fully wired)
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 ### 3. Run Development Server
 
-```bash
+```powershell
 npm run dev
 ```
 
@@ -66,7 +100,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ### 4. Build for Production
 
-```bash
+```powershell
 npm run build
 npm start
 ```
@@ -75,42 +109,77 @@ npm start
 
 ```
 app/
-├── (pages)
-│   ├── page.tsx              # Home page
-│   ├── about/                # About page
-│   ├── services/             # Services overview
-│   │   └── [slug]/          # Dynamic service pages
-│   ├── industries/           # Industry landing pages
-│   ├── contact/              # Contact form
-│   ├── book/                 # Discovery call booking
-│   ├── pay/                  # Payment links
-│   ├── results/              # Results & outcomes
-│   ├── privacy/              # Privacy policy
-│   └── terms/                # Terms of service
+├── page.tsx                  # Home page
+├── about/                    # About page
+├── services/                 # Services overview
+│   └── [slug]/              # Dynamic service pages (19 services)
+├── industries/               # Industry overview
+│   ├── architecture/         # Industry-specific landing pages
+│   ├── construction/
+│   ├── finance/
+│   ├── healthcare/
+│   ├── hospitality/
+│   ├── legal/
+│   ├── manufacturing/
+│   └── retail/
+├── locations/                # Locations overview
+│   ├── edmond/              # Location-specific pages
+│   ├── norman/
+│   ├── oklahoma-city/
+│   └── tulsa/
+├── contact/                  # Contact form
+├── book/                     # Calendly booking embed
+├── start/                    # Assessment quiz (913 lines)
+├── roi/                      # ROI calculator
+├── referral/                 # Referral program details
+├── invoices/                 # Pay invoice page
+├── resources/                # Resource center (coming soon)
+├── why-polus/                # Why choose Polus
+├── privacy-policy/           # Privacy policy
+├── terms-of-service/         # Terms of service
+├── cookie-policy/            # Cookie policy
+├── disclaimer/               # Legal disclaimer (added Jan 2026)
+├── accessibility/            # Accessibility statement
 ├── api/
-│   ├── contact/route.ts      # Contact form submission
-│   └── lead-magnet/route.ts  # Lead magnet capture
-├── globals.css               # Global styles
-└── layout.tsx                # Root layout
+│   ├── contact/route.ts     # Contact form handler
+│   └── roi-results/route.ts # ROI results email
+├── globals.css               # Global Tailwind styles
+└── layout.tsx                # Root layout with Navbar/Footer
 
 components/
-├── Button.tsx                # Primary/secondary/link buttons
-├── Card.tsx                  # Content cards with hover effects
-├── ContactForm.tsx           # Full contact/quote form
-├── FAQAccordion.tsx          # Expandable FAQ component
-├── Footer.tsx                # Site footer
-├── LeadMagnetForm.tsx        # Email capture form
-├── Navbar.tsx                # Sticky navigation
-├── PricingCard.tsx           # Service pricing cards
-├── Section.tsx               # Page section wrapper
-├── ServiceCard.tsx           # Service listing cards
-└── TrustBadgeStrip.tsx       # Certification badges
+├── AnimatedBackgrounds.tsx   # SVG animated patterns
+├── Button.tsx                # Reusable button component
+├── Card.tsx                  # Card container with hover effects
+├── ContactForm.tsx           # Main contact form
+├── FAQAccordion.tsx          # Collapsible FAQ sections
+├── Footer.tsx                # Site footer (updated Jan 2026)
+├── IndustryHero.tsx          # Industry page hero sections
+├── LocationHero.tsx          # Location page hero sections
+├── Navbar.tsx                # Main navigation
+├── OperatingSystemAnimated.tsx # Animated OS logos
+├── QuoteForm.tsx             # Multi-step quote form (524 lines)
+├── Section.tsx               # Section wrapper component
+├── ServicesGrid.tsx          # Services grid with search
+└── VideoSection.tsx          # Video embed component
 
-docs/                         # Full documentation & copy deck
-lib/                          # Utility functions
-public/                       # Static assets
-src/config/
-└── featureFlags.ts           # Feature toggles
+docs/                         # Comprehensive documentation (added Jan 2026)
+├── PROJECT_OVERVIEW.md       # Business context & overview
+├── SERVICES_PRICING.md       # Complete service catalog
+├── TECHNICAL_ARCHITECTURE.md # Technical details
+├── COMPONENT_LIBRARY.md      # Component reference
+└── DEVELOPMENT_WORKFLOWS.md  # Common tasks & workflows
+
+src/
+└── lib/
+    └── nodemailer.ts         # Email configuration
+
+public/
+├── images/                   # Image assets
+│   ├── industries/
+│   ├── locations/
+│   ├── logos/
+│   └── services/
+└── fonts/                    # Custom fonts (if any)
 ```
 
 ## Pages & Routes
@@ -118,153 +187,308 @@ src/config/
 | Route                        | Description                          |
 |------------------------------|--------------------------------------|
 | `/`                          | Home page with hero, packages, FAQ   |
-| `/about`                     | Company overview & values            |
-| `/services`                  | Services overview                    |
-| `/services/[slug]`           | Individual service details           |
+| `/about`                     | Company overview & team              |
+| `/services`                  | Services overview (19 services)      |
+| `/services/[slug]`           | Individual service detail pages      |
 | `/industries`                | Industries overview                  |
-| `/industries/construction`   | Construction-focused page            |
-| `/industries/nonprofits`     | Nonprofit-focused page               |
-| `/industries/startups`       | Startup-focused page                 |
-| `/results`                   | Outcomes & sample deliverables       |
-| `/contact`                   | Contact form                         |
-| `/book`                      | Discovery call booking               |
-| `/pay`                       | Payment links (deposits/invoices)    |
-| `/privacy`                   | Privacy policy                       |
-| `/terms`                     | Terms of service                     |
+| `/industries/[industry]`     | 8 industry-specific landing pages    |
+| `/locations`                 | Service locations overview           |
+| `/locations/[location]`      | 4 location pages (OKC, Tulsa, etc.)  |
+| `/why-polus`                 | Why choose Polus                     |
+| `/contact`                   | Contact form with service selection  |
+| `/book`                      | Discovery call booking (Calendly)    |
+| `/start`                     | Assessment quiz (14 questions)       |
+| `/roi`                       | ROI calculator with email results    |
+| `/referral`                  | Referral program (10% discount)      |
+| `/invoices`                  | Pay invoice page                     |
+| `/resources`                 | Resources library (coming soon)      |
+| `/privacy-policy`            | Privacy policy                       |
+| `/terms-of-service`          | Terms of service                     |
+| `/cookie-policy`             | Cookie policy                        |
+| `/disclaimer`                | Legal disclaimer (added Jan 2026)    |
+| `/accessibility`             | Accessibility statement              |
 
-## Available Services (Slugs)
+## Available Services (19 Total)
 
-- `systems-assessment`
-- `process-mapping-sops`
-- `onboarding-offboarding`
-- `m365-governance`
-- `endpoint-standardization`
-- `backup-disaster-recovery`
-- `managed-it`
-- `service-desk-setup`
-- `web-development`
-- `mvp-prd`
-- `automation-no-code`
+**Core Infrastructure:**
+- `systems-assessment` - Systems Review ($799, was $299 before Jan 2026)
+- `identity-device-foundation` - Microsoft 365 / Entra ID Setup ($6,500-$11,000)
+- `m365-governance` - Teams & SharePoint Governance ($3,500-$8,500)
+- `employee-lifecycle` - Onboarding & Offboarding Automation ($2,500-$3,500)
+
+**Operations:**
+- `strategic-advisory` - IT Advisory ($500-$1,000/month)
+- `it-operations-toolkit` - IT Operations Setup ($4,500-$7,500)
+- `it-documentation` - IT Documentation Package ($3,500-$6,000, updated Jan 2026)
+- `m365-training` - Microsoft 365 End-User Training ($1,200-$2,500)
+
+**Security & Risk:**
+- `backup-dr-readiness` - Backup & Disaster Recovery ($1,500-$3,500)
+- `dr-testing-service` - DR Testing Service ($1,500/quarter)
+- `compliance-documentation` - Compliance Documentation Prep ($3,500-$7,500)
+
+**Strategic:**
+- `technology-roadmap-workshop` - Technology Roadmap ($5,000, was $2,000 before Jan 2026)
+- `cloud-cost-optimization` - Cloud Cost Optimization Review ($1,200)
+
+**Specialized:**
+- `process-clarity-pack` - Process Documentation (Simple $1,200 / Standard $1,800 / Complex $3,000)
+- `web-development` - Web Development ($3,500-$8,500)
+- `mvp-prd` - Product Planning (MVP/PRD Workshop) ($2,000)
+- `acquisition-integration` - Acquisition Integration ($18,000 phased)
+
+**Bundles:**
+- `new-foundation-bundle` - IT Foundation Package ($14,500, save $1,500)
+- `growth-acceleration-bundle` - Growth Package ($9,299, save $1,000)
+
+## API Endpoints
+
+### Public Endpoints
+
+- `POST /api/contact` - Contact form submission (sends email via SMTP)
+- `POST /api/roi-results` - ROI calculator results (emails to user)
 
 ## Form Submissions
 
 ### Contact Form
 
-- Validates with Zod
-- Honeypot spam protection
-- Sends email via SMTP
-- Returns success/error messages
+**File:** `components/ContactForm.tsx`
 
-### Lead Magnet Form
+**Features:**
+- Validates with react-hook-form
+- Text inputs: name, email, phone, businessName
+- Textarea: message
+- Multi-select: interestedServices (all 19 services + bundles)
+- Sends email via nodemailer + Resend SMTP
+- Success/error messaging
+- Can prefill services from assessment quiz
 
-- Captures email address
-- Returns download URL for checklist
-- Can be configured to send email with PDF
+**Validation:**
+- Name: Required, min 2 characters
+- Email: Required, valid format
+- Phone: Optional but validated if provided
+- Message: Required, min 10 characters
 
-## Analytics Events
+### Quote Form
 
-The `track()` function in `lib/track.ts` can be connected to Google Analytics, Plausible, or any analytics provider:
+**File:** `components/QuoteForm.tsx` (524 lines)
 
-- `cta_book_click` - Discovery call CTA clicked
-- `contact_submit` - Contact form submitted
-- `lead_magnet_download` - Checklist downloaded
-- `pay_link_click` - Payment link clicked
+**Features:**
+- Multi-step form (5 steps)
+- Step 1: Basic info
+- Step 2: Service selection with checkboxes
+- Step 3: Timeline & budget
+- Step 4: Additional details
+- Step 5: Review & submit
+- Submits to same `/api/contact` endpoint
 
-## Customization
+### ROI Calculator
 
-### Colors
+**File:** `app/roi/page.tsx`
 
-Edit `tailwind.config.ts` to customize the color scheme:
+**Features:**
+- Collects business metrics
+- Calculates potential ROI based on service selection
+- Emails personalized results via `/api/roi-results`
+- Shows immediate results on screen
 
+### Assessment Quiz
+
+**File:** `app/start/page.tsx` (913 lines)
+
+**Features:**
+- 14 questions about business IT needs
+- Calculates scores for 6 service bundles
+- Redirects to contact page with recommended services prefilled
+- Helps qualify leads and recommend appropriate services
+## Recent Major Updates
+
+### January 2026: Comprehensive Pricing Overhaul
+
+Based on market analysis showing 30-60% underpricing:
+- **Systems Review:** $299 → $799 (reflects 4-6 hours strategic consulting)
+- **Technology Roadmap:** $2,000 → $5,000 (executive/board-ready deliverables)
+- **IT Documentation:** $2,000/$4,000 → $3,500/$6,000 (comprehensive scope)
+- **Added explicit scope boundaries** to all services (device caps, user limits, etc.)
+- **Created complexity tiers** for Process Documentation (Simple/Standard/Complex)
+- **Added pricing adders** for scalable factors (SSO apps, locations, systems, etc.)
+- **Updated bundle pricing** to match new component costs
+
+### January 2026: Legal Disclaimer Page
+
+- Created comprehensive `/disclaimer` page
+- Added to footer legal section
+- Covers professional services disclaimers, no warranties, limitation of liability
+- Strategic split: Service-specific boundaries on pages, general legal protections on disclaimer
+
+### Design System
+
+**Colors (Tailwind Config):**
 ```typescript
 colors: {
-  polus: {
-    paper: "#FEFFFF",    // Text/backgrounds
-    forest: "#0D251C",   // Primary background
-    gold: "#C2A319",     // CTAs/accents
-    mint: "#B1E3C7",     // Secondary accents
-    emerald: "#116238",  // Focus states
-    surface1: "#102D22", // Elevated surfaces
-    surface2: "#143427"  // More elevated surfaces
-  }
+  'polus-forest': '#0D251C',  // Primary background
+  'polus-gold': '#DAAA00',    // CTAs and accents
+  'polus-mint': '#B1E3C7',    // Light accents
+  'polus-emerald': '#10B981', // Focus states
 }
 ```
 
-### Copy
+**Typography:**
+- Headings: `font-heading` custom font family
+- Body: Default sans-serif with rgba opacity for hierarchy
+- Responsive: Mobile-first with sm/md/lg breakpoints
 
-All copy follows `docs/05_COPY_DECK.md`. Update pages directly or modify the copy deck and regenerate.
-
-### Feature Flags
-
-Edit `src/config/featureFlags.ts` to enable/disable features:
-
-- `BLOG_ENABLED` - Blog section (currently disabled)
-- `RESOURCES_ENABLED` - Resources library (currently disabled)
-- `TESTIMONIALS_ENABLED` - Testimonials section (currently disabled)
+**Component Patterns:**
+- Button: Primary (gold), Secondary (outline), consistent hover states
+- Card: White background, rounded corners, drop shadow, optional hover lift
+- Section: Consistent padding, background color options (white/gray/forest/mint)
+- Spacing: py-12 sm:py-16 lg:py-20 for sections
 
 ## Deployment
 
-### Vercel (Recommended)
+### Vercel (Current Setup)
 
-1. Push to GitHub
-2. Import to Vercel
-3. Add environment variables
-4. Deploy
+**Automatic Deployment:**
+1. Push commits to GitHub main branch
+2. Vercel detects push via webhook
+3. Runs build process (`npm run build`)
+4. Deploys to production if successful
+5. Updates https://polus-cs.com
 
-### Other Platforms
+**Build Time:** ~2-3 minutes  
+**Monitor:** Vercel dashboard shows build logs and deployment status
 
-Supports any Node.js hosting:
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
+**Environment Variables:**
+Set in Vercel dashboard → Settings → Environment Variables
+- SMTP_HOST
+- SMTP_PORT
+- SMTP_USER
+- SMTP_PASS
+- CONTACT_EMAIL
+- NEXT_PUBLIC_GA_MEASUREMENT_ID (optional)
+
+**Preview Deployments:**
+- Pull requests automatically get preview URLs
+- Format: `polus-<hash>.vercel.app`
+
+### Rollback
+
+If deployment has issues:
+1. Go to Vercel dashboard → Deployments
+2. Find previous working deployment
+3. Click "..." → "Promote to Production"
+
+Or fix forward:
+```powershell
+git revert <commit-hash>
+git push origin main
+```
 
 ## Email Configuration
 
-Contact form requires SMTP credentials. Recommended providers:
+Contact form and ROI calculator require SMTP credentials.
 
-- **SendGrid** (free tier available)
-- **Mailgun**
-- **Amazon SES**
-- **Postmark**
+**Current Setup: Resend**
 
-## Stripe Setup
+1. Sign up at https://resend.com
+2. Get API key from dashboard
+3. Configure in `.env.local`:
+```bash
+SMTP_HOST=smtp.resend.com
+SMTP_PORT=465
+SMTP_USER=resend
+SMTP_PASS=<your_resend_api_key>
+CONTACT_EMAIL=jack.washmon@polus-cs.com
+```
 
-1. Create Stripe account
-2. Create payment links for:
-   - Project deposit
-   - Invoice payment
-3. Add URLs to `.env.local`
+**Alternative SMTP Providers:**
+- SendGrid (free tier available)
+- Mailgun
+- Amazon SES
+- Postmark
 
-## Next Steps
+## Known Issues & Future Work
 
-1. **Add Logo:** Replace "Polus" text in Navbar with logo image
-2. **Customize Colors:** Adjust Tailwind config if needed
-3. **Add Images:** Hero section can use background images
-4. **Connect Calendar:** Update `BOOKING_URL` with your Calendly link
-5. **Configure Email:** Set up SMTP credentials
-6. **Add Analytics:** Connect Google Analytics or similar
-7. **Create Checklist PDF:** Add your actual checklist to `/public/checklists/`
+### High Priority
+- [ ] **Admin Dashboard Authentication:** Currently disabled (ADMIN_DASHBOARD_ENABLED: false), needs Clerk/Auth0/NextAuth implementation
+- [ ] **Resource Files:** 7 resources show "Coming Soon" - need actual content
+- [ ] **Google Analytics:** GA4 configured but not fully wired to all events
+- [ ] **Calendly Webhooks:** Booking tracking needs webhook implementation
+
+### Medium Priority
+- [ ] **Complexity Pricing Adders:** Services with variable complexity could use dynamic pricing
+- [ ] **Mobile Optimization:** Further optimize quiz and forms for mobile
+- [ ] **Performance:** Optimize images, add lazy loading
+
+### Low Priority
+- [ ] **Dark Mode:** Consider adding toggle (currently light mode only)
+- [ ] **Blog Section:** Content marketing opportunity
+- [ ] **Case Studies:** Need client permission and content creation
+- [ ] **Video Content:** Service explainer videos
+
+## Common Development Tasks
+
+**Add a New Service:**
+1. Add to `app/services/[slug]/page.tsx` services array
+2. Add to `app/services/page.tsx` listing page
+3. Update contact form service options (if selectable)
+4. Test detail page and search functionality
+
+**Update Pricing:**
+1. Update in `app/services/[slug]/page.tsx`
+2. Update in `app/services/page.tsx` (keep consistent)
+3. If on home page, update `app/page.tsx`
+4. 20% discount applied automatically via `calculateDiscount()`
+
+**Create a New Page:**
+1. Create `app/new-page/page.tsx`
+2. Export metadata for SEO
+3. Add to navbar (optional)
+4. Add to footer (optional)
+5. Test locally then deploy
+
+**Full workflows available in:** `docs/DEVELOPMENT_WORKFLOWS.md`
 
 ## Documentation
 
-Full documentation is in the `/docs` folder:
+Comprehensive documentation is in the `/docs` folder:
 
-- `01_PRD.md` - Product requirements
-- `02_SITE_MAP_AND_ROUTES.md` - Site structure
-- `03_UI_STYLE_TOKENS.json` - Design system
-- `04_BRAND_GUIDE.md` - Brand & messaging
-- `05_COPY_DECK.md` - All website copy
-- `06_COMPONENT_SPEC.md` - Component specifications
-- `07_FORMS_AND_VALIDATION.md` - Form requirements
-- `08_STRIPE_AND_PAYMENTS.md` - Payment setup
-- `09_SEO_ANALYTICS.md` - SEO and tracking
-- `10_FEATURE_FLAGS.md` - Feature toggles
-- `11_DEFINITION_OF_DONE.md` - Completion checklist
+- **PROJECT_OVERVIEW.md** - Business model, tech stack, recent updates, design system
+- **SERVICES_PRICING.md** - Complete service catalog with pricing, tiers, scope boundaries
+- **TECHNICAL_ARCHITECTURE.md** - Next.js structure, server vs client components, API routes, styling
+- **COMPONENT_LIBRARY.md** - All components with props, usage examples, patterns
+- **DEVELOPMENT_WORKFLOWS.md** - Step-by-step guides for common tasks
 
-## Support
+## Business Model
 
-For questions or issues, refer to the documentation or contact the development team.
+**Target Market:** Oklahoma small businesses (5-50 employees)  
+**Service Area:** OKC and Tulsa metros primarily  
+**Focus:** Microsoft 365, IT operations, modernization  
+**Model:** Project-based consulting (not MSP contracts)  
+**Services:** 19 individual services + 2 bundles  
+**Pricing:** $799-$18,000 (individual services)  
+**Recurring:** IT Advisory ($500-$1,000/mo), DR Testing ($1,500/quarter)
+
+## Git Workflow
+
+```powershell
+# Daily workflow
+git pull origin main
+# Make changes...
+git add .
+git commit -m "feat: descriptive message"
+git push origin main
+
+# Commit types: feat, fix, refactor, docs, style, chore
+```
+
+## Support & Contact
+
+**Owner:** Jack Washmon  
+**Email:** jack.washmon@polus-cs.com  
+**Website:** https://polus-cs.com
+
+For development questions, refer to documentation in `/docs` folder.
 
 ## License
 
