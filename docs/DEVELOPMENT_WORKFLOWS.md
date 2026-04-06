@@ -121,7 +121,7 @@ git push origin main
 }
 ```
 
-**The `calculateDiscount()` function automatically applies 20% off**
+**Pricing is displayed as shown - no automatic discounts applied**
 
 ### Tiered Pricing Update
 
@@ -209,11 +209,10 @@ pricingTiers: [
 
 ### Test Pricing Changes
 
-1. Check detail page shows correct original price
-2. Verify 20% discount calculates correctly
-3. Check pricing appears on services listing
-4. If featured on home, verify home page pricing
-5. Check any references in email templates
+1. Check detail page shows correct price
+2. Check pricing appears on services listing
+3. If featured on home, verify home page pricing
+4. Check any references in email templates
 
 ---
 

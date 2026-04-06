@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "Polus LLC — Operations and IT Consulting",
     template: "%s | Polus LLC"
   },
-  description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off. Free discovery call.",
+  description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. Free discovery call.",
   keywords: ["IT consulting Oklahoma", "Microsoft 365 consultant", "Oklahoma City IT", "Tulsa IT services", "small business IT", "M365 governance", "backup and disaster recovery", "IT operations", "process optimization", "Edmond IT consultant"],
   authors: [{ name: "Jack Washmon", url: "https://www.linkedin.com/in/jackwashmon" }],
   creator: "Polus LLC",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     siteName: "Polus Consulting",
     title: "Polus LLC — Operations and IT Consulting",
-    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off.",
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses.",
     images: [
       {
         url: "/hero/hero-bg.svg",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Polus LLC — Operations and IT Consulting",
-    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses. First 10 clients get 20% off.",
+    description: "Oklahoma IT consultant specializing in Microsoft 365, process optimization, backup/DR, and systems management for small businesses.",
     images: ["/hero/hero-bg.svg"]
   },
   robots: {

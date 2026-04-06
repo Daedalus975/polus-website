@@ -29,15 +29,8 @@
 
 ## Current Promotions
 
-**Limited Time Offer:**
-- 20% discount for first 10 businesses
-- Displayed across all service pages with `calculateDiscount()` function
-- Shows crossed-out original price with discounted price
-- "Limited Time Offer" badge on service detail pages
-
 **Referral Program:**
-- Referrer gets 10% discount after referred business starts project
-- Stackable with 20% limited offer (30% total when combined)
+- Both referrer and referee get 10% discount on their next project
 - No cap on referrals
 - Valid for 12 months from issue date
 

@@ -8,7 +8,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: "Why Polus? | Compare IT Options for Oklahoma Businesses",
-  description: "See how Polus compares to DIY IT and traditional MSPs. Project-based approach, transparent tiered pricing ($299-$11,000), Microsoft 365 expertise, no long-term contracts. 20% off for first 10 clients.",
+  description: "See how Polus compares to DIY IT and traditional MSPs. Project-based approach, transparent tiered pricing ($799-$11,000), Microsoft 365 expertise, no long-term contracts.",
   keywords: ["IT consulting Oklahoma", "project-based IT services", "no contract IT consultant", "Microsoft 365 expert", "small business IT consultant", "transparent IT pricing", "vs MSP"],
   alternates: {
     canonical: `${baseUrl}/why-polus`,

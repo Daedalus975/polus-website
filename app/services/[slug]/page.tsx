@@ -1318,34 +1318,14 @@ const services: ServiceData[] = [
   }
 ];
 
-// Helper function to calculate discounted price
-function calculateDiscount(priceString: string): { original: string; discounted: string } {
-  // Extract number from price string (e.g., "$299" -> 299, "$1,500/month" -> 1500)
-  const numMatch = priceString.match(/[\d,]+/);
-  if (!numMatch) return { original: priceString, discounted: priceString };
-  
-  const priceNum = parseInt(numMatch[0].replace(/,/g, ''));
-  const discountedNum = Math.round(priceNum * 0.8); // 20% off
-  
-  // Format back with commas if needed
-  const formattedDiscounted = discountedNum.toLocaleString();
-  
-  // Preserve the original format (with $ and any suffix like /month, /quarter)
-  const prefix = priceString.match(/^\$/) ? '$' : '';
-  const suffix = priceString.match(/\/\w+$/) ? priceString.match(/\/\w+$/)?.[0] : '';
-  
-  return {
-    original: priceString,
-    discounted: `${prefix}${formattedDiscounted}${suffix || ''}`
-  };
-}
+
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = services.find(s => s.slug === params.slug);
   if (!service) return { title: "Service Not Found" };
   
   // Add Oklahoma keyword for better local SEO
-  const metaDescription = `${service.description}. Oklahoma IT consulting for small businesses. ${service.startingPrice} starting price. 20% off for first 10 clients.`;
+  const metaDescription = `${service.description}. Oklahoma IT consulting for small businesses. ${service.startingPrice} starting price.`;
   
   return {
     title: `${service.title} | Oklahoma IT Consulting — Polus`,

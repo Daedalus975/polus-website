@@ -690,31 +690,6 @@ export function Navbar() {
         </div>
         )}
       </div>
-      
-      {/* Limited Time Offer Banner */}
-      <div className="sticky top-[72px] z-40 bg-polus-forest border-b border-polus-gold/20 py-2.5 px-4 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-polus-gold/5 to-transparent"></div>
-        <div className="relative z-10 flex items-center justify-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-2 bg-polus-gold/10 border border-polus-gold/30 text-polus-gold px-3 py-1 rounded-full font-semibold text-xs uppercase tracking-wide">
-            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-            </svg>
-            Limited Offer
-          </span>
-          <span className="text-polus-paper/90 text-sm md:text-base">
-            First 10 businesses get <span className="text-polus-gold font-semibold">20% off all services</span>
-          </span>
-          <a 
-            href="/contact?promo=early-bird" 
-            className="inline-flex items-center gap-1.5 bg-polus-gold text-polus-forest px-4 py-1.5 rounded-full font-semibold text-sm hover:brightness-110 transition shadow-sm"
-          >
-            Claim Your Spot
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
     </>
   );
 }

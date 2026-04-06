@@ -20,22 +20,7 @@ type ServiceDetailClientProps = {
   pricingTiers?: PricingTier[];
 };
 
-function calculateDiscount(priceString: string): { original: string; discounted: string } {
-  const numMatch = priceString.match(/[\d,]+/);
-  if (!numMatch) return { original: priceString, discounted: priceString };
-  
-  const priceNum = parseInt(numMatch[0].replace(/,/g, ''));
-  const discountedNum = Math.round(priceNum * 0.8);
-  const formattedDiscounted = discountedNum.toLocaleString();
-  
-  const prefix = priceString.match(/^\$/) ? '$' : '';
-  const suffix = priceString.match(/\/\w+$/) ? priceString.match(/\/\w+$/)?.[0] : '';
-  
-  return {
-    original: priceString,
-    discounted: `${prefix}${formattedDiscounted}${suffix || ''}`
-  };
-}
+
 
 export function ServiceDetailClient({ 
   deliverables, 
@@ -151,19 +136,12 @@ export function ServiceDetailClient({
 
       <div>
         <Card className="sticky top-24">
-          {/* Limited Offer Badge */}
-          <div className="mb-4 bg-polus-gold/10 border border-polus-gold/30 text-polus-gold px-3 py-2 rounded-lg text-center">
-            <div className="text-xs uppercase font-semibold tracking-wide mb-0.5">Limited Time Offer</div>
-            <div className="text-sm font-bold">20% Off • First 10 Businesses</div>
-          </div>
-
           <div className="space-y-6">
             {pricingTiers && pricingTiers.length > 0 ? (
               <div>
                 <div className="text-sm text-[rgba(254,255,255,0.62)] mb-3">Pricing Tiers</div>
                 <div className="space-y-3">
                   {pricingTiers.map((tier, idx) => {
-                    const pricing = calculateDiscount(tier.price);
                     const isSelected = selectedTier === idx;
                     
                     return (
@@ -178,10 +156,7 @@ export function ServiceDetailClient({
                       >
                         <div className="flex items-baseline justify-between">
                           <div className="font-semibold text-polus-gold">{tier.name}</div>
-                          <div className="flex flex-col items-end">
-                            <div className="text-sm text-[rgba(254,255,255,0.48)] line-through">{pricing.original}</div>
-                            <div className="text-xl font-bold text-polus-mint">{pricing.discounted}</div>
-                          </div>
+                          <div className="text-xl font-bold text-polus-mint">{tier.price}</div>
                         </div>
                         {isSelected && (
                           <div className="mt-2 text-xs text-polus-gold flex items-center gap-1">
@@ -199,16 +174,7 @@ export function ServiceDetailClient({
             ) : (
               <div>
                 <div className="text-sm text-[rgba(254,255,255,0.62)] mb-1">Starting at</div>
-                {(() => {
-                  const pricing = calculateDiscount(startingPrice);
-                  return (
-                    <div className="flex flex-col">
-                      <div className="text-2xl text-[rgba(254,255,255,0.48)] line-through mb-1">{pricing.original}</div>
-                      <div className="text-4xl font-bold text-polus-mint">{pricing.discounted}</div>
-                      <div className="text-sm text-polus-gold font-semibold mt-2">Save 20%</div>
-                    </div>
-                  );
-                })()}
+                <div className="text-4xl font-bold text-polus-mint">{startingPrice}</div>
               </div>
             )}
 

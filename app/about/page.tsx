@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Polus | Oklahoma IT Consulting for Small Businesses",
-  description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses. Clear, supportable systems built to last. First 10 clients get 20% off.",
+  description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses. Clear, supportable systems built to last.",
   openGraph: {
     title: "About Polus | Oklahoma IT Consulting for Small Businesses",
     description: "Oklahoma-based IT consulting specializing in Microsoft 365, process optimization, and systems management for small businesses. Clear, supportable systems built to last.",

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Edmond IT Consulting — Polus LLC",
-  description: "IT consulting for Edmond small businesses. Microsoft 365, cloud identity, backup/DR, and process optimization. Serving Edmond and north OKC metro. First 10 clients get 20% off.",
+  description: "IT consulting for Edmond small businesses. Microsoft 365, cloud identity, backup/DR, and process optimization. Serving Edmond and north OKC metro.",
   openGraph: {
     title: "Edmond IT Consulting — Polus LLC",
     description: "Expert IT consulting for Edmond small businesses. M365, security, backup, and operations help.",
@@ -20,12 +20,7 @@ export default function EdmondPage() {
           <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed mb-6">
             Serving small businesses in Edmond and the surrounding north Oklahoma City metro area. Get expert IT help tailored for growing Edmond companies—without the enterprise price tag.
           </p>
-          <div className="inline-flex items-center gap-2 bg-polus-gold/20 text-polus-gold border border-polus-gold/40 px-4 py-2 rounded-full font-semibold text-sm mb-6">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-            </svg>
-            Limited Time: 20% off for first 10 Edmond businesses
-          </div>
+
         </div>
       </Section>
 
@@ -98,12 +93,7 @@ export default function EdmondPage() {
         <h2 className="text-2xl font-semibold mb-6 text-center">Popular Services for Edmond Businesses</h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <Card>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide">
-                20% Off
-              </div>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Systems Review — $239</h3>
+            <h3 className="font-semibold text-lg mb-2">IT Assessment — $799</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
               90-minute assessment with documented recommendations. Perfect starting point for any Edmond business.
             </p>
@@ -112,12 +102,7 @@ export default function EdmondPage() {
             </Button>
           </Card>
           <Card>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide">
-                20% Off
-              </div>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Identity & Security — $5,200</h3>
+            <h3 className="font-semibold text-lg mb-2">Identity & Security — $6,500</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
               Cloud identity, MFA, device management setup. Secure your Edmond team with modern access controls.
             </p>
@@ -126,12 +111,7 @@ export default function EdmondPage() {
             </Button>
           </Card>
           <Card>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide">
-                20% Off
-              </div>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">M365 Governance — $3,400</h3>
+            <h3 className="font-semibold text-lg mb-2">M365 Governance — $3,500</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
               Tame Teams and SharePoint sprawl. Get control of your Microsoft 365 environment.
             </p>
@@ -140,12 +120,7 @@ export default function EdmondPage() {
             </Button>
           </Card>
           <Card>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-polus-gold/10 border border-polus-gold/30 text-polus-gold text-xs font-semibold uppercase tracking-wide">
-                20% Off
-              </div>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Backup & DR — $2,400</h3>
+            <h3 className="font-semibold text-lg mb-2">Backup & DR — $1,500</h3>
             <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed mb-4">
               Verify backups work and build disaster recovery plan. Peace of mind for your Edmond business.
             </p>

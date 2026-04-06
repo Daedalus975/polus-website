@@ -92,10 +92,6 @@ export default function LocationsPage() {
                 <span className="text-polus-mint font-semibold">✓</span>
                 <span><strong className="text-polus-paper">Fair pricing:</strong> Transparent pricing designed for small business budgets</span>
               </li>
-              <li className="flex gap-3">
-                <span className="text-polus-mint font-semibold">✓</span>
-                <span><strong className="text-polus-paper">First 10 clients get 20% off:</strong> New business promotion for early customers</span>
-              </li>
             </ul>
           </div>
 

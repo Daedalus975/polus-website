@@ -56,13 +56,11 @@ Professional IT consulting website for Polus LLC, serving Oklahoma small busines
 ✅ Calendly booking integration  
 ✅ Pay invoice functionality  
 ✅ Resources center (placeholder, content coming soon)  
-✅ Comprehensive legal pages (Privacy, Terms, Cookie Policy, Disclaimer, Accessibility)  
-✅ Current promotion: 20% off for first 10 businesses
+✅ Comprehensive legal pages (Privacy, Terms, Cookie Policy, Disclaimer, Accessibility)
 
 ## Current Promotions (March 2026)
 
-- **20% Launch Discount:** First 10 businesses get 20% off all services
-- **Referral Program:** 10% discount for referrer and referee (stackable with 20% = 30% total)  
+- **Referral Program:** 10% discount for both referrer and referee on next project  
 
 ## Quick Start
 
@@ -438,7 +436,6 @@ CONTACT_EMAIL=jack.washmon@polus-cs.com
 1. Update in `app/services/[slug]/page.tsx`
 2. Update in `app/services/page.tsx` (keep consistent)
 3. If on home page, update `app/page.tsx`
-4. 20% discount applied automatically via `calculateDiscount()`
 
 **Create a New Page:**
 1. Create `app/new-page/page.tsx`

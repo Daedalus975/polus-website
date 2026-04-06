@@ -17,12 +17,6 @@ export default function ReferralPage() {
             Know another Oklahoma business that needs better IT systems or processes? 
             Refer them to Polus and you both get <span className="text-polus-mint font-semibold">10% off your next project</span>.
           </p>
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-polus-gold/10 border border-polus-gold/30 mb-10">
-            <svg className="w-5 h-5 text-polus-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-            </svg>
-            <span className="text-sm font-semibold text-polus-gold">Stacks with our limited-time 20% off offer!</span>
-          </div>
         </div>
       </Section>
 
@@ -70,9 +64,9 @@ export default function ReferralPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Stackable Discounts</h3>
+                <h3 className="font-semibold text-lg mb-2">Simple Rewards</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.78)] leading-relaxed">
-                  Referral rewards stack with our current 20% off limited offer. That&apos;s 30% off when combined!
+                  Both you and your referral get 10% off your next project. No complicated tiers or limits.
                 </p>
               </div>
             </div>
@@ -249,10 +243,6 @@ export default function ReferralPage() {
             <div className="flex items-start gap-2">
               <span className="text-polus-mint mt-0.5">•</span>
               <p>Discount codes are valid for 12 months from issue date and apply to one future project.</p>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-polus-mint mt-0.5">•</span>
-              <p>Referral rewards stack with current promotions (e.g., 20% off limited offer).</p>
             </div>
             <div className="flex items-start gap-2">
               <span className="text-polus-mint mt-0.5">•</span>
