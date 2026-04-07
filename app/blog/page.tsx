@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 // Revalidate every 60 seconds
 export const revalidate = 60;
 
+// Force dynamic rendering to avoid build-time errors with incomplete Sanity data
+export const dynamic = 'force-dynamic';
+
 export default async function BlogPage() {
   const posts = await getBlogPosts();
   return (
