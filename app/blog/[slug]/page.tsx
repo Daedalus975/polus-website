@@ -10,6 +10,9 @@ type Props = {
   params: { slug: string };
 };
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
   
