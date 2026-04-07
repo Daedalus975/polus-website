@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author || "Polus Team"],
-      images: post.featuredImage ? [urlFor(post.featuredImage).width(1200).height(630).url()] : [],
+      images: post.featuredImage?.asset ? [urlFor(post.featuredImage).width(1200).height(630).url()] : [],
     },
   };
 }
@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Section className="pt-20 md:pt-24">
         <article className="max-w-3xl mx-auto">
           {/* Featured Image */}
-          {post.featuredImage && (
+          {post.featuredImage?.asset && (
             <div className="mb-8 rounded-lg overflow-hidden">
               <Image
                 src={urlFor(post.featuredImage).width(1200).height(630).url()}

@@ -44,7 +44,7 @@ export default async function BlogPage() {
                 className="group"
               >
                 <Card className="h-full flex flex-col hover:shadow-cardHover hover:border-polus-gold/50 transition-all">
-                  {post.featuredImage && (
+                  {post.featuredImage?.asset && (
                     <div className="mb-4 rounded-lg overflow-hidden">
                       <Image
                         src={urlFor(post.featuredImage).width(600).height(400).url()}
