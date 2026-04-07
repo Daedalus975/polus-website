@@ -168,8 +168,8 @@ export default function StartAssessmentPage() {
       question: "What's your budget for this project?",
       helpText: "Be honest—we'll only recommend services that fit your budget.",
       options: [
-        { label: "Under $1,500", value: "low", weights: {} },
-        { label: "$1,500 - $3,000", value: "mid", weights: {} },
+        { label: "Under $1,499", value: "low", weights: {} },
+        { label: "$1,499 - $2,999", value: "mid", weights: {} },
         { label: "$3,000 - $7,000", value: "mid_high", weights: {} },
         { label: "$7,000 - $15,000", value: "high", weights: {} },
         { label: "$15,000+", value: "enterprise", weights: {} },
@@ -226,7 +226,7 @@ export default function StartAssessmentPage() {
     "m365-governance": {
       slug: "m365-governance",
       title: "Teams & SharePoint Governance",
-      description: "Tame Teams/SharePoint sprawl with sustainable governance. Tier 1 (1-25 sites): $3,500. Tier 2 (26-50 sites): $5,500. Tier 3 (51-100 sites): $8,500. Includes cleanup, permissions, naming conventions, and lifecycle policies.",
+      description: "Tame Teams/SharePoint sprawl with sustainable governance. Tier 1 (1-25 sites): $3,499. Tier 2 (26-50 sites): $5,499. Tier 3 (51-100 sites): $8,499. Includes cleanup, permissions, naming conventions, and lifecycle policies.",
       deliverables: [
         "Complete Teams/SharePoint cleanup and reorganization",
         "Permissions baseline and security group structure",
@@ -234,7 +234,7 @@ export default function StartAssessmentPage() {
         "User training session",
         "Admin training on governance maintenance"
       ],
-      price: "$3,500+",
+      price: "$3,499+",
       timeline: "4-6 weeks",
       minBudget: 3500,
       idealFor: ["Teams using M365 but files are scattered", "6+ employees", "Growing organizations"]
@@ -266,7 +266,7 @@ export default function StartAssessmentPage() {
         "Recovery time estimates",
         "Testing documentation"
       ],
-      price: "$1,500+",
+      price: "$1,499+",
       timeline: "1-3 weeks",
       minBudget: 1500,
       idealFor: ["All industries", "Teams worried about data loss"]
@@ -274,7 +274,7 @@ export default function StartAssessmentPage() {
     "identity-device-foundation": {
       slug: "identity-device-foundation",
       title: "Microsoft 365 / Entra ID Setup",
-      description: "Modern cloud identity and device management. Tier 1 (10-15 users): $6,500. Tier 2 (16-35 users): $8,500. Tier 3 (36-50 users): $11,000. Includes Azure AD, Intune, MFA, SSO, and baseline security.",
+      description: "Modern cloud identity and device management. Tier 1 (10-15 users): $6,499. Tier 2 (16-35 users): $8,499. Tier 3 (36-50 users): $10,999. Includes Azure AD, Intune, MFA, SSO, and baseline security.",
       deliverables: [
         "Complete Azure AD/Entra ID setup with MFA",
         "Device enrollment in Microsoft Intune",
@@ -284,7 +284,7 @@ export default function StartAssessmentPage() {
         "Windows Update rings configuration",
         "Admin training and handoff documentation"
       ],
-      price: "$6,500+",
+      price: "$6,499+",
       timeline: "4-6 weeks",
       minBudget: 6500,
       idealFor: ["Teams moving to cloud", "Security-conscious organizations", "Healthcare", "Legal", "10-50 employees"]
@@ -347,7 +347,7 @@ export default function StartAssessmentPage() {
         "SEO optimization",
         "Content management system"
       ],
-      price: "$3,500+",
+      price: "$3,499+",
       timeline: "4-8 weeks",
       minBudget: 3500,
       idealFor: ["All industries", "Need online presence", "Lead generation"]
@@ -419,7 +419,7 @@ export default function StartAssessmentPage() {
     "it-documentation": {
       slug: "it-documentation",
       title: "IT Documentation Package",
-      description: "Document your entire IT environment: network diagrams, system inventory, configuration standards, and operational runbooks. Standard (up to 25 devices): $3,500. Comprehensive (26-50 devices): $6,000.",
+      description: "Document your entire IT environment: network diagrams, system inventory, configuration standards, and operational runbooks. Standard (up to 25 devices): $3,499. Comprehensive (26-50 devices): $5,999.",
       deliverables: [
         "Network topology diagrams (physical and logical)",
         "Complete system inventory with owners and support contacts",
@@ -428,7 +428,7 @@ export default function StartAssessmentPage() {
         "Operational runbooks for common IT tasks",
         "SharePoint or wiki site setup for ongoing maintenance"
       ],
-      price: "$3,500+",
+      price: "$3,499+",
       timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
       minBudget: 3500,
       idealFor: ["Companies with no IT documentation", "IT staff transitions", "Audit preparation", "Professional Services"]

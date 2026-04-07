@@ -144,7 +144,7 @@ const services: ServiceData[] = [
     title: "Microsoft 365 / Entra ID Setup",
     description: "Move to modern cloud identity and centralized device management",
     overview: "Move to modern cloud identity and centralized device management. Get your team set up with Microsoft Entra ID (Azure AD), Intune device management, multi-factor authentication, single sign-on for up to 3 apps, BitLocker encryption, and automated Windows updates. This package combines identity migration with endpoint management for a complete modern infrastructure foundation. Pricing assumes Microsoft 365 Business Premium (or equivalent) licensing. SSO limited to 3 applications; additional apps +$500 each. Additional locations beyond primary office: +$1,000 per location for on-site coordination.",
-    startingPrice: "$6,500",
+    startingPrice: "$6,499",
     timeline: "4-6 weeks (depends on device count and complexity)",
     deliverables: [
       "Azure AD Connect setup (hybrid identity configuration if needed)",
@@ -184,7 +184,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Tier 1",
-        price: "$6,500",
+        price: "$6,499",
         description: "10-15 users/devices, up to 3 SSO apps, single location",
         deliverables: [
           "Azure AD Connect setup (hybrid identity configuration if needed)",
@@ -227,7 +227,7 @@ const services: ServiceData[] = [
     slug: "acquisition-integration",
     title: "Acquisition Integration (Phased)",
     description: "Merge IT systems during a business acquisition—without the chaos",
-    overview: "Merge IT systems during a business acquisition with a proven phased approach. Phase A ($3,500): Pre-acquisition assessment and integration planning. Phase B (starting at $12,000 for 10-25 users): Identity migration, system consolidation, and user onboarding. Phase C ($2,500): Stabilization and handoff. Pricing scales based on user count, tenant complexity, and timeline. Proven experience with 400+ user integrations.",
+    overview: "Merge IT systems during a business acquisition with a proven phased approach. Phase A ($3,499): Pre-acquisition assessment and integration planning. Phase B (starting at $12,000 for 10-25 users): Identity migration, system consolidation, and user onboarding. Phase C ($2,499): Stabilization and handoff. Pricing scales based on user count, tenant complexity, and timeline. Proven experience with 400+ user integrations.",
     startingPrice: "$18,000",
     timeline: "Phase A: 2 weeks | Phase B: 6-12 weeks | Phase C: 2-4 weeks",
     deliverables: [
@@ -247,7 +247,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Phase A",
-        price: "$3,500",
+        price: "$3,499",
         description: "Integration assessment & planning (2 weeks)",
         deliverables: [
           "Pre-acquisition IT assessment and integration roadmap",
@@ -322,8 +322,8 @@ const services: ServiceData[] = [
     slug: "m365-governance",
     title: "Teams & SharePoint Governance",
     description: "Tame Teams/SharePoint sprawl and establish sustainable governance",
-    overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing based on active Teams/SharePoint site count. Tier 1: 1-25 sites ($3,500), Tier 2: 26-75 sites ($5,500), Tier 3: 76-150 sites ($8,500). Additional sites beyond tier caps: +$50 per site. Includes cleanup of up to 50% inactive sites (archival and documentation).",
-    startingPrice: "$3,500",
+    overview: "Tame Teams/SharePoint sprawl and establish sustainable governance. Current state audit, governance policy documentation, permissions cleanup, external sharing controls, retention policies, and template library for new sites. Tiered pricing based on active Teams/SharePoint site count. Tier 1: 1-25 sites ($3,499), Tier 2: 26-75 sites ($5,499), Tier 3: 76-150 sites ($8,499). Additional sites beyond tier caps: +$50 per site. Includes cleanup of up to 50% inactive sites (archival and documentation).",
+    startingPrice: "$3,499",
     timeline: "4-6 weeks",
     deliverables: [
       "Current state audit (active and inactive sites, Teams, permissions sprawl analysis)",
@@ -362,7 +362,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Tier 1",
-        price: "$3,500",
+        price: "$3,499",
         description: "1-25 active sites/Teams. Cleanup up to 12 inactive sites.",
         deliverables: [
           "Current state audit (1-25 active sites, permissions sprawl analysis)",
@@ -553,8 +553,8 @@ const services: ServiceData[] = [
     slug: "backup-dr-readiness",
     title: "Backup & Disaster Recovery",
     description: "Know your backups work before you need them",
-    overview: "Know your backups work before you need them. Verification Package ($1,500): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,500): Everything in Verification plus live restore test (up to 2 systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist. System = one application/data store (file server, database, M365 tenant, single VM). Additional systems +$500 each.",
-    startingPrice: "$1,500",
+    overview: "Know your backups work before you need them. Verification Package ($1,499): Coverage assessment, backup config review, gap analysis, and disaster recovery checklist. Full DR Package ($3,499): Everything in Verification plus live restore test (up to 2 systems), detailed DR playbook with step-by-step procedures, RTO/RPO analysis, recovery contact list, and quarterly backup verification checklist. System = one application/data store (file server, database, M365 tenant, single VM). Additional systems +$500 each.",
+    startingPrice: "$1,499",
     timeline: "1-2 weeks (Verification), 2-3 weeks (Full DR)",
     deliverables: [
       "Backup coverage assessment (systems, data, apps)",
@@ -576,7 +576,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Verification Package",
-        price: "$1,500",
+        price: "$1,499",
         description: "Coverage assessment and gap analysis only (no restore testing)",
         deliverables: [
           "Backup coverage assessment (systems, data, apps)",
@@ -588,7 +588,7 @@ const services: ServiceData[] = [
       },
       {
         name: "Full DR Package",
-        price: "$3,500",
+        price: "$3,499",
         description: "Verification, restore testing (up to 2 systems), and playbook. +$500 per additional system.",
         deliverables: [
           "Backup coverage assessment (systems, data, apps)",
@@ -618,7 +618,7 @@ const services: ServiceData[] = [
       },
       {
         question: "How often should we do this?",
-        answer: "At minimum, annually. For critical businesses or compliance requirements, quarterly testing is recommended. We offer a recurring DR Testing Service ($1,500/quarter) for ongoing confidence."
+        answer: "At minimum, annually. For critical businesses or compliance requirements, quarterly testing is recommended. We offer a recurring DR Testing Service ($1,499/quarter) for ongoing confidence."
       }
     ],
     isBundle: false
@@ -684,7 +684,7 @@ const services: ServiceData[] = [
       {
         name: "5-Process Package",
         price: "$7,500",
-        description: "5 standard processes (save $1,500 vs. individual)",
+        description: "5 standard processes (save $1,499 vs. individual)",
         deliverables: [
           "5 visual process maps (swimlane or flowchart format)",
           "5 written standard operating procedure (SOP) documents",
@@ -720,7 +720,7 @@ const services: ServiceData[] = [
     title: "Web Development",
     description: "Professional websites and digital tools for small businesses",
     overview: "Lead-generation websites built for small businesses. Custom website development, landing pages, or web applications built with modern frameworks (Next.js, React). Fast, secure, mobile-responsive, and designed for conversion. Includes technical SEO (meta tags, sitemaps, performance optimization)—not content strategy or ongoing SEO campaigns. Tiered packages available based on complexity and page count.",
-    startingPrice: "$3,500",
+    startingPrice: "$3,499",
     timeline: "4-8 weeks depending on scope",
     deliverables: [
       "Custom website or web application (modern frameworks: Next.js, React, or WordPress for simpler sites)",
@@ -738,7 +738,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter",
-        price: "$3,500",
+        price: "$3,499",
         description: "5-page website, basic SEO, contact forms, 1 round of revisions",
         deliverables: [
           "5-page custom website (Home, About, Services, Contact, and 1 additional page)",
@@ -879,7 +879,7 @@ const services: ServiceData[] = [
     faqs: [
       {
         question: "Can I purchase just one part of this bundle instead of the whole thing?",
-        answer: "Yes. Each component is available separately: Identity & Security ($6,500), M365 Governance ($3,500), and Employee Lifecycle ($2,500). The bundle saves you $1,500 if you need all three. We recommend the bundle for companies starting fresh."
+        answer: "Yes. Each component is available separately: Identity & Security ($6,499), M365 Governance ($3,499), and Employee Lifecycle ($2,499). The bundle saves you $1,497 if you need all three. We recommend the bundle for companies starting fresh."
       },
       {
         question: "What if we have more than 25 employees?",
@@ -900,13 +900,13 @@ const services: ServiceData[] = [
     slug: "growth-acceleration-bundle",
     title: "Growth Package",
     description: "Assessment, implementation, and ongoing guidance",
-    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review ($799) to identify priorities, implements your Identity & Security foundation (Tier 1: $6,500), then includes 3 months of IT Advisory ($500/month × 3 = $1,500) for ongoing guidance. Total value: $8,799. Bundle price: $7,999—saving you $800. This package ensures you have expert guidance through the entire modernization journey, from strategic planning to implementation to ongoing optimization.",
+    overview: "The complete path from assessment to modernization to ongoing strategic support. Starts with a Systems Review ($799) to identify priorities, implements your Identity & Security foundation (Tier 1: $6,499), then includes 3 months of IT Advisory ($499/month × 3 = $1,497) for ongoing guidance. Total value: $8,795. Bundle price: $7,999—saving you $796. This package ensures you have expert guidance through the entire modernization journey, from strategic planning to implementation to ongoing optimization.",
     startingPrice: "$7,999",
     timeline: "Assessment: 1 week | Implementation: 6-8 weeks | Advisory: 3 months",
     deliverables: [
       "Systems Review with prioritized roadmap ($799 value)",
-      "Identity & Security implementation (Tier 1: 10-15 users, $6,500 value)",
-      "3 months Strategic IT Advisory (Essentials tier: 4 hours/month, $1,500 value)",
+      "Identity & Security implementation (Tier 1: 10-15 users, $6,499 value)",
+      "3 months Strategic IT Advisory (Essentials tier: 4 hours/month, $1,497 value)",
       "Monthly strategic planning sessions during advisory period",
       "Technology roadmap development and quarterly updates",
       "Vendor evaluation and contract review support",
@@ -1027,7 +1027,7 @@ const services: ServiceData[] = [
     title: "IT Documentation Package",
     description: "Document your entire IT environment so nothing lives in one person's head",
     overview: "Comprehensive IT documentation including network diagrams, system inventory, configuration standards, and operational runbooks for general IT maintenance tasks (patching, incident response, user provisioning). Perfect for companies with undocumented infrastructure or preparing for IT staff transitions. Deliverables are organized in SharePoint or your preferred platform with version control and update procedures. Clear scope caps prevent scope creep. Note: For tested disaster recovery procedures, see Backup & DR service. For service desk operations procedures, see IT Operations Setup.",
-    startingPrice: "$3,500",
+    startingPrice: "$3,499",
     timeline: "3-4 weeks (Standard), 4-6 weeks (Comprehensive)",
     deliverables: [
       "Network topology diagrams (physical and logical)",
@@ -1046,7 +1046,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Standard Package",
-        price: "$3,500",
+        price: "$3,499",
         description: "Up to 25 devices, 5 core systems, 10 applications. Ideal for small businesses.",
         deliverables: [
           "Network topology diagrams (physical and logical)",
@@ -1101,7 +1101,7 @@ const services: ServiceData[] = [
     title: "Disaster Recovery Testing Service",
     description: "Quarterly restore tests to ensure your backups actually work",
     overview: "Don't wait for a disaster to find out your backups don't work. Recurring quarterly service that tests restore procedures (up to 2 systems per quarter), validates backup coverage, updates recovery documentation, and provides executive-ready reports. System = one application or data store (file server, database, M365 tenant, single VM). Additional systems +$250 each. Annual subscription ensures consistent validation and trend tracking.",
-    startingPrice: "$1,500/quarter",
+    startingPrice: "$1,499/quarter",
     timeline: "Ongoing quarterly service",
     deliverables: [
       "Quarterly restore testing (up to 2 critical systems per quarter)",
@@ -1121,7 +1121,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Quarterly Service",
-        price: "$1,500/quarter",
+        price: "$1,499/quarter",
         description: "Recurring DR testing (up to 2 systems per quarter, annual commitment). +$250 per additional system."
       }
     ],
@@ -1198,7 +1198,7 @@ const services: ServiceData[] = [
     title: "Compliance Documentation Prep",
     description: "Prepare IT documentation for HIPAA, SOC 2, or CMMC audits",
     overview: "Get your IT documentation audit-ready. We help you prepare IT security policies, compliance-specific procedures, system documentation, and evidence collection for HIPAA, SOC 2, CMMC, or other compliance frameworks. SOPs included are aligned to audit framework requirements (access control procedures, incident response, data handling, etc.). This is documentation preparation only—not legal advice or certification services. Work is performed in collaboration with your compliance auditor or consultant. Basic Prep: 10 policy templates, network diagram, asset inventory, access controls. Comprehensive Prep: All Basic plus 20 detailed compliance SOPs, evidence templates, gap analysis, remediation roadmap. Note: For general business process documentation, see Process Mapping & SOP Development.",
-    startingPrice: "$3,500",
+    startingPrice: "$3,499",
     timeline: "4-6 weeks depending on scope",
     deliverables: [
       "Basic Prep: 10 IT policy templates aligned to framework requirements (Acceptable Use, Access Control, Incident Response, etc.)",
@@ -1218,7 +1218,7 @@ const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Basic Prep",
-        price: "$3,500",
+        price: "$3,499",
         description: "10 policy templates + core IT documentation for compliance",
         deliverables: [
           "10 IT policy templates aligned to framework requirements (Acceptable Use, Access Control, Incident Response, etc.)",

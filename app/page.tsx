@@ -14,27 +14,27 @@ export default function HomePage() {
   const faqs = [
     {
       question: "How is Polus different from a traditional MSP?",
-      answer: "We're project-based consultants, not break-fix responders. We focus on fixing root causes—optimizing your Microsoft 365 setup, documenting processes, and building systems that prevent fires instead of constantly putting them out. You get expert-level work without the MSP price tag or long-term contract."
+      answer: "We focus on project-based consulting rather than break-fix support. Our approach addresses root causes through Microsoft 365 optimization, process documentation, and system improvements. You receive enterprise-quality work at fair project pricing without long-term contracts."
     },
     {
-      question: "What happens after the free discovery call?",
-      answer: "You'll get a 1-page Next Steps recap within 24 hours. It includes what we heard, top priorities, and recommended packages with starting-at pricing. No obligation—just clarity on what needs fixing and what it would cost."
+      question: "What happens after the initial consultation?",
+      answer: "Within 24 hours, you'll receive a written summary including identified priorities, recommended services, and transparent pricing. There's no obligation—you'll have the information needed to make an informed decision."
     },
     {
       question: "Do I need to sign a long-term contract?",
-      answer: "Nope. Most of our services are one-time projects (assessments, documentation, M365 setup). We also offer monthly IT Advisory for ongoing strategic help, but even that's month-to-month. No lock-in, no cancellation fees."
+      answer: "No. Most services are delivered as one-time projects. Our IT Advisory service is available on a month-to-month basis for ongoing strategic guidance, but requires no long-term commitment."
     },
     {
       question: "My team is only 5-10 people. Are we too small?",
-      answer: "Not at all. Small teams are our specialty. You're big enough to need real IT systems, but too small for a full-time IT person or expensive MSP contract. That's exactly who we help—Oklahoma businesses with 5-50 employees who need expert guidance without the overhead."
+      answer: "Organizations with 5-50 employees are our primary focus. At this size, you need professional IT infrastructure but may not require a full-time IT staff member or traditional MSP contract. We specialize in serving Oklahoma small businesses at this stage."
     },
     {
       question: "Can you help with Microsoft 365 and Teams setup?",
-      answer: "Yes! Microsoft 365 is our primary focus. We help with governance, identity/access management (Entra ID, MFA), endpoint security (Intune), Teams/SharePoint structure, email migration, license optimization, and backup protection. Most small businesses only use 20% of what M365 can do—we unlock the rest."
+      answer: "Yes. Microsoft 365 is our core expertise. We provide governance frameworks, identity and access management (Entra ID, MFA), endpoint security (Intune), Teams and SharePoint architecture, email migrations, license optimization, and backup protection for M365 environments."
     },
     {
       question: "How quickly can you start?",
-      answer: "Usually within 1-2 weeks after the discovery call, depending on the project. Assessments can often start same-week. More complex projects (like M365 governance or process documentation) need a bit more planning, but we move fast once you're ready."
+      answer: "Most projects begin within 1-2 weeks following the initial consultation. IT assessments can often be scheduled within the same week. Larger implementations (M365 governance, process documentation) require additional discovery, but we maintain efficient timelines once you approve the scope."
     }
   ];
 
@@ -72,7 +72,7 @@ export default function HomePage() {
                   Fix your processes. Strengthen your IT. Get more time back.
                 </h1>
                 <p className="text-lg md:text-xl text-polus-paper/90 leading-relaxed max-w-2xl">
-                  Stop wasting time on IT chaos and scattered processes. Get expert help for Oklahoma small businesses—without the MSP price tag.
+                  Professional IT consulting for Oklahoma small businesses. Project-based services without long-term MSP contracts.
                 </p>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function HomePage() {
               </Button>
             </div>
             <p className="text-sm text-polus-paper/70">
-              Free • 30 minutes • You&apos;ll leave with next steps
+              30-minute consultation • No obligation
             </p>
           </div>
         </Section>
@@ -108,9 +108,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <div className="font-semibold text-lg text-polus-paper mb-2">Plain-English clarity</div>
+                <div className="font-semibold text-lg text-polus-paper mb-2">Clear pricing</div>
                 <div className="text-sm text-polus-paper/80 leading-relaxed">
-                  Clear scope and starting-at pricing—straightforward and transparent.
+                  Fixed-scope projects with transparent pricing. No hourly billing surprises.
                 </div>
               </div>
             </div>
@@ -123,9 +123,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <div className="font-semibold text-lg text-polus-paper mb-2">Systems that stick</div>
+                <div className="font-semibold text-lg text-polus-paper mb-2">Implementation support</div>
                 <div className="text-sm text-polus-paper/80 leading-relaxed">
-                  SOPs, training, and adoption support.
+                  Documentation and training to ensure your team adopts new systems successfully.
                 </div>
               </div>
             </div>
@@ -138,9 +138,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <div className="font-semibold text-lg text-polus-paper mb-2">Reliability</div>
+                <div className="font-semibold text-lg text-polus-paper mb-2">Enterprise-grade security</div>
                 <div className="text-sm text-polus-paper/80 leading-relaxed">
-                  Identity, endpoints, backups/DR—stability by design.
+                  Cloud identity management, device controls, and verified backup systems.
                 </div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
               Set up cloud identity, MFA, and device management for your team.
             </div>
             <div className="mt-5">
-              <div className="text-2xl font-semibold text-polus-gold">$6,500</div>
+              <div className="text-2xl font-semibold text-polus-gold">$6,499</div>
             </div>
             <div className="mt-4">
               <Button href="/services/identity-device-foundation" variant="secondary" className="w-full">
@@ -193,7 +193,7 @@ export default function HomePage() {
               Know your backups work before you need them.
             </div>
             <div className="mt-5">
-              <div className="text-2xl font-semibold text-polus-gold">$1,500</div>
+              <div className="text-2xl font-semibold text-polus-gold">$1,499</div>
             </div>
             <div className="mt-4">
               <Button href="/services/backup-dr-readiness" variant="secondary" className="w-full">
