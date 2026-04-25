@@ -238,7 +238,10 @@ export default function HomePage() {
               href="/book"
               variant="primary"
               className="rounded-lg text-base px-6 py-3"
-              onClick={() => track("cta_book_click", { from: "home_bottom" })}
+              trackEvent={{
+                name: 'calendly_booking_click',
+                params: { button_location: 'bottom_cta', event_category: 'Lead Generation' }
+              }}
             >
               Book a Free Discovery Call
             </Button>
