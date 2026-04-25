@@ -13,14 +13,16 @@ This folder is the **single source of truth** for GitHub Copilot.
 ## Stack (decision)
 - Next.js (App Router) + TypeScript
 - TailwindCSS
+- Sanity v3 (headless CMS for blog posts and case studies)
 - Forms: server route + email provider (SMTP or Resend)
 - Payments: Stripe **Payment Links** (guest checkout)
+- Analytics: Google Analytics 4 (G-RMS0FPEQPD)
 
 ## Hard constraints
 - Microsoft 365 only (no Google Workspace).
 - ITSM is **platform-agnostic** (do not position Jira as the focus).
-- Blog/resources must remain **disabled** in v1 (feature flags).
 - No compliance claims (HIPAA/SOC2/CMMC/etc) unless explicitly verified.
 
-## What’s included
+## What's included
 - PRD, routes, copy deck, component spec, forms spec, Stripe wiring, SEO/analytics, feature flags, definition of done.
+- **Blog system (April 2026):** Sanity CMS with 67 published posts, schemas for blog posts and case studies.

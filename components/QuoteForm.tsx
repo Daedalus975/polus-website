@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { Card } from "./Card";
+import { trackQuoteFormSubmit } from "@/lib/analytics";
 import { track } from "@/lib/track";
 import { getCheckboxLabels, mapServiceSlugToCheckboxLabel } from "@/lib/serviceData";
 
@@ -223,10 +224,12 @@ export function QuoteForm({ prefillData }: { prefillData?: PrefillData }) {
       if (res.ok) {
         setStatus("success");
         setMessage(data.message || "Thanks! We'll send you a quote within 1 business day.");
-        track("quote_submit", {
-          industry: formData.industry,
-          urgency: formData.urgency,
-          primary_need: formData.primary_need.join(", ")
+        
+        // Track successful quote form submission
+        trackQuoteFormSubmit({
+          services: formData.primary_need,
+          budget: formData.team_size, // team_size used as proxy for budget range
+          timeline: formData.urgency
         });
         
         // Reset form

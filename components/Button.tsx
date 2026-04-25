@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 type Variant = "primary" | "secondary" | "link";
@@ -9,7 +10,8 @@ export function Button({
   variant = "primary",
   className = "",
   type,
-  disabled
+  disabled,
+  trackEvent
 }: {
   children: React.ReactNode;
   href?: string;
@@ -18,6 +20,7 @@ export function Button({
   className?: string;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
+  trackEvent?: { name: string; params?: Record<string, any> };
 }) {
   const base =
     "inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-4 disabled:opacity-50 disabled:cursor-not-allowed";
@@ -30,7 +33,36 @@ export function Button({
   };
 
   const cls = `${base} ${styles[variant]} ${className}`.trim();
+  
+  const handleClick = () => {
+    if (trackEvent) {
+      // Track the event
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', trackEvent.name, trackEvent.params);
+        console.log('[GA4 Event]', trackEvent.name, trackEvent.params);
+      }
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
 
-  if (href) return <Link className={cls} href={href}>{children}</Link>;
-  return <button className={cls} type={type || "button"} onClick={onClick} disabled={disabled}>{children}</button>;
+  if (href) {
+    return (
+      <Link className={cls} href={href} onClick={handleClick}>
+        {children}
+      </Link>
+    );
+  }
+  
+  return (
+    <button 
+      className={cls} 
+      type={type || "button"} 
+      onClick={handleClick} 
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
 }

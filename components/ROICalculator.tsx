@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { Card } from "./Card";
+import { trackROICalculatorSubmit } from "@/lib/analytics";
 import { track } from "@/lib/track";
 
 type Scenario = {
@@ -80,7 +81,10 @@ export function ROICalculator() {
   };
 
   const handleCalculate = () => {
-    track("roi_calculator_complete", scenario);
+    trackROICalculatorSubmit({
+      estimatedSavings: results.annualSavings,
+      services: [] // Could add selected services if we add that feature
+    });
     setShowResults(true);
   };
 

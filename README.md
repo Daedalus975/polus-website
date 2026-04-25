@@ -4,7 +4,7 @@ Professional IT consulting website for Polus LLC, serving Oklahoma small busines
 
 **Live Site:** https://polus-cs.com  
 **Owner:** Jack Washmon (jack.washmon@polus-cs.com)  
-**Last Updated:** March 2026
+**Last Updated:** April 2026
 
 ## Table of Contents
 
@@ -35,9 +35,11 @@ Professional IT consulting website for Polus LLC, serving Oklahoma small busines
 - **Framework:** Next.js 14.2.0 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS 3.4.1
+- **CMS:** Sanity v3.99.0 (headless CMS for blog content)
 - **Deployment:** Vercel (automatic CI/CD)
 - **Email:** nodemailer with Resend SMTP
 - **Forms:** react-hook-form
+- **Analytics:** Google Analytics 4 (G-RMS0FPEQPD)
 - **Scheduling:** Calendly embedded
 
 ## Features
@@ -55,7 +57,10 @@ Professional IT consulting website for Polus LLC, serving Oklahoma small busines
 ✅ FAQ accordion components  
 ✅ Calendly booking integration  
 ✅ Pay invoice functionality  
-✅ Resources center (placeholder, content coming soon)  
+✅ **Blog system with Sanity CMS (67 posts, Apr 2026 - Jun 2027)**  
+✅ **Case study capability via Sanity**  
+✅ Resources center (content coming soon)  
+✅ Google Analytics 4 with cookie consent  
 ✅ Comprehensive legal pages (Privacy, Terms, Cookie Policy, Disclaimer, Accessibility)
 
 ## Current Promotions (March 2026)
@@ -84,8 +89,14 @@ SMTP_PASS=re_YourResendAPIKey
 # Contact Form
 CONTACT_EMAIL=jack.washmon@polus-cs.com
 
-# Google Analytics (configured but not fully wired)
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+# Google Analytics 4 (fully configured)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-RMS0FPEQPD
+
+# Sanity CMS
+NEXT_PUBLIC_SANITY_PROJECT_ID=gzb97594
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+SANITY_API_TOKEN=your_token_here
 ```
 
 ### 3. Run Development Server
@@ -246,6 +257,51 @@ public/
 - `POST /api/contact` - Contact form submission (sends email via SMTP)
 - `POST /api/roi-results` - ROI calculator results (emails to user)
 
+## Content Management (Sanity CMS)
+
+**CMS:** Sanity v3.99.0 (headless CMS)  
+**Studio:** https://polus-cs.sanity.studio  
+**Project ID:** gzb97594  
+**Dataset:** production  
+
+### Content Types
+
+**Blog Posts (`blogPost`):**
+- 67 posts currently published (April 2026 - June 2027)
+- Fields: title, slug, author, publishedAt, excerpt, featuredImage, categories, body, SEO metadata
+- Categories: Microsoft 365, Backup & DR, IT Operations, Security, Process & Workflows, Case Studies
+- Rich text body with Portable Text format
+
+**Case Studies (`caseStudy`):**
+- Fields: title, slug, client, industry, teamSize, challenge, solution, results, testimonial
+- Industry options: Construction, Healthcare, Manufacturing, Professional Services, Retail, Non-Profit
+- Designed for client success stories and social proof
+
+### Sanity Studio
+
+**Access:** Run locally with `npm run sanity:dev` or deploy to Sanity hosting
+
+**Managing Content:**
+```powershell
+# Start Sanity Studio locally
+npm run sanity:dev
+
+# Deploy Studio to Sanity hosting
+sanity deploy
+
+# Run GROQ queries
+sanity documents query "*[_type == 'blogPost'] | order(publishedAt desc)"
+
+# Import content
+sanity dataset import data.ndjson production --replace
+```
+
+### Schemas Location
+
+- `schemas/blogPost.ts` - Blog post schema
+- `schemas/caseStudy.ts` - Case study schema  
+- `schemas/index.ts` - Schema registry
+
 ## Form Submissions
 
 ### Contact Form
@@ -300,6 +356,22 @@ public/
 - Redirects to contact page with recommended services prefilled
 - Helps qualify leads and recommend appropriate services
 ## Recent Major Updates
+
+### April 2026: Blog System Launch
+
+**Sanity CMS Integration:**
+- Integrated Sanity v3.99.0 as headless CMS
+- Created blog post and case study schemas
+- Imported 67 professionally-written blog posts
+- Publishing schedule: Weekly posts from April 2026 through June 2027
+- Topics: Microsoft 365, IT operations, security, backup/DR, compliance, process workflows
+- SEO-optimized with proper metadata and Portable Text formatting
+
+**Content Strategy:**
+- Focused on Oklahoma small business IT education
+- Technical accuracy verified (CMMC, HIPAA, SOC 2, Microsoft Entra ID rebrand)
+- Topical authority approach with minimal content overlap
+- All posts include proper frontmatter, excerpts, and featured images
 
 ### January 2026: Comprehensive Pricing Overhaul
 
@@ -363,7 +435,11 @@ Set in Vercel dashboard → Settings → Environment Variables
 - SMTP_USER
 - SMTP_PASS
 - CONTACT_EMAIL
-- NEXT_PUBLIC_GA_MEASUREMENT_ID (optional)
+- NEXT_PUBLIC_GA_MEASUREMENT_ID (configured: G-RMS0FPEQPD)
+- NEXT_PUBLIC_SANITY_PROJECT_ID
+- NEXT_PUBLIC_SANITY_DATASET
+- NEXT_PUBLIC_SANITY_API_VERSION
+- SANITY_API_TOKEN (for write operations)
 
 **Preview Deployments:**
 - Pull requests automatically get preview URLs
@@ -409,20 +485,20 @@ CONTACT_EMAIL=jack.washmon@polus-cs.com
 
 ### High Priority
 - [ ] **Admin Dashboard Authentication:** Currently disabled (ADMIN_DASHBOARD_ENABLED: false), needs Clerk/Auth0/NextAuth implementation
-- [ ] **Resource Files:** 7 resources show "Coming Soon" - need actual content
-- [ ] **Google Analytics:** GA4 configured but not fully wired to all events
-- [ ] **Calendly Webhooks:** Booking tracking needs webhook implementation
+- [ ] **Resource Files:** 7 resources show "Coming Soon" - need actual downloadable content (templates, guides, checklists)
+- [ ] **Calendly Webhooks:** Booking tracking needs webhook implementation for better analytics
 
 ### Medium Priority
-- [ ] **Complexity Pricing Adders:** Services with variable complexity could use dynamic pricing
+- [ ] **Blog Frontend Pages:** Sanity CMS and 67 posts ready, need to build Next.js pages to display them (/blog, /blog/[slug])
+- [ ] **Case Study Pages:** Schema ready, need frontend implementation
+- [ ] **Complexity Pricing Adders:** Services with variable complexity could use dynamic pricing calculator
 - [ ] **Mobile Optimization:** Further optimize quiz and forms for mobile
-- [ ] **Performance:** Optimize images, add lazy loading
+- [ ] **Performance:** Optimize images, add lazy loading for below-fold content
 
 ### Low Priority
 - [ ] **Dark Mode:** Consider adding toggle (currently light mode only)
-- [ ] **Blog Section:** Content marketing opportunity
-- [ ] **Case Studies:** Need client permission and content creation
-- [ ] **Video Content:** Service explainer videos
+- [ ] **Video Content:** Service explainer videos for social media and landing pages
+- [ ] **Additional Resources:** Expand downloadable templates and guides library
 
 ## Common Development Tasks
 
@@ -455,6 +531,9 @@ Comprehensive documentation is in the `/docs` folder:
 - **TECHNICAL_ARCHITECTURE.md** - Next.js structure, server vs client components, API routes, styling
 - **COMPONENT_LIBRARY.md** - All components with props, usage examples, patterns
 - **DEVELOPMENT_WORKFLOWS.md** - Step-by-step guides for common tasks
+- **ANALYTICS_SETUP.md** - Complete Google Analytics 4 setup guide, event tracking, conversions, reports
+
+**Quick Setup:** See `GA4_SETUP_CHECKLIST.md` in root for fast GA4 configuration
 
 ## Business Model
 

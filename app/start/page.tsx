@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { track } from "@/lib/track";
+import { trackAssessmentQuizComplete } from "@/lib/analytics";
 
 type Question = {
   id: string;
@@ -661,6 +662,11 @@ export default function StartAssessmentPage() {
     track("quiz_completed", { 
       recommended_service: topServiceSlug,
       confidence: Math.round(confidence)
+    });
+    
+    trackAssessmentQuizComplete({
+      recommendedServices: topServices,
+      score: Math.round(confidence)
     });
   };
 

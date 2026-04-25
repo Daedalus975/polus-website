@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "./Button";
-import { track } from "@/lib/track";
+import { trackContactFormSubmit } from "@/lib/analytics";
 import { getCheckboxLabels } from "@/lib/serviceData";
 
 type FormData = {
@@ -72,7 +72,13 @@ export function ContactForm() {
       if (res.ok) {
         setStatus("success");
         setMessage(data.message || "Thanks! We'll reply within 1 business day.");
-        track("contact_submit", { industry: formData.industry, urgency: formData.urgency });
+        
+        // Track successful contact form submission
+        trackContactFormSubmit({
+          services: formData.primary_need,
+          formLocation: 'contact_page',
+          hasPhone: !!formData.phone
+        });
         
         // Reset form
         setFormData({
