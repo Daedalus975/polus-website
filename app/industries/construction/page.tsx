@@ -55,37 +55,12 @@ export default function ConstructionPage() {
 
       <Section title="What we build for construction">
         <div className="max-w-3xl">
-          <ul className="space-y-3 text-[rgba(254,255,255,0.78)]">
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Estimating-to-PM-to-field handoff checklists</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>SharePoint structure for project documentation and RFIs</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Field onboarding SOPs (safety, tools, reporting)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Workflow automation (e.g., PO approvals, change orders)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Mobile device management and endpoint security</span>
-            </li>
+          <ul className="space-y-3 text-[rgba(254,255,255,0.78)] list-disc pl-5">
+            <li>Estimating-to-PM-to-field handoff checklists</li>
+            <li>SharePoint structure for project documentation and RFIs</li>
+            <li>Field onboarding SOPs (safety, tools, reporting)</li>
+            <li>Workflow automation (e.g., PO approvals, change orders)</li>
+            <li>Mobile device management and endpoint security</li>
           </ul>
         </div>
       </Section>
@@ -94,31 +69,16 @@ export default function ConstructionPage() {
         <>
           {/* Fast Fixes for Construction */}
           <Section title="Fast fixes for construction teams" eyebrow="Quick wins" className="bg-polus-surface1">
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Handoff Checklist</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Reduce rework by standardizing what gets handed off between estimating, PM, and field.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Create a handoff form template
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Require sign-off at each stage
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Store in SharePoint project folder
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Create a handoff form template</li>
+                  <li>Require sign-off at each stage</li>
+                  <li>Store in SharePoint project folder</li>
                 </ul>
               </Card>
 
@@ -127,25 +87,10 @@ export default function ConstructionPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Stop losing RFIs in email. Create a simple intake and tracking system.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Use Forms for RFI intake
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Auto-route to PM or estimator
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Track in a shared list or board
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Use Forms for RFI intake</li>
+                  <li>Auto-route to PM or estimator</li>
+                  <li>Track in a shared list or board</li>
                 </ul>
               </Card>
 
@@ -154,25 +99,10 @@ export default function ConstructionPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Standardize where docs live so teams don&apos;t waste time searching.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Create a template structure in SharePoint
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Auto-create for each new project
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Include folders for contracts, submittals, photos, RFIs
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Create a template structure in SharePoint</li>
+                  <li>Auto-create for each new project</li>
+                  <li>Include folders for contracts, submittals, photos, RFIs</li>
                 </ul>
               </Card>
 
@@ -181,25 +111,10 @@ export default function ConstructionPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Stop chasing field reports. Use a simple form that auto-compiles.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Mobile-friendly Forms template
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Auto-send to PM and site manager
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Archive responses for each project
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Mobile-friendly Forms template</li>
+                  <li>Auto-send to PM and site manager</li>
+                  <li>Archive responses for each project</li>
                 </ul>
               </Card>
             </div>

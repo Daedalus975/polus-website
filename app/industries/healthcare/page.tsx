@@ -67,14 +67,9 @@ export default function HealthcarePage() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-semibold mb-6">Healthcare Challenges We Solve</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-4 list-disc pl-5">
               {challenges.map((challenge, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-[rgba(254,255,255,0.78)]">{challenge}</span>
-                </li>
+                <li key={idx} className="text-[rgba(254,255,255,0.78)]">{challenge}</li>
               ))}
             </ul>
           </div>
@@ -101,7 +96,7 @@ export default function HealthcarePage() {
 
       <Section>
         <h2 className="text-3xl font-semibold mb-8 text-center">Services for Healthcare Practices</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, idx) => (
             <Card key={idx} className="p-6">
               <h3 className="text-xl font-semibold mb-3 text-polus-gold">{service.title}</h3>

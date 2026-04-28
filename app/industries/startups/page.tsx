@@ -55,37 +55,12 @@ export default function StartupsPage() {
 
       <Section title="What we build for startups">
         <div className="max-w-3xl">
-          <ul className="space-y-3 text-[rgba(254,255,255,0.78)]">
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>MVP/PRD kickoff (prioritization and first iteration plan)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Core workflow SOPs (sales, onboarding, support)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Microsoft 365 tenant setup and governance</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Identity and access baseline (MFA, admin separation, access review)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Lead-generation website (built for conversions)</span>
-            </li>
+          <ul className="space-y-3 text-[rgba(254,255,255,0.78)] list-disc pl-5">
+            <li>MVP/PRD kickoff (prioritization and first iteration plan)</li>
+            <li>Core workflow SOPs (sales, onboarding, support)</li>
+            <li>Microsoft 365 tenant setup and governance</li>
+            <li>Identity and access baseline (MFA, admin separation, access review)</li>
+            <li>Lead-generation website (built for conversions)</li>
           </ul>
         </div>
       </Section>
@@ -94,100 +69,40 @@ export default function StartupsPage() {
         <>
           {/* Fast Fixes */}
           <Section title="Fast fixes for startups" eyebrow="Quick wins" className="bg-polus-surface1">
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Week 1: Identity Baseline</h3>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Enable MFA on all Microsoft 365 accounts
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Separate admin accounts from daily-use accounts
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Block legacy authentication protocols
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Enable MFA on all Microsoft 365 accounts</li>
+                  <li>Separate admin accounts from daily-use accounts</li>
+                  <li>Block legacy authentication protocols</li>
                 </ul>
               </Card>
 
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Week 2: File Structure</h3>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Create logical Teams/SharePoint structure
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Set default permissions and sharing policies
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Establish naming conventions
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Create logical Teams/SharePoint structure</li>
+                  <li>Set default permissions and sharing policies</li>
+                  <li>Establish naming conventions</li>
                 </ul>
               </Card>
 
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Week 3: Core SOPs</h3>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Document onboarding process
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Write customer support workflow
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Create backup/recovery checklist
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Document onboarding process</li>
+                  <li>Write customer support workflow</li>
+                  <li>Create backup/recovery checklist</li>
                 </ul>
               </Card>
 
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Week 4: Backup Strategy</h3>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Verify Microsoft 365 backup coverage
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Set up version control for code
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Test recovery procedures
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Verify Microsoft 365 backup coverage</li>
+                  <li>Set up version control for code</li>
+                  <li>Test recovery procedures</li>
                 </ul>
               </Card>
             </div>

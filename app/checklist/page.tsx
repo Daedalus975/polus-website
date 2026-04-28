@@ -27,37 +27,12 @@ export default function ChecklistPage() {
 
             <div className="border-t border-[rgba(177,227,199,0.16)] pt-6 mb-6">
               <h3 className="text-lg font-semibold mb-3">What&apos;s included:</h3>
-              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>15 sections covering operations, IT, and business context</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>Process pain points and priorities assessment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>Microsoft 365 and IT infrastructure review</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>Backup, security, and disaster recovery checklist</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>Budget and timeline planning guidance</span>
-                </li>
+              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                <li>15 sections covering operations, IT, and business context</li>
+                <li>Process pain points and priorities assessment</li>
+                <li>Microsoft 365 and IT infrastructure review</li>
+                <li>Backup, security, and disaster recovery checklist</li>
+                <li>Budget and timeline planning guidance</li>
               </ul>
             </div>
 

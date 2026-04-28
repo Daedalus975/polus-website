@@ -55,37 +55,12 @@ export default function NonprofitsPage() {
 
       <Section title="What we build for nonprofits">
         <div className="max-w-3xl">
-          <ul className="space-y-3 text-[rgba(254,255,255,0.78)]">
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Volunteer onboarding checklists and training materials</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Grant reporting automation (forms → database → reports)</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Microsoft 365 for Nonprofits setup and governance</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Donor CRM cleanup and data migration</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Backup and disaster recovery planning</span>
-            </li>
+          <ul className="space-y-3 text-[rgba(254,255,255,0.78)] list-disc pl-5">
+            <li>Volunteer onboarding checklists and training materials</li>
+            <li>Grant reporting automation (forms → database → reports)</li>
+            <li>Microsoft 365 for Nonprofits setup and governance</li>
+            <li>Donor CRM cleanup and data migration</li>
+            <li>Backup and disaster recovery planning</li>
           </ul>
         </div>
       </Section>
@@ -94,31 +69,16 @@ export default function NonprofitsPage() {
         <>
           {/* Fast Fixes for Nonprofits */}
           <Section title="Fast fixes for nonprofits" eyebrow="Quick wins" className="bg-polus-surface1">
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="p-6">
                 <h3 className="font-semibold text-lg mb-3 text-polus-gold">Volunteer Onboarding SOP</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Reduce onboarding time and improve consistency with a simple checklist.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Create welcome packet template
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Document role-specific training
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Store in SharePoint with version history
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Create welcome packet template</li>
+                  <li>Document role-specific training</li>
+                  <li>Store in SharePoint with version history</li>
                 </ul>
               </Card>
 
@@ -127,25 +87,10 @@ export default function NonprofitsPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Reduce reporting time from days to minutes with simple automation.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Use Forms to collect program data
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Auto-populate Excel report templates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Schedule reminders before deadlines
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Use Forms to collect program data</li>
+                  <li>Auto-populate Excel report templates</li>
+                  <li>Schedule reminders before deadlines</li>
                 </ul>
               </Card>
 
@@ -154,25 +99,10 @@ export default function NonprofitsPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Clean up duplicates and missing data so your CRM is actually useful.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Identify and merge duplicates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Standardize naming and tagging
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Set data entry rules going forward
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Identify and merge duplicates</li>
+                  <li>Standardize naming and tagging</li>
+                  <li>Set data entry rules going forward</li>
                 </ul>
               </Card>
 
@@ -181,25 +111,10 @@ export default function NonprofitsPage() {
                 <p className="text-sm text-[rgba(254,255,255,0.78)] mb-3">
                   Get discounted (or free) M365 licenses and set up properly from day one.
                 </p>
-                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Apply for nonprofit pricing
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Set up Teams, SharePoint, Planner
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-polus-mint flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Establish governance policies
-                  </li>
+                <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-disc pl-5">
+                  <li>Apply for nonprofit pricing</li>
+                  <li>Set up Teams, SharePoint, Planner</li>
+                  <li>Establish governance policies</li>
                 </ul>
               </Card>
             </div>
