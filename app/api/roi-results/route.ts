@@ -61,7 +61,16 @@ export async function POST(req: Request) {
     annual_savings: results.annualSavings 
   });
 
-  // Send email via Resend
+  // Validate SMTP configuration
+  if (!process.env.SMTP_PASS) {
+    console.error('[ROI Calculator] ERROR: SMTP_PASS environment variable not set');
+    return NextResponse.json({ 
+      error: "Email service not configured",
+      ok: false 
+    }, { status: 500 });
+  }
+
+  // Send email via SMTP
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.resend.com',
@@ -71,16 +80,23 @@ export async function POST(req: Request) {
         user: process.env.SMTP_USER || 'resend',
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
 
     // Log SMTP configuration (without password)
     console.log('[ROI Calculator] SMTP Config:', {
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      user: process.env.SMTP_USER,
-      from: process.env.SMTP_FROM,
+      host: process.env.SMTP_HOST || 'smtp.resend.com',
+      port: process.env.SMTP_PORT || '587',
+      user: process.env.SMTP_USER || 'resend',
+      from: process.env.SMTP_FROM || 'Polus <no-reply@polus-cs.com>',
       hasPassword: !!process.env.SMTP_PASS
     });
+
+    // Verify transporter connection
+    await transporter.verify();
+    console.log('[ROI Calculator] SMTP connection verified');
 
     const htmlContent = `
 <!DOCTYPE html>
