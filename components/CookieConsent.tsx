@@ -16,6 +16,9 @@ export function CookieConsent() {
         setShowBanner(true);
         setTimeout(() => setIsVisible(true), 100);
       }, 1000);
+    } else if (consent === "accepted") {
+      // User previously accepted - load GA now
+      loadGoogleAnalytics();
     }
   }, []);
 
@@ -35,7 +38,15 @@ export function CookieConsent() {
   };
 
   const loadGoogleAnalytics = () => {
+    // Prevent duplicate loading
+    if (window.gtag) {
+      console.log('[GA4] Already loaded, skipping');
+      return;
+    }
+    
     const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-RMS0FPEQPD';
+    
+    console.log('[GA4] Loading analytics with ID:', measurementId);
     
     // Dynamically load Google Analytics
     const script1 = document.createElement("script");
@@ -49,6 +60,7 @@ export function CookieConsent() {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${measurementId}');
+      console.log('[GA4] Analytics initialized');
     `;
     document.head.appendChild(script2);
   };
