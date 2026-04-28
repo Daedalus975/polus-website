@@ -91,14 +91,9 @@ export function ServiceDetailClient({
         </div>
         
         {/* Base Deliverables */}
-        <ul className="space-y-3 mb-8">
+        <ul className="space-y-3 mb-8 list-disc pl-5">
           {baseDeliverables.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-[rgba(254,255,255,0.78)]">{item}</span>
-            </li>
+            <li key={idx} className="text-[rgba(254,255,255,0.78)]">{item}</li>
           ))}
         </ul>
 
@@ -106,30 +101,20 @@ export function ServiceDetailClient({
         {additions && additions.length > 0 && (
           <div className="mb-8 p-4 bg-polus-gold/5 border border-polus-gold/20 rounded-lg">
             <h4 className="text-lg font-semibold text-polus-gold mb-3">
-              ✨ Additional features in {tierName}
+              Additional features in {tierName}
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 list-disc pl-5">
               {additions.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-polus-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                  </svg>
-                  <span className="text-[rgba(254,255,255,0.88)] font-medium">{item}</span>
-                </li>
+                <li key={idx} className="text-[rgba(254,255,255,0.88)] font-medium">{item}</li>
               ))}
             </ul>
           </div>
         )}
 
         <h3 className="text-xl font-semibold mb-4">Ideal for</h3>
-        <ul className="space-y-3">
+        <ul className="space-y-3 list-disc pl-5">
           {idealFor.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-polus-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              <span className="text-[rgba(254,255,255,0.78)]">{item}</span>
-            </li>
+            <li key={idx} className="text-[rgba(254,255,255,0.78)]">{item}</li>
           ))}
         </ul>
       </div>
