@@ -24,6 +24,11 @@ export default function IndustriesPage() {
       title: "Startups",
       description: "Build the foundation now so you can scale later.",
       slug: "startups"
+    },
+    {
+      title: "Professional Services",
+      description: "Secure client data, document workflows, and scale operations.",
+      slug: "professional-services"
     }
   ];
 
@@ -33,7 +38,7 @@ export default function IndustriesPage() {
         <p className="text-lg text-[rgba(254,255,255,0.78)] leading-relaxed max-w-3xl mb-10">
           We tailor systems to your reality—without overcomplicating it.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {industries.map((industry) => (
             <Link key={industry.slug} href={`/industries/${industry.slug}`}>
               <Card className="h-full hover:shadow-cardHover hover:border-polus-gold/50 transition-all cursor-pointer">
