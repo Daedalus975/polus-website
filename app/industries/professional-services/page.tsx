@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Professional Services IT Solutions | Oklahoma IT Consulting — Polus",
-  description: "IT infrastructure for Oklahoma professional services firms. Secure client data, document workflows, and scale operations efficiently.",
+  description: "IT infrastructure for Oklahoma professional services firms. Secure client data, streamline operations, and scale efficiently with project-based consulting.",
   openGraph: {
     title: "Professional Services IT | Oklahoma — Polus",
     description: "IT solutions for Oklahoma professional services firms. Secure client data and operational efficiency."
@@ -59,7 +59,7 @@ export default function ProfessionalServicesPage() {
     <>
       <Section title="Professional Services IT" eyebrow="Oklahoma" className="pt-20 md:pt-24">
         <p className="text-xl text-[rgba(254,255,255,0.88)] max-w-3xl">
-          IT infrastructure for professional services firms in Oklahoma. Secure client data, streamline workflows, and scale operations without IT headaches.
+          IT infrastructure for professional services firms across Oklahoma. Built for businesses that bill by the hour and manage confidential client work.
         </p>
       </Section>
 
@@ -116,9 +116,9 @@ export default function ProfessionalServicesPage() {
           <h2 className="text-2xl font-semibold mb-6">Common Questions from Professional Services Firms</h2>
           <div className="space-y-6">
             <div className="border-b border-[rgba(177,227,199,0.12)] pb-6">
-              <h3 className="text-lg font-semibold mb-3 text-polus-mint">Can you integrate with our practice management software?</h3>
+              <h3 className="text-lg font-semibold mb-3 text-polus-mint">Can you integrate with our practice management or industry-specific software?</h3>
               <p className="text-[rgba(254,255,255,0.78)] leading-relaxed">
-                Yes. We can set up SSO (single sign-on) with most common business platforms and tools. Base pricing includes up to 3 SSO applications; additional apps are +$500 each.
+                Yes. We can set up SSO (single sign-on) with most business applications that support it. Base pricing includes up to 3 SSO applications; additional apps are +$500 each.
               </p>
             </div>
 
