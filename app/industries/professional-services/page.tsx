@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Professional Services IT Solutions | Oklahoma IT Consulting — Polus",
-  description: "IT infrastructure for Oklahoma accounting firms, engineering firms, consulting agencies, architects, and professional services. Secure client data and streamline billable operations.",
+  description: "IT infrastructure for Oklahoma professional services firms. Secure client data, document workflows, and scale operations efficiently.",
   openGraph: {
     title: "Professional Services IT | Oklahoma — Polus",
     description: "IT solutions for Oklahoma professional services firms. Secure client data and operational efficiency."
@@ -59,7 +59,7 @@ export default function ProfessionalServicesPage() {
     <>
       <Section title="Professional Services IT" eyebrow="Oklahoma" className="pt-20 md:pt-24">
         <p className="text-xl text-[rgba(254,255,255,0.88)] max-w-3xl">
-          IT infrastructure for Oklahoma accounting firms, engineering firms, consulting agencies, architects, and professional services built for billable hour businesses.
+          IT infrastructure for professional services firms in Oklahoma. Secure client data, streamline workflows, and scale operations without IT headaches.
         </p>
       </Section>
 
@@ -118,7 +118,7 @@ export default function ProfessionalServicesPage() {
             <div className="border-b border-[rgba(177,227,199,0.12)] pb-6">
               <h3 className="text-lg font-semibold mb-3 text-polus-mint">Can you integrate with our practice management software?</h3>
               <p className="text-[rgba(254,255,255,0.78)] leading-relaxed">
-                Yes. We can set up SSO (single sign-on) with common platforms like Clio, QuickBooks, Sage, Thomson Reuters, CCH, and others. Base pricing includes up to 3 SSO applications; additional apps are +$500 each.
+                Yes. We can set up SSO (single sign-on) with most common business platforms and tools. Base pricing includes up to 3 SSO applications; additional apps are +$500 each.
               </p>
             </div>
 
