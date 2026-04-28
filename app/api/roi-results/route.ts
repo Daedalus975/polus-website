@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { trackLeadEvent } from "@/lib/leadTracking";
 
 const Schema = z.object({
@@ -61,42 +61,18 @@ export async function POST(req: Request) {
     annual_savings: results.annualSavings 
   });
 
-  // Validate SMTP configuration
-  if (!process.env.SMTP_PASS) {
-    console.error('[ROI Calculator] ERROR: SMTP_PASS environment variable not set');
+  // Validate Resend API key
+  if (!process.env.RESEND_API_KEY) {
+    console.error('[ROI Calculator] ERROR: RESEND_API_KEY environment variable not set');
     return NextResponse.json({ 
       error: "Email service not configured",
       ok: false 
     }, { status: 500 });
   }
 
-  // Send email via SMTP
-  try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.resend.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER || 'resend',
-        pass: process.env.SMTP_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-    });
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Log SMTP configuration (without password)
-    console.log('[ROI Calculator] SMTP Config:', {
-      host: process.env.SMTP_HOST || 'smtp.resend.com',
-      port: process.env.SMTP_PORT || '587',
-      user: process.env.SMTP_USER || 'resend',
-      from: process.env.SMTP_FROM || 'Polus <no-reply@polus-cs.com>',
-      hasPassword: !!process.env.SMTP_PASS
-    });
-
-    // Verify transporter connection
-    await transporter.verify();
-    console.log('[ROI Calculator] SMTP connection verified');
+  console.log('[ROI Calculator] Using Resend API, key present:', !!process.env.RESEND_API_KEY);
 
     const htmlContent = `
 <!DOCTYPE html>
@@ -234,41 +210,49 @@ Polus LLC
 Oklahoma City, OK
 https://polus-cs.com`;
 
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'Polus <no-reply@polus-cs.com>',
-      to: email,
-      replyTo: 'jack.washmon@polus-cs.com',
-      subject: `Your IT ROI Analysis: ${formatCurrency(results.annualSavings)} Annual Savings Potential`,
-      html: htmlContent,
-      text: textContent,
-    });
-
-    console.log('[ROI Calculator] Email sent successfully to:', email);
-
-    return NextResponse.json({ 
-      ok: true,
-      message: "Results emailed successfully!"
-    });
-
-  } catch (error) {
-    console.error('[ROI Calculator] Email send error:', error);
-    
-    // More detailed error logging
-    if (error instanceof Error) {
-      console.error('[ROI Calculator] Error details:', {
-        message: error.message,
-        stack: error.stack
+    try {
+      const { data, error } = await resend.emails.send({
+        from: 'Polus <no-reply@polus-cs.com>',
+        to: email,
+        replyTo: 'jack.washmon@polus-cs.com',
+        subject: `Your IT ROI Analysis: ${formatCurrency(results.annualSavings)} Annual Savings Potential`,
+        html: htmlContent,
+        text: textContent,
       });
+
+      if (error) {
+        console.error('[ROI Calculator] Resend API error:', error);
+        return NextResponse.json({ 
+          error: error.message || "Failed to send email",
+          ok: false 
+        }, { status: 500 });
+      }
+
+      console.log('[ROI Calculator] Email sent successfully to:', email, '| ID:', data?.id);
+
+      return NextResponse.json({ 
+        ok: true,
+        message: "Results emailed successfully!"
+      });
+
+    } catch (error) {
+      console.error('[ROI Calculator] Email send error:', error);
+      
+      if (error instanceof Error) {
+        console.error('[ROI Calculator] Error details:', {
+          message: error.message,
+          stack: error.stack
+        });
+      }
+      
+      return NextResponse.json({ 
+        error: error instanceof Error ? error.message : "Failed to send email",
+        ok: false 
+      }, { status: 500 });
     }
-    
-    return NextResponse.json({ 
-      error: error instanceof Error ? error.message : "Failed to send email",
-      ok: false 
-    }, { status: 500 });
-  }
+
   } catch (outerError) {
-    // Catch any unhandled errors in the entire function
-    console.error('[ROI Calculator] CRITICAL ERROR:', outerError);
+    console.error('[ROI Calculator] Unexpected error:', outerError);
     return NextResponse.json({ 
       error: "Internal server error",
       ok: false 
