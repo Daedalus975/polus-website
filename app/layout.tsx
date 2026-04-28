@@ -78,6 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="anonymous" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="WxqGwHGcfU88LQNtojWs_FBoOflPzO3FxpeR4WbNANg" />
+        
         <StructuredData data={getOrganizationSchema()} />
         <StructuredData data={getWebSiteSchema()} />
         {/* Google Analytics loaded conditionally by CookieConsent component after user consent */}
