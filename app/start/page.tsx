@@ -693,30 +693,15 @@ export default function StartAssessmentPage() {
           <Card className="p-8">
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-polus-emerald/20 flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold">Takes 2-3 minutes</h3>
+                <h3 className="font-semibold text-polus-mint mb-2">Takes 2-3 minutes</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.65)] mt-1">Quick and straightforward</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-polus-emerald/20 flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold">Precision matching</h3>
+                <h3 className="font-semibold text-polus-mint mb-2">Precision matching</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.65)] mt-1">Industry and budget-aware</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-polus-emerald/20 flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold">Confident recommendation</h3>
+                <h3 className="font-semibold text-polus-mint mb-2">Confident recommendation</h3>
                 <p className="text-sm text-[rgba(254,255,255,0.65)] mt-1">One clear best option</p>
               </div>
             </div>
@@ -770,9 +755,6 @@ export default function StartAssessmentPage() {
           <Card className="p-8 mb-6">
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-polus-gold/20 text-polus-gold text-sm font-semibold mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
                 {confidence}% Match
               </div>
               <h2 className="text-3xl font-bold mb-3">{service.title}</h2>

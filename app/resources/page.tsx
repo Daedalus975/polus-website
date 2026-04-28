@@ -117,18 +117,11 @@ export default function ResourcesPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {resources.map((resource, idx) => (
             <Card key={idx} className="flex flex-col">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-polus-emerald/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-polus-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {iconSvgs[resource.icon as keyof typeof iconSvgs]}
-                  </svg>
+              <div className="mb-4">
+                <div className="inline-block text-xs font-semibold text-polus-gold bg-polus-gold/10 px-2 py-1 rounded mb-2">
+                  {resource.category}
                 </div>
-                <div>
-                  <div className="inline-block text-xs font-semibold text-polus-gold bg-polus-gold/10 px-2 py-1 rounded mb-2">
-                    {resource.category}
-                  </div>
-                  <h3 className="text-lg font-semibold">{resource.title}</h3>
-                </div>
+                <h3 className="text-lg font-semibold">{resource.title}</h3>
               </div>
 
               <p className="text-[rgba(254,255,255,0.78)] mb-6 flex-grow">
