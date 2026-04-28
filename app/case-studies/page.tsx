@@ -70,23 +70,11 @@ export default function CaseStudiesPage() {
               <h3 className="font-semibold text-lg mb-3 text-polus-mint">
                 Detailed Implementation Stories
               </h3>
-              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Initial challenges and pain points</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Solutions designed and implemented</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Timeline and team involvement</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Technical approach and tools used</span>
-                </li>
+              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-none">
+                <li>Initial challenges and pain points</li>
+                <li>Solutions designed and implemented</li>
+                <li>Timeline and team involvement</li>
+                <li>Technical approach and tools used</li>
               </ul>
             </Card>
 
@@ -94,23 +82,11 @@ export default function CaseStudiesPage() {
               <h3 className="font-semibold text-lg mb-3 text-polus-mint">
                 Measurable Results
               </h3>
-              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)]">
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Time savings achieved</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Cost reductions or efficiency gains</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>Security or compliance improvements</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-polus-mint mt-0.5">✓</span>
-                  <span>ROI and payback period</span>
-                </li>
+              <ul className="space-y-2 text-sm text-[rgba(254,255,255,0.78)] list-none">
+                <li>Time savings achieved</li>
+                <li>Cost reductions or efficiency gains</li>
+                <li>Security or compliance improvements</li>
+                <li>ROI and payback period</li>
               </ul>
             </Card>
           </div>

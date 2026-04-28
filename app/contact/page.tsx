@@ -225,15 +225,10 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           {fromQuiz && prefillData.service_title && (
             <>
               <div className="bg-polus-emerald/10 border-2 border-polus-mint/30 rounded-lg p-6 mb-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <svg className="w-6 h-6 text-polus-mint flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-polus-mint font-semibold mb-1">Assessment Completed — Here&apos;s What We Recommend</p>
-                    <div className="text-sm text-[rgba(254,255,255,0.78)] mb-4">
-                      Based on your answers, we&apos;ve pre-selected the services that best match your needs. The form below is ready to submit—just add your contact info.
-                    </div>
+                <div className="mb-4">
+                  <p className="text-polus-mint font-semibold mb-1">Assessment Completed — Here&apos;s What We Recommend</p>
+                  <div className="text-sm text-[rgba(254,255,255,0.78)] mb-4">
+                    Based on your answers, we&apos;ve pre-selected the services that best match your needs. The form below is ready to submit—just add your contact info.
                   </div>
                 </div>
                 
