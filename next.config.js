@@ -42,6 +42,22 @@ const nextConfig = {
       },
     ];
   },
+  
+  // Redirects for removed pages
+  async redirects() {
+    return [
+      {
+        source: '/industries/legal',
+        destination: '/industries',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/industries/healthcare',
+        destination: '/industries',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
 };
 module.exports = nextConfig;
 
